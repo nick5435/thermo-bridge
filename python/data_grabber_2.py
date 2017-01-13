@@ -32,3 +32,5 @@ for i, s in enumerate(rawdata[:, 2]):
 
 newdata = np.asarray(newdata)
 frame = pd.DataFrame(newdata, columns=['T', 'P', 'S'])
+
+frame.to_CSV("data/TPS.csv")
