@@ -1,0 +1,10 @@
+function jplot(x,cf,n,a,m)
+  figure(n)
+  colormap(cf)
+  surf(x,a.*(x.^m))
+  view(30,30)
+  title('Danfoss Load Profile')
+  xlabel('Days from 6/9/15')
+  ylabel('Time of Day')
+  zlabel('KW Use')
+  endfunction
