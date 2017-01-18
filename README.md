@@ -1,8 +1,12 @@
 # Thermodynamics Data Generator -- Physics Bridge
 ## Nick Meyer and Aaron Wangberg
-<img src="https://github.com/nick5435/thermo-bridge/raw/master/plots/TPS.png" alt="Sample Plot" style="width: 10vw;"/>
 
-We generate datasets [here][data] using [CoolProp] running under Python.
-
-[data]: https://github.com/nick5435/thermo-bridge/tree/master/data
-[CoolProp]: http://coolprop.org
+<table>
+<tr>
+<td>
+<img src="https://github.com/nick5435/thermo-bridge/raw/master/plots/TPS.png" alt="Sample Plot" width="400"/></td>
+<td>
+We generate <a href="https://github.com/nick5435/thermo-bridge/tree/master/data">datasets</a> and plots using <a href="http://coolprop.org">CoolProp</a> running under Python.</td>
+</td>
+</tr>
+</table>
