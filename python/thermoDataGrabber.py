@@ -1,8 +1,11 @@
+# thermoDataGrabber.py
+
+# CoolProp is for getting the thermo data
 import CoolProp
 import CoolProp.CoolProp as CP
-# CoolProp is for getting the thermo data
+# Matplotlib for making pretty pictures
 import matplotlib.pyplot as plt
-#
+# Data Storage Containers
 import numpy as np
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
@@ -16,20 +19,30 @@ FLUID = "Water"
 NUM_POINTS = 250
 COLORMAP = "nipy_spectral"
 
-
+# Linear interpolation between tmin and tmax with NUM_POINTS number of
+# points, delta = tmax-min/NUM_POINTS
 T = np.linspace(CP.PropsSI(FLUID, "TMIN") + 0.1,
-                CP.PropsSI(FLUID, "TMAX") - 0.1, NUM_POINTS)  # Linear interpolation between tmin and tmax with NUM_POINTS number of points, delta = max-min/NUM_POINTS
-P = np.linspace(CP.PropsSI(FLUID, "PMIN") + 1000,
-                CP.PropsSI(FLUID, "PMAX") - 1000, NUM_POINTS)  # Linear interpolation between pmin and pmax with NUM_POINTS number of points, delta = max-min/NUM_POINTS
+                CP.PropsSI(FLUID, "TMAX") - 0.1, NUM_POINTS)
 
-data = []  # Create a empty list for storing data
+# Linear interpolation between pmin and pmax with NUM_POINTS number of
+# points, delta = max-min/NUM_POINTS
+P = np.linspace(CP.PropsSI(FLUID, "PMIN") + 1000,
+                CP.PropsSI(FLUID, "PMAX") - 1000, NUM_POINTS)
+
+# Create a empty list for storing data
+# Then make our data.
+data = []
 
 for t in T:
     for p in P:
         data.append([t, p * (10**-5) / 1000,
                      CP.PropsSI("S", "T", t, "P", p, FLUID)])
-rawdata = np.asarray(data)  # rawdata is the numpy array for our data, faster!
-newdata = []  # Create a empty list for storing data
+
+# rawdata is the numpy array for our data, faster!
+# Then create an empty list for storing our data
+rawdata = np.asarray(data)
+newdata = []
+
 # we iterate over our array, getting our Z data and its index
 for i, s in enumerate(rawdata[:, 2]):
     # make sure Z>0, X, Y are allowed values
