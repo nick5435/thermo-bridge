@@ -21,13 +21,13 @@ COLORMAP = "nipy_spectral"
 
 # Linear interpolation between tmin and tmax with NUM_POINTS number of
 # points, delta = tmax-min/NUM_POINTS
-T = np.linspace(CP.PropsSI(FLUID, "TMIN") + 0.1,
-                CP.PropsSI(FLUID, "TMAX") - 0.1, NUM_POINTS)
+T = np.linspace(CP.PropsSI("TMIN", FLUID) + 0.1,
+                CP.PropsSI("TMAX", FLUID) - 0.1, NUM_POINTS)
 
 # Linear interpolation between pmin and pmax with NUM_POINTS number of
 # points, delta = max-min/NUM_POINTS
-P = np.linspace(CP.PropsSI(FLUID, "PMIN") + 1000,
-                CP.PropsSI(FLUID, "PMAX") - 1000, NUM_POINTS)
+P = np.linspace(CP.PropsSI("PMIN", FLUID) + 1000,
+                CP.PropsSI("PMAX", FLUID) - 1000, NUM_POINTS)
 
 # Create a empty list for storing data
 # Then make our data.

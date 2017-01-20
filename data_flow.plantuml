@@ -1,31 +1,35 @@
 @startuml
-entity CoolProp  #blue
 control DataGrabber #red
+entity CoolProp  #blue
 control Data #green
 boundary Plot #yellow
 database Pandas #red
 database CSV #green
 
-autonumber
+autonumber 0 1
 activate DataGrabber
 DataGrabber -> DataGrabber: Initialize Memory Stores and program
 autonumber 1
-DataGrabber -> Pandas: Call Library
-autonumber 1
-DataGrabber -> CoolProp: Call Library
-autonumber 2 1
+DataGrabber -> Pandas: Import Library
 activate Pandas
+autonumber 1
+DataGrabber -> CoolProp: Import Library
+autonumber 2 1
+
 activate CoolProp
 DataGrabber -> CoolProp: Request Data
 CoolProp -> DataGrabber: Send Data
 deactivate CoolProp
-activate Data
+
 DataGrabber -> Data: Create New List for Empty Data
+activate Data
 Data -> Data: Trim Bad Data
 Data -> Pandas: Store Data in Pandas Frame
 deactivate Data
-activate CSV
+
 Pandas -> CSV: Write Data to CSV File
+activate CSV
+DataGrabber-> CSV: Write File to Disk
 deactivate CSV
 Pandas -> Plot: Plot Data
 deactivate Pandas
