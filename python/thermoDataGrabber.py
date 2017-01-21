@@ -1,5 +1,12 @@
-# thermoDataGrabber.py
+"""
+.. module:: thermoDataGrabber
+    :platform: Unix, Windows
+    :synopsis: A standalone version of the genericDataGrabber library.
 
+.. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>
+
+
+"""
 # CoolProp is for getting the thermo data
 import CoolProp
 import CoolProp.CoolProp as CP
