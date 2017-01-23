@@ -4,13 +4,11 @@
     :synopsis: Uses CoolProp to access thermodynamic data about Fluids.
 
 .. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>
-
-
 """
 
 
 # CoolProp is for getting the thermo data
-import CoolProp
+# import CoolProp
 import CoolProp.CoolProp as CP
 # Matplotlib for making pretty pictures
 import matplotlib.pyplot as plt
@@ -25,7 +23,7 @@ class ThermoFluid():
     A class that will contain the data requested in .data as a pandas DataFrame
     """
 
-    def __init__(self, fluid: str = "Water", var1: str = "T", var2: str = "P", outvar: str = "S", numPoints=250, colorMap: str = "nipy_spectral"):
+    def __init__(self, fluid: str="Water", var1: str="T", var2: str="P", outvar: str="S", numPoints=250, colorMap: str="nipy_spectral"):
         """
         Call the class with these arguments
 
@@ -76,7 +74,7 @@ class ThermoFluid():
 
         if "P" in self.vars:
             self.data = self.data[self.data["P"] >= 10000]
-            self.data["P"] /= 10**8
+            self.data["P"] /= 10 ** 8
         if "S" in self.vars:
             self.data = self.data[self.data["S"] > 0]
         if "T" in self.vars:

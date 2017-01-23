@@ -42,7 +42,7 @@ data = []
 
 for t in T:
     for p in P:
-        data.append([t, p * (10**-5) / 1000,
+        data.append([t, p * (10 ** -5) / 1000,
                      CP.PropsSI("S", "T", t, "P", p, FLUID)])
 
 # rawdata is the numpy array for our data, faster!
@@ -53,7 +53,7 @@ newdata = []
 # we iterate over our array, getting our Z data and its index
 for i, s in enumerate(rawdata[:, 2]):
     # make sure Z>0, X, Y are allowed values
-    if s > 0 and rawdata[i, 1] >= 10**-2 and rawdata[i, 0] > 0:
+    if s > 0 and rawdata[i, 1] >= 10 ** -2 and rawdata[i, 0] > 0:
         newdata.append([rawdata[i, 0], rawdata[i, 1], rawdata[i, 2]])
 
 # frame is a pandas data frame (nice access to our data, named columns,

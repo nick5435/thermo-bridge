@@ -33,7 +33,7 @@ counter = 0
 while counter < 40000:  # a_useless_counter in range(40000):
 
     h = random.uniform(150000, 590000)
-    p = 10**random.uniform(np.log10(100000), np.log10(7000000))
+    p = 10 ** random.uniform(np.log10(100000), np.log10(7000000))
     CP.set_debug_level(0)
     try:
 
@@ -64,7 +64,6 @@ while counter < 40000:  # a_useless_counter in range(40000):
 
     except ValueError as VE:
         print('ERROR', VE)
-        pass
     counter += 1
 # SC1 = ax1.scatter(HHH1, PPP1, s=8, c=EEE1, edgecolors='none',
 #                   cmap=plt.get_cmap('jet'), norm=cNorm)
@@ -98,7 +97,7 @@ for ax in current_axes:
 
     ax.set_xticklabels(ax.get_xticks() / 1e3)
     ax.set_xlabel('Enthalpy [kJ/kg]')
-    ax.set_yticklabels(ax.get_yticks() / 10**3)
+    ax.set_yticklabels(ax.get_yticks() / 10 ** 3)
     ax.set_ylabel('Pressure [kPa]')
 
     ax.plot(hL, pV, 'k', lw=4)
