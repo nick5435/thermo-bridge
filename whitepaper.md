@@ -1,6 +1,9 @@
 # Thermodynamic Surface Generation in Python -- Physics Bridge
 ## Nick Meyer and Dr. Aaron Wangberg, Winona State University
 
+## Problem
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 ## Why Python?
 
 We chose to use **Python** as the main programming language for this project for several reasons.
