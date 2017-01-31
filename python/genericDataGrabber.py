@@ -74,12 +74,27 @@ class ThermoFluid():
 
         if "P" in self.vars:
             self.data = self.data[self.data["P"] >= 10000]
-            self.data["P"] /= 10 ** 8
         if "S" in self.vars:
             self.data = self.data[self.data["S"] > 0]
         if "T" in self.vars:
             self.data = self.data[self.data["T"] >= (
                 CP.PropsSI('TMIN', self.fluid) + 1.0)]
+
+        # Next block creates a list of the units that we need
+        self.units = ["", "", ""]
+        for i, var in enumerate(self.vars):
+            if var == "P":
+                self.units[i] = "Pa"
+            elif var == "T":
+                self.units[i] = "K"
+            elif var == "S":
+                self.units[i] = "J/kg/K"
+            elif var == "G":
+                self.units[i] = "J/kg"
+            elif var == "U":
+                self.units[i] = "J/kg"
+            elif var == "D":
+                self.units[i] = "kg/m^3"
 
     def make_csv(self):
         """
@@ -97,9 +112,9 @@ class ThermoFluid():
         ax.scatter(self.data[self.xvar], self.data[self.yvar], self.data[self.zvar], c=self.data[
                    self.zvar], cmap=self.colorMap, edgecolors="none")  # Plot the data
         # Set the Labels
-        ax.set_xlabel(self.xvar)
-        ax.set_ylabel(self.yvar)
-        ax.set_zlabel(self.zvar)
+        ax.set_xlabel("{0} [{1}]".format(self.vars[0], self.units[0]))
+        ax.set_ylabel("{0} [{1}]".format(self.vars[1], self.units[2]))
+        ax.set_zlabel("{0} [{1}]".format(self.vars[2], self.units[2]))
         ax.set_title("{0} and {1} vs {2} of {3}".format(
             *self.vars, self.fluid))
         plt.show()

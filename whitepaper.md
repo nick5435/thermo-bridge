@@ -7,11 +7,20 @@
 *   Somehow related to NIST
 *   Once we have the data, we need to make a real surface -> smooth, based on discrete data
 *   ID Constraints, assumptions, what variables.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+In most traditional undergraduate Thermodynamics courses, students are simply taught about Maxwell Relations, Partition Functions, Entropy, Enthalpy, and Heat. We often find that students' understanding of these concepts is extremely lacking, even if they understand the mathematics behind it all. Our goal with this project is to create realistic physical models, called _surfaces_, created using NIST data on thermodynamic systems.
+
+To create these surfaces, we first need to obtain data. This is the main goal of this document, and the process for this is contained within.
+
+To do this, we have made the following assumptions:
+
+*   We will be modeling a fluid supported by [coolProp][]
+*   We will be using x and y variables supported by [coolProp][]
+*   The user is using [Python 3][Python].
 
 ## Why Python?
 
-We chose to use **Python** as the main programming language for this project for several reasons.
+We chose to use **[Python][]** as the main programming language for this project for several reasons.
 
 ### Libraries
 
@@ -26,6 +35,22 @@ Then, we needed a way to visualize our data, to get a preiew of the surface befo
 Python is a **_very_** easy to use language. There's no required typings, no pointers, and most importantly, **no compilation!** We believe that Python is easy enough to learn, that someone with minimal programming experience could learn Python in less than a month.
 
 Python is more than just easy to use, it's enjoyable to use. Compared with languages like Java, C++, or Go, writing code in Python feels like writing down a recipie for a cookie, rather than writing instructions for how to assemble a cookie, atom by atom. Python's simple syntax and verbose error statements make it easy to figure out and debug your code. Python is also highly readable, as it prefers to use full words as its keywords, rather than archaic abbreviations. For example, compare Python's `print` to Java's `System.out.println`.
+
+## Technical Requirements:
+
+The following software and packages are required:
+
+*   [Python 3][Python]
+*   [CoolProp][]
+*   [Matplotlib][]
+*   [Numpy][]
+*   [Pandas][]
+*   [Sphinx][]
+*   Sphinx_Bootstrap_Theme
+*   [Recommonmark][]
+*   Sphinx-Autobuild
+
+All of these packages, save for Python 3, can be installed with `pip`.
 
 ## Why CoolProp?
 
@@ -49,7 +74,9 @@ _Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 [Matplotlib]: http://matplotlib.org/ "Matplotlib"
 [Pandas]: http://Pandas.pydata.org/ "Pandas"
 [NumPy]: http://numpy.org "NumPy"
-
+[Recommonmark]: https://github.com/rtfd/recommonmark "Recommonmarl"
+[Sphinx]: https://github.com/rtfd/recommonmark "Sphinx"
+[Python]: https://python.org "Python"
 [flowchart]: <https://github.com/nick5435/thermo-bridge/raw/master/data_flow.png> "Flowchart of Data for `thermoDataGrabber.py`"
 [plot-TPS]: <https://github.com/nick5435/thermo-bridge/raw/master/plots/TPS.png> "Plot of Temperature, Pressure, and Entropy for Water"
 
