@@ -49,6 +49,7 @@ The following software and packages are required:
 *   Sphinx_Bootstrap_Theme
 *   [Recommonmark][]
 *   Sphinx-Autobuild
+*   Typings
 
 All of these packages, save for Python 3, can be installed with `pip`.
 

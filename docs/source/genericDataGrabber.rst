@@ -5,4 +5,4 @@ Generic Thermo Library
     :noindex:
 
 .. autoclass:: genericDataGrabber.ThermoFluid
-    :members: __init__
+    :members: __init__, make_csv, show_plot
