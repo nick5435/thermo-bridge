@@ -9,3 +9,4 @@ TODO:
 *   [ ] Figure out how CoolProp generates its data
 *   [ ] Weds 2017-02-01: Walkthrough of Process, Sticking Points, Get what Plots we needs
 *   [ ] Path Length should logically correspond to **Energy**, or something like that.
+*   [ ] Energy and Volume variable implementation
