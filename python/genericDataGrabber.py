@@ -37,10 +37,6 @@ class ThermoFluid():
         units: (list of strings) the units for xvar, yvar, zvar, in that order.
         numPoints: (list of ints) the x-resolution and y-resolution, in that order.
 
-
-    Methods:
-        make_csv: Does what it says on the tin. Makes a CSV file and saves it to data/[XYZ].csv
-        show_plot: Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
     """
 
     def __init__(self, fluid: str="Water", var1: str="T", var2: str="P", outvar: str="S", numPoints: numList = [250, 250], colorMap: str="nipy_spectral"):
@@ -61,25 +57,18 @@ class ThermoFluid():
             colorMap (str): What color map to use
 
         """
-        self.fluid:
-            str
+        self.fluid: str
         self.fluid = fluid
-        self.numPoints:
-            numList
+        self.numPoints: numList
         if type(numPoints) is int:
             self.numPoints = [numPoints, numPoints]
         else:
             self.numPoints = [numPoints[0], numPoints[1]]
-        self.colorMap:
-            str
-        self.xvar:
-            str
-        self.yvar:
-            str
-        self.zvar:
-            str
-        self.var:
-            List[str]
+        self.colorMap: str
+        self.xvar: str
+        self.yvar: str
+        self.zvar: str
+        self.var: List[str]
         self.colorMap = colorMap
         self.xvar = var1
         self.yvar = var2
@@ -104,8 +93,7 @@ class ThermoFluid():
                     [x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y, self.fluid)])
 
         # Create Pandas Frame of Data
-        self.data:
-            pd.DataFrame
+        self.data: pd.DataFrame
         self.data = pd.DataFrame(np.asarray(data), columns=self.vars)
 
         if "P" in self.vars:
@@ -117,8 +105,7 @@ class ThermoFluid():
                 CP.PropsSI('TMIN', self.fluid) + 1.0)]
 
         # Next block creates a list of the units that we need
-        self.units:
-            List[str]
+        self.units: List[str]
         self.units = ["", "", ""]
         for i, var in enumerate(self.vars):
             if var == "P":
