@@ -16,8 +16,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
-
+import os
 from typing import Any, List, Tuple, TypeVar, Union, Text
+
+cwd = os.getcwd()
+
+
 
 
 class ThermoFluid():
@@ -77,13 +81,13 @@ class ThermoFluid():
         if self.xvar in ["P", "T"]:
             xspace = np.linspace(CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1, CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1, self.numPoints[0])
         elif self.xvar in ["D"] and self.fluid.lower() == "water":
-            xspace = np.linspace(0.01, 999.9, self.numPoints[0])
+            xspace = np.linspace(0.01, 1200.01, self.numPoints[0])
         # Linear interpolation between pmin and pmax with NUM_POINTS number of
         # points, delta = max-min/NUM_POINTS
         if self.yvar in ["P", "T"]:
             yspace = np.linspace(CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1, CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1, self.numPoints[1])
         elif self.yvar in ["D"] and self.fluid.lower() == "water":
-            yspace = np.linspace(0.01, 999.9, self.numPoints[1])
+            yspace = np.linspace(0.01, 1200.01, self.numPoints[1])
         # Create a empty list for storing data
         # Then make our data.
         data = []
@@ -125,7 +129,7 @@ class ThermoFluid():
         """
         Does what it says on the tin. Makes a CSV file and saves it to data/[XYZ].csv
         """
-        self.data.to_csv("data/" + self.xvar + self.yvar + self.zvar + ".csv")
+        self.data.to_csv("../data/" + "".join(self.vars) + ".csv", mode="w+")
 
     def show_plot(self) -> None:
         """
