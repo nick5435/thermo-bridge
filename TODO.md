@@ -7,6 +7,7 @@ TODO:
 *   [x] ~~Generic Module Interface for dataGrabber2~~  **2017-01-22 NM**
 *   [x] ~~Include units for Generic Data Grabber~~ **2017-01-31 NM**
 *   [ ] Figure out how CoolProp generates its data
-*   [ ] Weds 2017-02-01: Walkthrough of Process, Sticking Points, Get what Plots we needs
+*   [x] ~~Weds 2017-02-01: Walkthrough of Process, Sticking Points, Get what Plots we needs~~ **2017-02-01 NM/AW**
 *   [ ] Path Length should logically correspond to **Energy**, or something like that.
-*   [ ] Energy and Volume variable implementation
+*   [x] ~~Volume I/O Variable implementation~~ **2017-02-03 NM**
+*   [ ] Entropy should be able to work as an Input variable

@@ -6,7 +6,6 @@
 .. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>
 """
 
-
 # CoolProp is for getting the thermo data
 # import CoolProp
 import CoolProp.CoolProp as CP
@@ -16,12 +15,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from mpl_toolkits.mplot3d import Axes3D
-import os
-from typing import Any, List, Tuple, TypeVar, Union, Text
 
-cwd = os.getcwd()
-
-
+from typing import Any, List, Text, Tuple, TypeVar, Union
 
 
 class ThermoFluid():
@@ -41,7 +36,13 @@ class ThermoFluid():
 
     """
 
-    def __init__(self, fluid: str="Water", var1: str="T", var2: str="P", outvar: str="S", numPoints: Union[List[int],int] = [250, 250], colorMap: str="nipy_spectral") -> None:
+    def __init__(self,
+                 fluid: str="Water",
+                 var1: str="T",
+                 var2: str="P",
+                 outvar: str="S",
+                 numPoints: Union[List[int], int]=[250, 250],
+                 colorMap: str="nipy_spectral") -> None:
         """
         Call the class with these arguments
 
@@ -61,7 +62,7 @@ class ThermoFluid():
         """
         self.fluid: str
         self.fluid = fluid
-        self.numPoints: Union[List[int],int]
+        self.numPoints: Union[List[int], int]
         if type(numPoints) is int:
             self.numPoints = [numPoints, numPoints]
         else:
@@ -70,32 +71,65 @@ class ThermoFluid():
         self.xvar: str
         self.yvar: str
         self.zvar: str
+        self.M: float
         self.var: List[Text]
         self.colorMap = colorMap
         self.xvar = var1
         self.yvar = var2
         self.zvar = outvar
         self.vars = [self.xvar, self.yvar, self.zvar]
+        self.M = CP.PropsSI("M", self.fluid)
         # Linear interpolation between tmin and tmax with NUM_POINTS number of
         # points, delta = tmax-min/NUM_POINTS
         if self.xvar in ["P", "T"]:
-            xspace = np.linspace(CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1, CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1, self.numPoints[0])
+            xspace = np.linspace(
+                CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1,
+                CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1,
+                self.numPoints[0])
         elif self.xvar in ["D"] and self.fluid.lower() == "water":
             xspace = np.linspace(0.01, 1200.01, self.numPoints[0])
+        # elif self.xvar in ["S"] and self.fluid.lower() == "water":
+        #     xspace = np.linspace(35.0, 393.3, self.numPoints[0])
+        elif self.xvar in ["V"]:
+            xspace = np.linspace(self.M / 1200.01, self.M / 0.01, self.numPoints[0])
+
         # Linear interpolation between pmin and pmax with NUM_POINTS number of
         # points, delta = max-min/NUM_POINTS
         if self.yvar in ["P", "T"]:
-            yspace = np.linspace(CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1, CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1, self.numPoints[1])
+            yspace = np.linspace(
+                CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1,
+                CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1,
+                self.numPoints[1])
         elif self.yvar in ["D"] and self.fluid.lower() == "water":
             yspace = np.linspace(0.01, 1200.01, self.numPoints[1])
+        # elif self.yvar in ["S"] and self.fluid.lower() == "water":
+        #     yspace = np.linspace(35.0, 393.3, self.numPoints[1])
+        elif self.yvar in ["V"]:
+            yspace = np.linspace(self.M / 1200.01, self.M / 0.01, self.numPoints[1])
         # Create a empty list for storing data
         # Then make our data.
         data = []
-
-        for x in xspace:
-            for y in yspace:
-                data.append(
-                    [x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y, self.fluid)])
+        if "V" not in self.vars:
+            for x in xspace:
+                for y in yspace:
+                    data.append([
+                        x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
+                                         self.fluid)])
+        elif self.xvar == "V":
+            for x in xspace:
+                for y in yspace:
+                    data.append([
+                        x, y, CP.PropsSI(self.zvar, "D", self.M / x, self.yvar, y, self.fluid)])
+        elif self.yvar == "V":
+            for x in xspace:
+                for y in yspace:
+                    data.append([
+                        x, y, CP.PropsSI(self.zvar, self.xvar, x, "D", self.M / y, self.fluid)])
+        elif self.zvar == "V":
+            for x in xspace:
+                for y in yspace:
+                    data.append([
+                        x, y, self.M / CP.Props("D", self.xvar, x, self.yvar,y, self.fluid)])
 
         # Create Pandas Frame of Data
         self.data: pd.DataFrame
@@ -106,8 +140,7 @@ class ThermoFluid():
         if "S" in self.vars:
             self.data = self.data[self.data["S"] > 0]
         if "T" in self.vars:
-            self.data = self.data[self.data["T"] >= (
-                CP.PropsSI('TMIN', self.fluid) + 1.0)]
+            self.data = self.data[self.data["T"] >= (CP.PropsSI('TMIN', self.fluid) + 1.0)]
         # Next block creates a list of the units that we need
         self.units: List[Text]
         self.units = ["", "", ""]
@@ -124,6 +157,8 @@ class ThermoFluid():
                 self.units[i] = "J/kg"
             elif var == "D":
                 self.units[i] = "kg/m^3"
+            elif var == "V":
+                self.units[i] = "m^3"
 
     def make_csv(self) -> None:
         """
@@ -138,12 +173,17 @@ class ThermoFluid():
         # Plotting:
         fig = plt.figure()
         ax = fig.add_subplot(111, projection="3d")  # we want 3D plots
-        ax.scatter(self.data[self.xvar], self.data[self.yvar], self.data[self.zvar], c=self.data[
-                   self.zvar], cmap=self.colorMap, edgecolors="none")  # Plot the data
+        ax.scatter(
+            self.data[self.xvar],
+            self.data[self.yvar],
+            self.data[self.zvar],
+            c=self.data[self.zvar],
+            cmap=self.colorMap,
+            edgecolors="none")  # Plot the data
         # Set the Labels
         ax.set_xlabel("{0} [{1}]".format(self.vars[0], self.units[0]))
         ax.set_ylabel("{0} [{1}]".format(self.vars[1], self.units[1]))
         ax.set_zlabel("{0} [{1}]".format(self.vars[2], self.units[2]))
-        ax.set_title("{0} and {1} vs {2} of {3}".format(
-            *self.vars, self.fluid))
+        ax.set_title(
+            "{0} and {1} vs {2} of {3}".format(*self.vars, self.fluid))
         plt.show()
