@@ -10,4 +10,10 @@ TODO:
 *   [x] ~~Weds 2017-02-01: Walkthrough of Process, Sticking Points, Get what Plots we needs~~ **2017-02-01 NM/AW**
 *   [ ] Path Length should logically correspond to **Energy**, or something like that.
 *   [x] ~~Volume I/O Variable implementation~~ **2017-02-03 NM**
-*   [ ] Entropy should be able to work as an Input variable
+*   [ ] **Internal Energy should be able to work as an Input variable**
+*   [ ] **Error if data in wrong order (ex. S as input variable)**
+*   [ ] **CSV to Plot function in genericDataGrabber with column order changed**
+*   [ ] **metadata function for gDG**
+*   [ ] do _function_ to _col_ where _condition_ (Pandas?) (Flag col?)
+*   [ ] **Big 'ol CSV of derivatives**
+*   [ ] CSV Contour Plot w/ column order option

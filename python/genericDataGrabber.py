@@ -33,6 +33,7 @@ class ThermoFluid():
         data (pandas.DataFrame): The data for the given fluid
         units (List[Text]): the units for xvar, yvar, zvar, in that order.
         numPoints (List[int]): the x-resolution and y-resolution, in that order.
+        M (float): the molar mass of the fluid for the system.
 
     """
 
