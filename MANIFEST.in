@@ -1,0 +1,13 @@
+include README.md
+include *.rst
+include *.md
+include *.bat
+include requirements.txt
+include docs/source/*.rst
+include data/*.json
+include data/*.csv
+include notebooks/*.ipynb
+include plots/*.png
+include Makefile
+include *.png
+include *.plantuml
