@@ -6,6 +6,10 @@
 .. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>
 """
 
+import json
+from codecs import getwriter
+
+import arrow
 # CoolProp is for getting the thermo data
 # import CoolProp
 import CoolProp.CoolProp as CP
@@ -14,9 +18,10 @@ import matplotlib.pyplot as plt
 # Data Storage Containers
 import numpy as np
 import pandas as pd
+import pyrsistent as pyr
 from mpl_toolkits.mplot3d import Axes3D
 
-from typing import Any, List, Text, Tuple, TypeVar, Union
+from typing import Any, Dict, List, Text, Tuple, TypeVar, Union
 
 
 class ThermoFluid():
@@ -34,6 +39,7 @@ class ThermoFluid():
         units (List[Text]): the units for xvar, yvar, zvar, in that order.
         numPoints (List[int]): the x-resolution and y-resolution, in that order.
         M (float): the molar mass of the fluid for the system.
+        meta (pyrsistent._pmap.PMap): a PMap containing metadata related to the current fluid.
 
     """
 
@@ -73,13 +79,28 @@ class ThermoFluid():
         self.yvar: str
         self.zvar: str
         self.M: float
-        self.var: List[Text]
+        self.meta: pyr._pmap.PMap
         self.colorMap = colorMap
         self.xvar = var1
         self.yvar = var2
         self.zvar = outvar
         self.vars = [self.xvar, self.yvar, self.zvar]
         self.M = CP.PropsSI("M", self.fluid)
+        if "S" in self.vars[:-1]:
+            raise ValueError(
+                "S (entropy) is not supported as an input variable, try permuting your inputs until you get something to work!"
+            )
+        self.meta = pyr.pmap({
+            "date":
+            str(arrow.now('US/Central').format("YYYY-MM-DD @ HH:mm:ss")),
+            "fluid": self.fluid,
+            "xvar": self.xvar,
+            "yvar": self.yvar,
+            "zvar": self.zvar,
+            "numPoints": self.numPoints,
+            "colorMap": self.colorMap
+        })
+
         # Linear interpolation between tmin and tmax with NUM_POINTS number of
         # points, delta = tmax-min/NUM_POINTS
         if self.xvar in ["P", "T"]:
@@ -92,7 +113,10 @@ class ThermoFluid():
         # elif self.xvar in ["S"] and self.fluid.lower() == "water":
         #     xspace = np.linspace(35.0, 393.3, self.numPoints[0])
         elif self.xvar in ["V"]:
-            xspace = np.linspace(self.M / 1200.01, self.M / 0.01, self.numPoints[0])
+            xspace = np.linspace(self.M / 1200.01, self.M / 0.01,
+                                 self.numPoints[0])
+        elif self.xvar in ["U"]:
+            xspace = np.linspace(9000.0, 6000000.0, self.numPoints[0])
 
         # Linear interpolation between pmin and pmax with NUM_POINTS number of
         # points, delta = max-min/NUM_POINTS
@@ -106,7 +130,10 @@ class ThermoFluid():
         # elif self.yvar in ["S"] and self.fluid.lower() == "water":
         #     yspace = np.linspace(35.0, 393.3, self.numPoints[1])
         elif self.yvar in ["V"]:
-            yspace = np.linspace(self.M / 1200.01, self.M / 0.01, self.numPoints[1])
+            yspace = np.linspace(self.M / 1200.01, self.M / 0.01,
+                                 self.numPoints[1])
+        elif self.yvar in ["U"]:
+            yspace = np.linspace(9000.0, 6000000.0, self.numPoints[1])
         # Create a empty list for storing data
         # Then make our data.
         data = []
@@ -115,33 +142,46 @@ class ThermoFluid():
                 for y in yspace:
                     data.append([
                         x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
-                                         self.fluid)])
+                                         self.fluid)
+                    ])
         elif self.xvar == "V":
             for x in xspace:
                 for y in yspace:
                     data.append([
-                        x, y, CP.PropsSI(self.zvar, "D", self.M / x, self.yvar, y, self.fluid)])
+                        x, y, CP.PropsSI(self.zvar, "D", self.M / x, self.yvar,
+                                         y, self.fluid)
+                    ])
         elif self.yvar == "V":
             for x in xspace:
                 for y in yspace:
                     data.append([
-                        x, y, CP.PropsSI(self.zvar, self.xvar, x, "D", self.M / y, self.fluid)])
+                        x, y, CP.PropsSI(self.zvar, self.xvar, x, "D",
+                                         self.M / y, self.fluid)
+                    ])
         elif self.zvar == "V":
             for x in xspace:
                 for y in yspace:
                     data.append([
-                        x, y, self.M / CP.Props("D", self.xvar, x, self.yvar,y, self.fluid)])
+                        x, y, self.M /
+                        CP.Props("D", self.xvar, x, self.yvar, y, self.fluid)
+                    ])
 
         # Create Pandas Frame of Data
         self.data: pd.DataFrame
         self.data = pd.DataFrame(np.asarray(data), columns=self.vars)
 
         if "P" in self.vars:
-            self.data = self.data[self.data["P"] >= CP.PropsSI('PMIN', self.fluid) + 1]
+            self.data = self.data[self.data["P"] >=
+                                  CP.PropsSI('PMIN', self.fluid) + 1.0]
         if "S" in self.vars:
-            self.data = self.data[self.data["S"] > 0]
+            self.data = self.data[self.data["S"] > 0.1]
         if "T" in self.vars:
-            self.data = self.data[self.data["T"] >= (CP.PropsSI('TMIN', self.fluid) + 1.0)]
+            self.data = self.data[self.data["T"] >=
+                                  (CP.PropsSI('TMIN', self.fluid) + 1.0)]
+        if "U" in self.vars:
+            self.data = self.data[self.data["U"] >= 1.0]
+        if "V" in self.vars:
+            self.data = self.data[self.data["V"] >= 0.1]
         # Next block creates a list of the units that we need
         self.units: List[Text]
         self.units = ["", "", ""]
@@ -161,11 +201,17 @@ class ThermoFluid():
             elif var == "V":
                 self.units[i] = "m^3"
 
-    def make_csv(self) -> None:
+    def write_data(self) -> None:
         """
-        Does what it says on the tin. Makes a CSV file and saves it to data/[XYZ].csv
+        Does what it says on the tin. Makes a CSV and JSON files and saves them to data/X-xpoints_Y-ypoints_Z.*
         """
-        self.data.to_csv("../data/" + "".join(self.vars) + ".csv", mode="w+")
+        middle_string = "_".join([
+            str(varname) + "-" + str(point)
+            for (varname, point) in zip(self.vars, self.numPoints)
+        ] + [self.vars[-1]])
+        self.data.to_csv("../data/" + middle_string + ".csv", mode="w+")
+        with open("../data/" + middle_string + ".json", mode="w+") as f:
+            json.dump(dict(self.meta), f)
 
     def show_plot(self) -> None:
         """

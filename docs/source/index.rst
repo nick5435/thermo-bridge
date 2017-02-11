@@ -10,7 +10,7 @@ Welcome to Thermo-Bridge Data Generator's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   intro
+   DevTutorial
    thermoDataGrabber
    genericDataGrabber
 

@@ -35,15 +35,11 @@ sys.path.insert(0, os.path.abspath('../../plots/'))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.intersphinx',
-              'sphinx.ext.todo',
-              'sphinx.ext.mathjax',
-              'sphinx.ext.ifconfig',
-              'sphinx.ext.viewcode',
-              'sphinx.ext.githubpages',
-              'sphinx.ext.napoleon',
-              'sphinx_autodoc_typehints']
+extensions = [
+    'sphinx.ext.autodoc', 'sphinx.ext.intersphinx', 'sphinx.ext.todo',
+    'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
+    'sphinx.ext.githubpages', 'sphinx.ext.napoleon', 'sphinx_autodoc_typehints'
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -90,7 +86,6 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -99,7 +94,6 @@ todo_include_todos = True
 
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
-
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -119,9 +113,7 @@ html_theme_options = {
     #    (name, "http://example.com", True) # arbitrary absolute url
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
-    'navbar_links': [("Home", "index"),
-                     ("Modules", "py-modindex")
-                     ],
+    'navbar_links': [("Home", "index"), ("Modules", "py-modindex")],
 
     # Render the next and previous page links in navbar. (Default: true)
     'navbar_sidebarrel': False,
@@ -134,7 +126,7 @@ html_theme_options = {
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    'globaltoc_depth': 2,
+    'globaltoc_depth': 1,
 
     # Include hidden TOCs in Site navbar?
     #
@@ -161,7 +153,7 @@ html_theme_options = {
     #
     # Options are nothing (default) or the name of a valid theme
     # such as "amelia" or "cosmo".
-    'bootswatch_theme': "sandstone",
+    'bootswatch_theme': "flatly",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)
@@ -172,12 +164,10 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'Thermo-BridgeDataGeneratordoc'
-
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -202,33 +192,26 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'Thermo-BridgeDataGenerator.tex', 'Thermo-Bridge Data Generator Documentation',
-     'Nick Meyer, Aaron Wangberg', 'manual'),
-]
-
+latex_documents = [(master_doc, 'Thermo-BridgeDataGenerator.tex',
+                    'Thermo-Bridge Data Generator Documentation',
+                    'Nick Meyer, Aaron Wangberg', 'manual'), ]
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'thermo-bridgedatagenerator', 'Thermo-Bridge Data Generator Documentation',
-     [author], 1)
-]
-
+man_pages = [(master_doc, 'thermo-bridgedatagenerator',
+              'Thermo-Bridge Data Generator Documentation', [author], 1)]
 
 # -- Options for Texinfo output -------------------------------------------
 
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'Thermo-BridgeDataGenerator', 'Thermo-Bridge Data Generator Documentation',
-     author, 'Thermo-BridgeDataGenerator', 'One line description of project.',
-     'Miscellaneous'),
-]
-
+texinfo_documents = [(master_doc, 'Thermo-BridgeDataGenerator',
+                      'Thermo-Bridge Data Generator Documentation', author,
+                      'Thermo-BridgeDataGenerator',
+                      'One line description of project.', 'Miscellaneous'), ]
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
