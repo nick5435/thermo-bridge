@@ -1,6 +1,6 @@
-##############################
-Standalone Thermo Data Grabber
-##############################
+###################
+Thermo Data Grabber
+###################
 .. figure:: ../../data_flow.png
     :width: 100%
     :align: center
@@ -8,5 +8,8 @@ Standalone Thermo Data Grabber
     :figclass: align-left
     :figwidth: 45%
 
-.. literalinclude:: ../../python/thermoDataGrabber.py
-   :language: python
+.. automodule:: thermoDataGrabber
+        :noindex:
+
+.. autoclass:: thermoDataGrabber.ThermoFluid
+        :members: __init__, write_data, show_plot

@@ -12,7 +12,6 @@ Welcome to Thermo-Bridge Data Generator's documentation!
 
    DevTutorial
    thermoDataGrabber
-   genericDataGrabber
 
 Indices and tables
 ==================

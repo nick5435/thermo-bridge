@@ -1,5 +1,5 @@
 """
-.. module:: genericDataGrabber
+.. module:: thermoDataGrabber
     :platform: Unix, Windows
     :synopsis: Uses CoolProp to access thermodynamic data about Fluids.
 
@@ -7,9 +7,7 @@
 """
 
 import json
-from codecs import getwriter
 
-import arrow
 # CoolProp is for getting the thermo data
 # import CoolProp
 import CoolProp.CoolProp as CP
@@ -21,6 +19,7 @@ import pandas as pd
 import pyrsistent as pyr
 from mpl_toolkits.mplot3d import Axes3D
 
+import arrow
 from typing import Any, Dict, List, Text, Tuple, TypeVar, Union
 
 
@@ -93,12 +92,18 @@ class ThermoFluid():
         self.meta = pyr.pmap({
             "date":
             str(arrow.now('US/Central').format("YYYY-MM-DD @ HH:mm:ss")),
-            "fluid": self.fluid,
-            "xvar": self.xvar,
-            "yvar": self.yvar,
-            "zvar": self.zvar,
-            "numPoints": self.numPoints,
-            "colorMap": self.colorMap
+            "fluid":
+            self.fluid,
+            "xvar":
+            self.xvar,
+            "yvar":
+            self.yvar,
+            "zvar":
+            self.zvar,
+            "numPoints":
+            self.numPoints,
+            "colorMap":
+            self.colorMap
         })
 
         # Linear interpolation between tmin and tmax with NUM_POINTS number of
@@ -163,7 +168,7 @@ class ThermoFluid():
                 for y in yspace:
                     data.append([
                         x, y, self.M /
-                        CP.Props("D", self.xvar, x, self.yvar, y, self.fluid)
+                        CP.PropsSI("D", self.xvar, x, self.yvar, y, self.fluid)
                     ])
 
         # Create Pandas Frame of Data
