@@ -10,6 +10,7 @@ Welcome to Thermo-Bridge Data Generator's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   readme
    DevTutorial
    thermoDataGrabber
 
@@ -19,3 +20,10 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. figure:: ../../data_flow.png
+    :width: 100%
+    :align: center
+    :alt: UML State Flow diagram for ThermoDataGrabber
+    :figclass: align-center
+    :figwidth: 45%

@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 # Data Storage Containers
 import numpy as np
 import pandas as pd
-import pyrsistent as pyr
+import pyrsistent
 from mpl_toolkits.mplot3d import Axes3D
 
 import arrow
@@ -89,7 +89,7 @@ class ThermoFluid():
             raise ValueError(
                 "S (entropy) is not supported as an input variable, try permuting your inputs until you get something to work!"
             )
-        self.meta = pyr.pmap({
+        self.meta = pyristent.pmap({
             "date":
             str(arrow.now('US/Central').format("YYYY-MM-DD @ HH:mm:ss")),
             "fluid":
