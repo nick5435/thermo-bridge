@@ -214,8 +214,8 @@ class ThermoFluid():
             str(varname) + "-" + str(point)
             for (varname, point) in zip(self.vars, self.numPoints)
         ] + [self.vars[-1]])
-        self.data.to_csv("../data/" + middle_string + ".csv", mode="w+")
-        with open("../data/" + middle_string + ".json", mode="w+") as f:
+        self.data.to_csv("../../data/" + middle_string + ".csv", mode="w+")
+        with open("../../data/" + middle_string + ".json", mode="w+") as f:
             json.dump(dict(self.meta), f)
 
     def show_plot(self) -> None:
