@@ -13,6 +13,8 @@ Welcome to Thermo-Bridge Data Generator's documentation!
    readme
    DevTutorial
    thermoDataGrabber
+   whitepaper
+
 
 Indices and tables
 ==================

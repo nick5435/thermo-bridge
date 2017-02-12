@@ -30,7 +30,8 @@ sys.path.insert(0, os.path.abspath('../../plots/'))
 extensions = [
     'sphinx.ext.autodoc', 'sphinx.ext.intersphinx', 'sphinx.ext.todo',
     'sphinx.ext.mathjax', 'sphinx.ext.ifconfig', 'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages', 'sphinx.ext.napoleon', 'sphinx_autodoc_typehints'
+    'sphinx.ext.githubpages', 'sphinx.ext.napoleon',
+    'sphinx_autodoc_typehints', 'sphinx.ext.githubpages'
 ]
 
 napoleon_google_docstring = True

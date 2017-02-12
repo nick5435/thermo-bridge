@@ -1,4 +1,4 @@
-from setuptools import setup
+from distutils.core import setup
 
 
 def readme():
@@ -33,4 +33,23 @@ setup(
         'pyrsistent',
         'arrow',
     ],
-    include_package_data=True, )
+    include_package_data=True,
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3',
+        'Development Status :: 4 - Beta',
+        'Natural Language :: English',
+        'Environment :: Console',
+        'Topic :: Scientific/Engineering :: Physics',
+        'Topic :: Scientific/Engineering :: Mathematics',
+        'Topic :: Scientific/Engineering :: Visualization',
+        'Topic :: Scientific/Engineering',
+        'Operating System :: OS Independent',
+        'Framework :: Sphinx',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: Education',
+        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ], )
