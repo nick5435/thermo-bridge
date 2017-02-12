@@ -1,1 +1,1 @@
-{"yvar": "P", "colorMap": "viridis", "fluid": "Water", "xvar": "T", "date": "2017-02-11 @ 12:57:20", "numPoints": [100, 100], "zvar": "U"}
+{"yvar": "P", "xvar": "T", "fluid": "Water", "colorMap": "viridis", "zvar": "U", "date": "2017-02-11 @ 18:30:06", "units": ["K", "Pa", "J/kg"], "numPoints": [100, 100]}

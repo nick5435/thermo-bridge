@@ -8,7 +8,7 @@ TODO:
 *   [ ] do _function_ to _col_ where _condition_ (Pandas?) (Flag col?)
 *   [ ] **Big 'ol CSV of derivatives**
 *   [ ] CSV Contour Plot w/ column order option
-*   [ ] **CSV to Plot function in genericDataGrabber with column order changed**
+
 
 *   [x] ~~UML Diagram~~ **2017-01-19 NM**
 *   [x] ~~Code Documentation~~ **2017-01-18 NM**
@@ -20,3 +20,4 @@ TODO:
 *   [x] ~~Error if data in wrong order (ex. S as input variable)~~ **2017-02-11 NM**
 *   [x] ~~metadata function for gDG~~ **2017-02-11 NM**
 *   [x] ~~Wrap everything up for eventual Pip deployment~~ **2017-02-11 NM**
+*   [x] ~~CSV to Plot function in genericDataGrabber with column order changed~~ **2017-02-11 NM**
