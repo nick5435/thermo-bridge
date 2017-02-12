@@ -1,6 +1,8 @@
 # Thermodynamics Data Generator -- Physics Bridge
 ## Nick Meyer and Aaron Wangberg
-[![Documentation Status](https://readthedocs.org/projects/thermo-bridge/badge/?version=latest)](http://thermo-bridge.readthedocs.io/en/latest/?badge=latest)
+<a href='http://thermo-bridge.readthedocs.io/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/thermo-bridge/badge/?version=latest' alt='Documentation Status' />
+</a>
 <table>
 <tr>
 <td>
