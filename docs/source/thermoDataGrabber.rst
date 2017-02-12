@@ -1,14 +1,13 @@
-###################
-Thermo Data Grabber
-###################
+#################
+thermoDataGrabber
+#################
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Class Contents:
 
+   ThermoFluid
+   CSVFluid
 
 .. automodule:: thermoDataGrabber
-
-
-.. autoclass:: thermoDataGrabber.ThermoFluid
-        :members: __init__, write_data
-
-.. autoclass:: thermoDataGrabber.CSVFluid
-        :members: __init__, changeOrder
+      :members: fluid_plot

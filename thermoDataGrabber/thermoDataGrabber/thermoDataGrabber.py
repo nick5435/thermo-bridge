@@ -292,6 +292,9 @@ class CSVFluid():
 def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
     """
     Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
+    Args:
+        fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.
+
     """
     # Plotting:
     fig = plt.figure()
