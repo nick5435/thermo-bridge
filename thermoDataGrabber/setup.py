@@ -2,6 +2,7 @@ from setuptools import setup
 
 
 def readme():
+    """Where the README file is."""
     with open('README.md') as f:
         return f.read()
 
@@ -25,6 +26,7 @@ setup(
         'sphinx',
         'sphinx_bootstrap_theme',
         'sphinx-autobuild',
+        'sphinx-autodoc-typehints',
         'recommonmark',
         'pypandoc',
         'typing',
