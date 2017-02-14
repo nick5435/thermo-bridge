@@ -8,12 +8,8 @@
 
 import json
 
-# CoolProp is for getting the thermo data
-# import CoolProp
 import CoolProp.CoolProp as CP
-# Matplotlib for making pretty pictures
 import matplotlib.pyplot as plt
-# Data Storage Containers
 import numpy as np
 import pandas as pd
 import pyrsistent as pyr
@@ -66,6 +62,7 @@ class ThermoFluid():
             colorMap (str): What color map to use
 
         """
+
         self.fluid: str
         self.fluid = fluid
         self.numPoints: Union[List[int], int]
@@ -123,9 +120,11 @@ class ThermoFluid():
                                  self.numPoints[1])
         elif self.yvar in ["U"]:
             yspace = np.linspace(9000.0, 6000000.0, self.numPoints[1])
+
         # Create a empty list for storing data
         # Then make our data.
         data = []
+
         if "V" not in self.vars:
             for x in xspace:
                 for y in yspace:
@@ -189,24 +188,17 @@ class ThermoFluid():
                 self.units[i] = "kg/m^3"
             elif var == "V":
                 self.units[i] = "m^3"
-            self.meta = pyr.pmap({
-                "date":
-                str(arrow.now('US/Central').format("YYYY-MM-DD @ HH:mm:ss")),
-                "fluid":
-                self.fluid,
-                "xvar":
-                self.xvar,
-                "yvar":
-                self.yvar,
-                "zvar":
-                self.zvar,
-                "numPoints":
-                self.numPoints,
-                "colorMap":
-                self.colorMap,
-                "units":
-                self.units
-            })
+        self.meta = pyr.pmap({
+            "date":
+            str(arrow.now('US/Central').format("YYYY-MM-DD @ HH:mm:ss")),
+            "fluid": self.fluid,
+            "xvar": self.xvar,
+            "yvar": self.yvar,
+            "zvar": self.zvar,
+            "numPoints": self.numPoints,
+            "colorMap": self.colorMap,
+            "units": self.units
+        })
 
     def write_data(self, path: str) -> None:
         """
@@ -216,6 +208,7 @@ class ThermoFluid():
             path (str): path where file should be saved
 
         """
+
         middle_string = "_".join([
             str(varname) + "-" + str(point)
             for (varname, point) in zip(self.vars, self.numPoints)
@@ -311,16 +304,22 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
         fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.
 
     """
+
     # Plotting:
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection="3d")  # we want 3D plots
+
+    # we want 3D plots
+    ax = fig.add_subplot(111, projection="3d")
+
+    # Plot the data
     ax.scatter(
         fluid.data[fluid.xvar],
         fluid.data[fluid.yvar],
         fluid.data[fluid.zvar],
         c=fluid.data[fluid.zvar],
         cmap=fluid.colorMap,
-        edgecolors="none")  # Plot the data
+        edgecolors="none")
+
     # Set the Labels
     ax.set_xlabel("{0} [{1}]".format(fluid.vars[0], fluid.units[0]))
     ax.set_ylabel("{0} [{1}]".format(fluid.vars[1], fluid.units[1]))

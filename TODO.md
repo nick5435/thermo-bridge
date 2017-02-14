@@ -1,11 +1,11 @@
-TODO:
+# TODO:
 
 *   [ ] Improve README
 *   [ ] Whitepaper
 *   [ ] Figure out how CoolProp generates its data
 *   [ ] Path Length should logically correspond to **Energy**, or something like that.
 *   [ ] **Internal Energy should be able to work as an Input variable** Note: Having same issues as with entropy, might not be feasible as of *2017-02-11*
-*   [ ] do _function_ to _col_ where _condition_ (Pandas?) (Flag col?)
+*   [ ] <pre> do \<function> to \<col> where \<condition></pre> (Pandas?) (Flag col?)
 *   [ ] **Big 'ol CSV of derivatives**
 *   [ ] CSV Contour Plot w/ column order option
 *   [ ] Find host for Documentation
