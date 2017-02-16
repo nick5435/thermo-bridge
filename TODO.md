@@ -9,6 +9,7 @@
 *   [ ] **Big 'ol CSV of derivatives**
 *   [ ] CSV Contour Plot w/ column order option
 *   [ ] Find host for Documentation
+*   [ ] Cythonize Code - Would increase speed by a lot!
 
 *   [x] ~~UML Diagram~~ **2017-01-19 NM**
 *   [x] ~~Code Documentation~~ **2017-01-18 NM**

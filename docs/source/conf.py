@@ -108,7 +108,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 #
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "Thermodynamics -- Physics Bridge Project",
+    'navbar_title': "Thermodynamics: Physics Bridge",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Navigation",
@@ -120,10 +120,10 @@ html_theme_options = {
     #    (name, "http://example.com", True) # arbitrary absolute url
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
-    'navbar_links': [("Home", "index"), ("Modules", "py-modindex")],
+    'navbar_links': [],
 
     # Render the next and previous page links in navbar. (Default: true)
-    'navbar_sidebarrel': False,
+    'navbar_sidebarrel': True,
 
     # Render the current pages TOC in the navbar. (Default: true)
     'navbar_pagenav': True,
@@ -142,11 +142,11 @@ html_theme_options = {
     # will break.
     #
     # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
+    'globaltoc_includehidden': "false",
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar",
+    'navbar_class': "navbar-inverse",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
@@ -160,7 +160,7 @@ html_theme_options = {
     #
     # Options are nothing (default) or the name of a valid theme
     # such as "amelia" or "cosmo".
-    'bootswatch_theme': "flatly",
+    'bootswatch_theme': "paper",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)
@@ -199,11 +199,9 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'Thermo-BridgeDataGenerator.tex',
-     'Thermo-Bridge Data Generator Documentation',
-     'Nick Meyer, Aaron Wangberg', 'manual'),
-]
+latex_documents = [(master_doc, 'Thermo-BridgeDataGenerator.tex',
+                    'Thermo-Bridge Data Generator Documentation',
+                    'Nick Meyer, Aaron Wangberg', 'manual'), ]
 
 # -- Options for manual page output ---------------------------------------
 
@@ -217,12 +215,10 @@ man_pages = [(master_doc, 'thermo-bridgedatagenerator',
 # Grouping the document tree into Texinfo files. List of tuples
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'Thermo-BridgeDataGenerator',
-     'Thermo-Bridge Data Generator Documentation', author,
-     'Thermo-BridgeDataGenerator', 'One line description of project.',
-     'Miscellaneous'),
-]
+texinfo_documents = [(master_doc, 'Thermo-BridgeDataGenerator',
+                      'Thermo-Bridge Data Generator Documentation', author,
+                      'Thermo-BridgeDataGenerator',
+                      'One line description of project.', 'Miscellaneous'), ]
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None}
