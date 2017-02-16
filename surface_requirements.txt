@@ -1,0 +1,17 @@
+Surfaces:
+	Water:
+		U(S,V)
+			- Generate S(T,P), V(T,P) -> U(S,V) by chain Rule (?)
+		**U(T,P)**
+		- Can model multiple phases, curvature!
+		- NO LOG SCALE! Scalar Scaling is OK
+	Dimensions: 
+		8.5" x 8.5" or 216mm x 216mm
+		Need points close enough together (δx, δy small)
+		X, Y scale to (0, 216)
+		Z scale to (15, 152)
+		Highlight points BEFORE scaling
+		Curves of constant derivative
+
+Dummy Surface
+	For Reference: 200-400 Data per side, more than that takes FOREVER to render

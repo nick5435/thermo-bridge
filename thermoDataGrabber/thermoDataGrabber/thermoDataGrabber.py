@@ -93,16 +93,16 @@ class ThermoFluid():
             xspace = np.linspace(
                 CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1,
                 CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1,
-                self.numPoints[0])
+                self.numPoints[0] + 1)
         elif self.xvar in ["D"] and self.fluid.lower() == "water":
-            xspace = np.linspace(0.01, 1200.01, self.numPoints[0])
+            xspace = np.linspace(0.01, 1200.01, self.numPoints[0] + 1)
         # elif self.xvar in ["S"] and self.fluid.lower() == "water":
         #     xspace = np.linspace(35.0, 393.3, self.numPoints[0])
         elif self.xvar in ["V"]:
             xspace = np.linspace(self.M / 1200.01, self.M / 0.01,
-                                 self.numPoints[0])
+                                 self.numPoints[0] + 1)
         elif self.xvar in ["U"]:
-            xspace = np.linspace(9000.0, 6000000.0, self.numPoints[0])
+            xspace = np.linspace(9000.0, 6000000.0, self.numPoints[0] + 1)
 
         # Linear interpolation between pmin and pmax with NUM_POINTS number of
         # points, delta = max-min/NUM_POINTS
@@ -110,16 +110,16 @@ class ThermoFluid():
             yspace = np.linspace(
                 CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1,
                 CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1,
-                self.numPoints[1])
+                self.numPoints[1] + 1)
         elif self.yvar in ["D"] and self.fluid.lower() == "water":
-            yspace = np.linspace(0.01, 1200.01, self.numPoints[1])
+            yspace = np.linspace(0.01, 1200.01, self.numPoints[1] + 1)
         # elif self.yvar in ["S"] and self.fluid.lower() == "water":
         #     yspace = np.linspace(35.0, 393.3, self.numPoints[1])
         elif self.yvar in ["V"]:
             yspace = np.linspace(self.M / 1200.01, self.M / 0.01,
-                                 self.numPoints[1])
+                                 self.numPoints[1] + 1)
         elif self.yvar in ["U"]:
-            yspace = np.linspace(9000.0, 6000000.0, self.numPoints[1])
+            yspace = np.linspace(9000.0, 6000000.0, self.numPoints[1] + 1)
 
         # Create a empty list for storing data
         # Then make our data.
@@ -202,18 +202,18 @@ class ThermoFluid():
 
     def write_data(self, path: str) -> None:
         """
-        Does what it says on the tin. Makes a CSV and JSON files and saves them to data/X-xpoints_Y-ypoints_Z.
+        Does what it says on the tin. Makes a CSV and JSON files and saves them to data/FluidName_X-xpoints_Y-ypoints_Z.
 
         Parameters:
             path (str): path where file should be saved
 
         """
 
-        middle_string = "_".join([
+        middle_string = self.fluid + "_" + "_".join([
             str(varname) + "-" + str(point)
             for (varname, point) in zip(self.vars, self.numPoints)
         ] + [self.vars[-1]])
-        self.data.to_csv(path + middle_string + ".csv", mode="w+")
+        self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
         with open(path + middle_string + ".json", mode="w+") as f:
             json.dump(dict(self.meta), f)
 
@@ -268,7 +268,7 @@ class CSVFluid():
         with open(pathToFile + ".json", mode="r+") as jf:
             self.meta = pyr.pmap(json.loads(jf.read()))
         with open(pathToFile + ".csv", mode="r+") as cf:
-            self.data = pd.read_csv(cf, index_col=0)
+            self.data = pd.read_csv(cf)
         self.colorMap = self.meta['colorMap']
         self.xvar = self.meta['xvar']
         self.yvar = self.meta['yvar']
