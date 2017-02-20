@@ -16,7 +16,7 @@ import pyrsistent as pyr
 from mpl_toolkits.mplot3d import Axes3D
 
 import arrow
-from typing import Any, Dict, List, Text, Tuple, TypeVar, Union
+from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
 
 
 class ThermoFluid():
@@ -303,6 +303,9 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
     Parameters:
         fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.
 
+    Returns:
+        None
+
     """
 
     # Plotting:
@@ -327,12 +330,19 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
     ax.set_title("{0} and {1} vs {2} of {3}".format(*fluid.vars, fluid.fluid))
     plt.show()
 
-def rescale(oldrange: List[float, int], newrange: List[float, int]) -> function:
+
+def rescale(oldrange: List[Union[float, int]],
+            newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
+                                                           Union[float, int]]:
     """
     Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply
 
-    Paramaters:
-        oldrange (List[float, int]): The old range of the data, [min, max]
-        newrange (List[float, int]): The new range of the data, [min, max]
+    Parameters:
+        oldrange (List[Union[float, int]]): The old range of the data, [min, max]
+        newrange (List[Union[float, int]]): The new range of the data, [min, max]
+
+    Returns:
+        closure (Callable[[Union[float, int]], Union[float, int]]): A function that takes in a scalar from the old range, and scales it to the new range.
+
     """
-    return lambda x: newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0])*(x - oldrange[0]) + newrange[0]
+    return lambda x: (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]

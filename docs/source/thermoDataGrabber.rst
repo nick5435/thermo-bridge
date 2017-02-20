@@ -10,4 +10,4 @@ thermoDataGrabber
    CSVFluid
 
 .. automodule:: thermoDataGrabber
-      :members: fluid_plot
+      :members: fluid_plot, rescale
