@@ -326,3 +326,13 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
     ax.set_zlabel("{0} [{1}]".format(fluid.vars[2], fluid.units[2]))
     ax.set_title("{0} and {1} vs {2} of {3}".format(*fluid.vars, fluid.fluid))
     plt.show()
+
+def rescale(oldrange: List[float, int], newrange: List[float, int]) -> function:
+    """
+    Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply
+
+    Paramaters:
+        oldrange (List[float, int]): The old range of the data, [min, max]
+        newrange (List[float, int]): The new range of the data, [min, max]
+    """
+    return lambda x: newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0])*(x - oldrange[0]) + newrange[0]
