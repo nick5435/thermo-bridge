@@ -18,6 +18,13 @@ sys.path.insert(0, os.path.abspath('../../notebooks/'))
 sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('../../plots/'))
 
+try:
+	sys.path.insert(0,os.path.abspath('./thermoDataGrabber/thermoDataGrabber/'))
+except:
+	None
+
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
