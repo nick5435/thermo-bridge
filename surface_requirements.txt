@@ -15,3 +15,8 @@ Surfaces:
 
 Dummy Surface
 	For Reference: 200-400 Data per side, more than that takes FOREVER to render
+	Needs 
+	
+	
+	Plastic is .118" thick (MAX!)
+	Plot curves w/ different spacings
