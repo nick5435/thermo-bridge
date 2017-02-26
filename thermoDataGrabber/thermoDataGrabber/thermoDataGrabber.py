@@ -6,6 +6,7 @@
 .. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>
 """
 
+import copy
 import json
 
 import CoolProp.CoolProp as CP
@@ -43,7 +44,7 @@ class ThermoFluid():
                  var1: str="T",
                  var2: str="P",
                  outvar: str="S",
-                 numPoints: Union[List[int], int]=[250, 250],
+                 numPoints: Union[List[int], int]=[216, 216],
                  colorMap: str="nipy_spectral") -> None:
         """
         Call the class with these arguments
@@ -217,6 +218,15 @@ class ThermoFluid():
         with open(path + middle_string + ".json", mode="w+") as f:
             json.dump(dict(self.meta), f)
 
+    def copy(self):
+        """
+        Returns a copy of itself
+
+        returns:
+            self (ThermoFluid): A copy of this object
+        """
+        return copy.deepcopy(self)
+
 
 class CSVFluid():
     """
@@ -294,6 +304,15 @@ class CSVFluid():
         self.yvar = self.vars[1]
         self.zvar = self.vars[2]
         self.units = [self.units[i] for i in order]
+
+    def copy(self):
+        """
+        Returns a copy of itself
+
+        returns:
+            self (CSVFluid): A copy of this object
+        """
+        return copy.deepcopy(self)
 
 
 def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
