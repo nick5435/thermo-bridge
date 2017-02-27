@@ -49,7 +49,9 @@ napoleon_use_ivar = False
 napoleon_use_param = True
 napoleon_use_rtype = True
 
-autodoc_mock_imports = ["pyrsistent", "arrow", "matplotlib", "mpl_toolkits"]
+autodoc_mock_imports = [
+    "pyrsistent", "arrow", "matplotlib", "mpl_toolkits", "matplotlib.pyplot"
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
