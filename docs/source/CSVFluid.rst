@@ -1,6 +1,6 @@
-##########################
-thermoDataGrabber.CSVFluid
-##########################
+###################
+ThermoPyle.CSVFluid
+###################
 
-.. autoclass:: thermoDataGrabber.CSVFluid
+.. autoclass:: ThermoPyle.CSVFluid
         :members:

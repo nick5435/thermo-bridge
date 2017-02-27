@@ -1,5 +1,5 @@
 """
-.. module:: thermoDataGrabber
+.. module:: ThermoPyle
     :platform: Unix, Windows
     :synopsis: Uses CoolProp to access thermodynamic data about Fluids.
 

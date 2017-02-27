@@ -1,6 +1,6 @@
-#############################
-thermoDataGrabber.ThermoFluid
-#############################
+######################
+ThermoPyle.ThermoFluid
+######################
 
-.. autoclass:: thermoDataGrabber.ThermoFluid
+.. autoclass:: ThermoPyle.ThermoFluid
         :members:

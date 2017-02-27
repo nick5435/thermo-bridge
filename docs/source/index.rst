@@ -12,7 +12,7 @@ Welcome to Thermo-Bridge Data Generator's documentation!
 
    readme
    DevTutorial
-   thermoDataGrabber
+   ThermoPyle
    whitepaper
 
 
@@ -26,6 +26,6 @@ Indices and tables
 .. figure:: ../../data_flow.png
     :width: 100%
     :align: center
-    :alt: UML State Flow diagram for ThermoDataGrabber
+    :alt: UML State Flow diagram for ThermoPyle
     :figclass: align-center
     :figwidth: 45%

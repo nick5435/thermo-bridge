@@ -1,6 +1,6 @@
-#################
-thermoDataGrabber
-#################
+##########
+ThermoPyle
+##########
 
 .. toctree::
    :maxdepth: 2
@@ -9,5 +9,5 @@ thermoDataGrabber
    ThermoFluid
    CSVFluid
 
-.. automodule:: thermoDataGrabber
+.. automodule:: ThermoPyle
       :members: fluid_plot, rescale

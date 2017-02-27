@@ -30,7 +30,7 @@ Setup Process
     cd ~
     git clone https://github.com/nick5435/thermo-bridge.git
     cd thermo-bridge
-    pip install thermoDataGrabber/ -e -U
+    pip install ThermoPyle/ -e -U
     conda update --all
 
 #. For a runtime example, open :code:`notebooks/thermo_generic_library_runner.ipynb` using :code:`jupyter notebook`
