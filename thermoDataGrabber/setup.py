@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import find_packages, setup
 
 
 def readme():
@@ -16,23 +16,24 @@ setup(
     author='Nick Meyer',
     author_email='nmeyer14@winona.edu',
     license='MIT',
-    packages=['thermoDataGrabber'],
+    packages=find_packages(),
     zip_safe=False,
     install_requires=[
-        'CoolProp',
-        'matplotlib',
-        'numpy',
-        'pandas',
-        'sphinx',
-        'sphinx_bootstrap_theme',
-        'sphinx-autobuild',
-        'sphinx-autodoc-typehints',
-        'recommonmark',
-        'pypandoc',
-        'typing',
-        'pyrsistent',
-        'arrow',
+        'CoolProp>=6.0.0',
+        'matplotlib>=2.0.0',
+        'numpy>=1.12.0',
+        'pandas>=0.19.2',
+        'sphinx>=1.5.1',
+        'sphinx_bootstrap_theme>=0.4.13',
+        'sphinx-autobuild>=0.6.0',
+        'sphinx-autodoc-typehints>=1.1.0',
+        'recommonmark>=0.4.0',
+        'pypandoc>=1.3.3',
+        'typing>=3.5.3.0',
+        'pyrsistent>=0.12.0',
+        'arrow>=0.10.0',
     ],
+    python_requires='>=3.6.0',
     include_package_data=True,
     classifiers=[
         'Development Status :: 4 - Beta',
