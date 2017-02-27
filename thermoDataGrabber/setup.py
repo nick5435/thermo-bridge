@@ -9,7 +9,7 @@ def readme():
 
 setup(
     name='thermoDataGrabber',
-    version='0.5.0',
+    version='0.5.1',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     long_description=readme(),
     url='https://github.com/nick5435/thermo-bridge',
