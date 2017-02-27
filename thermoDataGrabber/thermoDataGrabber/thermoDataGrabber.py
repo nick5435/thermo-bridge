@@ -14,10 +14,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pyrsistent as pyr
+from cytoolz import get
 from mpl_toolkits.mplot3d import Axes3D
 
 import arrow
 from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
+
+T = TypeVar("ThermoFluid")
+C = TypeVar("CSVFluid")
+
+UNITS = {"P":"Pa",
+"T":"K","S":"J/kg/K","G":"J/kg","U":"J/kg","D":"kg/m^3","V":"m^3"}
+
 
 
 class ThermoFluid():
@@ -112,10 +120,7 @@ class ThermoFluid():
                 CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1,
                 CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1,
                 self.numPoints[1] + 1)
-        elif self.yvar in ["D"] and self.fluid.lower() == "water":
-            yspace = np.linspace(0.01, 1200.01, self.numPoints[1] + 1)
-        # elif self.yvar in ["S"] and self.fluid.lower() == "water":
-        #     yspace = np.linspace(35.0, 393.3, self.numPoints[1])
+
         elif self.yvar in ["V"]:
             yspace = np.linspace(self.M / 1200.01, self.M / 0.01,
                                  self.numPoints[1] + 1)
@@ -158,48 +163,92 @@ class ThermoFluid():
         # Create Pandas Frame of Data
         self.data: pd.DataFrame
         self.data = pd.DataFrame(np.asarray(data), columns=self.vars)
+        self.make_units()
+        self.clean()
+        self.make_meta()
 
-        if "P" in self.vars:
-            self.data = self.data[self.data["P"] >=
-                                  CP.PropsSI('PMIN', self.fluid) + 1.0]
-        if "S" in self.vars:
-            self.data = self.data[self.data["S"] > 0.1]
-        if "T" in self.vars:
-            self.data = self.data[self.data["T"] >=
-                                  (CP.PropsSI('TMIN', self.fluid) + 1.0)]
-        if "U" in self.vars:
-            self.data = self.data[self.data["U"] >= 1.0]
-        if "V" in self.vars:
-            self.data = self.data[self.data["V"] >= 0.1]
-        # Next block creates a list of the units that we need
+    def make_units(self)-> None:
+        """(Re)make the units list"""
         self.units: List[Text]
-        self.units = ["", "", ""]
-        for i, var in enumerate(self.vars):
-            if var == "P":
-                self.units[i] = "Pa"
-            elif var == "T":
-                self.units[i] = "K"
-            elif var == "S":
-                self.units[i] = "J/kg/K"
-            elif var == "G":
-                self.units[i] = "J/kg"
-            elif var == "U":
-                self.units[i] = "J/kg"
-            elif var == "D":
-                self.units[i] = "kg/m^3"
-            elif var == "V":
-                self.units[i] = "m^3"
+        self.units = [get(var, UNITS, "UnknownVar") for var in self.vars]
+
+    def make_meta(self) -> None:
+        """
+        (Re)make the metadata object
+        """
+        self.make_units()
         self.meta = pyr.pmap({
             "date":
-            str(arrow.now('US/Central').format("YYYY-MM-DD @ HH:mm:ss")),
+            str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
             "fluid": self.fluid,
             "xvar": self.xvar,
             "yvar": self.yvar,
             "zvar": self.zvar,
+            "vars": self.vars,
             "numPoints": self.numPoints,
             "colorMap": self.colorMap,
             "units": self.units
         })
+
+
+    def refresh(self) -> None:
+        """
+        Refreshes the object, remakes meta, cleans data, remakes units.
+        """
+        self.units()
+        self.clean()
+        self.meta()
+
+
+    def add_column(self, variables: Union[List[Text], Text])-> None:
+        """
+        Adds a column to the dataframe
+
+        Paramaters:
+            variable (Union[List[Text],Text]): What variable(s) to add
+        """
+        for var in variables:
+            try:
+                assert var not in self.vars
+            except AssertionError:
+                print(f"Cannot add column {var}: already in frame")
+                return None
+            try:
+                assert var != "V"
+            except AssertionError:
+                print(f"Cannot add Volume as a column just yet, TODO")
+                return None
+
+        self.vars += variables
+        buffer = dict([])
+        newcols = {var: (lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)) for var in variables}
+        for key in newcols:
+            buffer[key] = []
+
+        for index, row in self.data.iterrows():
+            for key in newcols:
+                get(key, buffer).append(get(key, newcols)(row))
+
+        for key in newcols:
+            self.data[key] = pd.Series(buffer[key], index=self.data.index)
+        self.make_units()
+        self.make_meta()
+
+    def clean(self) -> None:
+        """Re-cleans data"""
+        if "P" in self.vars:
+            self.data = self.data[self.data["P"] >=
+                                  CP.PropsSI("PMIN", self.fluid) + 1.0]
+        if "S" in self.vars:
+            self.data = self.data[self.data["S"] > 0.0]
+        if "T" in self.vars:
+            self.data = self.data[self.data["T"] >=
+                                  (CP.PropsSI("TMIN", self.fluid) + 1.0)]
+        if "U" in self.vars:
+            self.data = self.data[self.data["U"] >= 1.0]
+        if "V" in self.vars:
+            self.data = self.data[self.data["V"] >= 0.1]
+
 
     def write_data(self, path: str) -> None:
         """
@@ -209,21 +258,19 @@ class ThermoFluid():
             path (str): path where file should be saved
 
         """
-
+        self.make_meta()
         middle_string = self.fluid + "_" + "_".join([
             str(varname) + "-" + str(point)
-            for (varname, point) in zip(self.vars, self.numPoints)
-        ] + [self.vars[-1]])
+            for (varname, point) in zip(self.vars[:1], self.numPoints)
+        ] + [self.vars[2]])
         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
         with open(path + middle_string + ".json", mode="w+") as f:
             json.dump(dict(self.meta), f)
 
-    def copy(self):
+    def copy(self) -> T:
         """
         Returns a copy of itself
 
-        returns:
-            self (ThermoFluid): A copy of this object
         """
         return copy.deepcopy(self)
 
@@ -279,15 +326,15 @@ class CSVFluid():
             self.meta = pyr.pmap(json.loads(jf.read()))
         with open(pathToFile + ".csv", mode="r+") as cf:
             self.data = pd.read_csv(cf)
-        self.colorMap = self.meta['colorMap']
-        self.xvar = self.meta['xvar']
-        self.yvar = self.meta['yvar']
-        self.zvar = self.meta['zvar']
-        self.vars = [self.xvar, self.yvar, self.zvar]
-        self.fluid = self.meta['fluid']
-        self.colorMap = self.meta['colorMap']
-        self.numPoints = self.meta['numPoints']
-        self.units = self.meta['units']
+        self.colorMap = self.meta["colorMap"]
+        self.xvar = self.meta["xvar"]
+        self.yvar = self.meta["yvar"]
+        self.zvar = self.meta["zvar"]
+        self.vars = self.meta["vars"]
+        self.fluid = self.meta["fluid"]
+        self.colorMap = self.meta["colorMap"]
+        self.numPoints = self.meta["numPoints"]
+        self.units = self.meta["units"]
 
     def changeOrder(self, order: List[int]) -> None:
         """
@@ -305,12 +352,10 @@ class CSVFluid():
         self.zvar = self.vars[2]
         self.units = [self.units[i] for i in order]
 
-    def copy(self):
+    def copy(self) -> C:
         """
         Returns a copy of itself
 
-        returns:
-            self (CSVFluid): A copy of this object
         """
         return copy.deepcopy(self)
 
@@ -321,9 +366,6 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
 
     Parameters:
         fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.
-
-    Returns:
-        None
 
     """
 
@@ -359,9 +401,6 @@ def rescale(oldrange: List[Union[float, int]],
     Parameters:
         oldrange (List[Union[float, int]]): The old range of the data, [min, max]
         newrange (List[Union[float, int]]): The new range of the data, [min, max]
-
-    Returns:
-        closure (Callable[[Union[float, int]], Union[float, int]]): A function that takes in a scalar from the old range, and scales it to the new range.
 
     """
     return lambda x: (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]

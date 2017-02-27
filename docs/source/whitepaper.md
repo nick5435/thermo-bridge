@@ -15,7 +15,7 @@ To do this, we have made the following assumptions:
 
 *   We will be modeling a fluid supported by [coolProp][]
 *   We will be using x and y variables supported by [coolProp][]
-*   The user is using [Python 3][Python], preferably Python 3.6.
+*   The user is using [Python 3.6+.][Python]
 
 ## Why Python?
 
