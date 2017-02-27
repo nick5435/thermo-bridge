@@ -23,9 +23,15 @@ from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
 T = TypeVar("ThermoFluid")
 C = TypeVar("CSVFluid")
 
-UNITS = {"P":"Pa",
-"T":"K","S":"J/kg/K","G":"J/kg","U":"J/kg","D":"kg/m^3","V":"m^3"}
-
+UNITS = {
+    "P": "Pa",
+    "T": "K",
+    "S": "J/kg/K",
+    "G": "J/kg",
+    "U": "J/kg",
+    "D": "kg/m^3",
+    "V": "m^3"
+}
 
 
 class ThermoFluid():
@@ -158,7 +164,7 @@ class ThermoFluid():
         self.clean()
         self.make_meta()
 
-    def make_units(self)-> None:
+    def make_units(self) -> None:
         """(Re)make the units list"""
         self.units = [get(var, UNITS, "UnknownVar") for var in self.vars]
 
@@ -180,7 +186,6 @@ class ThermoFluid():
             "units": self.units
         })
 
-
     def refresh(self) -> None:
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
@@ -189,8 +194,7 @@ class ThermoFluid():
         self.clean()
         self.meta()
 
-
-    def add_column(self, variables: Union[List[Text], Text])-> None:
+    def add_column(self, variables: Union[List[Text], Text]) -> None:
         """
         Adds a column to the dataframe
 
@@ -201,17 +205,22 @@ class ThermoFluid():
             try:
                 assert var not in self.vars
             except AssertionError:
-                print(f"Cannot add column {var}: already in frame")
+                print("Cannot add column {0}: already in frame".format(var))
                 return None
             try:
                 assert var != "V"
             except AssertionError:
-                print(f"Cannot add Volume as a column just yet, TODO")
+                print("Cannot add Volume as a column just yet, TODO")
                 return None
 
         self.vars += variables
         buffer = dict([])
-        newcols = {var: (lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)) for var in variables}
+        newcols = {
+            var:
+            (lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+             )
+            for var in variables
+        }
         for key in newcols:
             buffer[key] = []
 
@@ -238,7 +247,6 @@ class ThermoFluid():
             self.data = self.data[self.data["U"] >= 1.0]
         if "V" in self.vars:
             self.data = self.data[self.data["V"] >= 0.1]
-
 
     def write_data(self, path: str) -> None:
         """
