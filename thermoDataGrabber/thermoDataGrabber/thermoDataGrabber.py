@@ -72,19 +72,11 @@ class ThermoFluid():
 
         """
 
-        self.fluid: str
         self.fluid = fluid
-        self.numPoints: Union[List[int], int]
         if type(numPoints) is int:
             self.numPoints = [numPoints, numPoints]
         else:
             self.numPoints = [numPoints[0], numPoints[1]]
-        self.colorMap: str
-        self.xvar: str
-        self.yvar: str
-        self.zvar: str
-        self.M: float
-        self.meta: pyr._pmap.PMap
         self.colorMap = colorMap
         self.xvar = var1
         self.yvar = var2
@@ -161,7 +153,6 @@ class ThermoFluid():
                     ])
 
         # Create Pandas Frame of Data
-        self.data: pd.DataFrame
         self.data = pd.DataFrame(np.asarray(data), columns=self.vars)
         self.make_units()
         self.clean()
@@ -169,7 +160,6 @@ class ThermoFluid():
 
     def make_units(self)-> None:
         """(Re)make the units list"""
-        self.units: List[Text]
         self.units = [get(var, UNITS, "UnknownVar") for var in self.vars]
 
     def make_meta(self) -> None:
@@ -312,16 +302,7 @@ class CSVFluid():
             pathToFile (str): The name of the files you want to use, NOT the path. Must have both a json and a CSV file for this purpose.
 
         """
-        self.meta: pyr._pmap.PMap
-        self.data: pd.DataFrame
-        self.fluid: str
-        self.numPoints: Union[List[int], int]
-        self.colorMap: str
-        self.xvar: str
-        self.yvar: str
-        self.zvar: str
-        self.M: float
-        self.vars: List[Text]
+
         with open(pathToFile + ".json", mode="r+") as jf:
             self.meta = pyr.pmap(json.loads(jf.read()))
         with open(pathToFile + ".csv", mode="r+") as cf:
