@@ -10,7 +10,7 @@ We generate <a href="https://github.com/nick5435/thermo-bridge/tree/master/data"
 Install the library by runnning <pre>pip install -e .</pre> in the ThermoPyle directory.
 <br />
 Documentation is at: <a href='http://thermo-bridge.readthedocs.io/'>
-     Read The Docs.io <br />
+     ReadTheDocs.io <br />
      <img src='https://readthedocs.org/projects/thermo-bridge/badge/?version=stable' alt='Documentation Status' />
 </a>
 </td>
