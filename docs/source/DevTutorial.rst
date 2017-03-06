@@ -30,7 +30,7 @@ Setup Process
     cd ~
     git clone https://github.com/nick5435/thermo-bridge.git
     cd thermo-bridge
-    pip install ThermoPyle/ -e -U
+    pip install -e ./ThermoPyle[dev]
     conda update --all
 
 #. For a runtime example, open :code:`notebooks/thermo_generic_library_runner.ipynb` using :code:`jupyter notebook`

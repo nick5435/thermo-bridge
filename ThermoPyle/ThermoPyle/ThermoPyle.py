@@ -6,9 +6,11 @@
 .. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>
 """
 
-import copy
 import json
+from copy import deepcopy
+from itertools import permutations
 
+import arrow
 import CoolProp.CoolProp as CP
 import matplotlib.pyplot as plt
 import numpy as np
@@ -17,7 +19,6 @@ import pyrsistent as pyr
 from cytoolz import get
 from mpl_toolkits.mplot3d import Axes3D
 
-import arrow
 from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
 
 T = TypeVar("ThermoFluid")
@@ -30,7 +31,8 @@ UNITS = {
     "G": "J/kg",
     "U": "J/kg",
     "D": "kg/m^3",
-    "V": "m^3"
+    "V": "m^3",
+    "PHASE": "",
 }
 
 
@@ -59,7 +61,7 @@ class ThermoFluid():
                  var2: str="P",
                  outvar: str="S",
                  numPoints: Union[List[int], int]=[216, 216],
-                 colorMap: str="nipy_spectral") -> None:
+                 colorMap: str="viridis") -> None:
         """
         Call the class with these arguments
 
@@ -166,7 +168,7 @@ class ThermoFluid():
 
     def make_units(self) -> None:
         """(Re)make the units list"""
-        self.units = [get(var, UNITS, "UnknownVar") for var in self.vars]
+        self.units = {var: get(var, UNITS, "UnknownVar") for var in self.vars}
 
     def make_meta(self) -> None:
         """
@@ -180,7 +182,7 @@ class ThermoFluid():
             "xvar": self.xvar,
             "yvar": self.yvar,
             "zvar": self.zvar,
-            "vars": self.vars,
+            "vars": list(self.vars),
             "numPoints": self.numPoints,
             "colorMap": self.colorMap,
             "units": self.units
@@ -201,17 +203,20 @@ class ThermoFluid():
         Paramaters:
             variable (Union[List[Text],Text]): What variable(s) to add
         """
+        if type(variables) is not list:
+            variables = [variables]
+
         for var in variables:
             try:
                 assert var not in self.vars
             except AssertionError:
-                print("Cannot add column {0}: already in frame".format(var))
-                return None
+                raise ValueError(
+                    "Cannot add column {0}: already in frame".format(var))
+
             try:
                 assert var != "V"
             except AssertionError:
-                print("Cannot add Volume as a column just yet, TODO")
-                return None
+                raise TypeError("Cannot add Volume as a column just yet, TODO")
 
         self.vars += variables
         buffer = dict([])
@@ -227,7 +232,6 @@ class ThermoFluid():
         for index, row in self.data.iterrows():
             for key in newcols:
                 get(key, buffer).append(get(key, newcols)(row))
-
         for key in newcols:
             self.data[key] = pd.Series(buffer[key], index=self.data.index)
         self.make_units()
@@ -248,19 +252,42 @@ class ThermoFluid():
         if "V" in self.vars:
             self.data = self.data[self.data["V"] >= 0.1]
 
-    def write_data(self, path: str) -> None:
+    def write_data(self, path: str, **kwargs) -> None:
         """
         Does what it says on the tin. Makes a CSV and JSON files and saves them to data/FluidName_X-xpoints_Y-ypoints_Z.
 
         Parameters:
             path (str): path where file should be saved
+            filename (str): what to name the file
+            mode (str): How to name the file
 
+                 -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``
+                 -  **custom**: fully custom name.
+                 -  **dual**: default + custom (with custom appended).
         """
+        if bool(kwargs):
+            if "filename" not in kwargs and "mode" in kwargs and get("nameMode", kwargs) in {"dual", "custom"}:
+                raise TypeError(
+                    "When supplying {0} mode, filename is required; None given".format(get('nameMode', kwargs)))
+            nameMode = get("mode", kwargs, "default")
+        else:
+            nameMode = "default"
+
+        if nameMode != "custom":
+            default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
+                varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+
+        if nameMode == "custom":
+            middle_string = get("filename", kwargs)
+
+        elif nameMode == "default":
+            middle_string = default_string
+
+        elif nameMode == "dual":
+            middle_string = default_string + "_" + str(get("filename", kwargs))
+
         self.make_meta()
-        middle_string = self.fluid + "_" + "_".join([
-            str(varname) + "-" + str(point)
-            for (varname, point) in zip(self.vars[:1], self.numPoints)
-        ] + [self.vars[2]])
+
         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
         with open(path + middle_string + ".json", mode="w+") as f:
             json.dump(dict(self.meta), f)
@@ -268,9 +295,8 @@ class ThermoFluid():
     def copy(self) -> T:
         """
         Returns a copy of itself
-
         """
-        return copy.deepcopy(self)
+        return deepcopy(self)
 
 
 class CSVFluid():
@@ -319,34 +345,43 @@ class CSVFluid():
         self.xvar = self.meta["xvar"]
         self.yvar = self.meta["yvar"]
         self.zvar = self.meta["zvar"]
-        self.vars = self.meta["vars"]
+        self.vars = list(self.meta["vars"])
         self.fluid = self.meta["fluid"]
         self.colorMap = self.meta["colorMap"]
         self.numPoints = self.meta["numPoints"]
         self.units = self.meta["units"]
 
-    def changeOrder(self, order: List[int]) -> None:
+    def changeOrder(self, order: List[Text]) -> None:
         """
         Changes order of the columns:
 
         Parameters:
-            order (List[int]): is a permutation on {0,1,2}.
+            order (List[Text]): is a permutation of length 3 on vars.
 
         """
+        try:
+            assert set(order).issubset(set(self.vars))
+        except AssertionError:
+            raise ValueError("All entries order MUST be in vars")
 
-        self.data = self.data[[self.vars[i] for i in order]]
-        self.vars = [self.vars[i] for i in order]
-        self.xvar = self.vars[0]
-        self.yvar = self.vars[1]
-        self.zvar = self.vars[2]
-        self.units = [self.units[i] for i in order]
+        try:
+            assert order in permutations(self.vars, 3)
+        except AssertionError:
+            raise ValueError(
+                "Order of columns must be a permutation of columns of data")
+
+        self.data = self.data[list(
+            order) + [var for var in set(self.vars) if var not in set(order)]]
+        self.xvar = order[0]
+        self.yvar = order[1]
+        self.zvar = order[2]
 
     def copy(self) -> C:
         """
         Returns a copy of itself
 
         """
-        return copy.deepcopy(self)
+        return deepcopy(self)
 
 
 def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:

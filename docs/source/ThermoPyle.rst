@@ -11,3 +11,4 @@ ThermoPyle
 
 .. automodule:: ThermoPyle
       :members: fluid_plot, rescale
+      :noindex:
