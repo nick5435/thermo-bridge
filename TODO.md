@@ -1,14 +1,8 @@
 # TODO:
 
 *   [ ] Improve README
-*   [ ] Whitepaper
-*   [ ] Figure out how CoolProp generates its data
+*   [ ] Flesh out whitepaper
 *   [ ] Path Length should logically correspond to **Energy**, or something like that.
-*   [ ] **Internal Energy should be able to work as an Input variable** Note: Having same issues as with entropy, might not be feasible as of *2017-02-11*
-*   [ ] <pre> do \<function> to \<col> where \<condition></pre> (Pandas?) (Flag col?)
-*   [ ] **Big 'ol CSV of derivatives**
-*   [ ] CSV Contour Plot w/ column order option
-*   [ ] Find host for Documentation
 *   [ ] Cythonize Code - Would increase speed by a lot!
 
 *   [x] ~~UML Diagram~~ **2017-01-19 NM**
@@ -22,3 +16,9 @@
 *   [x] ~~metadata function for gDG~~ **2017-02-11 NM**
 *   [x] ~~Wrap everything up for eventual Pip deployment~~ **2017-02-11 NM**
 *   [x] ~~CSV to Plot function in genericDataGrabber with column order changed~~ **2017-02-11 NM**
+*   [x] ~~<pre> do \<function> to \<col> where \<condition></pre> (Pandas?) (Flag Col?)~~ _Similar functionality already exists in Pandas_ **2017-02-19 NM**
+*   [x] ~~Big 'ol CSV of derivatives~~ **2017-03-06 NM**
+*   [x] ~~Find host for Documentation~~ **2017-02-26 NM**
+*   [x] ~~**Internal Energy should be able to work as an Input variable** Note: Having same issues as with entropy, might not be feasible as of *2017-02-11*~~ _It works great if we pivot!_ **2017-03-06 NM**
+*   [x] ~~Figure out how CoolProp generates its data~~ _It uses C++ routines and a rediculously complicated EoS_ **2017-02-26 NM**
+*   [x] ~~CSV Contour Plot w/ column order option~~ _CSV import and reorder column functionality done, plotting is left as an exercise_ **2017-03-06 NM**

@@ -5,7 +5,7 @@ Surfaces:
 		**U(T,P)**
 		- Can model multiple phases, curvature!
 		- NO LOG SCALE! Scalar Scaling is OK
-	Dimensions: 
+	Dimensions:
 		8.5" x 8.5" or 216mm x 216mm
 		Need points close enough together (δx, δy small)
 		X, Y scale to (0, 216)
@@ -15,8 +15,5 @@ Surfaces:
 
 Dummy Surface
 	For Reference: 200-400 Data per side, more than that takes FOREVER to render
-	Needs 
-	
-	
 	Plastic is .118" thick (MAX!)
 	Plot curves w/ different spacings
