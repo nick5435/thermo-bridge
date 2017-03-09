@@ -60,7 +60,7 @@ class ThermoFluid():
                  var1: str="T",
                  var2: str="P",
                  outvar: str="S",
-                 numPoints: Union[List[int], int]=[216, 216],
+                 numPoints: Union[List[int], int]=[217, 217],
                  colorMap: str="viridis") -> None:
         """
         Call the class with these arguments
