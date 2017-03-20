@@ -9,7 +9,7 @@ def readme():
 
 setup(
     name='ThermoPyle',
-    version='0.5.4',
+    version='0.5.5',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     long_description=readme(),
     url='https://github.com/nick5435/thermo-bridge',

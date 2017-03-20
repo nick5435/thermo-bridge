@@ -11,7 +11,8 @@ def make_Time(time):
 
 
 start = timeit.default_timer()
-myfluid = TP.ThermoFluid("Water", "T", "P", "U", [217, 217])
+myfluid = TP.ThermoFluid(fluid="Water", xvar="T",
+                         yvar="P", zvar="U", numPoints=[217, 217])
 
 d_vars = ["U", "T", "P", "S", "D", "G"]
 newCols = {f"d({z})/d({y})|{x}" for x, y, z in permutations(d_vars, 3)
