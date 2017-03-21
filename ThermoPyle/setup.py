@@ -1,4 +1,7 @@
+import setuptools
 from setuptools import find_packages, setup
+from setuptools.extension import Extension
+from Cython.Build import cythonize
 
 
 def readme():
@@ -7,9 +10,11 @@ def readme():
         return f.read()
 
 
+extensions = [Extension("ThermoPyle", ["ThermoPyle/ThermoPyle.pyx"]), ]
+
 setup(
     name='ThermoPyle',
-    version='0.5.5',
+    version='0.6.0',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     long_description=readme(),
     url='https://github.com/nick5435/thermo-bridge',
@@ -18,11 +23,13 @@ setup(
     license='MIT',
     packages=find_packages(),
     zip_safe=False,
+    setup_requires=['cython'],
     install_requires=[
         'CoolProp>=6.0.0', 'matplotlib>=2.0.0', 'numpy>=1.12.0',
         'pandas>=0.19.2',
         'pyrsistent>=0.12.0', 'arrow>=0.10.0', 'cytoolz>=0.8.2',
-        'mpld3>=0.3'
+        'mpld3>=0.3',
+        'cython>=0.25.2'
     ],
     extra_require={
         'dev': [
@@ -31,6 +38,7 @@ setup(
             'recommonmark>=0.4.0', 'pypandoc>=1.3.3',
         ]
     },
+    ext_modules=cythonize(extensions),
     python_requires='>=3.5.0',
     include_package_data=True,
     classifiers=[

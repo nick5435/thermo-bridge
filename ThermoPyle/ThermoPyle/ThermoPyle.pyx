@@ -212,12 +212,16 @@ class ThermoFluid():
 
         self.vars += variables
         buffer = dict([])
-        newcols = {
-            var:
-            (lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
-             )
-            for var in variables
-        }
+        newcols = dict([])
+        for var in variables:
+            newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+
+#         newcols = {
+#             var:
+#             (lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+#              )
+#             for var in variables
+#         }
         for key in newcols:
             buffer[key] = []
 
