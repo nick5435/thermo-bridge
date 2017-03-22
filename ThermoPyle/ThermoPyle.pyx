@@ -393,9 +393,9 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
         edgecolors="none")
 
     # Set the Labels
-    ax.set_xlabel("{0} [{1}]".format(fluid.vars[0], fluid.units[fluid.vars[0]]))
-    ax.set_ylabel("{0} [{1}]".format(fluid.vars[1], fluid.units[fluid.vars[1]]))
-    ax.set_zlabel("{0} [{1}]".format(fluid.vars[2], fluid.units[fluid.vars[2]]))
+    ax.set_xlabel("{0} [{1}]".format(fluid.vars[0], fluid.units[0]))
+    ax.set_ylabel("{0} [{1}]".format(fluid.vars[1], fluid.units[1]))
+    ax.set_zlabel("{0} [{1}]".format(fluid.vars[2], fluid.units[2]))
     ax.set_title("{0} and {1} vs {2} of {3}".format(*fluid.vars, fluid.fluid))
     plt.show()
 

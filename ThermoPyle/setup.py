@@ -10,7 +10,7 @@ def readme():
         return f.read()
 
 
-extensions = [Extension("ThermoPyle", ["ThermoPyle/ThermoPyle.pyx"]), ]
+extensions = [Extension("ThermoPyle", ["ThermoPyle.pyx"]), ]
 
 setup(
     name='ThermoPyle',
