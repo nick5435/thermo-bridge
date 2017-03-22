@@ -49,7 +49,7 @@ napoleon_use_rtype = True
 
 autodoc_mock_imports = [
     "pyrsistent", "arrow", "matplotlib", "mpl_toolkits", "matplotlib.pyplot",
-    "pandas", "cytoolz", "numpy", "mpl_toolkits.mplot3d", "Cython"
+    "pandas", "cytoolz", "numpy", "mpl_toolkits.mplot3d", "Cython", "matplotlib.mlab", "matplotlib.cm"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
