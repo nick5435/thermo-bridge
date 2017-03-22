@@ -23,13 +23,13 @@ setup(
     license='MIT',
     packages=find_packages(),
     zip_safe=False,
-    setup_requires=['cython'],
+    setup_requires=['cython', 'Cython'],
     install_requires=[
         'CoolProp>=6.0.0', 'matplotlib>=2.0.0', 'numpy>=1.12.0',
         'pandas>=0.19.2',
         'pyrsistent>=0.12.0', 'arrow>=0.10.0', 'cytoolz>=0.8.2',
         'mpld3>=0.3',
-        'cython>=0.25.2'
+        'Cython>=0.25.2'
     ],
     extra_require={
         'dev': [
