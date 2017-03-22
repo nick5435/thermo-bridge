@@ -1,4 +1,5 @@
 CoolProp>=6.0.0
+Cython>=0.25.2
 matplotlib>=2.0.0
 numpy>=1.12.0
 pandas>=0.19.2
@@ -12,5 +13,4 @@ sphinx-autobuild>=0.6.0
 recommonmark>=0.4.0
 pypandoc>=1.3.3
 sphinx-autodoc-typehints>=1.1.0
-Cython>=0.25.2
 ./ThermoPyle

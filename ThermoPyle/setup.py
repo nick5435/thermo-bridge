@@ -35,7 +35,7 @@ setup(
         'dev': [
             'sphinx>=1.5.1', 'sphinx_bootstrap_theme>=0.4.13',
             'sphinx-autobuild>=0.6.0', 'sphinx-autodoc-typehints>=1.1.0',
-            'recommonmark>=0.4.0', 'pypandoc>=1.3.3',
+            'recommonmark>=0.4.0', 'pypandoc>=1.3.3', 'Cython>=0.25.2',
         ]
     },
     ext_modules=cythonize(extensions),
