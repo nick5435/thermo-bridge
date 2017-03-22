@@ -164,7 +164,9 @@ class ThermoFluid():
 
     def make_units(self) -> None:
         """(Re)make the units list"""
-        self.units = {var: get(var, UNITS, "UnknownVar") for var in self.vars}
+        self.units = {}
+        for var in self.vars:
+            self.units[var] =  get(var, UNITS, "UnknownVar")
 
     def make_meta(self) -> None:
         """
@@ -188,9 +190,9 @@ class ThermoFluid():
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
         """
-        self.units()
+        self.make_units()
         self.clean()
-        self.meta()
+        self.make_meta()
 
     def add_column(self, variables: Union[List[Text], Text]) -> None:
         """
@@ -215,17 +217,11 @@ class ThermoFluid():
                 raise TypeError("Cannot add Volume as a column just yet, TODO")
 
         self.vars += variables
-        buffer = dict([])
-        newcols = dict([])
+        buffer = {}
+        newcols = {}
         for var in variables:
             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
 
-#         newcols = {
-#             var:
-#             (lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
-#              )
-#             for var in variables
-#         }
         for key in newcols:
             buffer[key] = []
 
@@ -372,35 +368,54 @@ class CSVFluid():
         return deepcopy(self)
 
 
-def fluid_plot(fluid: Union[CSVFluid, ThermoFluid]) -> None:
+def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:
     """
     Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
 
     Parameters:
         fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.
-
+        xvar (Text): What variable to put on the x-axis
+        yvar (Text): What variable to put on the y-axis
+        zvar (Text): What variable to put on the z-axis
+        coloring (Text): What variable to color by. Default is zvar.
     """
+    if not coloring:
+        coloring = fluid.zvar
+    for var in [xvar, yvar, zvar, coloring]:
+        if not var:
+            if var == xvar:
+                xvar = fluid.xvar
+            if var == yvar:
+                yvar = fluid.yvar
+            if var == zvar:
+                zvar = fluid.zvar
+            if var == coloring:
+                coloring == fluid.zvar
+        try:
+            assert var in fluid.vars
+        except AssertionError:
+            ValueError("variable {0} is not a valid variable.".format(var))
 
     # Plotting:
-    fig = plt.figure()
+    fig = plt.figure(randint(10**4,10**5))
 
     # we want 3D plots
     ax = fig.add_subplot(111, projection="3d")
 
     # Plot the data
     ax.scatter(
-        fluid.data[fluid.xvar],
-        fluid.data[fluid.yvar],
-        fluid.data[fluid.zvar],
-        c=fluid.data[fluid.zvar],
+        fluid.data[xvar],
+        fluid.data[yvar],
+        fluid.data[zvar],
+        c=fluid.data[coloring],
         cmap=fluid.colorMap,
         edgecolors="none")
 
     # Set the Labels
-    ax.set_xlabel("{0} [{1}]".format(fluid.xvar, fluid.units[fluid.xvar]))
-    ax.set_ylabel("{0} [{1}]".format(fluid.yvar, fluid.units[fluid.yvar]))
-    ax.set_zlabel("{0} [{1}]".format(fluid.zvar, fluid.units[fluid.zvar]))
-    ax.set_title("{0} and {1} vs {2} of {3}".format(fluid.xvar, fluid,yvar, fluid.zvar, fluid.fluid))
+    ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
+    ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
+    ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
+    ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))
     plt.show(fig)
 
 
@@ -437,7 +452,7 @@ def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], contour: Text) -> No
     fignum = fig.number
     X = np.array(pd.Series(fluid.data[fluid.xvar]).unique())
     Y = np.array(pd.Series(fluid.data[fluid.yvar]).unique())
-    Z = np.array(fluid.data.pivot(index=fluid.xvar, columns=fluid.yvar)[contour])
+    Z = np.array(fluid.data.pivot(index=fluid.xvar, columns=fluid.yvar, values=contour))
     CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
     fmt = {}
     for x in CS.levels:
@@ -446,4 +461,4 @@ def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], contour: Text) -> No
     plt.xlabel("{0} [{1}]".format(fluid.xvar, fluid.units[fluid.xvar]))
     plt.ylabel("{0} [{1}]".format(fluid.yvar, fluid.units[fluid.yvar]))
     plt.title("{0} and {1} vs {2} of {3}".format(fluid.xvar, fluid.yvar, contour, fluid.fluid))
-    plot.show(fig)
+    plt.show(fig)
