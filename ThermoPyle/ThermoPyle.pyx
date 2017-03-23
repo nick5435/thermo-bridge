@@ -87,10 +87,10 @@ class ThermoFluid():
         self.zvar = zvar
         self.vars = [self.xvar, self.yvar, self.zvar]
         self.M = CP.PropsSI("M", self.fluid)
-        if "S" in self.vars[:-1]:
-            raise ValueError(
-                "S (entropy) is not supported as an input variable, try permuting your inputs until you get something to work!"
-            )
+        # if "S" in self.vars[:-1]:
+        #     raise ValueError(
+        #         "S (entropy) is not supported as an input variable, try permuting your inputs until you get something to work!"
+        #     )
 
         # Linear interpolation between tmin and tmax with NUM_POINTS number of
         # points, delta = tmax-min/NUM_POINTS
