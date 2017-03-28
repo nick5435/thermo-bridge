@@ -10,7 +10,6 @@ import json
 from copy import deepcopy
 from itertools import permutations
 from random import randint
-# from numba import jit, jitclass, int64, float64, void
 
 import arrow
 import CoolProp.CoolProp as CP
@@ -36,7 +35,8 @@ UNITS = {
     "G": "J/kg",
     "U": "J/kg",
     "D": "kg/m^3",
-    "V": "m^3",
+    "VISCOSITY": "Pa*s",
+    "H": "J/kg",
     "PHASE": "",
 }
 
@@ -87,10 +87,7 @@ class ThermoFluid():
         self.zvar = zvar
         self.vars = [self.xvar, self.yvar, self.zvar]
         self.M = CP.PropsSI("M", self.fluid)
-        # if "S" in self.vars[:-1]:
-        #     raise ValueError(
-        #         "S (entropy) is not supported as an input variable, try permuting your inputs until you get something to work!"
-        #     )
+
 
         # Linear interpolation between tmin and tmax with NUM_POINTS number of
         # points, delta = tmax-min/NUM_POINTS
@@ -101,11 +98,7 @@ class ThermoFluid():
                 self.numPoints[0] + 1)
         elif self.xvar in ["D"] and self.fluid.lower() == "water":
             xspace = np.linspace(0.01, 1200.01, self.numPoints[0] + 1)
-        # elif self.xvar in ["S"] and self.fluid.lower() == "water":
-        #     xspace = np.linspace(35.0, 393.3, self.numPoints[0])
-        elif self.xvar in ["V"]:
-            xspace = np.linspace(self.M / 1200.01, self.M / 0.01,
-                                 self.numPoints[0] + 1)
+
         elif self.xvar in ["U"]:
             xspace = np.linspace(9000.0, 6000000.0, self.numPoints[0] + 1)
 
@@ -117,44 +110,21 @@ class ThermoFluid():
                 CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1,
                 self.numPoints[1] + 1)
 
-        elif self.yvar in ["V"]:
-            yspace = np.linspace(self.M / 1200.01, self.M / 0.01,
-                                 self.numPoints[1] + 1)
+        elif self.yvar in ["D"] and self.fluid.lower() == "water":
+            yspace = np.linspace(0.01, 1200.01, self.numPoints[1] + 1)
+
         elif self.yvar in ["U"]:
             yspace = np.linspace(9000.0, 6000000.0, self.numPoints[1] + 1)
 
         # Create a empty list for storing data
         # Then make our data.
         data = np.empty((0, 3), dtype=float)
-
-        if "V" not in self.vars:
-            for x in xspace:
-                for y in yspace:
-                    data = np.append(data, [[
-                        x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
-                                         self.fluid)
-                    ]], axis=0)
-        elif self.xvar == "V":
-            for x in xspace:
-                for y in yspace:
-                    data = np.append(data, [[
-                        x, y, CP.PropsSI(self.zvar, "D", self.M / x, self.yvar,
-                                         y, self.fluid)
-                    ]], axis=0)
-        elif self.yvar == "V":
-            for x in xspace:
-                for y in yspace:
-                    data = np.append(data, [[
-                        x, y, CP.PropsSI(self.zvar, self.xvar, x, "D",
-                                         self.M / y, self.fluid)
-                    ]], axis=0)
-        elif self.zvar == "V":
-            for x in xspace:
-                for y in yspace:
-                    data = np.append(data, [[
-                        x, y, self.M /
-                        CP.PropsSI("D", self.xvar, x, self.yvar, y, self.fluid)
-                    ]], axis=0)
+        for x in xspace:
+            for y in yspace:
+                data = np.append(data, [[
+                    x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
+                                     self.fluid)
+                                     ]], axis=0)
 
         # Create Pandas Frame of Data
         self.data = pd.DataFrame(data, columns=self.vars)
@@ -211,10 +181,6 @@ class ThermoFluid():
                 raise ValueError(
                     "Cannot add column {0}: already in frame".format(var))
 
-            try:
-                assert var != "V"
-            except AssertionError:
-                raise TypeError("Cannot add Volume as a column just yet, TODO")
 
         self.vars += variables
         buffer = {}
@@ -267,7 +233,7 @@ class ThermoFluid():
             assert mode in {"dual", "custom", "default"}
         except AssertionError:
             raise ValueError(
-                "Mode must be one of 'dual', 'custom', or 'default'. {0} provided".format(mode))
+                "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
 
         if filename == "" and mode in {"dual", "custom"}:
             raise TypeError(
@@ -446,8 +412,8 @@ def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], contour: Text) -> No
     except AssertionError:
         ValueError("contour needs to be a variable of fluid")
 
-    matplotlib.rcParams['xtick.direction'] = 'out'
-    matplotlib.rcParams['ytick.direction'] = 'out'
+    matplotlib.rcParams["xtick.direction"] = "out"
+    matplotlib.rcParams["ytick.direction"] = "out"
     fig = plt.figure(randint(1,10**4))
     fignum = fig.number
     X = np.array(pd.Series(fluid.data[fluid.xvar]).unique())
