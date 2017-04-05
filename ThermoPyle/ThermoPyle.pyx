@@ -17,8 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import matplotlib
-import matplotlib.cm as cm
-import matplotlib.mlab as mlab
+from matplotlib import cm, mlab
 import pyrsistent as pyr
 from cytoolz import get
 from mpl_toolkits.mplot3d import Axes3D
@@ -399,32 +398,47 @@ def rescale(oldrange: List[Union[float, int]],
     return lambda x: (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
 
 
-def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], contour: Text) -> None:
+def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:
     """
     Does what it says on the tin. Makes a Contour Plot of the Fluid.
 
     Paramaters:
         fluid (Union[CSVFluid, ThermoFluid]): What fluid object to get data from.
+        xvar (Text): What is our x-variable
+        yvar (Text): What is our y-variable?
         contour (Text): What contour to plot. Must be a variable in fluid.vars
     """
     try:
         assert contour in set(fluid.vars)
     except AssertionError:
         ValueError("contour needs to be a variable of fluid")
+    for var in [xvar, yvar]:
+        try:
+            assert var in set(fluid.vars)
+        except AssertionError:
+            ValueError("Variable not valid.")
 
     matplotlib.rcParams["xtick.direction"] = "out"
     matplotlib.rcParams["ytick.direction"] = "out"
     fig = plt.figure(randint(1,10**4))
     fignum = fig.number
-    X = np.array(pd.Series(fluid.data[fluid.xvar]).unique())
-    Y = np.array(pd.Series(fluid.data[fluid.yvar]).unique())
-    Z = np.array(fluid.data.pivot(index=fluid.xvar, columns=fluid.yvar, values=contour))
-    CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
+    # X = np.array(pd.Series(fluid.data[xvar]).unique())
+    # Y = np.array(pd.Series(fluid.data[yvar]).unique())
+    xx = pd.Series(fluid.data[xvar]).tolist()
+    yy = pd.Series(fluid.data[yvar]).tolist()
+    zz = pd.Series(fluid.data[contour]).tolist()
+    xi = np.linspace(min(xx), max(xx), 217)
+    yi = np.linspace(min(yy), max(yy), 217)
+    #Z = np.array(fluid.data.pivot(index=xvar, columns=yvar,  values=contour))
+    Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
+    X, Y = np.meshgrid(xi, yi)
+    #CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
+    CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
     fmt = {}
     for x in CS.levels:
         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
-    plt.xlabel("{0} [{1}]".format(fluid.xvar, fluid.units[fluid.xvar]))
-    plt.ylabel("{0} [{1}]".format(fluid.yvar, fluid.units[fluid.yvar]))
-    plt.title("{0} and {1} vs {2} of {3}".format(fluid.xvar, fluid.yvar, contour, fluid.fluid))
+    plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
+    plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
+    plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))
     plt.show(fig)

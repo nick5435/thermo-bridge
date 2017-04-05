@@ -11,9 +11,10 @@ def make_Time(time):
     return f"{int(hours)} hours, {int(mins)} minutes, {round(secs, 3)} seconds"
 
 
-d_vars = ["U", "T", "P", "S", "D", "G", "H"]
+# d_vars = ["U", "T", "P", "S", "D", "G", "H"]
+d_vars = ["U", "T", "P", "S", "D"]
 newCols = {f"d({z})/d({y})|{x}" for x, y, z in permutations(d_vars, 3)
-           }.union(d_vars).difference({"T", "P", "U"}).union({"PHASE"})
+           }.union(d_vars).difference({"T", "P", "U"})
 
 newCols = list(newCols)
 parser = argparse.ArgumentParser(description="Make some CSV goodness.")
@@ -44,8 +45,9 @@ print(" " * 4 + f"Time Elapsed: {make_Time(gstop-gstart)}\n")
 
 print("")
 numCols = min([len(newCols), args.maxcols])
+itertimes = []
 for i, col in enumerate(newCols[:numCols]):
-    istart = timeit.default_timer()
+    itertimes.append([timeit.default_timer(), 0, 0])
     print(f"Iteration {i+1} of {numCols}:")
     print(" " * 4 + f"Calculating Column {col}")
     print(
@@ -58,9 +60,10 @@ for i, col in enumerate(newCols[:numCols]):
     except:
         print(" " * 4 + "Failed!")
         pass
-    istop = timeit.default_timer()
-    print(" " * 4 + f"This Iteration: {make_Time(istop-istart)}")
-    print(" " * 4 + f"Time Elapsed: {make_Time(istop-start)}\n")
+    itertimes[-1][1] = timeit.default_timer()
+    itertimes[-1][2] = itertimes[-1][1] - itertimes[-1][0]
+    print(" " * 4 + f"This Iteration: {make_Time(itertimes[-1][2])}")
+    print(" " * 4 + f"Time Elapsed: {make_Time(itertimes[-1][1]-start)}\n")
 
 myfluid.clean()
 if args.write:
