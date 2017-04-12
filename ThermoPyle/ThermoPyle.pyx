@@ -325,6 +325,41 @@ class CSVFluid:
             "units": self.units
         })
 
+        def add_column(self, variables: Union[List[Text], Text]) -> None:
+            """
+            Adds a column to the dataframe
+
+            Paramaters:
+                variable (Union[List[Text],Text]): What variable(s) to add
+            """
+            if type(variables) is not list:
+                variables = [variables]
+
+            for var in variables:
+                try:
+                    assert var not in self.vars
+                except AssertionError:
+                    raise ValueError(
+                        "Cannot add column {0}: already in frame".format(var))
+
+
+            self.vars += variables
+            buffer = {}
+            newcols = {}
+            for var in variables:
+                newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+
+            for key in newcols:
+                buffer[key] = []
+
+            for index, row in self.data.iterrows():
+                for key in newcols:
+                    get(key, buffer).append(get(key, newcols)(row))
+            for key in newcols:
+                self.data[key] = pd.Series(buffer[key], index=self.data.index)
+            self.make_units()
+            self.make_meta()
+
     def refresh(self) -> None:
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
