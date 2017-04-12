@@ -636,14 +636,15 @@ static const char *__pyx_f[] = {
 
 /*--- Type declarations ---*/
 struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column;
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale;
+struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column;
+struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale;
 struct __pyx_defaults;
 typedef struct __pyx_defaults __pyx_defaults;
 struct __pyx_defaults {
   PyObject *__pyx_arg_numPoints;
 };
 
-/* "ThermoPyle.pyx":166
+/* "ThermoPyle.pyx":167
  *         self.make_meta()
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -657,14 +658,28 @@ struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column {
 };
 
 
-/* "ThermoPyle.pyx":387
+/* "ThermoPyle.pyx":413
+ * 
+ * 
+ *         def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
+ *             """
+ *             Adds a column to the dataframe
+ */
+struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column {
+  PyObject_HEAD
+  PyObject *__pyx_v_self;
+  PyObject *__pyx_v_var;
+};
+
+
+/* "ThermoPyle.pyx":500
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
  *             newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
  *                                                            Union[float, int]]:
  */
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale {
+struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale {
   PyObject_HEAD
   PyObject *__pyx_v_newrange;
   PyObject *__pyx_v_oldrange;
@@ -1200,7 +1215,8 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from 'ThermoPyle' */
 static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct__add_column = 0;
-static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct_1_rescale = 0;
+static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct_1_add_column = 0;
+static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct_2_rescale = 0;
 #define __Pyx_MODULE_NAME "ThermoPyle"
 int __pyx_module_is_main_ThermoPyle = 0;
 
@@ -1222,7 +1238,6 @@ static const char __pyx_k_P[] = "P";
 static const char __pyx_k_S[] = "S";
 static const char __pyx_k_T[] = "T";
 static const char __pyx_k_U[] = "U";
-static const char __pyx_k_V[] = "V";
 static const char __pyx_k_X[] = "X";
 static const char __pyx_k_Y[] = "Y";
 static const char __pyx_k_Z[] = "Z";
@@ -1255,8 +1270,8 @@ static const char __pyx_k_0_1[] = "{0} [{1}]";
 static const char __pyx_k_Any[] = "Any";
 static const char __pyx_k_MAX[] = "MAX";
 static const char __pyx_k_MIN[] = "MIN";
-static const char __pyx_k__18[] = " ";
-static const char __pyx_k__19[] = "*";
+static const char __pyx_k__23[] = " ";
+static const char __pyx_k__24[] = "*";
 static const char __pyx_k_csv[] = ".csv";
 static const char __pyx_k_doc[] = "__doc__";
 static const char __pyx_k_fig[] = "fig";
@@ -1423,14 +1438,18 @@ static const char __pyx_k_default_string[] = "default_string";
 static const char __pyx_k_CSVFluid___init[] = "CSVFluid.__init__";
 static const char __pyx_k_xtick_direction[] = "xtick.direction";
 static const char __pyx_k_ytick_direction[] = "ytick.direction";
+static const char __pyx_k_CSVFluid_refresh[] = "CSVFluid.refresh";
 static const char __pyx_k_ThermoFluid_copy[] = "ThermoFluid.copy";
 static const char __pyx_k_0_and_1_vs_2_of_3[] = "{0} and {1} vs {2} of {3}";
 static const char __pyx_k_CoolProp_CoolProp[] = "CoolProp.CoolProp";
 static const char __pyx_k_ThermoFluid_clean[] = "ThermoFluid.clean";
 static const char __pyx_k_matplotlib_pyplot[] = "matplotlib.pyplot";
+static const char __pyx_k_CSVFluid_make_meta[] = "CSVFluid.make_meta";
 static const char __pyx_k_ThermoFluid___init[] = "ThermoFluid.__init__";
 static const char __pyx_k_Variable_not_valid[] = "Variable not valid.";
 static const char __pyx_k_fluid_contour_plot[] = "fluid_contour_plot";
+static const char __pyx_k_CSVFluid_make_units[] = "CSVFluid.make_units";
+static const char __pyx_k_CSVFluid_write_data[] = "CSVFluid.write_data";
 static const char __pyx_k_ThermoFluid_refresh[] = "ThermoFluid.refresh";
 static const char __pyx_k_YYYY_MM_DD_HH_mm_ss[] = "YYYY-MM-DD @ HH:mm:ss";
 static const char __pyx_k_CSVFluid_changeOrder[] = "CSVFluid.changeOrder";
@@ -1445,6 +1464,7 @@ static const char __pyx_k_A_class_that_will_help_work_wit[] = "\n    A class tha
 static const char __pyx_k_Mode_must_be_one_of_dual_custom[] = "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided";
 static const char __pyx_k_module_ThermoPyle_platform_Unix[] = "\n.. module:: ThermoPyle\n    :platform: Unix, Windows\n    :synopsis: Uses CoolProp to access thermodynamic data about Fluids.\n\n.. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>\n";
 static const char __pyx_k_All_entries_order_MUST_be_in_var[] = "All entries order MUST be in vars";
+static const char __pyx_k_CSVFluid_write_data_locals_add_c[] = "CSVFluid.write_data.<locals>.add_column.<locals>.<lambda>";
 static const char __pyx_k_C_Users_at8183jk_Desktop_Drive_D[] = "C:\\Users\\at8183jk\\Desktop\\Drive\\Dropsync\\School\\Winona\\ResearchProject\\code\\ThermoPyle\\ThermoPyle.pyx";
 static const char __pyx_k_Cannot_add_column_0_already_in_f[] = "Cannot add column {0}: already in frame";
 static const char __pyx_k_Order_of_columns_must_be_a_permu[] = "Order of columns must be a permutation of columns of data";
@@ -1452,6 +1472,7 @@ static const char __pyx_k_ThermoFluid_add_column_locals_la[] = "ThermoFluid.add_
 static const char __pyx_k_When_supplying_0_mode_filename_i[] = "When supplying {0} mode, filename is required; None given";
 static const char __pyx_k_contour_needs_to_be_a_variable_o[] = "contour needs to be a variable of fluid";
 static const char __pyx_k_variable_0_is_not_a_valid_variab[] = "variable {0} is not a valid variable.";
+static const char __pyx_k_CSVFluid_write_data_locals_add_c_2[] = "CSVFluid.write_data.<locals>.add_column";
 static PyObject *__pyx_kp_s_0_1;
 static PyObject *__pyx_kp_s_0_and_1_vs_2_of_3;
 static PyObject *__pyx_kp_s_3d;
@@ -1469,6 +1490,12 @@ static PyObject *__pyx_n_s_CSVFluid;
 static PyObject *__pyx_n_s_CSVFluid___init;
 static PyObject *__pyx_n_s_CSVFluid_changeOrder;
 static PyObject *__pyx_n_s_CSVFluid_copy;
+static PyObject *__pyx_n_s_CSVFluid_make_meta;
+static PyObject *__pyx_n_s_CSVFluid_make_units;
+static PyObject *__pyx_n_s_CSVFluid_refresh;
+static PyObject *__pyx_n_s_CSVFluid_write_data;
+static PyObject *__pyx_n_s_CSVFluid_write_data_locals_add_c;
+static PyObject *__pyx_n_s_CSVFluid_write_data_locals_add_c_2;
 static PyObject *__pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D;
 static PyObject *__pyx_n_s_Callable;
 static PyObject *__pyx_kp_s_Cannot_add_column_0_already_in_f;
@@ -1517,7 +1544,6 @@ static PyObject *__pyx_n_s_UNITS;
 static PyObject *__pyx_kp_s_US_Central;
 static PyObject *__pyx_n_s_Union;
 static PyObject *__pyx_n_s_UnknownVar;
-static PyObject *__pyx_n_s_V;
 static PyObject *__pyx_n_s_VISCOSITY;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_kp_s_Variable_not_valid;
@@ -1527,8 +1553,8 @@ static PyObject *__pyx_n_s_X;
 static PyObject *__pyx_n_s_Y;
 static PyObject *__pyx_kp_s_YYYY_MM_DD_HH_mm_ss;
 static PyObject *__pyx_n_s_Z;
-static PyObject *__pyx_kp_s__18;
-static PyObject *__pyx_n_s__19;
+static PyObject *__pyx_kp_s__23;
+static PyObject *__pyx_n_s__24;
 static PyObject *__pyx_kp_s__5;
 static PyObject *__pyx_n_s__6;
 static PyObject *__pyx_kp_s__7;
@@ -1702,14 +1728,21 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
 static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode); /* proto */
 static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pathToFile); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10write_data_add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode); /* proto */
 static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_coloring); /* proto */
-static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
+static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
 static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_oldrange, PyObject *__pyx_v_newrange); /* proto */
 static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_contour); /* proto */
 static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct__add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_rescale(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_rescale(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_0_1;
 static PyObject *__pyx_float_1_0;
@@ -1738,38 +1771,52 @@ static PyObject *__pyx_tuple__13;
 static PyObject *__pyx_tuple__14;
 static PyObject *__pyx_tuple__15;
 static PyObject *__pyx_tuple__16;
-static PyObject *__pyx_tuple__17;
+static PyObject *__pyx_tuple__18;
+static PyObject *__pyx_tuple__19;
 static PyObject *__pyx_tuple__20;
 static PyObject *__pyx_tuple__21;
 static PyObject *__pyx_tuple__22;
-static PyObject *__pyx_tuple__24;
+static PyObject *__pyx_tuple__25;
 static PyObject *__pyx_tuple__26;
-static PyObject *__pyx_tuple__28;
-static PyObject *__pyx_tuple__30;
-static PyObject *__pyx_tuple__32;
-static PyObject *__pyx_tuple__34;
-static PyObject *__pyx_tuple__36;
+static PyObject *__pyx_tuple__27;
+static PyObject *__pyx_tuple__29;
+static PyObject *__pyx_tuple__31;
+static PyObject *__pyx_tuple__33;
+static PyObject *__pyx_tuple__35;
 static PyObject *__pyx_tuple__37;
 static PyObject *__pyx_tuple__39;
 static PyObject *__pyx_tuple__41;
-static PyObject *__pyx_tuple__43;
-static PyObject *__pyx_tuple__45;
-static PyObject *__pyx_tuple__47;
-static PyObject *__pyx_tuple__49;
-static PyObject *__pyx_codeobj__23;
-static PyObject *__pyx_codeobj__25;
-static PyObject *__pyx_codeobj__27;
-static PyObject *__pyx_codeobj__29;
-static PyObject *__pyx_codeobj__31;
-static PyObject *__pyx_codeobj__33;
-static PyObject *__pyx_codeobj__35;
+static PyObject *__pyx_tuple__42;
+static PyObject *__pyx_tuple__44;
+static PyObject *__pyx_tuple__46;
+static PyObject *__pyx_tuple__48;
+static PyObject *__pyx_tuple__50;
+static PyObject *__pyx_tuple__52;
+static PyObject *__pyx_tuple__54;
+static PyObject *__pyx_tuple__56;
+static PyObject *__pyx_tuple__58;
+static PyObject *__pyx_tuple__59;
+static PyObject *__pyx_tuple__61;
+static PyObject *__pyx_tuple__63;
+static PyObject *__pyx_codeobj__17;
+static PyObject *__pyx_codeobj__28;
+static PyObject *__pyx_codeobj__30;
+static PyObject *__pyx_codeobj__32;
+static PyObject *__pyx_codeobj__34;
+static PyObject *__pyx_codeobj__36;
 static PyObject *__pyx_codeobj__38;
 static PyObject *__pyx_codeobj__40;
-static PyObject *__pyx_codeobj__42;
-static PyObject *__pyx_codeobj__44;
-static PyObject *__pyx_codeobj__46;
-static PyObject *__pyx_codeobj__48;
-static PyObject *__pyx_codeobj__50;
+static PyObject *__pyx_codeobj__43;
+static PyObject *__pyx_codeobj__45;
+static PyObject *__pyx_codeobj__47;
+static PyObject *__pyx_codeobj__49;
+static PyObject *__pyx_codeobj__51;
+static PyObject *__pyx_codeobj__53;
+static PyObject *__pyx_codeobj__55;
+static PyObject *__pyx_codeobj__57;
+static PyObject *__pyx_codeobj__60;
+static PyObject *__pyx_codeobj__62;
+static PyObject *__pyx_codeobj__64;
 
 /* "ThermoPyle.pyx":70
  *     """
@@ -3641,16 +3688,17 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
   PyObject *__pyx_t_7 = NULL;
-  int __pyx_t_8;
-  PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_8 = NULL;
+  int __pyx_t_9;
+  PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("make_units", 0);
 
   /* "ThermoPyle.pyx":136
  *     def make_units(self) -> None:
  *         """(Re)make the units list"""
  *         self.units = {}             # <<<<<<<<<<<<<<
- *         for var in self.vars:
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *         for var in self.data.columns:
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  */
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -3660,43 +3708,46 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   /* "ThermoPyle.pyx":137
  *         """(Re)make the units list"""
  *         self.units = {}
- *         for var in self.vars:             # <<<<<<<<<<<<<<
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *         for var in self.data.columns:             # <<<<<<<<<<<<<<
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (likely(PyList_CheckExact(__pyx_t_1)) || PyTuple_CheckExact(__pyx_t_1)) {
-    __pyx_t_2 = __pyx_t_1; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_columns); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
+    __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
     __pyx_t_4 = NULL;
   } else {
-    __pyx_t_3 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 137, __pyx_L1_error)
+    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 137, __pyx_L1_error)
   }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   for (;;) {
     if (likely(!__pyx_t_4)) {
-      if (likely(PyList_CheckExact(__pyx_t_2))) {
-        if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_2)) break;
+      if (likely(PyList_CheckExact(__pyx_t_1))) {
+        if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 137, __pyx_L1_error)
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 137, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         #endif
       } else {
-        if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
+        if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_1); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 137, __pyx_L1_error)
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 137, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         #endif
       }
     } else {
-      __pyx_t_1 = __pyx_t_4(__pyx_t_2);
-      if (unlikely(!__pyx_t_1)) {
+      __pyx_t_2 = __pyx_t_4(__pyx_t_1);
+      if (unlikely(!__pyx_t_2)) {
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
@@ -3704,87 +3755,97 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
         }
         break;
       }
-      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_GOTREF(__pyx_t_2);
     }
-    __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_1);
-    __pyx_t_1 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_2);
+    __pyx_t_2 = 0;
 
     /* "ThermoPyle.pyx":138
  *         self.units = {}
- *         for var in self.vars:
- *             self.units[var] =  get(var, UNITS, "UnknownVar")             # <<<<<<<<<<<<<<
+ *         for var in self.data.columns:
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")             # <<<<<<<<<<<<<<
  * 
  *     def make_meta(self) -> None:
  */
     __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 138, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_INCREF(__pyx_v_var);
+    __Pyx_GIVEREF(__pyx_v_var);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_var);
+    __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_6, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_UNITS); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 138, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = NULL;
-    __pyx_t_8 = 0;
+    __pyx_t_8 = NULL;
+    __pyx_t_9 = 0;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
-      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_5);
-      if (likely(__pyx_t_7)) {
+      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_8)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
-        __Pyx_INCREF(__pyx_t_7);
+        __Pyx_INCREF(__pyx_t_8);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_5, function);
-        __pyx_t_8 = 1;
+        __pyx_t_9 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_5)) {
-      PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_v_var, __pyx_t_6, __pyx_n_s_UnknownVar};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
+      PyObject *__pyx_temp[4] = {__pyx_t_8, __pyx_t_7, __pyx_t_6, __pyx_n_s_UnknownVar};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_9, 3+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
-      PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_v_var, __pyx_t_6, __pyx_n_s_UnknownVar};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_8, 3+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
+      PyObject *__pyx_temp[4] = {__pyx_t_8, __pyx_t_7, __pyx_t_6, __pyx_n_s_UnknownVar};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_9, 3+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else
     #endif
     {
-      __pyx_t_9 = PyTuple_New(3+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 138, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_9);
-      if (__pyx_t_7) {
-        __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
+      __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 138, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      if (__pyx_t_8) {
+        __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
       }
-      __Pyx_INCREF(__pyx_v_var);
-      __Pyx_GIVEREF(__pyx_v_var);
-      PyTuple_SET_ITEM(__pyx_t_9, 0+__pyx_t_8, __pyx_v_var);
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_9, __pyx_t_7);
       __Pyx_GIVEREF(__pyx_t_6);
-      PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_8, __pyx_t_6);
+      PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_6);
       __Pyx_INCREF(__pyx_n_s_UnknownVar);
       __Pyx_GIVEREF(__pyx_n_s_UnknownVar);
-      PyTuple_SET_ITEM(__pyx_t_9, 2+__pyx_t_8, __pyx_n_s_UnknownVar);
+      PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_n_s_UnknownVar);
+      __pyx_t_7 = 0;
       __pyx_t_6 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_units); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 138, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    if (unlikely(PyObject_SetItem(__pyx_t_5, __pyx_v_var, __pyx_t_1) < 0)) __PYX_ERR(0, 138, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_t_5, __pyx_v_var, __pyx_t_2) < 0)) __PYX_ERR(0, 138, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
     /* "ThermoPyle.pyx":137
  *         """(Re)make the units list"""
  *         self.units = {}
- *         for var in self.vars:             # <<<<<<<<<<<<<<
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *         for var in self.data.columns:             # <<<<<<<<<<<<<<
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  * 
  */
   }
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "ThermoPyle.pyx":134
  *         self.make_meta()
@@ -3803,7 +3864,8 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_10);
   __Pyx_AddTraceback("ThermoPyle.ThermoFluid.make_units", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -3814,7 +3876,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
 }
 
 /* "ThermoPyle.pyx":140
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -4086,7 +4148,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "ThermoPyle.pyx":140
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -4144,40 +4206,29 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   /* "ThermoPyle.pyx":162
  *         Refreshes the object, remakes meta, cleans data, remakes units.
  *         """
- *         self.make_units()             # <<<<<<<<<<<<<<
+ *         self.vars = set(self.data.columns)             # <<<<<<<<<<<<<<
+ *         self.make_units()
  *         self.clean()
- *         self.make_meta()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_columns); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
-  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PySet_New(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vars, __pyx_t_1) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "ThermoPyle.pyx":163
  *         """
- *         self.make_units()
- *         self.clean()             # <<<<<<<<<<<<<<
+ *         self.vars = set(self.data.columns)
+ *         self.make_units()             # <<<<<<<<<<<<<<
+ *         self.clean()
  *         self.make_meta()
- * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_clean); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -4200,13 +4251,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "ThermoPyle.pyx":164
+ *         self.vars = set(self.data.columns)
  *         self.make_units()
- *         self.clean()
- *         self.make_meta()             # <<<<<<<<<<<<<<
+ *         self.clean()             # <<<<<<<<<<<<<<
+ *         self.make_meta()
  * 
- *     def add_column(self, variables: Union[List[Text], Text]) -> None:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_clean); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -4223,6 +4274,35 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
     __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":165
+ *         self.make_units()
+ *         self.clean()
+ *         self.make_meta()             # <<<<<<<<<<<<<<
+ * 
+ *     def add_column(self, variables: Union[List[Text], Text]) -> None:
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4251,7 +4331,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":166
+/* "ThermoPyle.pyx":167
  *         self.make_meta()
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -4289,11 +4369,11 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_variables)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, 1); __PYX_ERR(0, 166, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, 1); __PYX_ERR(0, 167, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add_column") < 0)) __PYX_ERR(0, 166, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add_column") < 0)) __PYX_ERR(0, 167, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -4306,7 +4386,7 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 166, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 167, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ThermoPyle.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -4319,7 +4399,7 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":188
+/* "ThermoPyle.pyx":189
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
@@ -4360,32 +4440,32 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_var)) { __Pyx_RaiseClosureNameError("var"); __PYX_ERR(0, 188, __pyx_L1_error) }
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 188, __pyx_L1_error) }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_var)) { __Pyx_RaiseClosureNameError("var"); __PYX_ERR(0, 189, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 189, __pyx_L1_error) }
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 188, __pyx_L1_error) }
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 189, __pyx_L1_error) }
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyObject_GetItem(__pyx_v_state, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_5 = PyObject_GetItem(__pyx_v_state, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 188, __pyx_L1_error) }
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 189, __pyx_L1_error) }
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 188, __pyx_L1_error) }
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 189, __pyx_L1_error) }
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyObject_GetItem(__pyx_v_state, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_t_7 = PyObject_GetItem(__pyx_v_state, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 188, __pyx_L1_error) }
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 188, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 189, __pyx_L1_error) }
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_t_8 = NULL;
   __pyx_t_9 = 0;
@@ -4402,7 +4482,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[7] = {__pyx_t_8, __pyx_cur_scope->__pyx_v_var, __pyx_t_2, __pyx_t_5, __pyx_t_4, __pyx_t_7, __pyx_t_6};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_9, 6+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_9, 6+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4415,7 +4495,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[7] = {__pyx_t_8, __pyx_cur_scope->__pyx_v_var, __pyx_t_2, __pyx_t_5, __pyx_t_4, __pyx_t_7, __pyx_t_6};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_9, 6+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_9, 6+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -4426,7 +4506,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   } else
   #endif
   {
-    __pyx_t_10 = PyTuple_New(6+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 188, __pyx_L1_error)
+    __pyx_t_10 = PyTuple_New(6+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     if (__pyx_t_8) {
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -4449,7 +4529,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
     __pyx_t_4 = 0;
     __pyx_t_7 = 0;
     __pyx_t_6 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   }
@@ -4477,7 +4557,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":166
+/* "ThermoPyle.pyx":167
  *         self.make_meta()
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -4520,7 +4600,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 166, __pyx_L1_error)
+    __PYX_ERR(0, 167, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -4529,7 +4609,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_INCREF(__pyx_v_variables);
 
-  /* "ThermoPyle.pyx":173
+  /* "ThermoPyle.pyx":174
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -4540,14 +4620,14 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":174
+    /* "ThermoPyle.pyx":175
  *         """
  *         if type(variables) is not list:
  *             variables = [variables]             # <<<<<<<<<<<<<<
  * 
  *         for var in variables:
  */
-    __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 175, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_v_variables);
     __Pyx_GIVEREF(__pyx_v_variables);
@@ -4555,7 +4635,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_DECREF_SET(__pyx_v_variables, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":173
+    /* "ThermoPyle.pyx":174
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -4564,7 +4644,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  */
   }
 
-  /* "ThermoPyle.pyx":176
+  /* "ThermoPyle.pyx":177
  *             variables = [variables]
  * 
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4575,26 +4655,26 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __pyx_t_3 = __pyx_v_variables; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_variables); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_variables); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 176, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 177, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_5)) {
       if (likely(PyList_CheckExact(__pyx_t_3))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_6 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
+        __pyx_t_6 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 177, __pyx_L1_error)
         #else
-        __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
+        __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
+        __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 177, __pyx_L1_error)
         #else
-        __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 176, __pyx_L1_error)
+        __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         #endif
       }
@@ -4604,7 +4684,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 176, __pyx_L1_error)
+          else __PYX_ERR(0, 177, __pyx_L1_error)
         }
         break;
       }
@@ -4615,7 +4695,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":177
+    /* "ThermoPyle.pyx":178
  * 
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -4631,7 +4711,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":178
+        /* "ThermoPyle.pyx":179
  *         for var in variables:
  *             try:
  *                 assert var not in self.vars             # <<<<<<<<<<<<<<
@@ -4640,18 +4720,18 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  */
         #ifndef CYTHON_WITHOUT_ASSERTIONS
         if (unlikely(!Py_OptimizeFlag)) {
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L6_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 179, __pyx_L6_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_cur_scope->__pyx_v_var, __pyx_t_6, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 178, __pyx_L6_error)
+          __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_cur_scope->__pyx_v_var, __pyx_t_6, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 179, __pyx_L6_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           if (unlikely(!(__pyx_t_2 != 0))) {
             PyErr_SetNone(PyExc_AssertionError);
-            __PYX_ERR(0, 178, __pyx_L6_error)
+            __PYX_ERR(0, 179, __pyx_L6_error)
           }
         }
         #endif
 
-        /* "ThermoPyle.pyx":177
+        /* "ThermoPyle.pyx":178
  * 
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -4667,7 +4747,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_PyThreadState_assign
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":179
+      /* "ThermoPyle.pyx":180
  *             try:
  *                 assert var not in self.vars
  *             except AssertionError:             # <<<<<<<<<<<<<<
@@ -4677,19 +4757,19 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_10) {
         __Pyx_AddTraceback("ThermoPyle.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_11, &__pyx_t_12) < 0) __PYX_ERR(0, 179, __pyx_L8_except_error)
+        if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_11, &__pyx_t_12) < 0) __PYX_ERR(0, 180, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_GOTREF(__pyx_t_12);
 
-        /* "ThermoPyle.pyx":181
+        /* "ThermoPyle.pyx":182
  *             except AssertionError:
  *                 raise ValueError(
  *                     "Cannot add column {0}: already in frame".format(var))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Cannot_add_column_0_already_in_f, __pyx_n_s_format); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 181, __pyx_L8_except_error)
+        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Cannot_add_column_0_already_in_f, __pyx_n_s_format); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 182, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_14);
         __pyx_t_15 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_14))) {
@@ -4702,13 +4782,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
           }
         }
         if (!__pyx_t_15) {
-          __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_cur_scope->__pyx_v_var); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 181, __pyx_L8_except_error)
+          __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_cur_scope->__pyx_v_var); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 182, __pyx_L8_except_error)
           __Pyx_GOTREF(__pyx_t_13);
         } else {
           #if CYTHON_FAST_PYCALL
           if (PyFunction_Check(__pyx_t_14)) {
             PyObject *__pyx_temp[2] = {__pyx_t_15, __pyx_cur_scope->__pyx_v_var};
-            __pyx_t_13 = __Pyx_PyFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 181, __pyx_L8_except_error)
+            __pyx_t_13 = __Pyx_PyFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 182, __pyx_L8_except_error)
             __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
             __Pyx_GOTREF(__pyx_t_13);
           } else
@@ -4716,48 +4796,48 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
           #if CYTHON_FAST_PYCCALL
           if (__Pyx_PyFastCFunction_Check(__pyx_t_14)) {
             PyObject *__pyx_temp[2] = {__pyx_t_15, __pyx_cur_scope->__pyx_v_var};
-            __pyx_t_13 = __Pyx_PyCFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 181, __pyx_L8_except_error)
+            __pyx_t_13 = __Pyx_PyCFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 182, __pyx_L8_except_error)
             __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
             __Pyx_GOTREF(__pyx_t_13);
           } else
           #endif
           {
-            __pyx_t_16 = PyTuple_New(1+1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 181, __pyx_L8_except_error)
+            __pyx_t_16 = PyTuple_New(1+1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 182, __pyx_L8_except_error)
             __Pyx_GOTREF(__pyx_t_16);
             __Pyx_GIVEREF(__pyx_t_15); PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_15); __pyx_t_15 = NULL;
             __Pyx_INCREF(__pyx_cur_scope->__pyx_v_var);
             __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_var);
             PyTuple_SET_ITEM(__pyx_t_16, 0+1, __pyx_cur_scope->__pyx_v_var);
-            __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_16, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 181, __pyx_L8_except_error)
+            __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_16, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 182, __pyx_L8_except_error)
             __Pyx_GOTREF(__pyx_t_13);
             __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
           }
         }
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-        /* "ThermoPyle.pyx":180
+        /* "ThermoPyle.pyx":181
  *                 assert var not in self.vars
  *             except AssertionError:
  *                 raise ValueError(             # <<<<<<<<<<<<<<
  *                     "Cannot add column {0}: already in frame".format(var))
  * 
  */
-        __pyx_t_14 = PyTuple_New(1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 180, __pyx_L8_except_error)
+        __pyx_t_14 = PyTuple_New(1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 181, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_GIVEREF(__pyx_t_13);
         PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_13);
         __pyx_t_13 = 0;
-        __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_14, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 180, __pyx_L8_except_error)
+        __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_14, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 181, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_Raise(__pyx_t_13, 0, 0, 0);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __PYX_ERR(0, 180, __pyx_L8_except_error)
+        __PYX_ERR(0, 181, __pyx_L8_except_error)
       }
       goto __pyx_L8_except_error;
       __pyx_L8_except_error:;
 
-      /* "ThermoPyle.pyx":177
+      /* "ThermoPyle.pyx":178
  * 
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -4773,7 +4853,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __pyx_L13_try_end:;
     }
 
-    /* "ThermoPyle.pyx":176
+    /* "ThermoPyle.pyx":177
  *             variables = [variables]
  * 
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4783,46 +4863,46 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":184
+  /* "ThermoPyle.pyx":185
  * 
  * 
  *         self.vars += variables             # <<<<<<<<<<<<<<
  *         buffer = {}
  *         newcols = {}
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_12 = PyNumber_InPlaceAdd(__pyx_t_3, __pyx_v_variables); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 184, __pyx_L1_error)
+  __pyx_t_12 = PyNumber_InPlaceAdd(__pyx_t_3, __pyx_v_variables); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars, __pyx_t_12) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars, __pyx_t_12) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":185
+  /* "ThermoPyle.pyx":186
  * 
  *         self.vars += variables
  *         buffer = {}             # <<<<<<<<<<<<<<
  *         newcols = {}
  *         for var in variables:
  */
-  __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 185, __pyx_L1_error)
+  __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 186, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __pyx_v_buffer = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":186
+  /* "ThermoPyle.pyx":187
  *         self.vars += variables
  *         buffer = {}
  *         newcols = {}             # <<<<<<<<<<<<<<
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
  */
-  __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 186, __pyx_L1_error)
+  __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __pyx_v_newcols = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":187
+  /* "ThermoPyle.pyx":188
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4833,26 +4913,26 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __pyx_t_12 = __pyx_v_variables; __Pyx_INCREF(__pyx_t_12); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_12 = PyObject_GetIter(__pyx_v_variables); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_12 = PyObject_GetIter(__pyx_v_variables); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 188, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_5 = Py_TYPE(__pyx_t_12)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_12)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 188, __pyx_L1_error)
   }
   for (;;) {
     if (likely(!__pyx_t_5)) {
       if (likely(PyList_CheckExact(__pyx_t_12))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_12)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_12, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 187, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_12, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 188, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_12, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_12, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_12)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_12, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 187, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_12, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 188, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_12, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_12, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
@@ -4862,7 +4942,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 187, __pyx_L1_error)
+          else __PYX_ERR(0, 188, __pyx_L1_error)
         }
         break;
       }
@@ -4873,19 +4953,19 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":188
+    /* "ThermoPyle.pyx":189
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
  * 
  *         for key in newcols:
  */
-    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_10add_column_lambda, 0, __pyx_n_s_ThermoFluid_add_column_locals_la, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_10add_column_lambda, 0, __pyx_n_s_ThermoFluid_add_column_locals_la, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (unlikely(PyDict_SetItem(__pyx_v_newcols, __pyx_cur_scope->__pyx_v_var, __pyx_t_3) < 0)) __PYX_ERR(0, 188, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_newcols, __pyx_cur_scope->__pyx_v_var, __pyx_t_3) < 0)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":187
+    /* "ThermoPyle.pyx":188
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4895,7 +4975,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":190
+  /* "ThermoPyle.pyx":191
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
  * 
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -4903,7 +4983,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  * 
  */
   __pyx_t_4 = 0;
-  __pyx_t_3 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_17), (&__pyx_t_10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_17), (&__pyx_t_10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_12);
   __pyx_t_12 = __pyx_t_3;
@@ -4911,35 +4991,35 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   while (1) {
     __pyx_t_18 = __Pyx_dict_iter_next(__pyx_t_12, __pyx_t_17, &__pyx_t_4, &__pyx_t_3, NULL, NULL, __pyx_t_10);
     if (unlikely(__pyx_t_18 == 0)) break;
-    if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 190, __pyx_L1_error)
+    if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 191, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":191
+    /* "ThermoPyle.pyx":192
  * 
  *         for key in newcols:
  *             buffer[key] = []             # <<<<<<<<<<<<<<
  * 
  *         for index, row in self.data.iterrows():
  */
-    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 191, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (unlikely(PyDict_SetItem(__pyx_v_buffer, __pyx_v_key, __pyx_t_3) < 0)) __PYX_ERR(0, 191, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_buffer, __pyx_v_key, __pyx_t_3) < 0)) __PYX_ERR(0, 192, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":193
+  /* "ThermoPyle.pyx":194
  *             buffer[key] = []
  * 
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -4953,10 +5033,10 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_12 = __Pyx_PyObject_CallNoArg(__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_CallNoArg(__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 194, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -4964,9 +5044,9 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __pyx_t_11 = __pyx_t_12; __Pyx_INCREF(__pyx_t_11); __pyx_t_17 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_17 = -1; __pyx_t_11 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_17 = -1; __pyx_t_11 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 194, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_5 = Py_TYPE(__pyx_t_11)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 193, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_11)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 194, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   for (;;) {
@@ -4974,17 +5054,17 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       if (likely(PyList_CheckExact(__pyx_t_11))) {
         if (__pyx_t_17 >= PyList_GET_SIZE(__pyx_t_11)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_12 = PyList_GET_ITEM(__pyx_t_11, __pyx_t_17); __Pyx_INCREF(__pyx_t_12); __pyx_t_17++; if (unlikely(0 < 0)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_12 = PyList_GET_ITEM(__pyx_t_11, __pyx_t_17); __Pyx_INCREF(__pyx_t_12); __pyx_t_17++; if (unlikely(0 < 0)) __PYX_ERR(0, 194, __pyx_L1_error)
         #else
-        __pyx_t_12 = PySequence_ITEM(__pyx_t_11, __pyx_t_17); __pyx_t_17++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_12 = PySequence_ITEM(__pyx_t_11, __pyx_t_17); __pyx_t_17++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 194, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
         #endif
       } else {
         if (__pyx_t_17 >= PyTuple_GET_SIZE(__pyx_t_11)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_12 = PyTuple_GET_ITEM(__pyx_t_11, __pyx_t_17); __Pyx_INCREF(__pyx_t_12); __pyx_t_17++; if (unlikely(0 < 0)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_12 = PyTuple_GET_ITEM(__pyx_t_11, __pyx_t_17); __Pyx_INCREF(__pyx_t_12); __pyx_t_17++; if (unlikely(0 < 0)) __PYX_ERR(0, 194, __pyx_L1_error)
         #else
-        __pyx_t_12 = PySequence_ITEM(__pyx_t_11, __pyx_t_17); __pyx_t_17++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_12 = PySequence_ITEM(__pyx_t_11, __pyx_t_17); __pyx_t_17++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 194, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
         #endif
       }
@@ -4994,7 +5074,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 193, __pyx_L1_error)
+          else __PYX_ERR(0, 194, __pyx_L1_error)
         }
         break;
       }
@@ -5010,7 +5090,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 193, __pyx_L1_error)
+        __PYX_ERR(0, 194, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -5023,15 +5103,15 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(__pyx_t_6);
       #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 193, __pyx_L1_error)
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 194, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       #endif
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_13 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 193, __pyx_L1_error)
+      __pyx_t_13 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 194, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __pyx_t_19 = Py_TYPE(__pyx_t_13)->tp_iternext;
@@ -5039,7 +5119,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_GOTREF(__pyx_t_3);
       index = 1; __pyx_t_6 = __pyx_t_19(__pyx_t_13); if (unlikely(!__pyx_t_6)) goto __pyx_L22_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_6);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_19(__pyx_t_13), 2) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_19(__pyx_t_13), 2) < 0) __PYX_ERR(0, 194, __pyx_L1_error)
       __pyx_t_19 = NULL;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       goto __pyx_L23_unpacking_done;
@@ -5047,7 +5127,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
       __pyx_t_19 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 193, __pyx_L1_error)
+      __PYX_ERR(0, 194, __pyx_L1_error)
       __pyx_L23_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_index, __pyx_t_3);
@@ -5055,7 +5135,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":194
+    /* "ThermoPyle.pyx":195
  * 
  *         for index, row in self.data.iterrows():
  *             for key in newcols:             # <<<<<<<<<<<<<<
@@ -5063,7 +5143,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  *         for key in newcols:
  */
     __pyx_t_4 = 0;
-    __pyx_t_6 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_20), (&__pyx_t_10)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 194, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_20), (&__pyx_t_10)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 195, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_12);
     __pyx_t_12 = __pyx_t_6;
@@ -5071,19 +5151,19 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     while (1) {
       __pyx_t_18 = __Pyx_dict_iter_next(__pyx_t_12, __pyx_t_20, &__pyx_t_4, &__pyx_t_6, NULL, NULL, __pyx_t_10);
       if (unlikely(__pyx_t_18 == 0)) break;
-      if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 194, __pyx_L1_error)
+      if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":195
+      /* "ThermoPyle.pyx":196
  *         for index, row in self.data.iterrows():
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))             # <<<<<<<<<<<<<<
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  */
-      __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_13 = NULL;
       __pyx_t_18 = 0;
@@ -5100,7 +5180,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_3)) {
         PyObject *__pyx_temp[3] = {__pyx_t_13, __pyx_v_key, __pyx_v_buffer};
-        __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_GOTREF(__pyx_t_6);
       } else
@@ -5108,13 +5188,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
         PyObject *__pyx_temp[3] = {__pyx_t_13, __pyx_v_key, __pyx_v_buffer};
-        __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_GOTREF(__pyx_t_6);
       } else
       #endif
       {
-        __pyx_t_14 = PyTuple_New(2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_14 = PyTuple_New(2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_14);
         if (__pyx_t_13) {
           __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_13); __pyx_t_13 = NULL;
@@ -5125,12 +5205,12 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         __Pyx_INCREF(__pyx_v_buffer);
         __Pyx_GIVEREF(__pyx_v_buffer);
         PyTuple_SET_ITEM(__pyx_t_14, 1+__pyx_t_18, __pyx_v_buffer);
-        __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_14, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_14, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 195, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __pyx_t_16 = NULL;
       __pyx_t_18 = 0;
@@ -5147,7 +5227,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_13)) {
         PyObject *__pyx_temp[3] = {__pyx_t_16, __pyx_v_key, __pyx_v_newcols};
-        __pyx_t_14 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_14 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_GOTREF(__pyx_t_14);
       } else
@@ -5155,13 +5235,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_13)) {
         PyObject *__pyx_temp[3] = {__pyx_t_16, __pyx_v_key, __pyx_v_newcols};
-        __pyx_t_14 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_14 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_GOTREF(__pyx_t_14);
       } else
       #endif
       {
-        __pyx_t_15 = PyTuple_New(2+__pyx_t_18); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_15 = PyTuple_New(2+__pyx_t_18); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_15);
         if (__pyx_t_16) {
           __Pyx_GIVEREF(__pyx_t_16); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_16); __pyx_t_16 = NULL;
@@ -5172,7 +5252,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         __Pyx_INCREF(__pyx_v_newcols);
         __Pyx_GIVEREF(__pyx_v_newcols);
         PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_18, __pyx_v_newcols);
-        __pyx_t_14 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_15, NULL); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_14 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_15, NULL); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
       }
@@ -5188,13 +5268,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         }
       }
       if (!__pyx_t_13) {
-        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_v_row); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_v_row); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
       } else {
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_14)) {
           PyObject *__pyx_temp[2] = {__pyx_t_13, __pyx_v_row};
-          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
@@ -5202,31 +5282,31 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_14)) {
           PyObject *__pyx_temp[2] = {__pyx_t_13, __pyx_v_row};
-          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
         #endif
         {
-          __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 195, __pyx_L1_error)
+          __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 196, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_15);
           __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_13); __pyx_t_13 = NULL;
           __Pyx_INCREF(__pyx_v_row);
           __Pyx_GIVEREF(__pyx_v_row);
           PyTuple_SET_ITEM(__pyx_t_15, 0+1, __pyx_v_row);
-          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
         }
       }
       __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-      __pyx_t_21 = __Pyx_PyObject_Append(__pyx_t_6, __pyx_t_3); if (unlikely(__pyx_t_21 == -1)) __PYX_ERR(0, 195, __pyx_L1_error)
+      __pyx_t_21 = __Pyx_PyObject_Append(__pyx_t_6, __pyx_t_3); if (unlikely(__pyx_t_21 == -1)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":193
+    /* "ThermoPyle.pyx":194
  *             buffer[key] = []
  * 
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -5236,7 +5316,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":196
+  /* "ThermoPyle.pyx":197
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -5244,7 +5324,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  *         self.make_units()
  */
   __pyx_t_17 = 0;
-  __pyx_t_12 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_20), (&__pyx_t_10)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 196, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_20), (&__pyx_t_10)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_11);
   __pyx_t_11 = __pyx_t_12;
@@ -5252,89 +5332,60 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   while (1) {
     __pyx_t_18 = __Pyx_dict_iter_next(__pyx_t_11, __pyx_t_20, &__pyx_t_17, &__pyx_t_12, NULL, NULL, __pyx_t_10);
     if (unlikely(__pyx_t_18 == 0)) break;
-    if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 196, __pyx_L1_error)
+    if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 197, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":197
+    /* "ThermoPyle.pyx":198
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)             # <<<<<<<<<<<<<<
  *         self.make_units()
  *         self.make_meta()
  */
-    __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_Series); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_Series); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyDict_GetItem(__pyx_v_buffer, __pyx_v_key); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyDict_GetItem(__pyx_v_buffer, __pyx_v_key); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_GIVEREF(__pyx_t_12);
     PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_12);
     __pyx_t_12 = 0;
-    __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_index); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_index); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_index, __pyx_t_15) < 0) __PYX_ERR(0, 197, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_index, __pyx_t_15) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_12); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_12); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 197, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    if (unlikely(PyObject_SetItem(__pyx_t_12, __pyx_v_key, __pyx_t_15) < 0)) __PYX_ERR(0, 197, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_t_12, __pyx_v_key, __pyx_t_15) < 0)) __PYX_ERR(0, 198, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":198
+  /* "ThermoPyle.pyx":199
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()             # <<<<<<<<<<<<<<
  *         self.make_meta()
  * 
  */
-  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 198, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_12 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_15))) {
-    __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_15);
-    if (likely(__pyx_t_12)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_15);
-      __Pyx_INCREF(__pyx_t_12);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_15, function);
-    }
-  }
-  if (__pyx_t_12) {
-    __pyx_t_11 = __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 198, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  } else {
-    __pyx_t_11 = __Pyx_PyObject_CallNoArg(__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 198, __pyx_L1_error)
-  }
-  __Pyx_GOTREF(__pyx_t_11);
-  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-
-  /* "ThermoPyle.pyx":199
- *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
- *         self.make_units()
- *         self.make_meta()             # <<<<<<<<<<<<<<
- * 
- *     def clean(self) -> None:
- */
-  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 199, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __pyx_t_12 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_15))) {
@@ -5356,7 +5407,36 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":166
+  /* "ThermoPyle.pyx":200
+ *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
+ *         self.make_units()
+ *         self.make_meta()             # <<<<<<<<<<<<<<
+ * 
+ *     def clean(self) -> None:
+ */
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
+  __pyx_t_12 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_15))) {
+    __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_15);
+    if (likely(__pyx_t_12)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_15);
+      __Pyx_INCREF(__pyx_t_12);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_15, function);
+    }
+  }
+  if (__pyx_t_12) {
+    __pyx_t_11 = __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 200, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  } else {
+    __pyx_t_11 = __Pyx_PyObject_CallNoArg(__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 200, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_11);
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+
+  /* "ThermoPyle.pyx":167
  *         self.make_meta()
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -5391,7 +5471,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":201
+/* "ThermoPyle.pyx":202
  *         self.make_meta()
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
@@ -5429,48 +5509,48 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("clean", 0);
 
-  /* "ThermoPyle.pyx":203
+  /* "ThermoPyle.pyx":204
  *     def clean(self) -> None:
  *         """Re-cleans data"""
  *         if "P" in self.vars:             # <<<<<<<<<<<<<<
  *             self.data = self.data[self.data["P"] >=
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_P, __pyx_t_1, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_P, __pyx_t_1, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "ThermoPyle.pyx":204
+    /* "ThermoPyle.pyx":205
  *         """Re-cleans data"""
  *         if "P" in self.vars:
  *             self.data = self.data[self.data["P"] >=             # <<<<<<<<<<<<<<
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_P); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_5 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_P); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":205
+    /* "ThermoPyle.pyx":206
  *         if "P" in self.vars:
  *             self.data = self.data[self.data["P"] >=
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]             # <<<<<<<<<<<<<<
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]
  */
-    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_t_8 = NULL;
     __pyx_t_9 = 0;
@@ -5487,7 +5567,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_7)) {
       PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_n_s_PMIN, __pyx_t_6};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -5496,14 +5576,14 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_7)) {
       PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_n_s_PMIN, __pyx_t_6};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_7, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else
     #endif
     {
-      __pyx_t_10 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 205, __pyx_L1_error)
+      __pyx_t_10 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       if (__pyx_t_8) {
         __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -5514,33 +5594,33 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_6);
       __pyx_t_6 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_7, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     }
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyFloat_AddObjC(__pyx_t_4, __pyx_float_1_0, 1.0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyFloat_AddObjC(__pyx_t_4, __pyx_float_1_0, 1.0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_5, __pyx_t_7, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_5, __pyx_t_7, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "ThermoPyle.pyx":204
+    /* "ThermoPyle.pyx":205
  *         """Re-cleans data"""
  *         if "P" in self.vars:
  *             self.data = self.data[self.data["P"] >=             # <<<<<<<<<<<<<<
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:
  */
-    __pyx_t_7 = PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_7 = PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_7) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_7) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "ThermoPyle.pyx":203
+    /* "ThermoPyle.pyx":204
  *     def clean(self) -> None:
  *         """Re-cleans data"""
  *         if "P" in self.vars:             # <<<<<<<<<<<<<<
@@ -5549,44 +5629,44 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":206
+  /* "ThermoPyle.pyx":207
  *             self.data = self.data[self.data["P"] >=
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:             # <<<<<<<<<<<<<<
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:
  */
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_S, __pyx_t_7, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_S, __pyx_t_7, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":207
+    /* "ThermoPyle.pyx":208
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]             # <<<<<<<<<<<<<<
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=
  */
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_S); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_1 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_S); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_float_0_0, Py_GT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_float_0_0, Py_GT); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyObject_GetItem(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_1 = PyObject_GetItem(__pyx_t_7, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 207, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 208, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "ThermoPyle.pyx":206
+    /* "ThermoPyle.pyx":207
  *             self.data = self.data[self.data["P"] >=
  *                                   CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:             # <<<<<<<<<<<<<<
@@ -5595,48 +5675,48 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":208
+  /* "ThermoPyle.pyx":209
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:             # <<<<<<<<<<<<<<
  *             self.data = self.data[self.data["T"] >=
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_T, __pyx_t_1, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_T, __pyx_t_1, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "ThermoPyle.pyx":209
+    /* "ThermoPyle.pyx":210
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=             # <<<<<<<<<<<<<<
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_T); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_7 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_T); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":210
+    /* "ThermoPyle.pyx":211
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]             # <<<<<<<<<<<<<<
  *         if "U" in self.vars:
- *             self.data = self.data[self.data["U"] >= 1.0]
+ *             self.data = self.data[self.data["U"] >= 0.0]
  */
-    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     __pyx_t_9 = 0;
@@ -5653,7 +5733,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_10)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_n_s_TMIN, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 211, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -5662,14 +5742,14 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_10)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_n_s_TMIN, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_9, 2+__pyx_t_9); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 211, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(2+__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 211, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (__pyx_t_6) {
         __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -5680,33 +5760,33 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_9, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 211, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = __Pyx_PyFloat_AddObjC(__pyx_t_4, __pyx_float_1_0, 1.0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 210, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyFloat_AddObjC(__pyx_t_4, __pyx_float_1_0, 1.0, 0); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_7, __pyx_t_10, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_7, __pyx_t_10, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":209
+    /* "ThermoPyle.pyx":210
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=             # <<<<<<<<<<<<<<
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:
  */
-    __pyx_t_10 = PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_10 = PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_10) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_10) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":208
+    /* "ThermoPyle.pyx":209
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:             # <<<<<<<<<<<<<<
@@ -5715,99 +5795,53 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":211
+  /* "ThermoPyle.pyx":212
  *             self.data = self.data[self.data["T"] >=
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:             # <<<<<<<<<<<<<<
- *             self.data = self.data[self.data["U"] >= 1.0]
- *         if "V" in self.vars:
+ *             self.data = self.data[self.data["U"] >= 0.0]
+ * 
  */
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_U, __pyx_t_10, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_U, __pyx_t_10, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":212
+    /* "ThermoPyle.pyx":213
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:
- *             self.data = self.data[self.data["U"] >= 1.0]             # <<<<<<<<<<<<<<
- *         if "V" in self.vars:
- *             self.data = self.data[self.data["V"] >= 0.1]
+ *             self.data = self.data[self.data["U"] >= 0.0]             # <<<<<<<<<<<<<<
+ * 
+ * 
  */
-    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 212, __pyx_L1_error)
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_U); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+    __pyx_t_1 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_U); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_float_1_0, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
+    __pyx_t_4 = PyObject_RichCompare(__pyx_t_1, __pyx_float_0_0, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyObject_GetItem(__pyx_t_10, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
+    __pyx_t_1 = PyObject_GetItem(__pyx_t_10, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "ThermoPyle.pyx":211
+    /* "ThermoPyle.pyx":212
  *             self.data = self.data[self.data["T"] >=
  *                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:             # <<<<<<<<<<<<<<
- *             self.data = self.data[self.data["U"] >= 1.0]
- *         if "V" in self.vars:
- */
-  }
-
-  /* "ThermoPyle.pyx":213
- *         if "U" in self.vars:
- *             self.data = self.data[self.data["U"] >= 1.0]
- *         if "V" in self.vars:             # <<<<<<<<<<<<<<
- *             self.data = self.data[self.data["V"] >= 0.1]
- * 
- */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_n_s_V, __pyx_t_1, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 213, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = (__pyx_t_2 != 0);
-  if (__pyx_t_3) {
-
-    /* "ThermoPyle.pyx":214
- *             self.data = self.data[self.data["U"] >= 1.0]
- *         if "V" in self.vars:
- *             self.data = self.data[self.data["V"] >= 0.1]             # <<<<<<<<<<<<<<
- * 
- *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
- */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_10 = PyObject_GetItem(__pyx_t_4, __pyx_n_s_V); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 214, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyObject_RichCompare(__pyx_t_10, __pyx_float_0_1, Py_GE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-    __pyx_t_10 = PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 214, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_10);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_10) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-
-    /* "ThermoPyle.pyx":213
- *         if "U" in self.vars:
- *             self.data = self.data[self.data["U"] >= 1.0]
- *         if "V" in self.vars:             # <<<<<<<<<<<<<<
- *             self.data = self.data[self.data["V"] >= 0.1]
+ *             self.data = self.data[self.data["U"] >= 0.0]
  * 
  */
   }
 
-  /* "ThermoPyle.pyx":201
+  /* "ThermoPyle.pyx":202
  *         self.make_meta()
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
@@ -5835,7 +5869,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
 }
 
 /* "ThermoPyle.pyx":216
- *             self.data = self.data[self.data["V"] >= 0.1]
+ * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -6851,7 +6885,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   }
 
   /* "ThermoPyle.pyx":216
- *             self.data = self.data[self.data["V"] >= 0.1]
+ * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -7691,7 +7725,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
  *         self.numPoints = self.meta["numPoints"]
  *         self.units = self.meta["units"]             # <<<<<<<<<<<<<<
  * 
- *     def changeOrder(self, order: List[Text]) -> None:
+ *     def make_units(self) -> None:
  */
   __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_meta); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 302, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
@@ -7733,16 +7767,693 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
 /* "ThermoPyle.pyx":304
  *         self.units = self.meta["units"]
  * 
+ *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
+ *         """(Re)make the units list"""
+ *         self.units = {}
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_2make_units[] = "(Re)make the units list";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_3make_units = {"make_units", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_3make_units, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_2make_units};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("make_units (wrapper)", 0);
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_2make_units(__pyx_self, ((PyObject *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  PyObject *__pyx_v_var = NULL;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  Py_ssize_t __pyx_t_3;
+  PyObject *(*__pyx_t_4)(PyObject *);
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
+  PyObject *__pyx_t_8 = NULL;
+  int __pyx_t_9;
+  PyObject *__pyx_t_10 = NULL;
+  __Pyx_RefNannySetupContext("make_units", 0);
+
+  /* "ThermoPyle.pyx":306
+ *     def make_units(self) -> None:
+ *         """(Re)make the units list"""
+ *         self.units = {}             # <<<<<<<<<<<<<<
+ *         for var in self.data.columns:
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ */
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_units, __pyx_t_1) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":307
+ *         """(Re)make the units list"""
+ *         self.units = {}
+ *         for var in self.data.columns:             # <<<<<<<<<<<<<<
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ * 
+ */
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_columns); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
+    __pyx_t_1 = __pyx_t_2; __Pyx_INCREF(__pyx_t_1); __pyx_t_3 = 0;
+    __pyx_t_4 = NULL;
+  } else {
+    __pyx_t_3 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_4 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 307, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  for (;;) {
+    if (likely(!__pyx_t_4)) {
+      if (likely(PyList_CheckExact(__pyx_t_1))) {
+        if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_1)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 307, __pyx_L1_error)
+        #else
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        #endif
+      } else {
+        if (__pyx_t_3 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_3); __Pyx_INCREF(__pyx_t_2); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 307, __pyx_L1_error)
+        #else
+        __pyx_t_2 = PySequence_ITEM(__pyx_t_1, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        #endif
+      }
+    } else {
+      __pyx_t_2 = __pyx_t_4(__pyx_t_1);
+      if (unlikely(!__pyx_t_2)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 307, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_2);
+    }
+    __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_2);
+    __pyx_t_2 = 0;
+
+    /* "ThermoPyle.pyx":308
+ *         self.units = {}
+ *         for var in self.data.columns:
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")             # <<<<<<<<<<<<<<
+ * 
+ *     def make_meta(self) -> None:
+ */
+    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 308, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 308, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_INCREF(__pyx_v_var);
+    __Pyx_GIVEREF(__pyx_v_var);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_var);
+    __pyx_t_7 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_6, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 308, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_UNITS); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 308, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __pyx_t_8 = NULL;
+    __pyx_t_9 = 0;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
+      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_5);
+      if (likely(__pyx_t_8)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+        __Pyx_INCREF(__pyx_t_8);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_5, function);
+        __pyx_t_9 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_5)) {
+      PyObject *__pyx_temp[4] = {__pyx_t_8, __pyx_t_7, __pyx_t_6, __pyx_n_s_UnknownVar};
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_9, 3+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
+      PyObject *__pyx_temp[4] = {__pyx_t_8, __pyx_t_7, __pyx_t_6, __pyx_n_s_UnknownVar};
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_9, 3+__pyx_t_9); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_10 = PyTuple_New(3+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 308, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      if (__pyx_t_8) {
+        __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
+      }
+      __Pyx_GIVEREF(__pyx_t_7);
+      PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_9, __pyx_t_7);
+      __Pyx_GIVEREF(__pyx_t_6);
+      PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_6);
+      __Pyx_INCREF(__pyx_n_s_UnknownVar);
+      __Pyx_GIVEREF(__pyx_n_s_UnknownVar);
+      PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_n_s_UnknownVar);
+      __pyx_t_7 = 0;
+      __pyx_t_6 = 0;
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_10, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_units); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 308, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    if (unlikely(PyObject_SetItem(__pyx_t_5, __pyx_v_var, __pyx_t_2) < 0)) __PYX_ERR(0, 308, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+    /* "ThermoPyle.pyx":307
+ *         """(Re)make the units list"""
+ *         self.units = {}
+ *         for var in self.data.columns:             # <<<<<<<<<<<<<<
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ * 
+ */
+  }
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":304
+ *         self.units = self.meta["units"]
+ * 
+ *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
+ *         """(Re)make the units list"""
+ *         self.units = {}
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_10);
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.make_units", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_var);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":310
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ * 
+ *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         (Re)make the metadata object
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_4make_meta[] = "\n        (Re)make the metadata object\n        ";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_5make_meta = {"make_meta", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_5make_meta, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_4make_meta};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("make_meta (wrapper)", 0);
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(__pyx_self, ((PyObject *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  __Pyx_RefNannySetupContext("make_meta", 0);
+
+  /* "ThermoPyle.pyx":314
+ *         (Re)make the metadata object
+ *         """
+ *         self.make_units()             # <<<<<<<<<<<<<<
+ *         self.meta = pyr.pmap({
+ *             "date":
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":315
+ *         """
+ *         self.make_units()
+ *         self.meta = pyr.pmap({             # <<<<<<<<<<<<<<
+ *             "date":
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
+ */
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_pyr); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_pmap); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "ThermoPyle.pyx":316
+ *         self.make_units()
+ *         self.meta = pyr.pmap({
+ *             "date":             # <<<<<<<<<<<<<<
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
+ *             "fluid": self.fluid,
+ */
+  __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+
+  /* "ThermoPyle.pyx":317
+ *         self.meta = pyr.pmap({
+ *             "date":
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),             # <<<<<<<<<<<<<<
+ *             "fluid": self.fluid,
+ *             "xvar": self.xvar,
+ */
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_arrow); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_now); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_format); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_GIVEREF(__pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4);
+  __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_date, __pyx_t_4) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "ThermoPyle.pyx":318
+ *             "date":
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
+ *             "fluid": self.fluid,             # <<<<<<<<<<<<<<
+ *             "xvar": self.xvar,
+ *             "yvar": self.yvar,
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_fluid, __pyx_t_4) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "ThermoPyle.pyx":319
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
+ *             "fluid": self.fluid,
+ *             "xvar": self.xvar,             # <<<<<<<<<<<<<<
+ *             "yvar": self.yvar,
+ *             "zvar": self.zvar,
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_xvar, __pyx_t_4) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "ThermoPyle.pyx":320
+ *             "fluid": self.fluid,
+ *             "xvar": self.xvar,
+ *             "yvar": self.yvar,             # <<<<<<<<<<<<<<
+ *             "zvar": self.zvar,
+ *             "vars": list(self.vars),
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_yvar, __pyx_t_4) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "ThermoPyle.pyx":321
+ *             "xvar": self.xvar,
+ *             "yvar": self.yvar,
+ *             "zvar": self.zvar,             # <<<<<<<<<<<<<<
+ *             "vars": list(self.vars),
+ *             "numPoints": self.numPoints,
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_zvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_zvar, __pyx_t_4) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "ThermoPyle.pyx":322
+ *             "yvar": self.yvar,
+ *             "zvar": self.zvar,
+ *             "vars": list(self.vars),             # <<<<<<<<<<<<<<
+ *             "numPoints": self.numPoints,
+ *             "colorMap": self.colorMap,
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = PySequence_List(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_vars, __pyx_t_5) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "ThermoPyle.pyx":323
+ *             "zvar": self.zvar,
+ *             "vars": list(self.vars),
+ *             "numPoints": self.numPoints,             # <<<<<<<<<<<<<<
+ *             "colorMap": self.colorMap,
+ *             "units": self.units
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_numPoints); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_numPoints, __pyx_t_5) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "ThermoPyle.pyx":324
+ *             "vars": list(self.vars),
+ *             "numPoints": self.numPoints,
+ *             "colorMap": self.colorMap,             # <<<<<<<<<<<<<<
+ *             "units": self.units
+ *         })
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_colorMap); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_colorMap, __pyx_t_5) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "ThermoPyle.pyx":325
+ *             "numPoints": self.numPoints,
+ *             "colorMap": self.colorMap,
+ *             "units": self.units             # <<<<<<<<<<<<<<
+ *         })
+ * 
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_units); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 325, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_units, __pyx_t_5) < 0) __PYX_ERR(0, 316, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5); __pyx_t_5 = NULL;
+      __Pyx_GIVEREF(__pyx_t_2);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "ThermoPyle.pyx":315
+ *         """
+ *         self.make_units()
+ *         self.meta = pyr.pmap({             # <<<<<<<<<<<<<<
+ *             "date":
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
+ */
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_meta, __pyx_t_1) < 0) __PYX_ERR(0, 315, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":310
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ * 
+ *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         (Re)make the metadata object
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.make_meta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":328
+ *         })
+ * 
+ *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Refreshes the object, remakes meta, cleans data, remakes units.
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_7refresh(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_6refresh[] = "\n        Refreshes the object, remakes meta, cleans data, remakes units.\n        ";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_7refresh = {"refresh", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_7refresh, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_6refresh};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_7refresh(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("refresh (wrapper)", 0);
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_6refresh(__pyx_self, ((PyObject *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  __Pyx_RefNannySetupContext("refresh", 0);
+
+  /* "ThermoPyle.pyx":332
+ *         Refreshes the object, remakes meta, cleans data, remakes units.
+ *         """
+ *         self.vars = set(self.data.columns)             # <<<<<<<<<<<<<<
+ *         self.make_units()
+ *         self.clean()
+ */
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_columns); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PySet_New(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vars, __pyx_t_1) < 0) __PYX_ERR(0, 332, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":333
+ *         """
+ *         self.vars = set(self.data.columns)
+ *         self.make_units()             # <<<<<<<<<<<<<<
+ *         self.clean()
+ *         self.make_meta()
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":334
+ *         self.vars = set(self.data.columns)
+ *         self.make_units()
+ *         self.clean()             # <<<<<<<<<<<<<<
+ *         self.make_meta()
+ * 
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_clean); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":335
+ *         self.make_units()
+ *         self.clean()
+ *         self.make_meta()             # <<<<<<<<<<<<<<
+ * 
+ *     def changeOrder(self, order: List[Text]) -> None:
+ */
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 335, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 335, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":328
+ *         })
+ * 
+ *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Refreshes the object, remakes meta, cleans data, remakes units.
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.refresh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":337
+ *         self.make_meta()
+ * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Changes order of the columns:
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_2changeOrder[] = "\n        Changes order of the columns:\n\n        Parameters:\n            order (List[Text]): is a permutation of length 3 on vars.\n\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_3changeOrder = {"changeOrder", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_3changeOrder, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_2changeOrder};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_9changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_8changeOrder[] = "\n        Changes order of the columns:\n\n        Parameters:\n            order (List[Text]): is a permutation of length 3 on vars.\n\n        ";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_9changeOrder = {"changeOrder", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_9changeOrder, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_8changeOrder};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_9changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_order = 0;
   PyObject *__pyx_r = 0;
@@ -7768,11 +8479,11 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3changeOrder(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_order)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("changeOrder", 1, 2, 2, 1); __PYX_ERR(0, 304, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("changeOrder", 1, 2, 2, 1); __PYX_ERR(0, 337, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "changeOrder") < 0)) __PYX_ERR(0, 304, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "changeOrder") < 0)) __PYX_ERR(0, 337, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7785,20 +8496,20 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3changeOrder(PyObject *__pyx_se
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("changeOrder", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 304, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("changeOrder", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 337, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(__pyx_self, __pyx_v_self, __pyx_v_order);
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_8changeOrder(__pyx_self, __pyx_v_self, __pyx_v_order);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order) {
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order) {
   PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -7816,7 +8527,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("changeOrder", 0);
 
-  /* "ThermoPyle.pyx":312
+  /* "ThermoPyle.pyx":345
  * 
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -7832,7 +8543,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":313
+      /* "ThermoPyle.pyx":346
  *         """
  *         try:
  *             assert set(order).issubset(set(self.vars))             # <<<<<<<<<<<<<<
@@ -7841,14 +8552,14 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
  */
       #ifndef CYTHON_WITHOUT_ASSERTIONS
       if (unlikely(!Py_OptimizeFlag)) {
-        __pyx_t_5 = PySet_New(__pyx_v_order); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 313, __pyx_L3_error)
+        __pyx_t_5 = PySet_New(__pyx_v_order); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_issubset); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 313, __pyx_L3_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_issubset); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 346, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 313, __pyx_L3_error)
+        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_7 = PySet_New(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 313, __pyx_L3_error)
+        __pyx_t_7 = PySet_New(__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 346, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __pyx_t_5 = NULL;
@@ -7862,14 +8573,14 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
           }
         }
         if (!__pyx_t_5) {
-          __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L3_error)
+          __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L3_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_4);
         } else {
           #if CYTHON_FAST_PYCALL
           if (PyFunction_Check(__pyx_t_6)) {
             PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-            __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L3_error)
+            __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L3_error)
             __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -7878,35 +8589,35 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
           #if CYTHON_FAST_PYCCALL
           if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
             PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-            __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L3_error)
+            __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L3_error)
             __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           } else
           #endif
           {
-            __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 313, __pyx_L3_error)
+            __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 346, __pyx_L3_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __pyx_t_5 = NULL;
             __Pyx_GIVEREF(__pyx_t_7);
             PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_7);
             __pyx_t_7 = 0;
-            __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L3_error)
+            __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L3_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
           }
         }
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 313, __pyx_L3_error)
+        __pyx_t_9 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 346, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         if (unlikely(!__pyx_t_9)) {
           PyErr_SetNone(PyExc_AssertionError);
-          __PYX_ERR(0, 313, __pyx_L3_error)
+          __PYX_ERR(0, 346, __pyx_L3_error)
         }
       }
       #endif
 
-      /* "ThermoPyle.pyx":312
+      /* "ThermoPyle.pyx":345
  * 
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -7926,7 +8637,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":314
+    /* "ThermoPyle.pyx":347
  *         try:
  *             assert set(order).issubset(set(self.vars))
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -7936,28 +8647,28 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_10) {
       __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_8) < 0) __PYX_ERR(0, 314, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_8) < 0) __PYX_ERR(0, 347, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "ThermoPyle.pyx":315
+      /* "ThermoPyle.pyx":348
  *             assert set(order).issubset(set(self.vars))
  *         except AssertionError:
  *             raise ValueError("All entries order MUST be in vars")             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-      __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__11, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 315, __pyx_L5_except_error)
+      __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 348, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_Raise(__pyx_t_7, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __PYX_ERR(0, 315, __pyx_L5_except_error)
+      __PYX_ERR(0, 348, __pyx_L5_except_error)
     }
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "ThermoPyle.pyx":312
+    /* "ThermoPyle.pyx":345
  * 
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -7973,7 +8684,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __pyx_L10_try_end:;
   }
 
-  /* "ThermoPyle.pyx":317
+  /* "ThermoPyle.pyx":350
  *             raise ValueError("All entries order MUST be in vars")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -7989,7 +8700,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __Pyx_XGOTREF(__pyx_t_1);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":318
+      /* "ThermoPyle.pyx":351
  * 
  *         try:
  *             assert order in permutations(self.vars, 3)             # <<<<<<<<<<<<<<
@@ -7998,9 +8709,9 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
  */
       #ifndef CYTHON_WITHOUT_ASSERTIONS
       if (unlikely(!Py_OptimizeFlag)) {
-        __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_permutations); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 318, __pyx_L13_error)
+        __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_permutations); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 351, __pyx_L13_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L13_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L13_error)
         __Pyx_GOTREF(__pyx_t_4);
         __pyx_t_7 = NULL;
         __pyx_t_10 = 0;
@@ -8017,7 +8728,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_t_4, __pyx_int_3};
-          __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 318, __pyx_L13_error)
+          __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 351, __pyx_L13_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -8026,14 +8737,14 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
           PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_t_4, __pyx_int_3};
-          __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 318, __pyx_L13_error)
+          __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 351, __pyx_L13_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         } else
         #endif
         {
-          __pyx_t_5 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 318, __pyx_L13_error)
+          __pyx_t_5 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L13_error)
           __Pyx_GOTREF(__pyx_t_5);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -8044,21 +8755,21 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
           __Pyx_GIVEREF(__pyx_int_3);
           PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_10, __pyx_int_3);
           __pyx_t_4 = 0;
-          __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 318, __pyx_L13_error)
+          __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 351, __pyx_L13_error)
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         }
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_9 = (__Pyx_PySequence_ContainsTF(__pyx_v_order, __pyx_t_8, Py_EQ)); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 318, __pyx_L13_error)
+        __pyx_t_9 = (__Pyx_PySequence_ContainsTF(__pyx_v_order, __pyx_t_8, Py_EQ)); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 351, __pyx_L13_error)
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         if (unlikely(!(__pyx_t_9 != 0))) {
           PyErr_SetNone(PyExc_AssertionError);
-          __PYX_ERR(0, 318, __pyx_L13_error)
+          __PYX_ERR(0, 351, __pyx_L13_error)
         }
       }
       #endif
 
-      /* "ThermoPyle.pyx":317
+      /* "ThermoPyle.pyx":350
  *             raise ValueError("All entries order MUST be in vars")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -8078,7 +8789,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "ThermoPyle.pyx":319
+    /* "ThermoPyle.pyx":352
  *         try:
  *             assert order in permutations(self.vars, 3)
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -8088,28 +8799,28 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_10) {
       __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_8, &__pyx_t_6, &__pyx_t_5) < 0) __PYX_ERR(0, 319, __pyx_L15_except_error)
+      if (__Pyx_GetException(&__pyx_t_8, &__pyx_t_6, &__pyx_t_5) < 0) __PYX_ERR(0, 352, __pyx_L15_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_5);
 
-      /* "ThermoPyle.pyx":320
+      /* "ThermoPyle.pyx":353
  *             assert order in permutations(self.vars, 3)
  *         except AssertionError:
  *             raise ValueError(             # <<<<<<<<<<<<<<
  *                 "Order of columns must be a permutation of columns of data")
  * 
  */
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L15_except_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__14, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L15_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_Raise(__pyx_t_4, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __PYX_ERR(0, 320, __pyx_L15_except_error)
+      __PYX_ERR(0, 353, __pyx_L15_except_error)
     }
     goto __pyx_L15_except_error;
     __pyx_L15_except_error:;
 
-    /* "ThermoPyle.pyx":317
+    /* "ThermoPyle.pyx":350
  *             raise ValueError("All entries order MUST be in vars")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -8125,35 +8836,35 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     __pyx_L20_try_end:;
   }
 
-  /* "ThermoPyle.pyx":323
+  /* "ThermoPyle.pyx":356
  *                 "Order of columns must be a permutation of columns of data")
  * 
  *         self.data = self.data[list(             # <<<<<<<<<<<<<<
  *             order) + [var for var in set(self.vars) if var not in set(order)]]
  *         self.xvar = order[0]
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "ThermoPyle.pyx":324
+  /* "ThermoPyle.pyx":357
  * 
  *         self.data = self.data[list(
  *             order) + [var for var in set(self.vars) if var not in set(order)]]             # <<<<<<<<<<<<<<
  *         self.xvar = order[0]
  *         self.yvar = order[1]
  */
-  __pyx_t_6 = PySequence_List(__pyx_v_order); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_6 = PySequence_List(__pyx_v_order); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_8 = PyList_New(0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_8 = PyList_New(0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = PySet_New(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_7 = PySet_New(__pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyObject_GetIter(__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_4 = PyObject_GetIter(__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_11 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_11 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   for (;;) {
     {
@@ -8162,7 +8873,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 324, __pyx_L1_error)
+          else __PYX_ERR(0, 357, __pyx_L1_error)
         }
         break;
       }
@@ -8170,73 +8881,73 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
     }
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_7);
     __pyx_t_7 = 0;
-    __pyx_t_7 = PySet_New(__pyx_v_order); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_7 = PySet_New(__pyx_v_order); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_9 = (__Pyx_PySequence_ContainsTF(__pyx_v_var, __pyx_t_7, Py_NE)); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_9 = (__Pyx_PySequence_ContainsTF(__pyx_v_var, __pyx_t_7, Py_NE)); if (unlikely(__pyx_t_9 < 0)) __PYX_ERR(0, 357, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_12 = (__pyx_t_9 != 0);
     if (__pyx_t_12) {
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_8, (PyObject*)__pyx_v_var))) __PYX_ERR(0, 324, __pyx_L1_error)
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_8, (PyObject*)__pyx_v_var))) __PYX_ERR(0, 357, __pyx_L1_error)
     }
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_6, __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_6, __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":323
+  /* "ThermoPyle.pyx":356
  *                 "Order of columns must be a permutation of columns of data")
  * 
  *         self.data = self.data[list(             # <<<<<<<<<<<<<<
  *             order) + [var for var in set(self.vars) if var not in set(order)]]
  *         self.xvar = order[0]
  */
-  __pyx_t_8 = PyObject_GetItem(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_8 = PyObject_GetItem(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_8) < 0) __PYX_ERR(0, 323, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_8) < 0) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":325
+  /* "ThermoPyle.pyx":358
  *         self.data = self.data[list(
  *             order) + [var for var in set(self.vars) if var not in set(order)]]
  *         self.xvar = order[0]             # <<<<<<<<<<<<<<
  *         self.yvar = order[1]
  *         self.zvar = order[2]
  */
-  __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_order, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 325, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_order, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xvar, __pyx_t_8) < 0) __PYX_ERR(0, 325, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xvar, __pyx_t_8) < 0) __PYX_ERR(0, 358, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":326
+  /* "ThermoPyle.pyx":359
  *             order) + [var for var in set(self.vars) if var not in set(order)]]
  *         self.xvar = order[0]
  *         self.yvar = order[1]             # <<<<<<<<<<<<<<
  *         self.zvar = order[2]
  * 
  */
-  __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_order, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_order, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yvar, __pyx_t_8) < 0) __PYX_ERR(0, 326, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yvar, __pyx_t_8) < 0) __PYX_ERR(0, 359, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":327
+  /* "ThermoPyle.pyx":360
  *         self.xvar = order[0]
  *         self.yvar = order[1]
  *         self.zvar = order[2]             # <<<<<<<<<<<<<<
  * 
  *     def copy(self) -> C:
  */
-  __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_order, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 327, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetItemInt(__pyx_v_order, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 360, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_zvar, __pyx_t_8) < 0) __PYX_ERR(0, 327, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_zvar, __pyx_t_8) < 0) __PYX_ERR(0, 360, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":304
- *         self.units = self.meta["units"]
+  /* "ThermoPyle.pyx":337
+ *         self.make_meta()
  * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -8261,7 +8972,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":329
+/* "ThermoPyle.pyx":362
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
@@ -8270,21 +8981,21 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2changeOrder(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_5copy(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_4copy[] = "\n        Returns a copy of itself\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_5copy = {"copy", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_5copy, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_4copy};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_5copy(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_11copy(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_10copy[] = "\n        Returns a copy of itself\n        ";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_11copy = {"copy", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_11copy, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_10copy};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_11copy(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("copy (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_4copy(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_10copy(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8293,15 +9004,15 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *_
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("copy", 0);
 
-  /* "ThermoPyle.pyx":333
+  /* "ThermoPyle.pyx":366
  *         Returns a copy of itself
  *         """
  *         return deepcopy(self)             # <<<<<<<<<<<<<<
  * 
- * 
+ *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_deepcopy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_deepcopy); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -8314,13 +9025,13 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_v_self};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
@@ -8328,19 +9039,19 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_v_self};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 333, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_INCREF(__pyx_v_self);
       __Pyx_GIVEREF(__pyx_v_self);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_v_self);
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -8350,7 +9061,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ThermoPyle.pyx":329
+  /* "ThermoPyle.pyx":362
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
@@ -8372,7 +9083,2248 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4copy(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":336
+/* "ThermoPyle.pyx":368
+ *         return deepcopy(self)
+ * 
+ *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_13write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_12write_data[] = "\n        Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.\n\n        Parameters:\n\n            path (str): path where file should be saved\n\n            filename (str): what to name the file\n\n            mode (str): How to name the file:\n                -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``;\n                -  **custom**: fully custom name;\n                -  **dual**: default + custom.\n        ";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_13write_data = {"write_data", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_13write_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_12write_data};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_13write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_self = 0;
+  PyObject *__pyx_v_path = 0;
+  PyObject *__pyx_v_filename = 0;
+  PyObject *__pyx_v_mode = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("write_data (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_path,&__pyx_n_s_filename,&__pyx_n_s_mode,0};
+    PyObject* values[4] = {0,0,0,0};
+    values[1] = ((PyObject *)((PyObject*)__pyx_kp_s_data_2));
+    values[2] = ((PyObject *)((PyObject*)__pyx_kp_s__5));
+    values[3] = ((PyObject *)((PyObject*)__pyx_n_s_default));
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_self)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        case  1:
+        if (kw_args > 0) {
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_path);
+          if (value) { values[1] = value; kw_args--; }
+        }
+        case  2:
+        if (kw_args > 0) {
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_filename);
+          if (value) { values[2] = value; kw_args--; }
+        }
+        case  3:
+        if (kw_args > 0) {
+          PyObject* value = PyDict_GetItem(__pyx_kwds, __pyx_n_s_mode);
+          if (value) { values[3] = value; kw_args--; }
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "write_data") < 0)) __PYX_ERR(0, 368, __pyx_L3_error)
+      }
+    } else {
+      switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+    }
+    __pyx_v_self = values[0];
+    __pyx_v_path = values[1];
+    __pyx_v_filename = values[2];
+    __pyx_v_mode = values[3];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("write_data", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 368, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_12write_data(__pyx_self, __pyx_v_self, __pyx_v_path, __pyx_v_filename, __pyx_v_mode);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":413
+ * 
+ * 
+ *         def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
+ *             """
+ *             Adds a column to the dataframe
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10write_data_1add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_10ThermoPyle_8CSVFluid_10write_data_add_column[] = "\n            Adds a column to the dataframe\n\n            Paramaters:\n                variable (Union[List[Text],Text]): What variable(s) to add\n            ";
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_10write_data_1add_column = {"add_column", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_10write_data_1add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_10write_data_add_column};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10write_data_1add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_self = 0;
+  PyObject *__pyx_v_variables = 0;
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("add_column (wrapper)", 0);
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_variables,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_self)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        case  1:
+        if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_variables)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, 1); __PYX_ERR(0, 413, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "add_column") < 0)) __PYX_ERR(0, 413, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_self = values[0];
+    __pyx_v_variables = values[1];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 413, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_10write_data_add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":435
+ *             newcols = {}
+ *             for var in variables:
+ *                 newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
+ * 
+ *             for key in newcols:
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10write_data_10add_column_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
+static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_10write_data_10add_column_lambda1 = {"lambda1", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_10write_data_10add_column_lambda1, METH_O, 0};
+static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10write_data_10add_column_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("lambda1 (wrapper)", 0);
+  __pyx_r = __pyx_lambda_funcdef_lambda1(__pyx_self, ((PyObject *)__pyx_v_state));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state) {
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_cur_scope;
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_outer_scope;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
+  PyObject *__pyx_t_8 = NULL;
+  int __pyx_t_9;
+  PyObject *__pyx_t_10 = NULL;
+  __Pyx_RefNannySetupContext("lambda1", 0);
+  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_cur_scope = __pyx_outer_scope;
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_PropsSI); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (unlikely(!__pyx_cur_scope->__pyx_v_var)) { __Pyx_RaiseClosureNameError("var"); __PYX_ERR(0, 435, __pyx_L1_error) }
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 435, __pyx_L1_error) }
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 435, __pyx_L1_error) }
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = PyObject_GetItem(__pyx_v_state, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 435, __pyx_L1_error) }
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 435, __pyx_L1_error) }
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_7 = PyObject_GetItem(__pyx_v_state, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+  __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  if (unlikely(!__pyx_cur_scope->__pyx_v_self)) { __Pyx_RaiseClosureNameError("self"); __PYX_ERR(0, 435, __pyx_L1_error) }
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_8 = NULL;
+  __pyx_t_9 = 0;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_8)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_8);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+      __pyx_t_9 = 1;
+    }
+  }
+  #if CYTHON_FAST_PYCALL
+  if (PyFunction_Check(__pyx_t_3)) {
+    PyObject *__pyx_temp[7] = {__pyx_t_8, __pyx_cur_scope->__pyx_v_var, __pyx_t_2, __pyx_t_5, __pyx_t_4, __pyx_t_7, __pyx_t_6};
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_9, 6+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  } else
+  #endif
+  #if CYTHON_FAST_PYCCALL
+  if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+    PyObject *__pyx_temp[7] = {__pyx_t_8, __pyx_cur_scope->__pyx_v_var, __pyx_t_2, __pyx_t_5, __pyx_t_4, __pyx_t_7, __pyx_t_6};
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_9, 6+__pyx_t_9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+  } else
+  #endif
+  {
+    __pyx_t_10 = PyTuple_New(6+__pyx_t_9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 435, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    if (__pyx_t_8) {
+      __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8); __pyx_t_8 = NULL;
+    }
+    __Pyx_INCREF(__pyx_cur_scope->__pyx_v_var);
+    __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_var);
+    PyTuple_SET_ITEM(__pyx_t_10, 0+__pyx_t_9, __pyx_cur_scope->__pyx_v_var);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_9, __pyx_t_2);
+    __Pyx_GIVEREF(__pyx_t_5);
+    PyTuple_SET_ITEM(__pyx_t_10, 2+__pyx_t_9, __pyx_t_5);
+    __Pyx_GIVEREF(__pyx_t_4);
+    PyTuple_SET_ITEM(__pyx_t_10, 3+__pyx_t_9, __pyx_t_4);
+    __Pyx_GIVEREF(__pyx_t_7);
+    PyTuple_SET_ITEM(__pyx_t_10, 4+__pyx_t_9, __pyx_t_7);
+    __Pyx_GIVEREF(__pyx_t_6);
+    PyTuple_SET_ITEM(__pyx_t_10, 5+__pyx_t_9, __pyx_t_6);
+    __pyx_t_2 = 0;
+    __pyx_t_5 = 0;
+    __pyx_t_4 = 0;
+    __pyx_t_7 = 0;
+    __pyx_t_6 = 0;
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_10, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_2);
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_7);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_10);
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data.add_column.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":413
+ * 
+ * 
+ *         def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
+ *             """
+ *             Adds a column to the dataframe
+ */
+
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10write_data_add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_cur_scope;
+  PyObject *__pyx_v_buffer = NULL;
+  PyObject *__pyx_v_newcols = NULL;
+  PyObject *__pyx_v_key = NULL;
+  CYTHON_UNUSED PyObject *__pyx_v_index = NULL;
+  PyObject *__pyx_v_row = NULL;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  int __pyx_t_1;
+  int __pyx_t_2;
+  PyObject *__pyx_t_3 = NULL;
+  Py_ssize_t __pyx_t_4;
+  PyObject *(*__pyx_t_5)(PyObject *);
+  PyObject *__pyx_t_6 = NULL;
+  PyObject *__pyx_t_7 = NULL;
+  PyObject *__pyx_t_8 = NULL;
+  PyObject *__pyx_t_9 = NULL;
+  int __pyx_t_10;
+  PyObject *__pyx_t_11 = NULL;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  PyObject *__pyx_t_14 = NULL;
+  PyObject *__pyx_t_15 = NULL;
+  PyObject *__pyx_t_16 = NULL;
+  Py_ssize_t __pyx_t_17;
+  int __pyx_t_18;
+  PyObject *(*__pyx_t_19)(PyObject *);
+  Py_ssize_t __pyx_t_20;
+  int __pyx_t_21;
+  __Pyx_RefNannySetupContext("add_column", 0);
+  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(__pyx_ptype_10ThermoPyle___pyx_scope_struct_1_add_column, __pyx_empty_tuple, NULL);
+  if (unlikely(!__pyx_cur_scope)) {
+    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)Py_None);
+    __Pyx_INCREF(Py_None);
+    __PYX_ERR(0, 413, __pyx_L1_error)
+  } else {
+    __Pyx_GOTREF(__pyx_cur_scope);
+  }
+  __pyx_cur_scope->__pyx_v_self = __pyx_v_self;
+  __Pyx_INCREF(__pyx_cur_scope->__pyx_v_self);
+  __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
+  __Pyx_INCREF(__pyx_v_variables);
+
+  /* "ThermoPyle.pyx":420
+ *                 variable (Union[List[Text],Text]): What variable(s) to add
+ *             """
+ *             if type(variables) is not list:             # <<<<<<<<<<<<<<
+ *                 variables = [variables]
+ * 
+ */
+  __pyx_t_1 = (((PyObject *)Py_TYPE(__pyx_v_variables)) != ((PyObject *)(&PyList_Type)));
+  __pyx_t_2 = (__pyx_t_1 != 0);
+  if (__pyx_t_2) {
+
+    /* "ThermoPyle.pyx":421
+ *             """
+ *             if type(variables) is not list:
+ *                 variables = [variables]             # <<<<<<<<<<<<<<
+ * 
+ *             for var in variables:
+ */
+    __pyx_t_3 = PyList_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 421, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_INCREF(__pyx_v_variables);
+    __Pyx_GIVEREF(__pyx_v_variables);
+    PyList_SET_ITEM(__pyx_t_3, 0, __pyx_v_variables);
+    __Pyx_DECREF_SET(__pyx_v_variables, __pyx_t_3);
+    __pyx_t_3 = 0;
+
+    /* "ThermoPyle.pyx":420
+ *                 variable (Union[List[Text],Text]): What variable(s) to add
+ *             """
+ *             if type(variables) is not list:             # <<<<<<<<<<<<<<
+ *                 variables = [variables]
+ * 
+ */
+  }
+
+  /* "ThermoPyle.pyx":423
+ *                 variables = [variables]
+ * 
+ *             for var in variables:             # <<<<<<<<<<<<<<
+ *                 try:
+ *                     assert var not in self.vars
+ */
+  if (likely(PyList_CheckExact(__pyx_v_variables)) || PyTuple_CheckExact(__pyx_v_variables)) {
+    __pyx_t_3 = __pyx_v_variables; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
+    __pyx_t_5 = NULL;
+  } else {
+    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_v_variables); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 423, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_5 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 423, __pyx_L1_error)
+  }
+  for (;;) {
+    if (likely(!__pyx_t_5)) {
+      if (likely(PyList_CheckExact(__pyx_t_3))) {
+        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_6 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 423, __pyx_L1_error)
+        #else
+        __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 423, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_6);
+        #endif
+      } else {
+        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_6); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 423, __pyx_L1_error)
+        #else
+        __pyx_t_6 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 423, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_6);
+        #endif
+      }
+    } else {
+      __pyx_t_6 = __pyx_t_5(__pyx_t_3);
+      if (unlikely(!__pyx_t_6)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 423, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_6);
+    }
+    __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_var);
+    __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_var, __pyx_t_6);
+    __Pyx_GIVEREF(__pyx_t_6);
+    __pyx_t_6 = 0;
+
+    /* "ThermoPyle.pyx":424
+ * 
+ *             for var in variables:
+ *                 try:             # <<<<<<<<<<<<<<
+ *                     assert var not in self.vars
+ *                 except AssertionError:
+ */
+    {
+      __Pyx_PyThreadState_declare
+      __Pyx_PyThreadState_assign
+      __Pyx_ExceptionSave(&__pyx_t_7, &__pyx_t_8, &__pyx_t_9);
+      __Pyx_XGOTREF(__pyx_t_7);
+      __Pyx_XGOTREF(__pyx_t_8);
+      __Pyx_XGOTREF(__pyx_t_9);
+      /*try:*/ {
+
+        /* "ThermoPyle.pyx":425
+ *             for var in variables:
+ *                 try:
+ *                     assert var not in self.vars             # <<<<<<<<<<<<<<
+ *                 except AssertionError:
+ *                     raise ValueError(
+ */
+        #ifndef CYTHON_WITHOUT_ASSERTIONS
+        if (unlikely(!Py_OptimizeFlag)) {
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 425, __pyx_L6_error)
+          __Pyx_GOTREF(__pyx_t_6);
+          __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_cur_scope->__pyx_v_var, __pyx_t_6, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 425, __pyx_L6_error)
+          __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+          if (unlikely(!(__pyx_t_2 != 0))) {
+            PyErr_SetNone(PyExc_AssertionError);
+            __PYX_ERR(0, 425, __pyx_L6_error)
+          }
+        }
+        #endif
+
+        /* "ThermoPyle.pyx":424
+ * 
+ *             for var in variables:
+ *                 try:             # <<<<<<<<<<<<<<
+ *                     assert var not in self.vars
+ *                 except AssertionError:
+ */
+      }
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+      goto __pyx_L13_try_end;
+      __pyx_L6_error:;
+      __Pyx_PyThreadState_assign
+      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
+
+      /* "ThermoPyle.pyx":426
+ *                 try:
+ *                     assert var not in self.vars
+ *                 except AssertionError:             # <<<<<<<<<<<<<<
+ *                     raise ValueError(
+ *                         "Cannot add column {0}: already in frame".format(var))
+ */
+      __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
+      if (__pyx_t_10) {
+        __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_11, &__pyx_t_12) < 0) __PYX_ERR(0, 426, __pyx_L8_except_error)
+        __Pyx_GOTREF(__pyx_t_6);
+        __Pyx_GOTREF(__pyx_t_11);
+        __Pyx_GOTREF(__pyx_t_12);
+
+        /* "ThermoPyle.pyx":428
+ *                 except AssertionError:
+ *                     raise ValueError(
+ *                         "Cannot add column {0}: already in frame".format(var))             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Cannot_add_column_0_already_in_f, __pyx_n_s_format); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 428, __pyx_L8_except_error)
+        __Pyx_GOTREF(__pyx_t_14);
+        __pyx_t_15 = NULL;
+        if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_14))) {
+          __pyx_t_15 = PyMethod_GET_SELF(__pyx_t_14);
+          if (likely(__pyx_t_15)) {
+            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
+            __Pyx_INCREF(__pyx_t_15);
+            __Pyx_INCREF(function);
+            __Pyx_DECREF_SET(__pyx_t_14, function);
+          }
+        }
+        if (!__pyx_t_15) {
+          __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_cur_scope->__pyx_v_var); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L8_except_error)
+          __Pyx_GOTREF(__pyx_t_13);
+        } else {
+          #if CYTHON_FAST_PYCALL
+          if (PyFunction_Check(__pyx_t_14)) {
+            PyObject *__pyx_temp[2] = {__pyx_t_15, __pyx_cur_scope->__pyx_v_var};
+            __pyx_t_13 = __Pyx_PyFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L8_except_error)
+            __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
+            __Pyx_GOTREF(__pyx_t_13);
+          } else
+          #endif
+          #if CYTHON_FAST_PYCCALL
+          if (__Pyx_PyFastCFunction_Check(__pyx_t_14)) {
+            PyObject *__pyx_temp[2] = {__pyx_t_15, __pyx_cur_scope->__pyx_v_var};
+            __pyx_t_13 = __Pyx_PyCFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L8_except_error)
+            __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
+            __Pyx_GOTREF(__pyx_t_13);
+          } else
+          #endif
+          {
+            __pyx_t_16 = PyTuple_New(1+1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 428, __pyx_L8_except_error)
+            __Pyx_GOTREF(__pyx_t_16);
+            __Pyx_GIVEREF(__pyx_t_15); PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_15); __pyx_t_15 = NULL;
+            __Pyx_INCREF(__pyx_cur_scope->__pyx_v_var);
+            __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_var);
+            PyTuple_SET_ITEM(__pyx_t_16, 0+1, __pyx_cur_scope->__pyx_v_var);
+            __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_16, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 428, __pyx_L8_except_error)
+            __Pyx_GOTREF(__pyx_t_13);
+            __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
+          }
+        }
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+
+        /* "ThermoPyle.pyx":427
+ *                     assert var not in self.vars
+ *                 except AssertionError:
+ *                     raise ValueError(             # <<<<<<<<<<<<<<
+ *                         "Cannot add column {0}: already in frame".format(var))
+ * 
+ */
+        __pyx_t_14 = PyTuple_New(1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 427, __pyx_L8_except_error)
+        __Pyx_GOTREF(__pyx_t_14);
+        __Pyx_GIVEREF(__pyx_t_13);
+        PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_13);
+        __pyx_t_13 = 0;
+        __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_14, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 427, __pyx_L8_except_error)
+        __Pyx_GOTREF(__pyx_t_13);
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+        __Pyx_Raise(__pyx_t_13, 0, 0, 0);
+        __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __PYX_ERR(0, 427, __pyx_L8_except_error)
+      }
+      goto __pyx_L8_except_error;
+      __pyx_L8_except_error:;
+
+      /* "ThermoPyle.pyx":424
+ * 
+ *             for var in variables:
+ *                 try:             # <<<<<<<<<<<<<<
+ *                     assert var not in self.vars
+ *                 except AssertionError:
+ */
+      __Pyx_PyThreadState_assign
+      __Pyx_XGIVEREF(__pyx_t_7);
+      __Pyx_XGIVEREF(__pyx_t_8);
+      __Pyx_XGIVEREF(__pyx_t_9);
+      __Pyx_ExceptionReset(__pyx_t_7, __pyx_t_8, __pyx_t_9);
+      goto __pyx_L1_error;
+      __pyx_L13_try_end:;
+    }
+
+    /* "ThermoPyle.pyx":423
+ *                 variables = [variables]
+ * 
+ *             for var in variables:             # <<<<<<<<<<<<<<
+ *                 try:
+ *                     assert var not in self.vars
+ */
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "ThermoPyle.pyx":431
+ * 
+ * 
+ *             self.vars += variables             # <<<<<<<<<<<<<<
+ *             buffer = {}
+ *             newcols = {}
+ */
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_12 = PyNumber_InPlaceAdd(__pyx_t_3, __pyx_v_variables); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars, __pyx_t_12) < 0) __PYX_ERR(0, 431, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+
+  /* "ThermoPyle.pyx":432
+ * 
+ *             self.vars += variables
+ *             buffer = {}             # <<<<<<<<<<<<<<
+ *             newcols = {}
+ *             for var in variables:
+ */
+  __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 432, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __pyx_v_buffer = ((PyObject*)__pyx_t_12);
+  __pyx_t_12 = 0;
+
+  /* "ThermoPyle.pyx":433
+ *             self.vars += variables
+ *             buffer = {}
+ *             newcols = {}             # <<<<<<<<<<<<<<
+ *             for var in variables:
+ *                 newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+ */
+  __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __pyx_v_newcols = ((PyObject*)__pyx_t_12);
+  __pyx_t_12 = 0;
+
+  /* "ThermoPyle.pyx":434
+ *             buffer = {}
+ *             newcols = {}
+ *             for var in variables:             # <<<<<<<<<<<<<<
+ *                 newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+ * 
+ */
+  if (likely(PyList_CheckExact(__pyx_v_variables)) || PyTuple_CheckExact(__pyx_v_variables)) {
+    __pyx_t_12 = __pyx_v_variables; __Pyx_INCREF(__pyx_t_12); __pyx_t_4 = 0;
+    __pyx_t_5 = NULL;
+  } else {
+    __pyx_t_4 = -1; __pyx_t_12 = PyObject_GetIter(__pyx_v_variables); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_5 = Py_TYPE(__pyx_t_12)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 434, __pyx_L1_error)
+  }
+  for (;;) {
+    if (likely(!__pyx_t_5)) {
+      if (likely(PyList_CheckExact(__pyx_t_12))) {
+        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_12)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_12, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 434, __pyx_L1_error)
+        #else
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_12, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 434, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_3);
+        #endif
+      } else {
+        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_12)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_12, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 434, __pyx_L1_error)
+        #else
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_12, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 434, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_3);
+        #endif
+      }
+    } else {
+      __pyx_t_3 = __pyx_t_5(__pyx_t_12);
+      if (unlikely(!__pyx_t_3)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 434, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_3);
+    }
+    __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_var);
+    __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_var, __pyx_t_3);
+    __Pyx_GIVEREF(__pyx_t_3);
+    __pyx_t_3 = 0;
+
+    /* "ThermoPyle.pyx":435
+ *             newcols = {}
+ *             for var in variables:
+ *                 newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
+ * 
+ *             for key in newcols:
+ */
+    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_10write_data_10add_column_lambda1, 0, __pyx_n_s_CSVFluid_write_data_locals_add_c, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 435, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(PyDict_SetItem(__pyx_v_newcols, __pyx_cur_scope->__pyx_v_var, __pyx_t_3) < 0)) __PYX_ERR(0, 435, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+    /* "ThermoPyle.pyx":434
+ *             buffer = {}
+ *             newcols = {}
+ *             for var in variables:             # <<<<<<<<<<<<<<
+ *                 newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+ * 
+ */
+  }
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+
+  /* "ThermoPyle.pyx":437
+ *                 newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+ * 
+ *             for key in newcols:             # <<<<<<<<<<<<<<
+ *                 buffer[key] = []
+ * 
+ */
+  __pyx_t_4 = 0;
+  __pyx_t_3 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_17), (&__pyx_t_10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 437, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_12);
+  __pyx_t_12 = __pyx_t_3;
+  __pyx_t_3 = 0;
+  while (1) {
+    __pyx_t_18 = __Pyx_dict_iter_next(__pyx_t_12, __pyx_t_17, &__pyx_t_4, &__pyx_t_3, NULL, NULL, __pyx_t_10);
+    if (unlikely(__pyx_t_18 == 0)) break;
+    if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 437, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
+    __pyx_t_3 = 0;
+
+    /* "ThermoPyle.pyx":438
+ * 
+ *             for key in newcols:
+ *                 buffer[key] = []             # <<<<<<<<<<<<<<
+ * 
+ *             for index, row in self.data.iterrows():
+ */
+    __pyx_t_3 = PyList_New(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (unlikely(PyDict_SetItem(__pyx_v_buffer, __pyx_v_key, __pyx_t_3) < 0)) __PYX_ERR(0, 438, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+
+  /* "ThermoPyle.pyx":440
+ *                 buffer[key] = []
+ * 
+ *             for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
+ *                 for key in newcols:
+ *                     get(key, buffer).append(get(key, newcols)(row))
+ */
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_iterrows); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_11);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_11);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_11);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_11, function);
+    }
+  }
+  if (__pyx_t_3) {
+    __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 440, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else {
+    __pyx_t_12 = __Pyx_PyObject_CallNoArg(__pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 440, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_12);
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_12)) || PyTuple_CheckExact(__pyx_t_12)) {
+    __pyx_t_11 = __pyx_t_12; __Pyx_INCREF(__pyx_t_11); __pyx_t_17 = 0;
+    __pyx_t_5 = NULL;
+  } else {
+    __pyx_t_17 = -1; __pyx_t_11 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 440, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_11);
+    __pyx_t_5 = Py_TYPE(__pyx_t_11)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 440, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  for (;;) {
+    if (likely(!__pyx_t_5)) {
+      if (likely(PyList_CheckExact(__pyx_t_11))) {
+        if (__pyx_t_17 >= PyList_GET_SIZE(__pyx_t_11)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_12 = PyList_GET_ITEM(__pyx_t_11, __pyx_t_17); __Pyx_INCREF(__pyx_t_12); __pyx_t_17++; if (unlikely(0 < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
+        #else
+        __pyx_t_12 = PySequence_ITEM(__pyx_t_11, __pyx_t_17); __pyx_t_17++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 440, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_12);
+        #endif
+      } else {
+        if (__pyx_t_17 >= PyTuple_GET_SIZE(__pyx_t_11)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_12 = PyTuple_GET_ITEM(__pyx_t_11, __pyx_t_17); __Pyx_INCREF(__pyx_t_12); __pyx_t_17++; if (unlikely(0 < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
+        #else
+        __pyx_t_12 = PySequence_ITEM(__pyx_t_11, __pyx_t_17); __pyx_t_17++; if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 440, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_12);
+        #endif
+      }
+    } else {
+      __pyx_t_12 = __pyx_t_5(__pyx_t_11);
+      if (unlikely(!__pyx_t_12)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 440, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_12);
+    }
+    if ((likely(PyTuple_CheckExact(__pyx_t_12))) || (PyList_CheckExact(__pyx_t_12))) {
+      PyObject* sequence = __pyx_t_12;
+      #if !CYTHON_COMPILING_IN_PYPY
+      Py_ssize_t size = Py_SIZE(sequence);
+      #else
+      Py_ssize_t size = PySequence_Size(sequence);
+      #endif
+      if (unlikely(size != 2)) {
+        if (size > 2) __Pyx_RaiseTooManyValuesError(2);
+        else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
+        __PYX_ERR(0, 440, __pyx_L1_error)
+      }
+      #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+      if (likely(PyTuple_CheckExact(sequence))) {
+        __pyx_t_3 = PyTuple_GET_ITEM(sequence, 0); 
+        __pyx_t_6 = PyTuple_GET_ITEM(sequence, 1); 
+      } else {
+        __pyx_t_3 = PyList_GET_ITEM(sequence, 0); 
+        __pyx_t_6 = PyList_GET_ITEM(sequence, 1); 
+      }
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_6);
+      #else
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 440, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_6 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 440, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      #endif
+      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    } else {
+      Py_ssize_t index = -1;
+      __pyx_t_13 = PyObject_GetIter(__pyx_t_12); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 440, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+      __pyx_t_19 = Py_TYPE(__pyx_t_13)->tp_iternext;
+      index = 0; __pyx_t_3 = __pyx_t_19(__pyx_t_13); if (unlikely(!__pyx_t_3)) goto __pyx_L22_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_3);
+      index = 1; __pyx_t_6 = __pyx_t_19(__pyx_t_13); if (unlikely(!__pyx_t_6)) goto __pyx_L22_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_6);
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_19(__pyx_t_13), 2) < 0) __PYX_ERR(0, 440, __pyx_L1_error)
+      __pyx_t_19 = NULL;
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      goto __pyx_L23_unpacking_done;
+      __pyx_L22_unpacking_failed:;
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_19 = NULL;
+      if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
+      __PYX_ERR(0, 440, __pyx_L1_error)
+      __pyx_L23_unpacking_done:;
+    }
+    __Pyx_XDECREF_SET(__pyx_v_index, __pyx_t_3);
+    __pyx_t_3 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_6);
+    __pyx_t_6 = 0;
+
+    /* "ThermoPyle.pyx":441
+ * 
+ *             for index, row in self.data.iterrows():
+ *                 for key in newcols:             # <<<<<<<<<<<<<<
+ *                     get(key, buffer).append(get(key, newcols)(row))
+ *             for key in newcols:
+ */
+    __pyx_t_4 = 0;
+    __pyx_t_6 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_20), (&__pyx_t_10)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_12);
+    __pyx_t_12 = __pyx_t_6;
+    __pyx_t_6 = 0;
+    while (1) {
+      __pyx_t_18 = __Pyx_dict_iter_next(__pyx_t_12, __pyx_t_20, &__pyx_t_4, &__pyx_t_6, NULL, NULL, __pyx_t_10);
+      if (unlikely(__pyx_t_18 == 0)) break;
+      if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 441, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_6);
+      __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_6);
+      __pyx_t_6 = 0;
+
+      /* "ThermoPyle.pyx":442
+ *             for index, row in self.data.iterrows():
+ *                 for key in newcols:
+ *                     get(key, buffer).append(get(key, newcols)(row))             # <<<<<<<<<<<<<<
+ *             for key in newcols:
+ *                 self.data[key] = pd.Series(buffer[key], index=self.data.index)
+ */
+      __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_13 = NULL;
+      __pyx_t_18 = 0;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_13)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_13);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+          __pyx_t_18 = 1;
+        }
+      }
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_3)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_13, __pyx_v_key, __pyx_v_buffer};
+        __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __Pyx_GOTREF(__pyx_t_6);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_13, __pyx_v_key, __pyx_v_buffer};
+        __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __Pyx_GOTREF(__pyx_t_6);
+      } else
+      #endif
+      {
+        __pyx_t_14 = PyTuple_New(2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_14);
+        if (__pyx_t_13) {
+          __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_13); __pyx_t_13 = NULL;
+        }
+        __Pyx_INCREF(__pyx_v_key);
+        __Pyx_GIVEREF(__pyx_v_key);
+        PyTuple_SET_ITEM(__pyx_t_14, 0+__pyx_t_18, __pyx_v_key);
+        __Pyx_INCREF(__pyx_v_buffer);
+        __Pyx_GIVEREF(__pyx_v_buffer);
+        PyTuple_SET_ITEM(__pyx_t_14, 1+__pyx_t_18, __pyx_v_buffer);
+        __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_14, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_6);
+        __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_get); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __pyx_t_16 = NULL;
+      __pyx_t_18 = 0;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_13))) {
+        __pyx_t_16 = PyMethod_GET_SELF(__pyx_t_13);
+        if (likely(__pyx_t_16)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_13);
+          __Pyx_INCREF(__pyx_t_16);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_13, function);
+          __pyx_t_18 = 1;
+        }
+      }
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_13)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_16, __pyx_v_key, __pyx_v_newcols};
+        __pyx_t_14 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
+        __Pyx_GOTREF(__pyx_t_14);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_13)) {
+        PyObject *__pyx_temp[3] = {__pyx_t_16, __pyx_v_key, __pyx_v_newcols};
+        __pyx_t_14 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-__pyx_t_18, 2+__pyx_t_18); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
+        __Pyx_GOTREF(__pyx_t_14);
+      } else
+      #endif
+      {
+        __pyx_t_15 = PyTuple_New(2+__pyx_t_18); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_15);
+        if (__pyx_t_16) {
+          __Pyx_GIVEREF(__pyx_t_16); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_16); __pyx_t_16 = NULL;
+        }
+        __Pyx_INCREF(__pyx_v_key);
+        __Pyx_GIVEREF(__pyx_v_key);
+        PyTuple_SET_ITEM(__pyx_t_15, 0+__pyx_t_18, __pyx_v_key);
+        __Pyx_INCREF(__pyx_v_newcols);
+        __Pyx_GIVEREF(__pyx_v_newcols);
+        PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_18, __pyx_v_newcols);
+        __pyx_t_14 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_15, NULL); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_14);
+        __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+      }
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_13 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_14))) {
+        __pyx_t_13 = PyMethod_GET_SELF(__pyx_t_14);
+        if (likely(__pyx_t_13)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_14);
+          __Pyx_INCREF(__pyx_t_13);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_14, function);
+        }
+      }
+      if (!__pyx_t_13) {
+        __pyx_t_3 = __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_v_row); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_3);
+      } else {
+        #if CYTHON_FAST_PYCALL
+        if (PyFunction_Check(__pyx_t_14)) {
+          PyObject *__pyx_temp[2] = {__pyx_t_13, __pyx_v_row};
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+          __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+          __Pyx_GOTREF(__pyx_t_3);
+        } else
+        #endif
+        #if CYTHON_FAST_PYCCALL
+        if (__Pyx_PyFastCFunction_Check(__pyx_t_14)) {
+          PyObject *__pyx_temp[2] = {__pyx_t_13, __pyx_v_row};
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_14, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+          __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+          __Pyx_GOTREF(__pyx_t_3);
+        } else
+        #endif
+        {
+          __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 442, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_15);
+          __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_13); __pyx_t_13 = NULL;
+          __Pyx_INCREF(__pyx_v_row);
+          __Pyx_GIVEREF(__pyx_v_row);
+          PyTuple_SET_ITEM(__pyx_t_15, 0+1, __pyx_v_row);
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_14, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 442, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_3);
+          __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+        }
+      }
+      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+      __pyx_t_21 = __Pyx_PyObject_Append(__pyx_t_6, __pyx_t_3); if (unlikely(__pyx_t_21 == -1)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+
+    /* "ThermoPyle.pyx":440
+ *                 buffer[key] = []
+ * 
+ *             for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
+ *                 for key in newcols:
+ *                     get(key, buffer).append(get(key, newcols)(row))
+ */
+  }
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+
+  /* "ThermoPyle.pyx":443
+ *                 for key in newcols:
+ *                     get(key, buffer).append(get(key, newcols)(row))
+ *             for key in newcols:             # <<<<<<<<<<<<<<
+ *                 self.data[key] = pd.Series(buffer[key], index=self.data.index)
+ *             self.make_units()
+ */
+  __pyx_t_17 = 0;
+  __pyx_t_12 = __Pyx_dict_iterator(__pyx_v_newcols, 1, ((PyObject *)NULL), (&__pyx_t_20), (&__pyx_t_10)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_11);
+  __pyx_t_11 = __pyx_t_12;
+  __pyx_t_12 = 0;
+  while (1) {
+    __pyx_t_18 = __Pyx_dict_iter_next(__pyx_t_11, __pyx_t_20, &__pyx_t_17, &__pyx_t_12, NULL, NULL, __pyx_t_10);
+    if (unlikely(__pyx_t_18 == 0)) break;
+    if (unlikely(__pyx_t_18 == -1)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_12);
+    __pyx_t_12 = 0;
+
+    /* "ThermoPyle.pyx":444
+ *                     get(key, buffer).append(get(key, newcols)(row))
+ *             for key in newcols:
+ *                 self.data[key] = pd.Series(buffer[key], index=self.data.index)             # <<<<<<<<<<<<<<
+ *             self.make_units()
+ *             self.make_meta()
+ */
+    __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_Series); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __pyx_t_12 = __Pyx_PyDict_GetItem(__pyx_v_buffer, __pyx_v_key); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_6);
+    __Pyx_GIVEREF(__pyx_t_12);
+    PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_12);
+    __pyx_t_12 = 0;
+    __pyx_t_12 = PyDict_New(); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_14);
+    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_index); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_15);
+    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
+    if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_index, __pyx_t_15) < 0) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, __pyx_t_12); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_15);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_12);
+    if (unlikely(PyObject_SetItem(__pyx_t_12, __pyx_v_key, __pyx_t_15) < 0)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+    __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+
+  /* "ThermoPyle.pyx":445
+ *             for key in newcols:
+ *                 self.data[key] = pd.Series(buffer[key], index=self.data.index)
+ *             self.make_units()             # <<<<<<<<<<<<<<
+ *             self.make_meta()
+ * 
+ */
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_make_units); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 445, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
+  __pyx_t_12 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_15))) {
+    __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_15);
+    if (likely(__pyx_t_12)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_15);
+      __Pyx_INCREF(__pyx_t_12);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_15, function);
+    }
+  }
+  if (__pyx_t_12) {
+    __pyx_t_11 = __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 445, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  } else {
+    __pyx_t_11 = __Pyx_PyObject_CallNoArg(__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 445, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_11);
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+
+  /* "ThermoPyle.pyx":446
+ *                 self.data[key] = pd.Series(buffer[key], index=self.data.index)
+ *             self.make_units()
+ *             self.make_meta()             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 446, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
+  __pyx_t_12 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_15))) {
+    __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_15);
+    if (likely(__pyx_t_12)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_15);
+      __Pyx_INCREF(__pyx_t_12);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_15, function);
+    }
+  }
+  if (__pyx_t_12) {
+    __pyx_t_11 = __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_12); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 446, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+  } else {
+    __pyx_t_11 = __Pyx_PyObject_CallNoArg(__pyx_t_15); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 446, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_11);
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+
+  /* "ThermoPyle.pyx":413
+ * 
+ * 
+ *         def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
+ *             """
+ *             Adds a column to the dataframe
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_13);
+  __Pyx_XDECREF(__pyx_t_14);
+  __Pyx_XDECREF(__pyx_t_15);
+  __Pyx_XDECREF(__pyx_t_16);
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_buffer);
+  __Pyx_XDECREF(__pyx_v_newcols);
+  __Pyx_XDECREF(__pyx_v_key);
+  __Pyx_XDECREF(__pyx_v_index);
+  __Pyx_XDECREF(__pyx_v_row);
+  __Pyx_XDECREF(__pyx_v_variables);
+  __Pyx_DECREF(((PyObject *)__pyx_cur_scope));
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":368
+ *         return deepcopy(self)
+ * 
+ *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
+ */
+
+static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode) {
+  PyObject *__pyx_v_default_string = NULL;
+  PyObject *__pyx_v_middle_string = NULL;
+  PyObject *__pyx_v_f = NULL;
+  CYTHON_UNUSED PyObject *__pyx_v_add_column = 0;
+  PyObject *__pyx_v_varname = NULL;
+  PyObject *__pyx_v_point = NULL;
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  PyObject *__pyx_t_2 = NULL;
+  PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_t_5;
+  int __pyx_t_6;
+  int __pyx_t_7;
+  PyObject *__pyx_t_8 = NULL;
+  PyObject *__pyx_t_9 = NULL;
+  PyObject *__pyx_t_10 = NULL;
+  PyObject *__pyx_t_11 = NULL;
+  PyObject *__pyx_t_12 = NULL;
+  PyObject *__pyx_t_13 = NULL;
+  int __pyx_t_14;
+  Py_ssize_t __pyx_t_15;
+  PyObject *(*__pyx_t_16)(PyObject *);
+  PyObject *(*__pyx_t_17)(PyObject *);
+  PyObject *__pyx_t_18 = NULL;
+  PyObject *__pyx_t_19 = NULL;
+  __Pyx_RefNannySetupContext("write_data", 0);
+
+  /* "ThermoPyle.pyx":383
+ *                 -  **dual**: default + custom.
+ *         """
+ *         try:             # <<<<<<<<<<<<<<
+ *             assert mode in {"dual", "custom", "default"}
+ *         except AssertionError:
+ */
+  {
+    __Pyx_PyThreadState_declare
+    __Pyx_PyThreadState_assign
+    __Pyx_ExceptionSave(&__pyx_t_1, &__pyx_t_2, &__pyx_t_3);
+    __Pyx_XGOTREF(__pyx_t_1);
+    __Pyx_XGOTREF(__pyx_t_2);
+    __Pyx_XGOTREF(__pyx_t_3);
+    /*try:*/ {
+
+      /* "ThermoPyle.pyx":384
+ *         """
+ *         try:
+ *             assert mode in {"dual", "custom", "default"}             # <<<<<<<<<<<<<<
+ *         except AssertionError:
+ *             raise ValueError(
+ */
+      #ifndef CYTHON_WITHOUT_ASSERTIONS
+      if (unlikely(!Py_OptimizeFlag)) {
+        __Pyx_INCREF(__pyx_v_mode);
+        __pyx_t_4 = __pyx_v_mode;
+        __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_dual, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 384, __pyx_L3_error)
+        if (!__pyx_t_6) {
+        } else {
+          __pyx_t_5 = __pyx_t_6;
+          goto __pyx_L11_bool_binop_done;
+        }
+        __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_custom, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 384, __pyx_L3_error)
+        if (!__pyx_t_6) {
+        } else {
+          __pyx_t_5 = __pyx_t_6;
+          goto __pyx_L11_bool_binop_done;
+        }
+        __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_default, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 384, __pyx_L3_error)
+        __pyx_t_5 = __pyx_t_6;
+        __pyx_L11_bool_binop_done:;
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+        if (unlikely(!(__pyx_t_5 != 0))) {
+          PyErr_SetNone(PyExc_AssertionError);
+          __PYX_ERR(0, 384, __pyx_L3_error)
+        }
+      }
+      #endif
+
+      /* "ThermoPyle.pyx":383
+ *                 -  **dual**: default + custom.
+ *         """
+ *         try:             # <<<<<<<<<<<<<<
+ *             assert mode in {"dual", "custom", "default"}
+ *         except AssertionError:
+ */
+    }
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    goto __pyx_L10_try_end;
+    __pyx_L3_error:;
+    __Pyx_PyThreadState_assign
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+    /* "ThermoPyle.pyx":385
+ *         try:
+ *             assert mode in {"dual", "custom", "default"}
+ *         except AssertionError:             # <<<<<<<<<<<<<<
+ *             raise ValueError(
+ *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
+ */
+    __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
+    if (__pyx_t_7) {
+      __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 385, __pyx_L5_except_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GOTREF(__pyx_t_8);
+      __Pyx_GOTREF(__pyx_t_9);
+
+      /* "ThermoPyle.pyx":387
+ *         except AssertionError:
+ *             raise ValueError(
+ *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))             # <<<<<<<<<<<<<<
+ * 
+ *         if filename == "" and mode in {"dual", "custom"}:
+ */
+      __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Mode_must_be_one_of_dual_custom, __pyx_n_s_format); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 387, __pyx_L5_except_error)
+      __Pyx_GOTREF(__pyx_t_11);
+      __pyx_t_12 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
+        __pyx_t_12 = PyMethod_GET_SELF(__pyx_t_11);
+        if (likely(__pyx_t_12)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_11);
+          __Pyx_INCREF(__pyx_t_12);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_11, function);
+        }
+      }
+      if (!__pyx_t_12) {
+        __pyx_t_10 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_v_mode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 387, __pyx_L5_except_error)
+        __Pyx_GOTREF(__pyx_t_10);
+      } else {
+        #if CYTHON_FAST_PYCALL
+        if (PyFunction_Check(__pyx_t_11)) {
+          PyObject *__pyx_temp[2] = {__pyx_t_12, __pyx_v_mode};
+          __pyx_t_10 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 387, __pyx_L5_except_error)
+          __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
+          __Pyx_GOTREF(__pyx_t_10);
+        } else
+        #endif
+        #if CYTHON_FAST_PYCCALL
+        if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
+          PyObject *__pyx_temp[2] = {__pyx_t_12, __pyx_v_mode};
+          __pyx_t_10 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 387, __pyx_L5_except_error)
+          __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
+          __Pyx_GOTREF(__pyx_t_10);
+        } else
+        #endif
+        {
+          __pyx_t_13 = PyTuple_New(1+1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 387, __pyx_L5_except_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_12); __pyx_t_12 = NULL;
+          __Pyx_INCREF(__pyx_v_mode);
+          __Pyx_GIVEREF(__pyx_v_mode);
+          PyTuple_SET_ITEM(__pyx_t_13, 0+1, __pyx_v_mode);
+          __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_13, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 387, __pyx_L5_except_error)
+          __Pyx_GOTREF(__pyx_t_10);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+        }
+      }
+      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+
+      /* "ThermoPyle.pyx":386
+ *             assert mode in {"dual", "custom", "default"}
+ *         except AssertionError:
+ *             raise ValueError(             # <<<<<<<<<<<<<<
+ *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
+ * 
+ */
+      __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 386, __pyx_L5_except_error)
+      __Pyx_GOTREF(__pyx_t_11);
+      __Pyx_GIVEREF(__pyx_t_10);
+      PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_10);
+      __pyx_t_10 = 0;
+      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_11, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 386, __pyx_L5_except_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __Pyx_Raise(__pyx_t_10, 0, 0, 0);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __PYX_ERR(0, 386, __pyx_L5_except_error)
+    }
+    goto __pyx_L5_except_error;
+    __pyx_L5_except_error:;
+
+    /* "ThermoPyle.pyx":383
+ *                 -  **dual**: default + custom.
+ *         """
+ *         try:             # <<<<<<<<<<<<<<
+ *             assert mode in {"dual", "custom", "default"}
+ *         except AssertionError:
+ */
+    __Pyx_PyThreadState_assign
+    __Pyx_XGIVEREF(__pyx_t_1);
+    __Pyx_XGIVEREF(__pyx_t_2);
+    __Pyx_XGIVEREF(__pyx_t_3);
+    __Pyx_ExceptionReset(__pyx_t_1, __pyx_t_2, __pyx_t_3);
+    goto __pyx_L1_error;
+    __pyx_L10_try_end:;
+  }
+
+  /* "ThermoPyle.pyx":389
+ *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
+ * 
+ *         if filename == "" and mode in {"dual", "custom"}:             # <<<<<<<<<<<<<<
+ *             raise TypeError(
+ *                 "When supplying {0} mode, filename is required; None given".format(mode))
+ */
+  __pyx_t_6 = (__Pyx_PyString_Equals(__pyx_v_filename, __pyx_kp_s__5, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 389, __pyx_L1_error)
+  if (__pyx_t_6) {
+  } else {
+    __pyx_t_5 = __pyx_t_6;
+    goto __pyx_L17_bool_binop_done;
+  }
+  __Pyx_INCREF(__pyx_v_mode);
+  __pyx_t_9 = __pyx_v_mode;
+  __pyx_t_14 = (__Pyx_PyString_Equals(__pyx_t_9, __pyx_n_s_dual, Py_EQ)); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 389, __pyx_L1_error)
+  if (!__pyx_t_14) {
+  } else {
+    __pyx_t_6 = __pyx_t_14;
+    goto __pyx_L19_bool_binop_done;
+  }
+  __pyx_t_14 = (__Pyx_PyString_Equals(__pyx_t_9, __pyx_n_s_custom, Py_EQ)); if (unlikely(__pyx_t_14 < 0)) __PYX_ERR(0, 389, __pyx_L1_error)
+  __pyx_t_6 = __pyx_t_14;
+  __pyx_L19_bool_binop_done:;
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+  __pyx_t_14 = (__pyx_t_6 != 0);
+  __pyx_t_5 = __pyx_t_14;
+  __pyx_L17_bool_binop_done:;
+  if (__pyx_t_5) {
+
+    /* "ThermoPyle.pyx":391
+ *         if filename == "" and mode in {"dual", "custom"}:
+ *             raise TypeError(
+ *                 "When supplying {0} mode, filename is required; None given".format(mode))             # <<<<<<<<<<<<<<
+ * 
+ *         if mode != "custom":
+ */
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_When_supplying_0_mode_filename_i, __pyx_n_s_format); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 391, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_4 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_8))) {
+      __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_8);
+      if (likely(__pyx_t_4)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_8);
+        __Pyx_INCREF(__pyx_t_4);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_8, function);
+      }
+    }
+    if (!__pyx_t_4) {
+      __pyx_t_9 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_v_mode); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+    } else {
+      #if CYTHON_FAST_PYCALL
+      if (PyFunction_Check(__pyx_t_8)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_mode};
+        __pyx_t_9 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_GOTREF(__pyx_t_9);
+      } else
+      #endif
+      #if CYTHON_FAST_PYCCALL
+      if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
+        PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_v_mode};
+        __pyx_t_9 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_GOTREF(__pyx_t_9);
+      } else
+      #endif
+      {
+        __pyx_t_10 = PyTuple_New(1+1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_4); __pyx_t_4 = NULL;
+        __Pyx_INCREF(__pyx_v_mode);
+        __Pyx_GIVEREF(__pyx_v_mode);
+        PyTuple_SET_ITEM(__pyx_t_10, 0+1, __pyx_v_mode);
+        __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_10, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 391, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      }
+    }
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+
+    /* "ThermoPyle.pyx":390
+ * 
+ *         if filename == "" and mode in {"dual", "custom"}:
+ *             raise TypeError(             # <<<<<<<<<<<<<<
+ *                 "When supplying {0} mode, filename is required; None given".format(mode))
+ * 
+ */
+    __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 390, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_GIVEREF(__pyx_t_9);
+    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_9);
+    __pyx_t_9 = 0;
+    __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_t_8, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 390, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_Raise(__pyx_t_9, 0, 0, 0);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __PYX_ERR(0, 390, __pyx_L1_error)
+
+    /* "ThermoPyle.pyx":389
+ *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
+ * 
+ *         if filename == "" and mode in {"dual", "custom"}:             # <<<<<<<<<<<<<<
+ *             raise TypeError(
+ *                 "When supplying {0} mode, filename is required; None given".format(mode))
+ */
+  }
+
+  /* "ThermoPyle.pyx":393
+ *                 "When supplying {0} mode, filename is required; None given".format(mode))
+ * 
+ *         if mode != "custom":             # <<<<<<<<<<<<<<
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ */
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_custom, Py_NE)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 393, __pyx_L1_error)
+  if (__pyx_t_5) {
+
+    /* "ThermoPyle.pyx":394
+ * 
+ *         if mode != "custom":
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ * 
+ */
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_fluid); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __pyx_t_8 = PyNumber_Add(__pyx_t_9, __pyx_n_s__6); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+
+    /* "ThermoPyle.pyx":395
+ *         if mode != "custom":
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])             # <<<<<<<<<<<<<<
+ * 
+ *         if mode == "custom":
+ */
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xvar); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_11 = PyList_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_11);
+    __Pyx_GIVEREF(__pyx_t_10);
+    PyList_SET_ITEM(__pyx_t_11, 0, __pyx_t_10);
+    __Pyx_GIVEREF(__pyx_t_4);
+    PyList_SET_ITEM(__pyx_t_11, 1, __pyx_t_4);
+    __pyx_t_10 = 0;
+    __pyx_t_4 = 0;
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_numPoints); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_GIVEREF(__pyx_t_11);
+    PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_11);
+    __Pyx_GIVEREF(__pyx_t_4);
+    PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_t_4);
+    __pyx_t_11 = 0;
+    __pyx_t_4 = 0;
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_zip, __pyx_t_10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    if (likely(PyList_CheckExact(__pyx_t_4)) || PyTuple_CheckExact(__pyx_t_4)) {
+      __pyx_t_10 = __pyx_t_4; __Pyx_INCREF(__pyx_t_10); __pyx_t_15 = 0;
+      __pyx_t_16 = NULL;
+    } else {
+      __pyx_t_15 = -1; __pyx_t_10 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 395, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __pyx_t_16 = Py_TYPE(__pyx_t_10)->tp_iternext; if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 395, __pyx_L1_error)
+    }
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    for (;;) {
+      if (likely(!__pyx_t_16)) {
+        if (likely(PyList_CheckExact(__pyx_t_10))) {
+          if (__pyx_t_15 >= PyList_GET_SIZE(__pyx_t_10)) break;
+          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+          __pyx_t_4 = PyList_GET_ITEM(__pyx_t_10, __pyx_t_15); __Pyx_INCREF(__pyx_t_4); __pyx_t_15++; if (unlikely(0 < 0)) __PYX_ERR(0, 395, __pyx_L1_error)
+          #else
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_10, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_4);
+          #endif
+        } else {
+          if (__pyx_t_15 >= PyTuple_GET_SIZE(__pyx_t_10)) break;
+          #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+          __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_10, __pyx_t_15); __Pyx_INCREF(__pyx_t_4); __pyx_t_15++; if (unlikely(0 < 0)) __PYX_ERR(0, 395, __pyx_L1_error)
+          #else
+          __pyx_t_4 = PySequence_ITEM(__pyx_t_10, __pyx_t_15); __pyx_t_15++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 395, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_4);
+          #endif
+        }
+      } else {
+        __pyx_t_4 = __pyx_t_16(__pyx_t_10);
+        if (unlikely(!__pyx_t_4)) {
+          PyObject* exc_type = PyErr_Occurred();
+          if (exc_type) {
+            if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+            else __PYX_ERR(0, 395, __pyx_L1_error)
+          }
+          break;
+        }
+        __Pyx_GOTREF(__pyx_t_4);
+      }
+      if ((likely(PyTuple_CheckExact(__pyx_t_4))) || (PyList_CheckExact(__pyx_t_4))) {
+        PyObject* sequence = __pyx_t_4;
+        #if !CYTHON_COMPILING_IN_PYPY
+        Py_ssize_t size = Py_SIZE(sequence);
+        #else
+        Py_ssize_t size = PySequence_Size(sequence);
+        #endif
+        if (unlikely(size != 2)) {
+          if (size > 2) __Pyx_RaiseTooManyValuesError(2);
+          else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
+          __PYX_ERR(0, 395, __pyx_L1_error)
+        }
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        if (likely(PyTuple_CheckExact(sequence))) {
+          __pyx_t_11 = PyTuple_GET_ITEM(sequence, 0); 
+          __pyx_t_13 = PyTuple_GET_ITEM(sequence, 1); 
+        } else {
+          __pyx_t_11 = PyList_GET_ITEM(sequence, 0); 
+          __pyx_t_13 = PyList_GET_ITEM(sequence, 1); 
+        }
+        __Pyx_INCREF(__pyx_t_11);
+        __Pyx_INCREF(__pyx_t_13);
+        #else
+        __pyx_t_11 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 395, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_11);
+        __pyx_t_13 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 395, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_13);
+        #endif
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      } else {
+        Py_ssize_t index = -1;
+        __pyx_t_12 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 395, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_12);
+        __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __pyx_t_17 = Py_TYPE(__pyx_t_12)->tp_iternext;
+        index = 0; __pyx_t_11 = __pyx_t_17(__pyx_t_12); if (unlikely(!__pyx_t_11)) goto __pyx_L24_unpacking_failed;
+        __Pyx_GOTREF(__pyx_t_11);
+        index = 1; __pyx_t_13 = __pyx_t_17(__pyx_t_12); if (unlikely(!__pyx_t_13)) goto __pyx_L24_unpacking_failed;
+        __Pyx_GOTREF(__pyx_t_13);
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_17(__pyx_t_12), 2) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
+        __pyx_t_17 = NULL;
+        __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+        goto __pyx_L25_unpacking_done;
+        __pyx_L24_unpacking_failed:;
+        __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
+        __pyx_t_17 = NULL;
+        if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
+        __PYX_ERR(0, 395, __pyx_L1_error)
+        __pyx_L25_unpacking_done:;
+      }
+      __Pyx_XDECREF_SET(__pyx_v_varname, __pyx_t_11);
+      __pyx_t_11 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_point, __pyx_t_13);
+      __pyx_t_13 = 0;
+
+      /* "ThermoPyle.pyx":394
+ * 
+ *         if mode != "custom":
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ * 
+ */
+      __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_INCREF(__pyx_v_varname);
+      __Pyx_GIVEREF(__pyx_v_varname);
+      PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_varname);
+      __pyx_t_13 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_4, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = PyNumber_Add(__pyx_t_13, __pyx_kp_s__7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __Pyx_INCREF(__pyx_v_point);
+      __Pyx_GIVEREF(__pyx_v_point);
+      PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_v_point);
+      __pyx_t_11 = __Pyx_PyObject_Call(((PyObject *)(&PyString_Type)), __pyx_t_13, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_11);
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+      __pyx_t_13 = PyNumber_Add(__pyx_t_4, __pyx_t_11); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_13);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_9, (PyObject*)__pyx_t_13))) __PYX_ERR(0, 394, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+
+    /* "ThermoPyle.pyx":395
+ *         if mode != "custom":
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])             # <<<<<<<<<<<<<<
+ * 
+ *         if mode == "custom":
+ */
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_zvar); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __pyx_t_13 = PyList_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_GIVEREF(__pyx_t_10);
+    PyList_SET_ITEM(__pyx_t_13, 0, __pyx_t_10);
+    __pyx_t_10 = 0;
+    __pyx_t_10 = PyNumber_Add(__pyx_t_9, __pyx_t_13); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 395, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+
+    /* "ThermoPyle.pyx":394
+ * 
+ *         if mode != "custom":
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ * 
+ */
+    __pyx_t_13 = __Pyx_PyString_Join(__pyx_n_s__6, __pyx_t_10); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    __pyx_t_10 = PyNumber_Add(__pyx_t_8, __pyx_t_13); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 394, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __pyx_v_default_string = __pyx_t_10;
+    __pyx_t_10 = 0;
+
+    /* "ThermoPyle.pyx":393
+ *                 "When supplying {0} mode, filename is required; None given".format(mode))
+ * 
+ *         if mode != "custom":             # <<<<<<<<<<<<<<
+ *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ */
+  }
+
+  /* "ThermoPyle.pyx":397
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ * 
+ *         if mode == "custom":             # <<<<<<<<<<<<<<
+ *             middle_string = filename
+ * 
+ */
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_custom, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 397, __pyx_L1_error)
+  if (__pyx_t_5) {
+
+    /* "ThermoPyle.pyx":398
+ * 
+ *         if mode == "custom":
+ *             middle_string = filename             # <<<<<<<<<<<<<<
+ * 
+ *         elif mode == "default":
+ */
+    __Pyx_INCREF(__pyx_v_filename);
+    __pyx_v_middle_string = __pyx_v_filename;
+
+    /* "ThermoPyle.pyx":397
+ *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+ * 
+ *         if mode == "custom":             # <<<<<<<<<<<<<<
+ *             middle_string = filename
+ * 
+ */
+    goto __pyx_L26;
+  }
+
+  /* "ThermoPyle.pyx":400
+ *             middle_string = filename
+ * 
+ *         elif mode == "default":             # <<<<<<<<<<<<<<
+ *             middle_string = default_string
+ * 
+ */
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_default, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 400, __pyx_L1_error)
+  if (__pyx_t_5) {
+
+    /* "ThermoPyle.pyx":401
+ * 
+ *         elif mode == "default":
+ *             middle_string = default_string             # <<<<<<<<<<<<<<
+ * 
+ *         elif mode == "dual":
+ */
+    if (unlikely(!__pyx_v_default_string)) { __Pyx_RaiseUnboundLocalError("default_string"); __PYX_ERR(0, 401, __pyx_L1_error) }
+    __Pyx_INCREF(__pyx_v_default_string);
+    __pyx_v_middle_string = __pyx_v_default_string;
+
+    /* "ThermoPyle.pyx":400
+ *             middle_string = filename
+ * 
+ *         elif mode == "default":             # <<<<<<<<<<<<<<
+ *             middle_string = default_string
+ * 
+ */
+    goto __pyx_L26;
+  }
+
+  /* "ThermoPyle.pyx":403
+ *             middle_string = default_string
+ * 
+ *         elif mode == "dual":             # <<<<<<<<<<<<<<
+ *             middle_string = default_string + "_" + filename
+ * 
+ */
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_dual, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 403, __pyx_L1_error)
+  if (__pyx_t_5) {
+
+    /* "ThermoPyle.pyx":404
+ * 
+ *         elif mode == "dual":
+ *             middle_string = default_string + "_" + filename             # <<<<<<<<<<<<<<
+ * 
+ *         self.make_meta()
+ */
+    if (unlikely(!__pyx_v_default_string)) { __Pyx_RaiseUnboundLocalError("default_string"); __PYX_ERR(0, 404, __pyx_L1_error) }
+    __pyx_t_10 = PyNumber_Add(__pyx_v_default_string, __pyx_n_s__6); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 404, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __pyx_t_13 = PyNumber_Add(__pyx_t_10, __pyx_v_filename); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 404, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    __pyx_v_middle_string = __pyx_t_13;
+    __pyx_t_13 = 0;
+
+    /* "ThermoPyle.pyx":403
+ *             middle_string = default_string
+ * 
+ *         elif mode == "dual":             # <<<<<<<<<<<<<<
+ *             middle_string = default_string + "_" + filename
+ * 
+ */
+  }
+  __pyx_L26:;
+
+  /* "ThermoPyle.pyx":406
+ *             middle_string = default_string + "_" + filename
+ * 
+ *         self.make_meta()             # <<<<<<<<<<<<<<
+ * 
+ *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
+ */
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_make_meta); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 406, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __pyx_t_8 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_10))) {
+    __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_10);
+    if (likely(__pyx_t_8)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_10);
+      __Pyx_INCREF(__pyx_t_8);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_10, function);
+    }
+  }
+  if (__pyx_t_8) {
+    __pyx_t_13 = __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_8); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 406, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  } else {
+    __pyx_t_13 = __Pyx_PyObject_CallNoArg(__pyx_t_10); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 406, __pyx_L1_error)
+  }
+  __Pyx_GOTREF(__pyx_t_13);
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+
+  /* "ThermoPyle.pyx":408
+ *         self.make_meta()
+ * 
+ *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)             # <<<<<<<<<<<<<<
+ *         with open(path + middle_string + ".json", mode="w+") as f:
+ *             json.dump(dict(self.meta), f)
+ */
+  __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_data); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_to_csv); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  if (unlikely(!__pyx_v_middle_string)) { __Pyx_RaiseUnboundLocalError("middle_string"); __PYX_ERR(0, 408, __pyx_L1_error) }
+  __pyx_t_13 = PyNumber_Add(__pyx_v_path, __pyx_v_middle_string); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __pyx_t_8 = PyNumber_Add(__pyx_t_13, __pyx_kp_s_csv); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_8);
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __Pyx_GIVEREF(__pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_8);
+  __pyx_t_8 = 0;
+  __pyx_t_8 = PyDict_New(); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_8);
+  if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_mode, __pyx_kp_s_w) < 0) __PYX_ERR(0, 408, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_index, Py_False) < 0) __PYX_ERR(0, 408, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_13, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 408, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_9);
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+  /* "ThermoPyle.pyx":409
+ * 
+ *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
+ *         with open(path + middle_string + ".json", mode="w+") as f:             # <<<<<<<<<<<<<<
+ *             json.dump(dict(self.meta), f)
+ * 
+ */
+  /*with:*/ {
+    if (unlikely(!__pyx_v_middle_string)) { __Pyx_RaiseUnboundLocalError("middle_string"); __PYX_ERR(0, 409, __pyx_L1_error) }
+    __pyx_t_9 = PyNumber_Add(__pyx_v_path, __pyx_v_middle_string); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __pyx_t_8 = PyNumber_Add(__pyx_t_9, __pyx_kp_s_json); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_GIVEREF(__pyx_t_8);
+    PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8);
+    __pyx_t_8 = 0;
+    __pyx_t_8 = PyDict_New(); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_mode, __pyx_kp_s_w) < 0) __PYX_ERR(0, 409, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_9, __pyx_t_8); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_13);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_3 = __Pyx_PyObject_LookupSpecial(__pyx_t_13, __pyx_n_s_exit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 409, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_13, __pyx_n_s_enter); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 409, __pyx_L27_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __pyx_t_10 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_9))) {
+      __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_9);
+      if (likely(__pyx_t_10)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_9);
+        __Pyx_INCREF(__pyx_t_10);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_9, function);
+      }
+    }
+    if (__pyx_t_10) {
+      __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 409, __pyx_L27_error)
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    } else {
+      __pyx_t_8 = __Pyx_PyObject_CallNoArg(__pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 409, __pyx_L27_error)
+    }
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __pyx_t_9 = __pyx_t_8;
+    __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    /*try:*/ {
+      {
+        __Pyx_PyThreadState_declare
+        __Pyx_PyThreadState_assign
+        __Pyx_ExceptionSave(&__pyx_t_2, &__pyx_t_1, &__pyx_t_18);
+        __Pyx_XGOTREF(__pyx_t_2);
+        __Pyx_XGOTREF(__pyx_t_1);
+        __Pyx_XGOTREF(__pyx_t_18);
+        /*try:*/ {
+          __pyx_v_f = __pyx_t_9;
+          __pyx_t_9 = 0;
+
+          /* "ThermoPyle.pyx":410
+ *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
+ *         with open(path + middle_string + ".json", mode="w+") as f:
+ *             json.dump(dict(self.meta), f)             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+          __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_json_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 410, __pyx_L31_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_dump); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 410, __pyx_L31_error)
+          __Pyx_GOTREF(__pyx_t_8);
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_meta); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 410, __pyx_L31_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_10 = PyTuple_New(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 410, __pyx_L31_error)
+          __Pyx_GOTREF(__pyx_t_10);
+          __Pyx_GIVEREF(__pyx_t_13);
+          PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_13);
+          __pyx_t_13 = 0;
+          __pyx_t_13 = __Pyx_PyObject_Call(((PyObject *)(&PyDict_Type)), __pyx_t_10, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 410, __pyx_L31_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+          __pyx_t_10 = NULL;
+          __pyx_t_7 = 0;
+          if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_8))) {
+            __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_8);
+            if (likely(__pyx_t_10)) {
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_8);
+              __Pyx_INCREF(__pyx_t_10);
+              __Pyx_INCREF(function);
+              __Pyx_DECREF_SET(__pyx_t_8, function);
+              __pyx_t_7 = 1;
+            }
+          }
+          #if CYTHON_FAST_PYCALL
+          if (PyFunction_Check(__pyx_t_8)) {
+            PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_13, __pyx_v_f};
+            __pyx_t_9 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 410, __pyx_L31_error)
+            __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+            __Pyx_GOTREF(__pyx_t_9);
+            __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          } else
+          #endif
+          #if CYTHON_FAST_PYCCALL
+          if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
+            PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_t_13, __pyx_v_f};
+            __pyx_t_9 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 410, __pyx_L31_error)
+            __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+            __Pyx_GOTREF(__pyx_t_9);
+            __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          } else
+          #endif
+          {
+            __pyx_t_11 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 410, __pyx_L31_error)
+            __Pyx_GOTREF(__pyx_t_11);
+            if (__pyx_t_10) {
+              __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_10); __pyx_t_10 = NULL;
+            }
+            __Pyx_GIVEREF(__pyx_t_13);
+            PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_7, __pyx_t_13);
+            __Pyx_INCREF(__pyx_v_f);
+            __Pyx_GIVEREF(__pyx_v_f);
+            PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_7, __pyx_v_f);
+            __pyx_t_13 = 0;
+            __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_11, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 410, __pyx_L31_error)
+            __Pyx_GOTREF(__pyx_t_9);
+            __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+          }
+          __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+          /* "ThermoPyle.pyx":409
+ * 
+ *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
+ *         with open(path + middle_string + ".json", mode="w+") as f:             # <<<<<<<<<<<<<<
+ *             json.dump(dict(self.meta), f)
+ * 
+ */
+        }
+        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __Pyx_XDECREF(__pyx_t_18); __pyx_t_18 = 0;
+        goto __pyx_L38_try_end;
+        __pyx_L31_error:;
+        __Pyx_PyThreadState_assign
+        __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
+        __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+        __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
+        __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+        /*except:*/ {
+          __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          if (__Pyx_GetException(&__pyx_t_9, &__pyx_t_8, &__pyx_t_11) < 0) __PYX_ERR(0, 409, __pyx_L33_except_error)
+          __Pyx_GOTREF(__pyx_t_9);
+          __Pyx_GOTREF(__pyx_t_8);
+          __Pyx_GOTREF(__pyx_t_11);
+          __pyx_t_13 = PyTuple_Pack(3, __pyx_t_9, __pyx_t_8, __pyx_t_11); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 409, __pyx_L33_except_error)
+          __Pyx_GOTREF(__pyx_t_13);
+          __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_13, NULL);
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+          __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+          if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 409, __pyx_L33_except_error)
+          __Pyx_GOTREF(__pyx_t_19);
+          __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_19);
+          __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+          if (__pyx_t_5 < 0) __PYX_ERR(0, 409, __pyx_L33_except_error)
+          __pyx_t_14 = ((!(__pyx_t_5 != 0)) != 0);
+          if (__pyx_t_14) {
+            __Pyx_GIVEREF(__pyx_t_9);
+            __Pyx_GIVEREF(__pyx_t_8);
+            __Pyx_XGIVEREF(__pyx_t_11);
+            __Pyx_ErrRestoreWithState(__pyx_t_9, __pyx_t_8, __pyx_t_11);
+            __pyx_t_9 = 0; __pyx_t_8 = 0; __pyx_t_11 = 0; 
+            __PYX_ERR(0, 409, __pyx_L33_except_error)
+          }
+          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+          __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+          __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+          goto __pyx_L32_exception_handled;
+        }
+        __pyx_L33_except_error:;
+        __Pyx_PyThreadState_assign
+        __Pyx_XGIVEREF(__pyx_t_2);
+        __Pyx_XGIVEREF(__pyx_t_1);
+        __Pyx_XGIVEREF(__pyx_t_18);
+        __Pyx_ExceptionReset(__pyx_t_2, __pyx_t_1, __pyx_t_18);
+        goto __pyx_L1_error;
+        __pyx_L32_exception_handled:;
+        __Pyx_PyThreadState_assign
+        __Pyx_XGIVEREF(__pyx_t_2);
+        __Pyx_XGIVEREF(__pyx_t_1);
+        __Pyx_XGIVEREF(__pyx_t_18);
+        __Pyx_ExceptionReset(__pyx_t_2, __pyx_t_1, __pyx_t_18);
+        __pyx_L38_try_end:;
+      }
+    }
+    /*finally:*/ {
+      /*normal exit:*/{
+        if (__pyx_t_3) {
+          __pyx_t_18 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__15, NULL);
+          __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+          if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 409, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_18);
+          __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
+        }
+        goto __pyx_L30;
+      }
+      __pyx_L30:;
+    }
+    goto __pyx_L42;
+    __pyx_L27_error:;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    goto __pyx_L1_error;
+    __pyx_L42:;
+  }
+
+  /* "ThermoPyle.pyx":413
+ * 
+ * 
+ *         def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
+ *             """
+ *             Adds a column to the dataframe
+ */
+  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_11);
+  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_Union); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_8);
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_List); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_9);
+  __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __pyx_t_10 = PyObject_GetItem(__pyx_t_9, __pyx_t_13); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  __pyx_t_13 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_9);
+  __Pyx_GIVEREF(__pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_10);
+  __Pyx_GIVEREF(__pyx_t_13);
+  PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_13);
+  __pyx_t_10 = 0;
+  __pyx_t_13 = 0;
+  __pyx_t_13 = PyObject_GetItem(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_variables, __pyx_t_13) < 0) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 413, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_10write_data_1add_column, 0, __pyx_n_s_CSVFluid_write_data_locals_add_c_2, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_13);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_13, __pyx_t_11);
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_v_add_column = __pyx_t_13;
+  __pyx_t_13 = 0;
+
+  /* "ThermoPyle.pyx":368
+ *         return deepcopy(self)
+ * 
+ *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
+ */
+
+  /* function exit code */
+  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
+  goto __pyx_L0;
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_9);
+  __Pyx_XDECREF(__pyx_t_10);
+  __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_XDECREF(__pyx_t_12);
+  __Pyx_XDECREF(__pyx_t_13);
+  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XDECREF(__pyx_v_default_string);
+  __Pyx_XDECREF(__pyx_v_middle_string);
+  __Pyx_XDECREF(__pyx_v_f);
+  __Pyx_XDECREF(__pyx_v_add_column);
+  __Pyx_XDECREF(__pyx_v_varname);
+  __Pyx_XDECREF(__pyx_v_point);
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "ThermoPyle.pyx":449
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
@@ -8439,7 +11391,7 @@ static PyObject *__pyx_pw_10ThermoPyle_1fluid_plot(PyObject *__pyx_self, PyObjec
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fluid_plot") < 0)) __PYX_ERR(0, 336, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fluid_plot") < 0)) __PYX_ERR(0, 449, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -8460,7 +11412,7 @@ static PyObject *__pyx_pw_10ThermoPyle_1fluid_plot(PyObject *__pyx_self, PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("fluid_plot", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 336, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("fluid_plot", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 449, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ThermoPyle.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8500,30 +11452,30 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_INCREF(__pyx_v_zvar);
   __Pyx_INCREF(__pyx_v_coloring);
 
-  /* "ThermoPyle.pyx":347
+  /* "ThermoPyle.pyx":460
  *         coloring (Text): What variable to color by. Default is zvar.
  *     """
  *     if not coloring:             # <<<<<<<<<<<<<<
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_coloring); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_coloring); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 460, __pyx_L1_error)
   __pyx_t_2 = ((!__pyx_t_1) != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":348
+    /* "ThermoPyle.pyx":461
  *     """
  *     if not coloring:
  *         coloring = fluid.zvar             # <<<<<<<<<<<<<<
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_zvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_zvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF_SET(__pyx_v_coloring, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":347
+    /* "ThermoPyle.pyx":460
  *         coloring (Text): What variable to color by. Default is zvar.
  *     """
  *     if not coloring:             # <<<<<<<<<<<<<<
@@ -8532,14 +11484,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "ThermoPyle.pyx":349
+  /* "ThermoPyle.pyx":462
  *     if not coloring:
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:             # <<<<<<<<<<<<<<
  *         if not var:
  *             if var == xvar:
  */
-  __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 462, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_xvar);
   __Pyx_GIVEREF(__pyx_v_xvar);
@@ -8558,50 +11510,50 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   for (;;) {
     if (__pyx_t_5 >= 4) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 462, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 462, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":350
+    /* "ThermoPyle.pyx":463
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:             # <<<<<<<<<<<<<<
  *             if var == xvar:
  *                 xvar = fluid.xvar
  */
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_var); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 350, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_v_var); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 463, __pyx_L1_error)
     __pyx_t_1 = ((!__pyx_t_2) != 0);
     if (__pyx_t_1) {
 
-      /* "ThermoPyle.pyx":351
+      /* "ThermoPyle.pyx":464
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:
  *             if var == xvar:             # <<<<<<<<<<<<<<
  *                 xvar = fluid.xvar
  *             if var == yvar:
  */
-      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_xvar, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 351, __pyx_L1_error)
-      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 351, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_xvar, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 464, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 464, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":352
+        /* "ThermoPyle.pyx":465
  *         if not var:
  *             if var == xvar:
  *                 xvar = fluid.xvar             # <<<<<<<<<<<<<<
  *             if var == yvar:
  *                 yvar = fluid.yvar
  */
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_xvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_xvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 465, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF_SET(__pyx_v_xvar, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "ThermoPyle.pyx":351
+        /* "ThermoPyle.pyx":464
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:
  *             if var == xvar:             # <<<<<<<<<<<<<<
@@ -8610,31 +11562,31 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":353
+      /* "ThermoPyle.pyx":466
  *             if var == xvar:
  *                 xvar = fluid.xvar
  *             if var == yvar:             # <<<<<<<<<<<<<<
  *                 yvar = fluid.yvar
  *             if var == zvar:
  */
-      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_yvar, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
-      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 353, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_yvar, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 466, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 466, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":354
+        /* "ThermoPyle.pyx":467
  *                 xvar = fluid.xvar
  *             if var == yvar:
  *                 yvar = fluid.yvar             # <<<<<<<<<<<<<<
  *             if var == zvar:
  *                 zvar = fluid.zvar
  */
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_yvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_yvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 467, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF_SET(__pyx_v_yvar, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "ThermoPyle.pyx":353
+        /* "ThermoPyle.pyx":466
  *             if var == xvar:
  *                 xvar = fluid.xvar
  *             if var == yvar:             # <<<<<<<<<<<<<<
@@ -8643,31 +11595,31 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":355
+      /* "ThermoPyle.pyx":468
  *             if var == yvar:
  *                 yvar = fluid.yvar
  *             if var == zvar:             # <<<<<<<<<<<<<<
  *                 zvar = fluid.zvar
  *             if var == coloring:
  */
-      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_zvar, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 355, __pyx_L1_error)
-      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 355, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_zvar, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 468, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 468, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":356
+        /* "ThermoPyle.pyx":469
  *                 yvar = fluid.yvar
  *             if var == zvar:
  *                 zvar = fluid.zvar             # <<<<<<<<<<<<<<
  *             if var == coloring:
  *                 coloring == fluid.zvar
  */
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_zvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_zvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 469, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF_SET(__pyx_v_zvar, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "ThermoPyle.pyx":355
+        /* "ThermoPyle.pyx":468
  *             if var == yvar:
  *                 yvar = fluid.yvar
  *             if var == zvar:             # <<<<<<<<<<<<<<
@@ -8676,32 +11628,32 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":357
+      /* "ThermoPyle.pyx":470
  *             if var == zvar:
  *                 zvar = fluid.zvar
  *             if var == coloring:             # <<<<<<<<<<<<<<
  *                 coloring == fluid.zvar
  *         try:
  */
-      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_coloring, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
-      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 357, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_v_var, __pyx_v_coloring, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 470, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 470, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":358
+        /* "ThermoPyle.pyx":471
  *                 zvar = fluid.zvar
  *             if var == coloring:
  *                 coloring == fluid.zvar             # <<<<<<<<<<<<<<
  *         try:
  *             assert var in fluid.vars
  */
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_zvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_zvar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 471, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_6 = PyObject_RichCompare(__pyx_v_coloring, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 358, __pyx_L1_error)
+        __pyx_t_6 = PyObject_RichCompare(__pyx_v_coloring, __pyx_t_3, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 471, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "ThermoPyle.pyx":357
+        /* "ThermoPyle.pyx":470
  *             if var == zvar:
  *                 zvar = fluid.zvar
  *             if var == coloring:             # <<<<<<<<<<<<<<
@@ -8710,7 +11662,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":350
+      /* "ThermoPyle.pyx":463
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:             # <<<<<<<<<<<<<<
@@ -8719,7 +11671,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
     }
 
-    /* "ThermoPyle.pyx":359
+    /* "ThermoPyle.pyx":472
  *             if var == coloring:
  *                 coloring == fluid.zvar
  *         try:             # <<<<<<<<<<<<<<
@@ -8735,7 +11687,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":360
+        /* "ThermoPyle.pyx":473
  *                 coloring == fluid.zvar
  *         try:
  *             assert var in fluid.vars             # <<<<<<<<<<<<<<
@@ -8744,18 +11696,18 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
         #ifndef CYTHON_WITHOUT_ASSERTIONS
         if (unlikely(!Py_OptimizeFlag)) {
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_vars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 360, __pyx_L11_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_vars); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 473, __pyx_L11_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_v_var, __pyx_t_6, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 360, __pyx_L11_error)
+          __pyx_t_1 = (__Pyx_PySequence_ContainsTF(__pyx_v_var, __pyx_t_6, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 473, __pyx_L11_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           if (unlikely(!(__pyx_t_1 != 0))) {
             PyErr_SetNone(PyExc_AssertionError);
-            __PYX_ERR(0, 360, __pyx_L11_error)
+            __PYX_ERR(0, 473, __pyx_L11_error)
           }
         }
         #endif
 
-        /* "ThermoPyle.pyx":359
+        /* "ThermoPyle.pyx":472
  *             if var == coloring:
  *                 coloring == fluid.zvar
  *         try:             # <<<<<<<<<<<<<<
@@ -8772,7 +11724,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":361
+      /* "ThermoPyle.pyx":474
  *         try:
  *             assert var in fluid.vars
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -8782,19 +11734,19 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_10) {
         __Pyx_AddTraceback("ThermoPyle.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_3, &__pyx_t_11) < 0) __PYX_ERR(0, 361, __pyx_L13_except_error)
+        if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_3, &__pyx_t_11) < 0) __PYX_ERR(0, 474, __pyx_L13_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_GOTREF(__pyx_t_11);
 
-        /* "ThermoPyle.pyx":362
+        /* "ThermoPyle.pyx":475
  *             assert var in fluid.vars
  *         except AssertionError:
  *             ValueError("variable {0} is not a valid variable.".format(var))             # <<<<<<<<<<<<<<
  * 
  *     # Plotting:
  */
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_variable_0_is_not_a_valid_variab, __pyx_n_s_format); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_variable_0_is_not_a_valid_variab, __pyx_n_s_format); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 475, __pyx_L13_except_error)
         __Pyx_GOTREF(__pyx_t_13);
         __pyx_t_14 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_13))) {
@@ -8807,13 +11759,13 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
           }
         }
         if (!__pyx_t_14) {
-          __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_v_var); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+          __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_v_var); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 475, __pyx_L13_except_error)
           __Pyx_GOTREF(__pyx_t_12);
         } else {
           #if CYTHON_FAST_PYCALL
           if (PyFunction_Check(__pyx_t_13)) {
             PyObject *__pyx_temp[2] = {__pyx_t_14, __pyx_v_var};
-            __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+            __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_13, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 475, __pyx_L13_except_error)
             __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
             __Pyx_GOTREF(__pyx_t_12);
           } else
@@ -8821,30 +11773,30 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
           #if CYTHON_FAST_PYCCALL
           if (__Pyx_PyFastCFunction_Check(__pyx_t_13)) {
             PyObject *__pyx_temp[2] = {__pyx_t_14, __pyx_v_var};
-            __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+            __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_13, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 475, __pyx_L13_except_error)
             __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
             __Pyx_GOTREF(__pyx_t_12);
           } else
           #endif
           {
-            __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+            __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 475, __pyx_L13_except_error)
             __Pyx_GOTREF(__pyx_t_15);
             __Pyx_GIVEREF(__pyx_t_14); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_14); __pyx_t_14 = NULL;
             __Pyx_INCREF(__pyx_v_var);
             __Pyx_GIVEREF(__pyx_v_var);
             PyTuple_SET_ITEM(__pyx_t_15, 0+1, __pyx_v_var);
-            __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_15, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+            __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_13, __pyx_t_15, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 475, __pyx_L13_except_error)
             __Pyx_GOTREF(__pyx_t_12);
             __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
           }
         }
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+        __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 475, __pyx_L13_except_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_GIVEREF(__pyx_t_12);
         PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_12);
         __pyx_t_12 = 0;
-        __pyx_t_12 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_13, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 362, __pyx_L13_except_error)
+        __pyx_t_12 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_t_13, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 475, __pyx_L13_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
@@ -8856,7 +11808,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       goto __pyx_L13_except_error;
       __pyx_L13_except_error:;
 
-      /* "ThermoPyle.pyx":359
+      /* "ThermoPyle.pyx":472
  *             if var == coloring:
  *                 coloring == fluid.zvar
  *         try:             # <<<<<<<<<<<<<<
@@ -8878,7 +11830,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __pyx_L18_try_end:;
     }
 
-    /* "ThermoPyle.pyx":349
+    /* "ThermoPyle.pyx":462
  *     if not coloring:
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:             # <<<<<<<<<<<<<<
@@ -8888,21 +11840,21 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":365
+  /* "ThermoPyle.pyx":478
  * 
  *     # Plotting:
  *     fig = plt.figure(randint(10**4,10**5))             # <<<<<<<<<<<<<<
  * 
  *     # we want 3D plots
  */
-  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_figure); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_figure); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_randint); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_randint); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_tuple__13, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_tuple__18, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_11 = NULL;
@@ -8916,14 +11868,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     }
   }
   if (!__pyx_t_11) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_t_6};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -8932,20 +11884,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_t_6};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else
     #endif
     {
-      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 365, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_11); __pyx_t_11 = NULL;
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_12, 0+1, __pyx_t_6);
       __pyx_t_6 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 365, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     }
@@ -8954,82 +11906,82 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_v_fig = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":368
+  /* "ThermoPyle.pyx":481
  * 
  *     # we want 3D plots
  *     ax = fig.add_subplot(111, projection="3d")             # <<<<<<<<<<<<<<
  * 
  *     # Plot the data
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fig, __pyx_n_s_add_subplot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fig, __pyx_n_s_add_subplot); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 481, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_projection, __pyx_kp_s_3d) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
-  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__14, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 368, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_projection, __pyx_kp_s_3d) < 0) __PYX_ERR(0, 481, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__19, __pyx_t_3); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 481, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_ax = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":371
+  /* "ThermoPyle.pyx":484
  * 
  *     # Plot the data
  *     ax.scatter(             # <<<<<<<<<<<<<<
  *         fluid.data[xvar],
  *         fluid.data[yvar],
  */
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_scatter); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_scatter); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
 
-  /* "ThermoPyle.pyx":372
+  /* "ThermoPyle.pyx":485
  *     # Plot the data
  *     ax.scatter(
  *         fluid.data[xvar],             # <<<<<<<<<<<<<<
  *         fluid.data[yvar],
  *         fluid.data[zvar],
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 485, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyObject_GetItem(__pyx_t_3, __pyx_v_xvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_4 = PyObject_GetItem(__pyx_t_3, __pyx_v_xvar); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":373
+  /* "ThermoPyle.pyx":486
  *     ax.scatter(
  *         fluid.data[xvar],
  *         fluid.data[yvar],             # <<<<<<<<<<<<<<
  *         fluid.data[zvar],
  *         c=fluid.data[coloring],
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = PyObject_GetItem(__pyx_t_3, __pyx_v_yvar); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_t_6 = PyObject_GetItem(__pyx_t_3, __pyx_v_yvar); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 486, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":374
+  /* "ThermoPyle.pyx":487
  *         fluid.data[xvar],
  *         fluid.data[yvar],
  *         fluid.data[zvar],             # <<<<<<<<<<<<<<
  *         c=fluid.data[coloring],
  *         cmap=fluid.colorMap,
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_11 = PyObject_GetItem(__pyx_t_3, __pyx_v_zvar); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_11 = PyObject_GetItem(__pyx_t_3, __pyx_v_zvar); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 487, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":371
+  /* "ThermoPyle.pyx":484
  * 
  *     # Plot the data
  *     ax.scatter(             # <<<<<<<<<<<<<<
  *         fluid.data[xvar],
  *         fluid.data[yvar],
  */
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4);
@@ -9041,64 +11993,64 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_6 = 0;
   __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":375
+  /* "ThermoPyle.pyx":488
  *         fluid.data[yvar],
  *         fluid.data[zvar],
  *         c=fluid.data[coloring],             # <<<<<<<<<<<<<<
  *         cmap=fluid.colorMap,
  *         edgecolors="none")
  */
-  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_4 = PyObject_GetItem(__pyx_t_6, __pyx_v_coloring); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_4 = PyObject_GetItem(__pyx_t_6, __pyx_v_coloring); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_c, __pyx_t_4) < 0) __PYX_ERR(0, 375, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_c, __pyx_t_4) < 0) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":376
+  /* "ThermoPyle.pyx":489
  *         fluid.data[zvar],
  *         c=fluid.data[coloring],
  *         cmap=fluid.colorMap,             # <<<<<<<<<<<<<<
  *         edgecolors="none")
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_colorMap); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_colorMap); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_cmap, __pyx_t_4) < 0) __PYX_ERR(0, 375, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_cmap, __pyx_t_4) < 0) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_edgecolors, __pyx_n_s_none) < 0) __PYX_ERR(0, 375, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_edgecolors, __pyx_n_s_none) < 0) __PYX_ERR(0, 488, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":371
+  /* "ThermoPyle.pyx":484
  * 
  *     # Plot the data
  *     ax.scatter(             # <<<<<<<<<<<<<<
  *         fluid.data[xvar],
  *         fluid.data[yvar],
  */
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_3, __pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_3, __pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":380
+  /* "ThermoPyle.pyx":493
  * 
  *     # Set the Labels
  *     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))             # <<<<<<<<<<<<<<
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
  */
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_xlabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_xlabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_13 = PyObject_GetItem(__pyx_t_6, __pyx_v_xvar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_t_13 = PyObject_GetItem(__pyx_t_6, __pyx_v_xvar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -9116,7 +12068,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_12)) {
     PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_v_xvar, __pyx_t_13};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 493, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
@@ -9125,14 +12077,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_12)) {
     PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_v_xvar, __pyx_t_13};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 493, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   } else
   #endif
   {
-    __pyx_t_15 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __pyx_t_15 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 493, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -9143,7 +12095,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_GIVEREF(__pyx_t_13);
     PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_10, __pyx_t_13);
     __pyx_t_13 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_15, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 493, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   }
@@ -9159,14 +12111,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     }
   }
   if (!__pyx_t_12) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 380, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 493, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_12, __pyx_t_3};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 493, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9175,20 +12127,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_12, __pyx_t_3};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 493, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else
     #endif
     {
-      __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 493, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_12); __pyx_t_12 = NULL;
       __Pyx_GIVEREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_15, 0+1, __pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_15, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_15, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 493, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     }
@@ -9196,20 +12148,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":381
+  /* "ThermoPyle.pyx":494
  *     # Set the Labels
  *     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))             # <<<<<<<<<<<<<<
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
  *     ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))
  */
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_ylabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_ylabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = PyObject_GetItem(__pyx_t_12, __pyx_v_yvar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_13 = PyObject_GetItem(__pyx_t_12, __pyx_v_yvar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   __pyx_t_12 = NULL;
@@ -9227,7 +12179,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_12, __pyx_v_yvar, __pyx_t_13};
-    __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 494, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
@@ -9236,14 +12188,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_12, __pyx_v_yvar, __pyx_t_13};
-    __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 494, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 494, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_12) {
       __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_12); __pyx_t_12 = NULL;
@@ -9254,7 +12206,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_GIVEREF(__pyx_t_13);
     PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_10, __pyx_t_13);
     __pyx_t_13 = 0;
-    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_6, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 494, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
@@ -9270,14 +12222,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     }
   }
   if (!__pyx_t_3) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 381, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_15); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 494, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_15};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 494, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
@@ -9286,20 +12238,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_15};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 494, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1+1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 494, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
       __Pyx_GIVEREF(__pyx_t_15);
       PyTuple_SET_ITEM(__pyx_t_6, 0+1, __pyx_t_15);
       __pyx_t_15 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_6, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_6, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 494, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
@@ -9307,20 +12259,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":382
+  /* "ThermoPyle.pyx":495
  *     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))             # <<<<<<<<<<<<<<
  *     ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))
  *     plt.show(fig)
  */
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_zlabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_zlabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 495, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 495, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 495, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_13 = PyObject_GetItem(__pyx_t_3, __pyx_v_zvar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_13 = PyObject_GetItem(__pyx_t_3, __pyx_v_zvar); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 495, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -9338,7 +12290,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_15)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_zvar, __pyx_t_13};
-    __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_15, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyFunction_FastCall(__pyx_t_15, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
@@ -9347,14 +12299,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_15)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_zvar, __pyx_t_13};
-    __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_15, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyCFunction_FastCall(__pyx_t_15, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   } else
   #endif
   {
-    __pyx_t_12 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __pyx_t_12 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -9365,7 +12317,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_GIVEREF(__pyx_t_13);
     PyTuple_SET_ITEM(__pyx_t_12, 1+__pyx_t_10, __pyx_t_13);
     __pyx_t_13 = 0;
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_12, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_12, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   }
@@ -9381,14 +12333,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     }
   }
   if (!__pyx_t_15) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 382, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 495, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_15, __pyx_t_6};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 382, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 495, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -9397,20 +12349,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_15, __pyx_t_6};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 382, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 495, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     } else
     #endif
     {
-      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 382, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 495, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_GIVEREF(__pyx_t_15); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_15); __pyx_t_15 = NULL;
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_12, 0+1, __pyx_t_6);
       __pyx_t_6 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 382, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 495, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     }
@@ -9418,18 +12370,18 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":383
+  /* "ThermoPyle.pyx":496
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
  *     ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))             # <<<<<<<<<<<<<<
  *     plt.show(fig)
  * 
  */
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_title); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 383, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_set_title); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_and_1_vs_2_of_3, __pyx_n_s_format); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 383, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_and_1_vs_2_of_3, __pyx_n_s_format); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_fluid); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 383, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_fluid); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 496, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __pyx_t_13 = NULL;
   __pyx_t_10 = 0;
@@ -9446,7 +12398,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_6)) {
     PyObject *__pyx_temp[5] = {__pyx_t_13, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_zvar, __pyx_t_15};
-    __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 4+__pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 4+__pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 496, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
@@ -9455,14 +12407,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
     PyObject *__pyx_temp[5] = {__pyx_t_13, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_zvar, __pyx_t_15};
-    __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 4+__pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_10, 4+__pyx_t_10); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 496, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   } else
   #endif
   {
-    __pyx_t_3 = PyTuple_New(4+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(4+__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 496, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (__pyx_t_13) {
       __Pyx_GIVEREF(__pyx_t_13); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_13); __pyx_t_13 = NULL;
@@ -9479,7 +12431,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_GIVEREF(__pyx_t_15);
     PyTuple_SET_ITEM(__pyx_t_3, 3+__pyx_t_10, __pyx_t_15);
     __pyx_t_15 = 0;
-    __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_3, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_3, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 496, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
@@ -9495,14 +12447,14 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     }
   }
   if (!__pyx_t_6) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 383, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_t_12};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 383, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
@@ -9511,20 +12463,20 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_6, __pyx_t_12};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 383, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     } else
     #endif
     {
-      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_New(1+1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 496, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6); __pyx_t_6 = NULL;
       __Pyx_GIVEREF(__pyx_t_12);
       PyTuple_SET_ITEM(__pyx_t_3, 0+1, __pyx_t_12);
       __pyx_t_12 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 383, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
@@ -9532,16 +12484,16 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":384
+  /* "ThermoPyle.pyx":497
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
  *     ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))
  *     plt.show(fig)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 497, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_show); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_show); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 497, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_11 = NULL;
@@ -9555,13 +12507,13 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     }
   }
   if (!__pyx_t_11) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_fig); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 384, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_fig); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 497, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_v_fig};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 384, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 497, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
@@ -9569,19 +12521,19 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_v_fig};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 384, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 497, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 384, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 497, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_11); __pyx_t_11 = NULL;
       __Pyx_INCREF(__pyx_v_fig);
       __Pyx_GIVEREF(__pyx_v_fig);
       PyTuple_SET_ITEM(__pyx_t_12, 0+1, __pyx_v_fig);
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 384, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_12, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 497, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     }
@@ -9589,7 +12541,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":336
+  /* "ThermoPyle.pyx":449
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
@@ -9624,7 +12576,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":387
+/* "ThermoPyle.pyx":500
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -9662,11 +12614,11 @@ static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_newrange)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rescale", 1, 2, 2, 1); __PYX_ERR(0, 387, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rescale", 1, 2, 2, 1); __PYX_ERR(0, 500, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rescale") < 0)) __PYX_ERR(0, 387, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rescale") < 0)) __PYX_ERR(0, 500, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -9679,7 +12631,7 @@ static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("rescale", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 387, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("rescale", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 500, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ThermoPyle.rescale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9692,7 +12644,7 @@ static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":398
+/* "ThermoPyle.pyx":511
  * 
  *     """
  *     return lambda x: (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]             # <<<<<<<<<<<<<<
@@ -9701,70 +12653,70 @@ static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_7rescale_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static PyMethodDef __pyx_mdef_10ThermoPyle_7rescale_lambda1 = {"lambda1", (PyCFunction)__pyx_pw_10ThermoPyle_7rescale_lambda1, METH_O, 0};
-static PyObject *__pyx_pw_10ThermoPyle_7rescale_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_10ThermoPyle_7rescale_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static PyMethodDef __pyx_mdef_10ThermoPyle_7rescale_lambda2 = {"lambda2", (PyCFunction)__pyx_pw_10ThermoPyle_7rescale_lambda2, METH_O, 0};
+static PyObject *__pyx_pw_10ThermoPyle_7rescale_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("lambda1 (wrapper)", 0);
-  __pyx_r = __pyx_lambda_funcdef_lambda1(__pyx_self, ((PyObject *)__pyx_v_x));
+  __Pyx_RefNannySetupContext("lambda2 (wrapper)", 0);
+  __pyx_r = __pyx_lambda_funcdef_lambda2(__pyx_self, ((PyObject *)__pyx_v_x));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *__pyx_cur_scope;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *__pyx_outer_scope;
+static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *__pyx_cur_scope;
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  __Pyx_RefNannySetupContext("lambda1", 0);
-  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __Pyx_RefNannySetupContext("lambda2", 0);
+  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_newrange)) { __Pyx_RaiseClosureNameError("newrange"); __PYX_ERR(0, 398, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_newrange, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_newrange)) { __Pyx_RaiseClosureNameError("newrange"); __PYX_ERR(0, 511, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_newrange, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_newrange)) { __Pyx_RaiseClosureNameError("newrange"); __PYX_ERR(0, 398, __pyx_L1_error) }
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_newrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_newrange)) { __Pyx_RaiseClosureNameError("newrange"); __PYX_ERR(0, 511, __pyx_L1_error) }
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_newrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_oldrange)) { __Pyx_RaiseClosureNameError("oldrange"); __PYX_ERR(0, 398, __pyx_L1_error) }
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_oldrange, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_oldrange)) { __Pyx_RaiseClosureNameError("oldrange"); __PYX_ERR(0, 511, __pyx_L1_error) }
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_oldrange, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_oldrange)) { __Pyx_RaiseClosureNameError("oldrange"); __PYX_ERR(0, 398, __pyx_L1_error) }
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_oldrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_oldrange)) { __Pyx_RaiseClosureNameError("oldrange"); __PYX_ERR(0, 511, __pyx_L1_error) }
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_oldrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyNumber_Subtract(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Subtract(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_oldrange)) { __Pyx_RaiseClosureNameError("oldrange"); __PYX_ERR(0, 398, __pyx_L1_error) }
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_oldrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 398, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_oldrange)) { __Pyx_RaiseClosureNameError("oldrange"); __PYX_ERR(0, 511, __pyx_L1_error) }
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_oldrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyNumber_Subtract(__pyx_v_x, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_v_x, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_cur_scope->__pyx_v_newrange)) { __Pyx_RaiseClosureNameError("newrange"); __PYX_ERR(0, 398, __pyx_L1_error) }
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_newrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_newrange)) { __Pyx_RaiseClosureNameError("newrange"); __PYX_ERR(0, 511, __pyx_L1_error) }
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_cur_scope->__pyx_v_newrange, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9778,7 +12730,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("ThermoPyle.rescale.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyle.rescale.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -9786,7 +12738,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":387
+/* "ThermoPyle.pyx":500
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -9795,16 +12747,16 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
  */
 
 static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_oldrange, PyObject *__pyx_v_newrange) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *__pyx_cur_scope;
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *__pyx_cur_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rescale", 0);
-  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_rescale(__pyx_ptype_10ThermoPyle___pyx_scope_struct_1_rescale, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_rescale(__pyx_ptype_10ThermoPyle___pyx_scope_struct_2_rescale, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 387, __pyx_L1_error)
+    __PYX_ERR(0, 500, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -9815,7 +12767,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_newrange);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_newrange);
 
-  /* "ThermoPyle.pyx":398
+  /* "ThermoPyle.pyx":511
  * 
  *     """
  *     return lambda x: (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]             # <<<<<<<<<<<<<<
@@ -9823,13 +12775,13 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_7rescale_lambda1, 0, __pyx_n_s_rescale_locals_lambda, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_7rescale_lambda2, 0, __pyx_n_s_rescale_locals_lambda, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ThermoPyle.pyx":387
+  /* "ThermoPyle.pyx":500
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -9849,7 +12801,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":401
+/* "ThermoPyle.pyx":514
  * 
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
@@ -9908,7 +12860,7 @@ static PyObject *__pyx_pw_10ThermoPyle_5fluid_contour_plot(PyObject *__pyx_self,
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fluid_contour_plot") < 0)) __PYX_ERR(0, 401, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "fluid_contour_plot") < 0)) __PYX_ERR(0, 514, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -9927,7 +12879,7 @@ static PyObject *__pyx_pw_10ThermoPyle_5fluid_contour_plot(PyObject *__pyx_self,
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("fluid_contour_plot", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 401, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("fluid_contour_plot", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 514, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9974,7 +12926,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_15 = NULL;
   __Pyx_RefNannySetupContext("fluid_contour_plot", 0);
 
-  /* "ThermoPyle.pyx":411
+  /* "ThermoPyle.pyx":524
  *         contour (Text): What contour to plot. Must be a variable in fluid.vars
  *     """
  *     try:             # <<<<<<<<<<<<<<
@@ -9990,7 +12942,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":412
+      /* "ThermoPyle.pyx":525
  *     """
  *     try:
  *         assert contour in set(fluid.vars)             # <<<<<<<<<<<<<<
@@ -9999,21 +12951,21 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
  */
       #ifndef CYTHON_WITHOUT_ASSERTIONS
       if (unlikely(!Py_OptimizeFlag)) {
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 412, __pyx_L3_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_vars); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 525, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_5 = PySet_New(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 412, __pyx_L3_error)
+        __pyx_t_5 = PySet_New(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 525, __pyx_L3_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_6 = (__Pyx_PySequence_ContainsTF(__pyx_v_contour, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 412, __pyx_L3_error)
+        __pyx_t_6 = (__Pyx_PySequence_ContainsTF(__pyx_v_contour, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 525, __pyx_L3_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         if (unlikely(!(__pyx_t_6 != 0))) {
           PyErr_SetNone(PyExc_AssertionError);
-          __PYX_ERR(0, 412, __pyx_L3_error)
+          __PYX_ERR(0, 525, __pyx_L3_error)
         }
       }
       #endif
 
-      /* "ThermoPyle.pyx":411
+      /* "ThermoPyle.pyx":524
  *         contour (Text): What contour to plot. Must be a variable in fluid.vars
  *     """
  *     try:             # <<<<<<<<<<<<<<
@@ -10030,7 +12982,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "ThermoPyle.pyx":413
+    /* "ThermoPyle.pyx":526
  *     try:
  *         assert contour in set(fluid.vars)
  *     except AssertionError:             # <<<<<<<<<<<<<<
@@ -10040,19 +12992,19 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_7) {
       __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) __PYX_ERR(0, 413, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) __PYX_ERR(0, 526, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "ThermoPyle.pyx":414
+      /* "ThermoPyle.pyx":527
  *         assert contour in set(fluid.vars)
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")             # <<<<<<<<<<<<<<
  *     for var in [xvar, yvar]:
  *         try:
  */
-      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__15, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 414, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 527, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -10063,7 +13015,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "ThermoPyle.pyx":411
+    /* "ThermoPyle.pyx":524
  *         contour (Text): What contour to plot. Must be a variable in fluid.vars
  *     """
  *     try:             # <<<<<<<<<<<<<<
@@ -10085,14 +13037,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __pyx_L10_try_end:;
   }
 
-  /* "ThermoPyle.pyx":415
+  /* "ThermoPyle.pyx":528
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:             # <<<<<<<<<<<<<<
  *         try:
  *             assert var in set(fluid.vars)
  */
-  __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_8 = PyTuple_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_INCREF(__pyx_v_xvar);
   __Pyx_GIVEREF(__pyx_v_xvar);
@@ -10105,15 +13057,15 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   for (;;) {
     if (__pyx_t_10 >= 2) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_8 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_10); __Pyx_INCREF(__pyx_t_8); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 415, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_10); __Pyx_INCREF(__pyx_t_8); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 528, __pyx_L1_error)
     #else
-    __pyx_t_8 = PySequence_ITEM(__pyx_t_4, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 415, __pyx_L1_error)
+    __pyx_t_8 = PySequence_ITEM(__pyx_t_4, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 528, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "ThermoPyle.pyx":416
+    /* "ThermoPyle.pyx":529
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:
  *         try:             # <<<<<<<<<<<<<<
@@ -10129,7 +13081,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __Pyx_XGOTREF(__pyx_t_1);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":417
+        /* "ThermoPyle.pyx":530
  *     for var in [xvar, yvar]:
  *         try:
  *             assert var in set(fluid.vars)             # <<<<<<<<<<<<<<
@@ -10138,21 +13090,21 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
  */
         #ifndef CYTHON_WITHOUT_ASSERTIONS
         if (unlikely(!Py_OptimizeFlag)) {
-          __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_vars); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 417, __pyx_L15_error)
+          __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_vars); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 530, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_8);
-          __pyx_t_5 = PySet_New(__pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 417, __pyx_L15_error)
+          __pyx_t_5 = PySet_New(__pyx_t_8); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 530, __pyx_L15_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-          __pyx_t_6 = (__Pyx_PySequence_ContainsTF(__pyx_v_var, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 417, __pyx_L15_error)
+          __pyx_t_6 = (__Pyx_PySequence_ContainsTF(__pyx_v_var, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 530, __pyx_L15_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           if (unlikely(!(__pyx_t_6 != 0))) {
             PyErr_SetNone(PyExc_AssertionError);
-            __PYX_ERR(0, 417, __pyx_L15_error)
+            __PYX_ERR(0, 530, __pyx_L15_error)
           }
         }
         #endif
 
-        /* "ThermoPyle.pyx":416
+        /* "ThermoPyle.pyx":529
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:
  *         try:             # <<<<<<<<<<<<<<
@@ -10170,7 +13122,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "ThermoPyle.pyx":418
+      /* "ThermoPyle.pyx":531
  *         try:
  *             assert var in set(fluid.vars)
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -10180,19 +13132,19 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_7) {
         __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 418, __pyx_L17_except_error)
+        if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 531, __pyx_L17_except_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_GOTREF(__pyx_t_9);
 
-        /* "ThermoPyle.pyx":419
+        /* "ThermoPyle.pyx":532
  *             assert var in set(fluid.vars)
  *         except AssertionError:
  *             ValueError("Variable not valid.")             # <<<<<<<<<<<<<<
  * 
  *     matplotlib.rcParams["xtick.direction"] = "out"
  */
-        __pyx_t_11 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 419, __pyx_L17_except_error)
+        __pyx_t_11 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 532, __pyx_L17_except_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -10203,7 +13155,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       goto __pyx_L17_except_error;
       __pyx_L17_except_error:;
 
-      /* "ThermoPyle.pyx":416
+      /* "ThermoPyle.pyx":529
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:
  *         try:             # <<<<<<<<<<<<<<
@@ -10225,7 +13177,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __pyx_L22_try_end:;
     }
 
-    /* "ThermoPyle.pyx":415
+    /* "ThermoPyle.pyx":528
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:             # <<<<<<<<<<<<<<
@@ -10235,51 +13187,51 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":421
+  /* "ThermoPyle.pyx":534
  *             ValueError("Variable not valid.")
  * 
  *     matplotlib.rcParams["xtick.direction"] = "out"             # <<<<<<<<<<<<<<
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_matplotlib); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_matplotlib); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_rcParams); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_rcParams); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(PyObject_SetItem(__pyx_t_9, __pyx_kp_s_xtick_direction, __pyx_n_s_out) < 0)) __PYX_ERR(0, 421, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(__pyx_t_9, __pyx_kp_s_xtick_direction, __pyx_n_s_out) < 0)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "ThermoPyle.pyx":422
+  /* "ThermoPyle.pyx":535
  * 
  *     matplotlib.rcParams["xtick.direction"] = "out"
  *     matplotlib.rcParams["ytick.direction"] = "out"             # <<<<<<<<<<<<<<
  *     fig = plt.figure(randint(1,10**4))
  *     fignum = fig.number
  */
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_matplotlib); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_matplotlib); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_rcParams); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_rcParams); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  if (unlikely(PyObject_SetItem(__pyx_t_4, __pyx_kp_s_ytick_direction, __pyx_n_s_out) < 0)) __PYX_ERR(0, 422, __pyx_L1_error)
+  if (unlikely(PyObject_SetItem(__pyx_t_4, __pyx_kp_s_ytick_direction, __pyx_n_s_out) < 0)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":423
+  /* "ThermoPyle.pyx":536
  *     matplotlib.rcParams["xtick.direction"] = "out"
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))             # <<<<<<<<<<<<<<
  *     fignum = fig.number
- *     # X = np.array(pd.Series(fluid.data[xvar]).unique())
+ *     xx = pd.Series(fluid.data[xvar]).tolist()
  */
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 423, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_figure); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 423, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_figure); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_randint); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 423, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_randint); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 423, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __pyx_t_9 = NULL;
@@ -10293,14 +13245,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_9) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[2] = {__pyx_t_9, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -10309,20 +13261,20 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
       PyObject *__pyx_temp[2] = {__pyx_t_9, __pyx_t_5};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_9); __pyx_t_9 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_11, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_11, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_11, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 536, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     }
@@ -10331,33 +13283,33 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_fig = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":424
+  /* "ThermoPyle.pyx":537
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))
  *     fignum = fig.number             # <<<<<<<<<<<<<<
- *     # X = np.array(pd.Series(fluid.data[xvar]).unique())
- *     # Y = np.array(pd.Series(fluid.data[yvar]).unique())
+ *     xx = pd.Series(fluid.data[xvar]).tolist()
+ *     yy = pd.Series(fluid.data[yvar]).tolist()
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fig, __pyx_n_s_number); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 424, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_fig, __pyx_n_s_number); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_v_fignum = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":427
- *     # X = np.array(pd.Series(fluid.data[xvar]).unique())
- *     # Y = np.array(pd.Series(fluid.data[yvar]).unique())
+  /* "ThermoPyle.pyx":538
+ *     fig = plt.figure(randint(1,10**4))
+ *     fignum = fig.number
  *     xx = pd.Series(fluid.data[xvar]).tolist()             # <<<<<<<<<<<<<<
  *     yy = pd.Series(fluid.data[yvar]).tolist()
  *     zz = pd.Series(fluid.data[contour]).tolist()
  */
-  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_Series); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_Series); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_9 = PyObject_GetItem(__pyx_t_11, __pyx_v_xvar); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_9 = PyObject_GetItem(__pyx_t_11, __pyx_v_xvar); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_11 = NULL;
@@ -10371,14 +13323,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_11) {
-    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 538, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_t_9};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 427, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10387,26 +13339,26 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_t_9};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 427, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     } else
     #endif
     {
-      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 427, __pyx_L1_error)
+      __pyx_t_12 = PyTuple_New(1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_11); __pyx_t_11 = NULL;
       __Pyx_GIVEREF(__pyx_t_9);
       PyTuple_SET_ITEM(__pyx_t_12, 0+1, __pyx_t_9);
       __pyx_t_9 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_12, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 427, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_12, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_tolist); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_tolist); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_t_8 = NULL;
@@ -10420,31 +13372,31 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (__pyx_t_8) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 538, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   } else {
-    __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 538, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_v_xx = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":428
- *     # Y = np.array(pd.Series(fluid.data[yvar]).unique())
+  /* "ThermoPyle.pyx":539
+ *     fignum = fig.number
  *     xx = pd.Series(fluid.data[xvar]).tolist()
  *     yy = pd.Series(fluid.data[yvar]).tolist()             # <<<<<<<<<<<<<<
  *     zz = pd.Series(fluid.data[contour]).tolist()
  *     xi = np.linspace(min(xx), max(xx), 217)
  */
-  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_Series); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_Series); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = PyObject_GetItem(__pyx_t_8, __pyx_v_yvar); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_9 = PyObject_GetItem(__pyx_t_8, __pyx_v_yvar); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __pyx_t_8 = NULL;
@@ -10458,14 +13410,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_8) {
-    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 539, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_5);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_12)) {
       PyObject *__pyx_temp[2] = {__pyx_t_8, __pyx_t_9};
-      __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10474,26 +13426,26 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_12)) {
       PyObject *__pyx_temp[2] = {__pyx_t_8, __pyx_t_9};
-      __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     } else
     #endif
     {
-      __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_8); __pyx_t_8 = NULL;
       __Pyx_GIVEREF(__pyx_t_9);
       PyTuple_SET_ITEM(__pyx_t_11, 0+1, __pyx_t_9);
       __pyx_t_9 = 0;
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_11, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_11, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 539, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_tolist); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_tolist); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -10507,31 +13459,31 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (__pyx_t_5) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 539, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   } else {
-    __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 539, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   __pyx_v_yy = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":429
+  /* "ThermoPyle.pyx":540
  *     xx = pd.Series(fluid.data[xvar]).tolist()
  *     yy = pd.Series(fluid.data[yvar]).tolist()
  *     zz = pd.Series(fluid.data[contour]).tolist()             # <<<<<<<<<<<<<<
  *     xi = np.linspace(min(xx), max(xx), 217)
  *     yi = np.linspace(min(yy), max(yy), 217)
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_pd); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_Series); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_Series); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_data); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_9 = PyObject_GetItem(__pyx_t_5, __pyx_v_contour); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_9 = PyObject_GetItem(__pyx_t_5, __pyx_v_contour); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -10545,14 +13497,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_9); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_9); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_12);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_9};
-      __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 429, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 540, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10561,26 +13513,26 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_9};
-      __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 429, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 540, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 429, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 540, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_9);
       PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_9);
       __pyx_t_9 = 0;
-      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_8, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 429, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_8, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 540, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_tolist); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_tolist); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   __pyx_t_12 = NULL;
@@ -10594,42 +13546,42 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (__pyx_t_12) {
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 540, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   } else {
-    __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallNoArg(__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 540, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_v_zz = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":430
+  /* "ThermoPyle.pyx":541
  *     yy = pd.Series(fluid.data[yvar]).tolist()
  *     zz = pd.Series(fluid.data[contour]).tolist()
  *     xi = np.linspace(min(xx), max(xx), 217)             # <<<<<<<<<<<<<<
  *     yi = np.linspace(min(yy), max(yy), 217)
- *     #Z = np.array(fluid.data.pivot(index=xvar, columns=yvar,  values=contour))
+ *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
  */
-  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_linspace); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_linspace); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_INCREF(__pyx_v_xx);
   __Pyx_GIVEREF(__pyx_v_xx);
   PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_v_xx);
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_min, __pyx_t_11, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_min, __pyx_t_11, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_INCREF(__pyx_v_xx);
   __Pyx_GIVEREF(__pyx_v_xx);
   PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_v_xx);
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_max, __pyx_t_11, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_max, __pyx_t_11, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_11 = NULL;
@@ -10647,7 +13599,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_12)) {
     PyObject *__pyx_temp[4] = {__pyx_t_11, __pyx_t_8, __pyx_t_9, __pyx_int_217};
-    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 541, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -10657,7 +13609,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_12)) {
     PyObject *__pyx_temp[4] = {__pyx_t_11, __pyx_t_8, __pyx_t_9, __pyx_int_217};
-    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_12, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 541, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -10665,7 +13617,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 430, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 541, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_11) {
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_11); __pyx_t_11 = NULL;
@@ -10679,7 +13631,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     PyTuple_SET_ITEM(__pyx_t_5, 2+__pyx_t_7, __pyx_int_217);
     __pyx_t_8 = 0;
     __pyx_t_9 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 541, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -10687,32 +13639,32 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_xi = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":431
+  /* "ThermoPyle.pyx":542
  *     zz = pd.Series(fluid.data[contour]).tolist()
  *     xi = np.linspace(min(xx), max(xx), 217)
  *     yi = np.linspace(min(yy), max(yy), 217)             # <<<<<<<<<<<<<<
- *     #Z = np.array(fluid.data.pivot(index=xvar, columns=yvar,  values=contour))
  *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
+ *     X, Y = np.meshgrid(xi, yi)
  */
-  __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_linspace); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_linspace); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_INCREF(__pyx_v_yy);
   __Pyx_GIVEREF(__pyx_v_yy);
   PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_yy);
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_min, __pyx_t_12, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_builtin_min, __pyx_t_12, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_12 = PyTuple_New(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_INCREF(__pyx_v_yy);
   __Pyx_GIVEREF(__pyx_v_yy);
   PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_v_yy);
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_max, __pyx_t_12, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_builtin_max, __pyx_t_12, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   __pyx_t_12 = NULL;
@@ -10730,7 +13682,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[4] = {__pyx_t_12, __pyx_t_9, __pyx_t_8, __pyx_int_217};
-    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 542, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10740,7 +13692,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
     PyObject *__pyx_temp[4] = {__pyx_t_12, __pyx_t_9, __pyx_t_8, __pyx_int_217};
-    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 542, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10748,7 +13700,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   } else
   #endif
   {
-    __pyx_t_11 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 431, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 542, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     if (__pyx_t_12) {
       __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_12); __pyx_t_12 = NULL;
@@ -10762,7 +13714,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     PyTuple_SET_ITEM(__pyx_t_11, 2+__pyx_t_7, __pyx_int_217);
     __pyx_t_9 = 0;
     __pyx_t_8 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_11, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_11, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 542, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   }
@@ -10770,19 +13722,19 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_yi = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":433
+  /* "ThermoPyle.pyx":543
+ *     xi = np.linspace(min(xx), max(xx), 217)
  *     yi = np.linspace(min(yy), max(yy), 217)
- *     #Z = np.array(fluid.data.pivot(index=xvar, columns=yvar,  values=contour))
  *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')             # <<<<<<<<<<<<<<
  *     X, Y = np.meshgrid(xi, yi)
- *     #CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
+ *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_mlab); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_mlab); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_griddata); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_griddata); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_xx);
   __Pyx_GIVEREF(__pyx_v_xx);
@@ -10799,10 +13751,10 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_INCREF(__pyx_v_yi);
   __Pyx_GIVEREF(__pyx_v_yi);
   PyTuple_SET_ITEM(__pyx_t_4, 4, __pyx_v_yi);
-  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_interp, __pyx_n_s_linear) < 0) __PYX_ERR(0, 433, __pyx_L1_error)
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 433, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_interp, __pyx_n_s_linear) < 0) __PYX_ERR(0, 543, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_4, __pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -10810,16 +13762,16 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_Z = __pyx_t_8;
   __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":434
- *     #Z = np.array(fluid.data.pivot(index=xvar, columns=yvar,  values=contour))
+  /* "ThermoPyle.pyx":544
+ *     yi = np.linspace(min(yy), max(yy), 217)
  *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
  *     X, Y = np.meshgrid(xi, yi)             # <<<<<<<<<<<<<<
- *     #CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
+ *     fmt = {}
  */
-  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_meshgrid); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_meshgrid); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_11 = NULL;
@@ -10837,7 +13789,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_v_xi, __pyx_v_yi};
-    __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else
@@ -10845,13 +13797,13 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_v_xi, __pyx_v_yi};
-    __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_11) {
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_11); __pyx_t_11 = NULL;
@@ -10862,7 +13814,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_INCREF(__pyx_v_yi);
     __Pyx_GIVEREF(__pyx_v_yi);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_7, __pyx_v_yi);
-    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -10877,7 +13829,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     if (unlikely(size != 2)) {
       if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 434, __pyx_L1_error)
+      __PYX_ERR(0, 544, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -10890,15 +13842,15 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_INCREF(__pyx_t_4);
     __Pyx_INCREF(__pyx_t_5);
     #else
-    __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_4 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     #endif
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_11 = PyObject_GetIter(__pyx_t_8); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __pyx_t_11 = PyObject_GetIter(__pyx_t_8); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_t_13 = Py_TYPE(__pyx_t_11)->tp_iternext;
@@ -10906,7 +13858,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_GOTREF(__pyx_t_4);
     index = 1; __pyx_t_5 = __pyx_t_13(__pyx_t_11); if (unlikely(!__pyx_t_5)) goto __pyx_L25_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_5);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_13(__pyx_t_11), 2) < 0) __PYX_ERR(0, 434, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_13(__pyx_t_11), 2) < 0) __PYX_ERR(0, 544, __pyx_L1_error)
     __pyx_t_13 = NULL;
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     goto __pyx_L26_unpacking_done;
@@ -10914,7 +13866,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __pyx_t_13 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 434, __pyx_L1_error)
+    __PYX_ERR(0, 544, __pyx_L1_error)
     __pyx_L26_unpacking_done:;
   }
   __pyx_v_X = __pyx_t_4;
@@ -10922,19 +13874,19 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_Y = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":436
+  /* "ThermoPyle.pyx":545
+ *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
  *     X, Y = np.meshgrid(xi, yi)
- *     #CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)             # <<<<<<<<<<<<<<
  *     fmt = {}
  *     for x in CS.levels:
  */
-  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_contour); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_contour); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = PyTuple_New(3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_8 = PyTuple_New(3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_INCREF(__pyx_v_X);
   __Pyx_GIVEREF(__pyx_v_X);
@@ -10945,13 +13897,13 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_INCREF(__pyx_v_Z);
   __Pyx_GIVEREF(__pyx_v_Z);
   PyTuple_SET_ITEM(__pyx_t_8, 2, __pyx_v_Z);
-  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_4 = PyDict_New(); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_colorMap); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_colorMap); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_cmap, __pyx_t_11) < 0) __PYX_ERR(0, 436, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_cmap, __pyx_t_11) < 0) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, __pyx_t_4); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -10959,34 +13911,34 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_CS = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":437
- *     #CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
+  /* "ThermoPyle.pyx":546
+ *     X, Y = np.meshgrid(xi, yi)
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  *     fmt = {}             # <<<<<<<<<<<<<<
  *     for x in CS.levels:
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
  */
-  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 437, __pyx_L1_error)
+  __pyx_t_11 = PyDict_New(); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __pyx_v_fmt = ((PyObject*)__pyx_t_11);
   __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":438
+  /* "ThermoPyle.pyx":547
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  *     fmt = {}
  *     for x in CS.levels:             # <<<<<<<<<<<<<<
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
  */
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_CS, __pyx_n_s_levels); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_CS, __pyx_n_s_levels); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   if (likely(PyList_CheckExact(__pyx_t_11)) || PyTuple_CheckExact(__pyx_t_11)) {
     __pyx_t_4 = __pyx_t_11; __Pyx_INCREF(__pyx_t_4); __pyx_t_10 = 0;
     __pyx_t_14 = NULL;
   } else {
-    __pyx_t_10 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 438, __pyx_L1_error)
+    __pyx_t_10 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_11); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 547, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_14 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 438, __pyx_L1_error)
+    __pyx_t_14 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 547, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   for (;;) {
@@ -10994,17 +13946,17 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       if (likely(PyList_CheckExact(__pyx_t_4))) {
         if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_11 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_10); __Pyx_INCREF(__pyx_t_11); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 438, __pyx_L1_error)
+        __pyx_t_11 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_10); __Pyx_INCREF(__pyx_t_11); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 547, __pyx_L1_error)
         #else
-        __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 438, __pyx_L1_error)
+        __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 547, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         #endif
       } else {
         if (__pyx_t_10 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_11 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_10); __Pyx_INCREF(__pyx_t_11); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 438, __pyx_L1_error)
+        __pyx_t_11 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_10); __Pyx_INCREF(__pyx_t_11); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 547, __pyx_L1_error)
         #else
-        __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 438, __pyx_L1_error)
+        __pyx_t_11 = PySequence_ITEM(__pyx_t_4, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 547, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         #endif
       }
@@ -11014,7 +13966,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(exc_type == PyExc_StopIteration || PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 438, __pyx_L1_error)
+          else __PYX_ERR(0, 547, __pyx_L1_error)
         }
         break;
       }
@@ -11023,14 +13975,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_11);
     __pyx_t_11 = 0;
 
-    /* "ThermoPyle.pyx":439
+    /* "ThermoPyle.pyx":548
  *     fmt = {}
  *     for x in CS.levels:
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]             # <<<<<<<<<<<<<<
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  */
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_4g, __pyx_n_s_format); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_4g, __pyx_n_s_format); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_8))) {
@@ -11043,13 +13995,13 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       }
     }
     if (!__pyx_t_5) {
-      __pyx_t_11 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_v_x); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 439, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_v_x); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 548, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
     } else {
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_8)) {
         PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_v_x};
-        __pyx_t_11 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 548, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_11);
       } else
@@ -11057,40 +14009,40 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
         PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_v_x};
-        __pyx_t_11 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 548, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_11);
       } else
       #endif
       {
-        __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_9 = PyTuple_New(1+1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 548, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_5); __pyx_t_5 = NULL;
         __Pyx_INCREF(__pyx_v_x);
         __Pyx_GIVEREF(__pyx_v_x);
         PyTuple_SET_ITEM(__pyx_t_9, 0+1, __pyx_v_x);
-        __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_9, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 439, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_9, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 548, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       }
     }
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyNumber_Add(__pyx_t_11, __pyx_kp_s__18); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __pyx_t_8 = PyNumber_Add(__pyx_t_11, __pyx_kp_s__23); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_9 = PyObject_GetItem(__pyx_t_11, __pyx_v_contour); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __pyx_t_9 = PyObject_GetItem(__pyx_t_11, __pyx_v_contour); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_11 = PyNumber_Add(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __pyx_t_11 = PyNumber_Add(__pyx_t_8, __pyx_t_9); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    if (unlikely(PyDict_SetItem(__pyx_v_fmt, __pyx_v_x, __pyx_t_11) < 0)) __PYX_ERR(0, 439, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_fmt, __pyx_v_x, __pyx_t_11) < 0)) __PYX_ERR(0, 548, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-    /* "ThermoPyle.pyx":438
+    /* "ThermoPyle.pyx":547
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  *     fmt = {}
  *     for x in CS.levels:             # <<<<<<<<<<<<<<
@@ -11100,52 +14052,52 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":440
+  /* "ThermoPyle.pyx":549
  *     for x in CS.levels:
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)             # <<<<<<<<<<<<<<
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_clabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_clabel); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_v_CS);
   __Pyx_GIVEREF(__pyx_v_CS);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_CS);
-  __pyx_t_9 = PyDict_New(); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_9 = PyDict_New(); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_fontsize, __pyx_int_10) < 0) __PYX_ERR(0, 440, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_inline, __pyx_int_1) < 0) __PYX_ERR(0, 440, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_fmt, __pyx_v_fmt) < 0) __PYX_ERR(0, 440, __pyx_L1_error)
-  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_4, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 440, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_fontsize, __pyx_int_10) < 0) __PYX_ERR(0, 549, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_inline, __pyx_int_1) < 0) __PYX_ERR(0, 549, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_fmt, __pyx_v_fmt) < 0) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_4, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":441
+  /* "ThermoPyle.pyx":550
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))             # <<<<<<<<<<<<<<
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))
  */
-  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_xlabel); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_12 = PyObject_GetItem(__pyx_t_5, __pyx_v_xvar); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 441, __pyx_L1_error)
+  __pyx_t_12 = PyObject_GetItem(__pyx_t_5, __pyx_v_xvar); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -11163,7 +14115,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_11)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_v_xvar, __pyx_t_12};
-    __pyx_t_9 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
@@ -11172,14 +14124,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_v_xvar, __pyx_t_12};
-    __pyx_t_9 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   } else
   #endif
   {
-    __pyx_t_15 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_15 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -11190,7 +14142,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_GIVEREF(__pyx_t_12);
     PyTuple_SET_ITEM(__pyx_t_15, 1+__pyx_t_7, __pyx_t_12);
     __pyx_t_12 = 0;
-    __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_15, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_15, NULL); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   }
@@ -11206,14 +14158,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_11) {
-    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 441, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 550, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_t_9};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 441, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 550, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -11222,20 +14174,20 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[2] = {__pyx_t_11, __pyx_t_9};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 441, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 550, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     } else
     #endif
     {
-      __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 441, __pyx_L1_error)
+      __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 550, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_11); __pyx_t_11 = NULL;
       __Pyx_GIVEREF(__pyx_t_9);
       PyTuple_SET_ITEM(__pyx_t_15, 0+1, __pyx_t_9);
       __pyx_t_9 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_15, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 441, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_15, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 550, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     }
@@ -11243,23 +14195,23 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":442
+  /* "ThermoPyle.pyx":551
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))             # <<<<<<<<<<<<<<
  *     plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))
  *     plt.show(fig)
  */
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_ylabel); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_1, __pyx_n_s_format); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_units); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = PyObject_GetItem(__pyx_t_11, __pyx_v_yvar); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 442, __pyx_L1_error)
+  __pyx_t_12 = PyObject_GetItem(__pyx_t_11, __pyx_v_yvar); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __pyx_t_11 = NULL;
@@ -11277,7 +14229,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_9)) {
     PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_v_yvar, __pyx_t_12};
-    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
@@ -11286,14 +14238,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_9)) {
     PyObject *__pyx_temp[3] = {__pyx_t_11, __pyx_v_yvar, __pyx_t_12};
-    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_9, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_11) {
       __Pyx_GIVEREF(__pyx_t_11); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_11); __pyx_t_11 = NULL;
@@ -11304,7 +14256,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_GIVEREF(__pyx_t_12);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_7, __pyx_t_12);
     __pyx_t_12 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_5, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -11320,14 +14272,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_9) {
-    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 442, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 551, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_15)) {
       PyObject *__pyx_temp[2] = {__pyx_t_9, __pyx_t_4};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_15, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_15, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 551, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -11336,20 +14288,20 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_15)) {
       PyObject *__pyx_temp[2] = {__pyx_t_9, __pyx_t_4};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_15, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_15, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 551, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 551, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_9); __pyx_t_9 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 442, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_5, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 551, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
@@ -11357,20 +14309,20 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":443
+  /* "ThermoPyle.pyx":552
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))             # <<<<<<<<<<<<<<
  *     plt.show(fig)
  */
-  __pyx_t_15 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_title); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_title); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_and_1_vs_2_of_3, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_0_and_1_vs_2_of_3, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_fluid); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 443, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_fluid, __pyx_n_s_fluid); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __pyx_t_12 = NULL;
   __pyx_t_7 = 0;
@@ -11387,7 +14339,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[5] = {__pyx_t_12, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_contour, __pyx_t_9};
-    __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -11396,14 +14348,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[5] = {__pyx_t_12, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_contour, __pyx_t_9};
-    __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   } else
   #endif
   {
-    __pyx_t_11 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     if (__pyx_t_12) {
       __Pyx_GIVEREF(__pyx_t_12); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_12); __pyx_t_12 = NULL;
@@ -11420,7 +14372,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_GIVEREF(__pyx_t_9);
     PyTuple_SET_ITEM(__pyx_t_11, 3+__pyx_t_7, __pyx_t_9);
     __pyx_t_9 = 0;
-    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_11, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_11, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   }
@@ -11436,14 +14388,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_15); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 443, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_15); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     __Pyx_GOTREF(__pyx_t_8);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_15};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 443, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
@@ -11452,20 +14404,20 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_15};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 443, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     } else
     #endif
     {
-      __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 443, __pyx_L1_error)
+      __pyx_t_11 = PyTuple_New(1+1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_15);
       PyTuple_SET_ITEM(__pyx_t_11, 0+1, __pyx_t_15);
       __pyx_t_15 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_11, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 443, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_11, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 552, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     }
@@ -11473,14 +14425,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":444
+  /* "ThermoPyle.pyx":553
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))
  *     plt.show(fig)             # <<<<<<<<<<<<<<
  */
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 444, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_plt); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_show); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 444, __pyx_L1_error)
+  __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_show); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -11494,13 +14446,13 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_v_fig); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_v_fig); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 553, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_v_fig};
-      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 553, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_8);
     } else
@@ -11508,19 +14460,19 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_11)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_v_fig};
-      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_11, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 553, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_8);
     } else
     #endif
     {
-      __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __pyx_t_15 = PyTuple_New(1+1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 553, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_15);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_INCREF(__pyx_v_fig);
       __Pyx_GIVEREF(__pyx_v_fig);
       PyTuple_SET_ITEM(__pyx_t_15, 0+1, __pyx_v_fig);
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_15, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_15, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 553, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
     }
@@ -11528,7 +14480,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":401
+  /* "ThermoPyle.pyx":514
  * 
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
@@ -11680,14 +14632,14 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct__add_column = {
   #endif
 };
 
-static struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *__pyx_freelist_10ThermoPyle___pyx_scope_struct_1_rescale[8];
-static int __pyx_freecount_10ThermoPyle___pyx_scope_struct_1_rescale = 0;
+static struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_freelist_10ThermoPyle___pyx_scope_struct_1_add_column[8];
+static int __pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column = 0;
 
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_rescale(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_rescale > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale)))) {
-    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct_1_rescale[--__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_rescale];
-    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column)))) {
+    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct_1_add_column[--__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column];
+    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -11697,48 +14649,48 @@ static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_rescale(PyTypeOb
   return o;
 }
 
-static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_1_rescale(PyObject *o) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *)o;
+static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject *o) {
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o;
   PyObject_GC_UnTrack(o);
-  Py_CLEAR(p->__pyx_v_newrange);
-  Py_CLEAR(p->__pyx_v_oldrange);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_rescale < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale)))) {
-    __pyx_freelist_10ThermoPyle___pyx_scope_struct_1_rescale[__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_rescale++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *)o);
+  Py_CLEAR(p->__pyx_v_self);
+  Py_CLEAR(p->__pyx_v_var);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column)))) {
+    __pyx_freelist_10ThermoPyle___pyx_scope_struct_1_add_column[__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_rescale(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *)o;
-  if (p->__pyx_v_newrange) {
-    e = (*v)(p->__pyx_v_newrange, a); if (e) return e;
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o;
+  if (p->__pyx_v_self) {
+    e = (*v)(p->__pyx_v_self, a); if (e) return e;
   }
-  if (p->__pyx_v_oldrange) {
-    e = (*v)(p->__pyx_v_oldrange, a); if (e) return e;
+  if (p->__pyx_v_var) {
+    e = (*v)(p->__pyx_v_var, a); if (e) return e;
   }
   return 0;
 }
 
-static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_rescale(PyObject *o) {
+static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale *)o;
-  tmp = ((PyObject*)p->__pyx_v_newrange);
-  p->__pyx_v_newrange = Py_None; Py_INCREF(Py_None);
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o;
+  tmp = ((PyObject*)p->__pyx_v_self);
+  p->__pyx_v_self = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
-  tmp = ((PyObject*)p->__pyx_v_oldrange);
-  p->__pyx_v_oldrange = Py_None; Py_INCREF(Py_None);
+  tmp = ((PyObject*)p->__pyx_v_var);
+  p->__pyx_v_var = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
   return 0;
 }
 
-static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_rescale = {
+static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ThermoPyle.__pyx_scope_struct_1_rescale", /*tp_name*/
-  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_rescale), /*tp_basicsize*/
+  "ThermoPyle.__pyx_scope_struct_1_add_column", /*tp_name*/
+  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_1_rescale, /*tp_dealloc*/
+  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -11760,8 +14712,8 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_rescale = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_rescale, /*tp_traverse*/
-  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_rescale, /*tp_clear*/
+  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_traverse*/
+  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -11776,7 +14728,118 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_rescale = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_rescale, /*tp_new*/
+  __pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_new*/
+  0, /*tp_free*/
+  0, /*tp_is_gc*/
+  0, /*tp_bases*/
+  0, /*tp_mro*/
+  0, /*tp_cache*/
+  0, /*tp_subclasses*/
+  0, /*tp_weaklist*/
+  0, /*tp_del*/
+  0, /*tp_version_tag*/
+  #if PY_VERSION_HEX >= 0x030400a1
+  0, /*tp_finalize*/
+  #endif
+};
+
+static struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *__pyx_freelist_10ThermoPyle___pyx_scope_struct_2_rescale[8];
+static int __pyx_freecount_10ThermoPyle___pyx_scope_struct_2_rescale = 0;
+
+static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_rescale(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+  PyObject *o;
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_rescale > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale)))) {
+    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct_2_rescale[--__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_rescale];
+    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale));
+    (void) PyObject_INIT(o, t);
+    PyObject_GC_Track(o);
+  } else {
+    o = (*t->tp_alloc)(t, 0);
+    if (unlikely(!o)) return 0;
+  }
+  return o;
+}
+
+static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_2_rescale(PyObject *o) {
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *)o;
+  PyObject_GC_UnTrack(o);
+  Py_CLEAR(p->__pyx_v_newrange);
+  Py_CLEAR(p->__pyx_v_oldrange);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_rescale < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale)))) {
+    __pyx_freelist_10ThermoPyle___pyx_scope_struct_2_rescale[__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_rescale++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *)o);
+  } else {
+    (*Py_TYPE(o)->tp_free)(o);
+  }
+}
+
+static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_2_rescale(PyObject *o, visitproc v, void *a) {
+  int e;
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *)o;
+  if (p->__pyx_v_newrange) {
+    e = (*v)(p->__pyx_v_newrange, a); if (e) return e;
+  }
+  if (p->__pyx_v_oldrange) {
+    e = (*v)(p->__pyx_v_oldrange, a); if (e) return e;
+  }
+  return 0;
+}
+
+static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_2_rescale(PyObject *o) {
+  PyObject* tmp;
+  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale *)o;
+  tmp = ((PyObject*)p->__pyx_v_newrange);
+  p->__pyx_v_newrange = Py_None; Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  tmp = ((PyObject*)p->__pyx_v_oldrange);
+  p->__pyx_v_oldrange = Py_None; Py_INCREF(Py_None);
+  Py_XDECREF(tmp);
+  return 0;
+}
+
+static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_2_rescale = {
+  PyVarObject_HEAD_INIT(0, 0)
+  "ThermoPyle.__pyx_scope_struct_2_rescale", /*tp_name*/
+  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_rescale), /*tp_basicsize*/
+  0, /*tp_itemsize*/
+  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_2_rescale, /*tp_dealloc*/
+  0, /*tp_print*/
+  0, /*tp_getattr*/
+  0, /*tp_setattr*/
+  #if PY_MAJOR_VERSION < 3
+  0, /*tp_compare*/
+  #endif
+  #if PY_MAJOR_VERSION >= 3
+  0, /*tp_as_async*/
+  #endif
+  0, /*tp_repr*/
+  0, /*tp_as_number*/
+  0, /*tp_as_sequence*/
+  0, /*tp_as_mapping*/
+  0, /*tp_hash*/
+  0, /*tp_call*/
+  0, /*tp_str*/
+  0, /*tp_getattro*/
+  0, /*tp_setattro*/
+  0, /*tp_as_buffer*/
+  Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
+  0, /*tp_doc*/
+  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_2_rescale, /*tp_traverse*/
+  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_2_rescale, /*tp_clear*/
+  0, /*tp_richcompare*/
+  0, /*tp_weaklistoffset*/
+  0, /*tp_iter*/
+  0, /*tp_iternext*/
+  0, /*tp_methods*/
+  0, /*tp_members*/
+  0, /*tp_getset*/
+  0, /*tp_base*/
+  0, /*tp_dict*/
+  0, /*tp_descr_get*/
+  0, /*tp_descr_set*/
+  0, /*tp_dictoffset*/
+  0, /*tp_init*/
+  0, /*tp_alloc*/
+  __pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_rescale, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -11831,6 +14894,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_CSVFluid___init, __pyx_k_CSVFluid___init, sizeof(__pyx_k_CSVFluid___init), 0, 0, 1, 1},
   {&__pyx_n_s_CSVFluid_changeOrder, __pyx_k_CSVFluid_changeOrder, sizeof(__pyx_k_CSVFluid_changeOrder), 0, 0, 1, 1},
   {&__pyx_n_s_CSVFluid_copy, __pyx_k_CSVFluid_copy, sizeof(__pyx_k_CSVFluid_copy), 0, 0, 1, 1},
+  {&__pyx_n_s_CSVFluid_make_meta, __pyx_k_CSVFluid_make_meta, sizeof(__pyx_k_CSVFluid_make_meta), 0, 0, 1, 1},
+  {&__pyx_n_s_CSVFluid_make_units, __pyx_k_CSVFluid_make_units, sizeof(__pyx_k_CSVFluid_make_units), 0, 0, 1, 1},
+  {&__pyx_n_s_CSVFluid_refresh, __pyx_k_CSVFluid_refresh, sizeof(__pyx_k_CSVFluid_refresh), 0, 0, 1, 1},
+  {&__pyx_n_s_CSVFluid_write_data, __pyx_k_CSVFluid_write_data, sizeof(__pyx_k_CSVFluid_write_data), 0, 0, 1, 1},
+  {&__pyx_n_s_CSVFluid_write_data_locals_add_c, __pyx_k_CSVFluid_write_data_locals_add_c, sizeof(__pyx_k_CSVFluid_write_data_locals_add_c), 0, 0, 1, 1},
+  {&__pyx_n_s_CSVFluid_write_data_locals_add_c_2, __pyx_k_CSVFluid_write_data_locals_add_c_2, sizeof(__pyx_k_CSVFluid_write_data_locals_add_c_2), 0, 0, 1, 1},
   {&__pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_k_C_Users_at8183jk_Desktop_Drive_D, sizeof(__pyx_k_C_Users_at8183jk_Desktop_Drive_D), 0, 0, 1, 0},
   {&__pyx_n_s_Callable, __pyx_k_Callable, sizeof(__pyx_k_Callable), 0, 0, 1, 1},
   {&__pyx_kp_s_Cannot_add_column_0_already_in_f, __pyx_k_Cannot_add_column_0_already_in_f, sizeof(__pyx_k_Cannot_add_column_0_already_in_f), 0, 0, 1, 0},
@@ -11879,7 +14948,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_s_US_Central, __pyx_k_US_Central, sizeof(__pyx_k_US_Central), 0, 0, 1, 0},
   {&__pyx_n_s_Union, __pyx_k_Union, sizeof(__pyx_k_Union), 0, 0, 1, 1},
   {&__pyx_n_s_UnknownVar, __pyx_k_UnknownVar, sizeof(__pyx_k_UnknownVar), 0, 0, 1, 1},
-  {&__pyx_n_s_V, __pyx_k_V, sizeof(__pyx_k_V), 0, 0, 1, 1},
   {&__pyx_n_s_VISCOSITY, __pyx_k_VISCOSITY, sizeof(__pyx_k_VISCOSITY), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_kp_s_Variable_not_valid, __pyx_k_Variable_not_valid, sizeof(__pyx_k_Variable_not_valid), 0, 0, 1, 0},
@@ -11889,8 +14957,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Y, __pyx_k_Y, sizeof(__pyx_k_Y), 0, 0, 1, 1},
   {&__pyx_kp_s_YYYY_MM_DD_HH_mm_ss, __pyx_k_YYYY_MM_DD_HH_mm_ss, sizeof(__pyx_k_YYYY_MM_DD_HH_mm_ss), 0, 0, 1, 0},
   {&__pyx_n_s_Z, __pyx_k_Z, sizeof(__pyx_k_Z), 0, 0, 1, 1},
-  {&__pyx_kp_s__18, __pyx_k__18, sizeof(__pyx_k__18), 0, 0, 1, 0},
-  {&__pyx_n_s__19, __pyx_k__19, sizeof(__pyx_k__19), 0, 0, 1, 1},
+  {&__pyx_kp_s__23, __pyx_k__23, sizeof(__pyx_k__23), 0, 0, 1, 0},
+  {&__pyx_n_s__24, __pyx_k__24, sizeof(__pyx_k__24), 0, 0, 1, 1},
   {&__pyx_kp_s__5, __pyx_k__5, sizeof(__pyx_k__5), 0, 0, 1, 0},
   {&__pyx_n_s__6, __pyx_k__6, sizeof(__pyx_k__6), 0, 0, 1, 1},
   {&__pyx_kp_s__7, __pyx_k__7, sizeof(__pyx_k__7), 0, 0, 1, 0},
@@ -12056,13 +15124,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_AssertionError = __Pyx_GetBuiltinName(__pyx_n_s_AssertionError); if (!__pyx_builtin_AssertionError) __PYX_ERR(0, 179, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_builtin_AssertionError = __Pyx_GetBuiltinName(__pyx_n_s_AssertionError); if (!__pyx_builtin_AssertionError) __PYX_ERR(0, 180, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 181, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 238, __pyx_L1_error)
   __pyx_builtin_zip = __Pyx_GetBuiltinName(__pyx_n_s_zip); if (!__pyx_builtin_zip) __PYX_ERR(0, 243, __pyx_L1_error)
   __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 257, __pyx_L1_error)
-  __pyx_builtin_min = __Pyx_GetBuiltinName(__pyx_n_s_min); if (!__pyx_builtin_min) __PYX_ERR(0, 430, __pyx_L1_error)
-  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_builtin_min = __Pyx_GetBuiltinName(__pyx_n_s_min); if (!__pyx_builtin_min) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_builtin_max = __Pyx_GetBuiltinName(__pyx_n_s_max); if (!__pyx_builtin_max) __PYX_ERR(0, 541, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -12133,82 +15201,119 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "ThermoPyle.pyx":315
+  /* "ThermoPyle.pyx":317
+ *         self.meta = pyr.pmap({
+ *             "date":
+ *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),             # <<<<<<<<<<<<<<
+ *             "fluid": self.fluid,
+ *             "xvar": self.xvar,
+ */
+  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_s_US_Central); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__11);
+  __Pyx_GIVEREF(__pyx_tuple__11);
+  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_s_YYYY_MM_DD_HH_mm_ss); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__12);
+  __Pyx_GIVEREF(__pyx_tuple__12);
+
+  /* "ThermoPyle.pyx":348
  *             assert set(order).issubset(set(self.vars))
  *         except AssertionError:
  *             raise ValueError("All entries order MUST be in vars")             # <<<<<<<<<<<<<<
  * 
  *         try:
  */
-  __pyx_tuple__11 = PyTuple_Pack(1, __pyx_kp_s_All_entries_order_MUST_be_in_var); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 315, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__11);
-  __Pyx_GIVEREF(__pyx_tuple__11);
+  __pyx_tuple__13 = PyTuple_Pack(1, __pyx_kp_s_All_entries_order_MUST_be_in_var); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__13);
+  __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "ThermoPyle.pyx":320
+  /* "ThermoPyle.pyx":353
  *             assert order in permutations(self.vars, 3)
  *         except AssertionError:
  *             raise ValueError(             # <<<<<<<<<<<<<<
  *                 "Order of columns must be a permutation of columns of data")
  * 
  */
-  __pyx_tuple__12 = PyTuple_Pack(1, __pyx_kp_s_Order_of_columns_must_be_a_permu); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 320, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__12);
-  __Pyx_GIVEREF(__pyx_tuple__12);
+  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_kp_s_Order_of_columns_must_be_a_permu); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__14);
+  __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "ThermoPyle.pyx":365
+  /* "ThermoPyle.pyx":409
+ * 
+ *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
+ *         with open(path + middle_string + ".json", mode="w+") as f:             # <<<<<<<<<<<<<<
+ *             json.dump(dict(self.meta), f)
+ * 
+ */
+  __pyx_tuple__15 = PyTuple_Pack(3, Py_None, Py_None, Py_None); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 409, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__15);
+  __Pyx_GIVEREF(__pyx_tuple__15);
+
+  /* "ThermoPyle.pyx":413
+ * 
+ * 
+ *         def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
+ *             """
+ *             Adds a column to the dataframe
+ */
+  __pyx_tuple__16 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_variables, __pyx_n_s_var, __pyx_n_s_buffer, __pyx_n_s_newcols, __pyx_n_s_key, __pyx_n_s_index, __pyx_n_s_row); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__16);
+  __Pyx_GIVEREF(__pyx_tuple__16);
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_add_column, 413, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 413, __pyx_L1_error)
+
+  /* "ThermoPyle.pyx":478
  * 
  *     # Plotting:
  *     fig = plt.figure(randint(10**4,10**5))             # <<<<<<<<<<<<<<
  * 
  *     # we want 3D plots
  */
-  __pyx_tuple__13 = PyTuple_Pack(2, __pyx_int_10000, __pyx_int_100000); if (unlikely(!__pyx_tuple__13)) __PYX_ERR(0, 365, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__13);
-  __Pyx_GIVEREF(__pyx_tuple__13);
+  __pyx_tuple__18 = PyTuple_Pack(2, __pyx_int_10000, __pyx_int_100000); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__18);
+  __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "ThermoPyle.pyx":368
+  /* "ThermoPyle.pyx":481
  * 
  *     # we want 3D plots
  *     ax = fig.add_subplot(111, projection="3d")             # <<<<<<<<<<<<<<
  * 
  *     # Plot the data
  */
-  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_int_111); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 368, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__14);
-  __Pyx_GIVEREF(__pyx_tuple__14);
+  __pyx_tuple__19 = PyTuple_Pack(1, __pyx_int_111); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 481, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__19);
+  __Pyx_GIVEREF(__pyx_tuple__19);
 
-  /* "ThermoPyle.pyx":414
+  /* "ThermoPyle.pyx":527
  *         assert contour in set(fluid.vars)
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")             # <<<<<<<<<<<<<<
  *     for var in [xvar, yvar]:
  *         try:
  */
-  __pyx_tuple__15 = PyTuple_Pack(1, __pyx_kp_s_contour_needs_to_be_a_variable_o); if (unlikely(!__pyx_tuple__15)) __PYX_ERR(0, 414, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__15);
-  __Pyx_GIVEREF(__pyx_tuple__15);
+  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_kp_s_contour_needs_to_be_a_variable_o); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 527, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__20);
+  __Pyx_GIVEREF(__pyx_tuple__20);
 
-  /* "ThermoPyle.pyx":419
+  /* "ThermoPyle.pyx":532
  *             assert var in set(fluid.vars)
  *         except AssertionError:
  *             ValueError("Variable not valid.")             # <<<<<<<<<<<<<<
  * 
  *     matplotlib.rcParams["xtick.direction"] = "out"
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s_Variable_not_valid); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 419, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__16);
-  __Pyx_GIVEREF(__pyx_tuple__16);
+  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_kp_s_Variable_not_valid); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__21);
+  __Pyx_GIVEREF(__pyx_tuple__21);
 
-  /* "ThermoPyle.pyx":423
+  /* "ThermoPyle.pyx":536
  *     matplotlib.rcParams["xtick.direction"] = "out"
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))             # <<<<<<<<<<<<<<
  *     fignum = fig.number
- *     # X = np.array(pd.Series(fluid.data[xvar]).unique())
+ *     xx = pd.Series(fluid.data[xvar]).tolist()
  */
-  __pyx_tuple__17 = PyTuple_Pack(2, __pyx_int_1, __pyx_int_10000); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 423, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__17);
-  __Pyx_GIVEREF(__pyx_tuple__17);
+  __pyx_tuple__22 = PyTuple_Pack(2, __pyx_int_1, __pyx_int_10000); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 536, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__22);
+  __Pyx_GIVEREF(__pyx_tuple__22);
 
   /* "ThermoPyle.pyx":27
  * from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
@@ -12217,9 +15322,9 @@ static int __Pyx_InitCachedConstants(void) {
  * C = TypeVar("CSVFluid")
  * 
  */
-  __pyx_tuple__20 = PyTuple_Pack(1, __pyx_n_s_ThermoFluid); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 27, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__20);
-  __Pyx_GIVEREF(__pyx_tuple__20);
+  __pyx_tuple__25 = PyTuple_Pack(1, __pyx_n_s_ThermoFluid); if (unlikely(!__pyx_tuple__25)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__25);
+  __Pyx_GIVEREF(__pyx_tuple__25);
 
   /* "ThermoPyle.pyx":28
  * 
@@ -12228,9 +15333,9 @@ static int __Pyx_InitCachedConstants(void) {
  * 
  * UNITS = {
  */
-  __pyx_tuple__21 = PyTuple_Pack(1, __pyx_n_s_CSVFluid); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 28, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__21);
-  __Pyx_GIVEREF(__pyx_tuple__21);
+  __pyx_tuple__26 = PyTuple_Pack(1, __pyx_n_s_CSVFluid); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__26);
+  __Pyx_GIVEREF(__pyx_tuple__26);
 
   /* "ThermoPyle.pyx":70
  *     """
@@ -12239,10 +15344,10 @@ static int __Pyx_InitCachedConstants(void) {
  *                  fluid: str="Water",
  *                  xvar: str="T",
  */
-  __pyx_tuple__22 = PyTuple_Pack(12, __pyx_n_s_self, __pyx_n_s_fluid, __pyx_n_s_xvar, __pyx_n_s_yvar, __pyx_n_s_zvar, __pyx_n_s_numPoints, __pyx_n_s_colorMap, __pyx_n_s_xspace, __pyx_n_s_yspace, __pyx_n_s_data, __pyx_n_s_x, __pyx_n_s_y); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 70, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__22);
-  __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(7, 0, 12, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_init, 70, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_tuple__27 = PyTuple_Pack(12, __pyx_n_s_self, __pyx_n_s_fluid, __pyx_n_s_xvar, __pyx_n_s_yvar, __pyx_n_s_zvar, __pyx_n_s_numPoints, __pyx_n_s_colorMap, __pyx_n_s_xspace, __pyx_n_s_yspace, __pyx_n_s_data, __pyx_n_s_x, __pyx_n_s_y); if (unlikely(!__pyx_tuple__27)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__27);
+  __Pyx_GIVEREF(__pyx_tuple__27);
+  __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(7, 0, 12, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_init, 70, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 70, __pyx_L1_error)
 
   /* "ThermoPyle.pyx":134
  *         self.make_meta()
@@ -12251,22 +15356,22 @@ static int __Pyx_InitCachedConstants(void) {
  *         """(Re)make the units list"""
  *         self.units = {}
  */
-  __pyx_tuple__24 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_var); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 134, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__24);
-  __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_units, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_tuple__29 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_var); if (unlikely(!__pyx_tuple__29)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__29);
+  __Pyx_GIVEREF(__pyx_tuple__29);
+  __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_units, 134, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 134, __pyx_L1_error)
 
   /* "ThermoPyle.pyx":140
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         (Re)make the metadata object
  */
-  __pyx_tuple__26 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 140, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__26);
-  __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_meta, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_tuple__31 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__31)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__31);
+  __Pyx_GIVEREF(__pyx_tuple__31);
+  __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_meta, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 140, __pyx_L1_error)
 
   /* "ThermoPyle.pyx":158
  *         })
@@ -12275,49 +15380,49 @@ static int __Pyx_InitCachedConstants(void) {
  *         """
  *         Refreshes the object, remakes meta, cleans data, remakes units.
  */
-  __pyx_tuple__28 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 158, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__28);
-  __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_refresh, 158, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_tuple__33 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__33)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__33);
+  __Pyx_GIVEREF(__pyx_tuple__33);
+  __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_refresh, 158, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 158, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":166
+  /* "ThermoPyle.pyx":167
  *         self.make_meta()
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Adds a column to the dataframe
  */
-  __pyx_tuple__30 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_variables, __pyx_n_s_var, __pyx_n_s_buffer, __pyx_n_s_newcols, __pyx_n_s_key, __pyx_n_s_index, __pyx_n_s_row); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 166, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__30);
-  __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_add_column, 166, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_tuple__35 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_variables, __pyx_n_s_var, __pyx_n_s_buffer, __pyx_n_s_newcols, __pyx_n_s_key, __pyx_n_s_index, __pyx_n_s_row); if (unlikely(!__pyx_tuple__35)) __PYX_ERR(0, 167, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__35);
+  __Pyx_GIVEREF(__pyx_tuple__35);
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_add_column, 167, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 167, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":201
+  /* "ThermoPyle.pyx":202
  *         self.make_meta()
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
  *         """Re-cleans data"""
  *         if "P" in self.vars:
  */
-  __pyx_tuple__32 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 201, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__32);
-  __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_clean, 201, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__37);
+  __Pyx_GIVEREF(__pyx_tuple__37);
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_clean, 202, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 202, __pyx_L1_error)
 
   /* "ThermoPyle.pyx":216
- *             self.data = self.data[self.data["V"] >= 0.1]
+ * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
  */
-  __pyx_tuple__34 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_path, __pyx_n_s_filename, __pyx_n_s_mode, __pyx_n_s_default_string, __pyx_n_s_middle_string, __pyx_n_s_f, __pyx_n_s_varname, __pyx_n_s_point); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 216, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__34);
-  __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_write_data, 216, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 216, __pyx_L1_error)
-  __pyx_tuple__36 = PyTuple_Pack(3, ((PyObject*)__pyx_kp_s_data_2), ((PyObject*)__pyx_kp_s__5), ((PyObject*)__pyx_n_s_default)); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 216, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__36);
-  __Pyx_GIVEREF(__pyx_tuple__36);
+  __pyx_tuple__39 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_path, __pyx_n_s_filename, __pyx_n_s_mode, __pyx_n_s_default_string, __pyx_n_s_middle_string, __pyx_n_s_f, __pyx_n_s_varname, __pyx_n_s_point); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__39);
+  __Pyx_GIVEREF(__pyx_tuple__39);
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(4, 0, 9, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_write_data, 216, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(3, ((PyObject*)__pyx_kp_s_data_2), ((PyObject*)__pyx_kp_s__5), ((PyObject*)__pyx_n_s_default)); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__41);
+  __Pyx_GIVEREF(__pyx_tuple__41);
 
   /* "ThermoPyle.pyx":260
  *             json.dump(dict(self.meta), f)
@@ -12326,10 +15431,10 @@ static int __Pyx_InitCachedConstants(void) {
  *         """
  *         Returns a copy of itself
  */
-  __pyx_tuple__37 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 260, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__37);
-  __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_copy, 260, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_tuple__42 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__42);
+  __Pyx_GIVEREF(__pyx_tuple__42);
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_copy, 260, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 260, __pyx_L1_error)
 
   /* "ThermoPyle.pyx":288
  *     """
@@ -12338,70 +15443,121 @@ static int __Pyx_InitCachedConstants(void) {
  * 
  *         with open(pathToFile + ".json", mode="r+") as jf:
  */
-  __pyx_tuple__39 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_pathToFile, __pyx_n_s_jf, __pyx_n_s_cf); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 288, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__39);
-  __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_init, 288, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_tuple__44 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_pathToFile, __pyx_n_s_jf, __pyx_n_s_cf); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__44);
+  __Pyx_GIVEREF(__pyx_tuple__44);
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_init, 288, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 288, __pyx_L1_error)
 
   /* "ThermoPyle.pyx":304
  *         self.units = self.meta["units"]
+ * 
+ *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
+ *         """(Re)make the units list"""
+ *         self.units = {}
+ */
+  __pyx_tuple__46 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_var); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__46);
+  __Pyx_GIVEREF(__pyx_tuple__46);
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_units, 304, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 304, __pyx_L1_error)
+
+  /* "ThermoPyle.pyx":310
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ * 
+ *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         (Re)make the metadata object
+ */
+  __pyx_tuple__48 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 310, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__48);
+  __Pyx_GIVEREF(__pyx_tuple__48);
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_meta, 310, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 310, __pyx_L1_error)
+
+  /* "ThermoPyle.pyx":328
+ *         })
+ * 
+ *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Refreshes the object, remakes meta, cleans data, remakes units.
+ */
+  __pyx_tuple__50 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__50);
+  __Pyx_GIVEREF(__pyx_tuple__50);
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_refresh, 328, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 328, __pyx_L1_error)
+
+  /* "ThermoPyle.pyx":337
+ *         self.make_meta()
  * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Changes order of the columns:
  */
-  __pyx_tuple__41 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_order, __pyx_n_s_var); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 304, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__41);
-  __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_changeOrder, 304, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_tuple__52 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_order, __pyx_n_s_var); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__52);
+  __Pyx_GIVEREF(__pyx_tuple__52);
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_changeOrder, 337, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 337, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":329
+  /* "ThermoPyle.pyx":362
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
  *         """
  *         Returns a copy of itself
  */
-  __pyx_tuple__43 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 329, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__43);
-  __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_copy, 329, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_tuple__54 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 362, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__54);
+  __Pyx_GIVEREF(__pyx_tuple__54);
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_copy, 362, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 362, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":336
+  /* "ThermoPyle.pyx":368
+ *         return deepcopy(self)
+ * 
+ *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
+ */
+  __pyx_tuple__56 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_path, __pyx_n_s_filename, __pyx_n_s_mode, __pyx_n_s_default_string, __pyx_n_s_middle_string, __pyx_n_s_f, __pyx_n_s_add_column, __pyx_n_s_add_column, __pyx_n_s_varname, __pyx_n_s_point); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__56);
+  __Pyx_GIVEREF(__pyx_tuple__56);
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(4, 0, 11, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_write_data, 368, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_tuple__58 = PyTuple_Pack(3, ((PyObject*)__pyx_kp_s_data_2), ((PyObject*)__pyx_kp_s__5), ((PyObject*)__pyx_n_s_default)); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__58);
+  __Pyx_GIVEREF(__pyx_tuple__58);
+
+  /* "ThermoPyle.pyx":449
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
  *     """
  *     Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
  */
-  __pyx_tuple__45 = PyTuple_Pack(8, __pyx_n_s_fluid, __pyx_n_s_xvar, __pyx_n_s_yvar, __pyx_n_s_zvar, __pyx_n_s_coloring, __pyx_n_s_var, __pyx_n_s_fig, __pyx_n_s_ax); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 336, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__45);
-  __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_fluid_plot, 336, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_tuple__59 = PyTuple_Pack(8, __pyx_n_s_fluid, __pyx_n_s_xvar, __pyx_n_s_yvar, __pyx_n_s_zvar, __pyx_n_s_coloring, __pyx_n_s_var, __pyx_n_s_fig, __pyx_n_s_ax); if (unlikely(!__pyx_tuple__59)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__59);
+  __Pyx_GIVEREF(__pyx_tuple__59);
+  __pyx_codeobj__60 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__59, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_fluid_plot, 449, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__60)) __PYX_ERR(0, 449, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":387
+  /* "ThermoPyle.pyx":500
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
  *             newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
  *                                                            Union[float, int]]:
  */
-  __pyx_tuple__47 = PyTuple_Pack(2, __pyx_n_s_oldrange, __pyx_n_s_newrange); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 387, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__47);
-  __Pyx_GIVEREF(__pyx_tuple__47);
-  __pyx_codeobj__48 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__47, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_rescale, 387, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__48)) __PYX_ERR(0, 387, __pyx_L1_error)
+  __pyx_tuple__61 = PyTuple_Pack(2, __pyx_n_s_oldrange, __pyx_n_s_newrange); if (unlikely(!__pyx_tuple__61)) __PYX_ERR(0, 500, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__61);
+  __Pyx_GIVEREF(__pyx_tuple__61);
+  __pyx_codeobj__62 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__61, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_rescale, 500, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__62)) __PYX_ERR(0, 500, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":401
+  /* "ThermoPyle.pyx":514
  * 
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
  *     """
  *     Does what it says on the tin. Makes a Contour Plot of the Fluid.
  */
-  __pyx_tuple__49 = PyTuple_Pack(18, __pyx_n_s_fluid, __pyx_n_s_xvar, __pyx_n_s_yvar, __pyx_n_s_contour, __pyx_n_s_var, __pyx_n_s_fig, __pyx_n_s_fignum, __pyx_n_s_xx, __pyx_n_s_yy, __pyx_n_s_zz, __pyx_n_s_xi, __pyx_n_s_yi, __pyx_n_s_Z, __pyx_n_s_X, __pyx_n_s_Y, __pyx_n_s_CS, __pyx_n_s_fmt, __pyx_n_s_x); if (unlikely(!__pyx_tuple__49)) __PYX_ERR(0, 401, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__49);
-  __Pyx_GIVEREF(__pyx_tuple__49);
-  __pyx_codeobj__50 = (PyObject*)__Pyx_PyCode_New(4, 0, 18, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__49, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_fluid_contour_plot, 401, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__50)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_tuple__63 = PyTuple_Pack(18, __pyx_n_s_fluid, __pyx_n_s_xvar, __pyx_n_s_yvar, __pyx_n_s_contour, __pyx_n_s_var, __pyx_n_s_fig, __pyx_n_s_fignum, __pyx_n_s_xx, __pyx_n_s_yy, __pyx_n_s_zz, __pyx_n_s_xi, __pyx_n_s_yi, __pyx_n_s_Z, __pyx_n_s_X, __pyx_n_s_Y, __pyx_n_s_CS, __pyx_n_s_fmt, __pyx_n_s_x); if (unlikely(!__pyx_tuple__63)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_tuple__63);
+  __Pyx_GIVEREF(__pyx_tuple__63);
+  __pyx_codeobj__64 = (PyObject*)__Pyx_PyCode_New(4, 0, 18, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__63, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_fluid_contour_plot, 514, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__64)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -12520,12 +15676,15 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct__add_column) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct__add_column) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
   __pyx_type_10ThermoPyle___pyx_scope_struct__add_column.tp_print = 0;
   __pyx_ptype_10ThermoPyle___pyx_scope_struct__add_column = &__pyx_type_10ThermoPyle___pyx_scope_struct__add_column;
-  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct_1_rescale) < 0) __PYX_ERR(0, 387, __pyx_L1_error)
-  __pyx_type_10ThermoPyle___pyx_scope_struct_1_rescale.tp_print = 0;
-  __pyx_ptype_10ThermoPyle___pyx_scope_struct_1_rescale = &__pyx_type_10ThermoPyle___pyx_scope_struct_1_rescale;
+  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column) < 0) __PYX_ERR(0, 413, __pyx_L1_error)
+  __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column.tp_print = 0;
+  __pyx_ptype_10ThermoPyle___pyx_scope_struct_1_add_column = &__pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column;
+  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct_2_rescale) < 0) __PYX_ERR(0, 500, __pyx_L1_error)
+  __pyx_type_10ThermoPyle___pyx_scope_struct_2_rescale.tp_print = 0;
+  __pyx_ptype_10ThermoPyle___pyx_scope_struct_2_rescale = &__pyx_type_10ThermoPyle___pyx_scope_struct_2_rescale;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
@@ -12630,9 +15789,9 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_INCREF(__pyx_n_s__19);
-  __Pyx_GIVEREF(__pyx_n_s__19);
-  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s__19);
+  __Pyx_INCREF(__pyx_n_s__24);
+  __Pyx_GIVEREF(__pyx_n_s__24);
+  PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s__24);
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_CoolProp_CoolProp, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -12648,9 +15807,9 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_INCREF(__pyx_n_s__19);
-  __Pyx_GIVEREF(__pyx_n_s__19);
-  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s__19);
+  __Pyx_INCREF(__pyx_n_s__24);
+  __Pyx_GIVEREF(__pyx_n_s__24);
+  PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s__24);
   __pyx_t_2 = __Pyx_Import(__pyx_n_s_matplotlib_pyplot, __pyx_t_1, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12854,7 +16013,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_TypeVar); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__20, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_tuple__25, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_T, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
@@ -12869,7 +16028,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_TypeVar); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_tuple__26, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_C, __pyx_t_2) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
@@ -12899,7 +16058,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   /* "ThermoPyle.pyx":43
  * 
  * 
- * class ThermoFluid():             # <<<<<<<<<<<<<<
+ * class ThermoFluid:             # <<<<<<<<<<<<<<
  *     """
  *     A class that will contain the data requested.
  */
@@ -12997,7 +16156,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  *                  fluid: str="Water",
  *                  xvar: str="T",
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_1__init__, 0, __pyx_n_s_ThermoFluid___init, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_1__init__, 0, __pyx_n_s_ThermoFluid___init, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (!__Pyx_CyFunction_InitDefaults(__pyx_t_5, sizeof(__pyx_defaults), 1)) __PYX_ERR(0, 70, __pyx_L1_error)
 
@@ -13035,7 +16194,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_3make_units, 0, __pyx_n_s_ThermoFluid_make_units, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_3make_units, 0, __pyx_n_s_ThermoFluid_make_units, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -13043,7 +16202,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "ThermoPyle.pyx":140
- *             self.units[var] =  get(var, UNITS, "UnknownVar")
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -13052,7 +16211,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_5make_meta, 0, __pyx_n_s_ThermoFluid_make_meta, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_5make_meta, 0, __pyx_n_s_ThermoFluid_make_meta, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13069,35 +16228,35 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_7refresh, 0, __pyx_n_s_ThermoFluid_refresh, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_7refresh, 0, __pyx_n_s_ThermoFluid_refresh, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_refresh, __pyx_t_1) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":166
+  /* "ThermoPyle.pyx":167
  *         self.make_meta()
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Adds a column to the dataframe
  */
-  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_Union); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_Union); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_List); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_List); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = PyObject_GetItem(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_6 = PyObject_GetItem(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_6);
   PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_6);
@@ -13105,39 +16264,39 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __pyx_t_6 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyObject_GetItem(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
+  __pyx_t_3 = PyObject_GetItem(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_variables, __pyx_t_3) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_variables, __pyx_t_3) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_9add_column, 0, __pyx_n_s_ThermoFluid_add_column, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_9add_column, 0, __pyx_n_s_ThermoFluid_add_column, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_add_column, __pyx_t_3) < 0) __PYX_ERR(0, 166, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_add_column, __pyx_t_3) < 0) __PYX_ERR(0, 167, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":201
+  /* "ThermoPyle.pyx":202
  *         self.make_meta()
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
  *         """Re-cleans data"""
  *         if "P" in self.vars:
  */
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_11clean, 0, __pyx_n_s_ThermoFluid_clean, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_11clean, 0, __pyx_n_s_ThermoFluid_clean, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_clean, __pyx_t_1) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_clean, __pyx_t_1) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "ThermoPyle.pyx":216
- *             self.data = self.data[self.data["V"] >= 0.1]
+ * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
  *         """
@@ -13149,9 +16308,9 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_filename, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 216, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_mode, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 216, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 216, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_13write_data, 0, __pyx_n_s_ThermoFluid_write_data, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_13write_data, 0, __pyx_n_s_ThermoFluid_write_data, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__36);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__41);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_write_data, __pyx_t_3) < 0) __PYX_ERR(0, 216, __pyx_L1_error)
@@ -13170,7 +16329,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_t_1) < 0) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_15copy, 0, __pyx_n_s_ThermoFluid_copy, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_15copy, 0, __pyx_n_s_ThermoFluid_copy, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -13180,7 +16339,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   /* "ThermoPyle.pyx":43
  * 
  * 
- * class ThermoFluid():             # <<<<<<<<<<<<<<
+ * class ThermoFluid:             # <<<<<<<<<<<<<<
  *     """
  *     A class that will contain the data requested.
  */
@@ -13193,7 +16352,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   /* "ThermoPyle.pyx":267
  * 
  * 
- * class CSVFluid():             # <<<<<<<<<<<<<<
+ * class CSVFluid:             # <<<<<<<<<<<<<<
  *     """
  *     A class that will help work with ThermoFluid data contained in CSV/JSON files.
  */
@@ -13210,7 +16369,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_pathToFile, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 288, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_1__init__, 0, __pyx_n_s_CSVFluid___init, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_1__init__, 0, __pyx_n_s_CSVFluid___init, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13220,97 +16379,169 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   /* "ThermoPyle.pyx":304
  *         self.units = self.meta["units"]
  * 
+ *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
+ *         """(Re)make the units list"""
+ *         self.units = {}
+ */
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_3make_units, 0, __pyx_n_s_CSVFluid_make_units, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_units, __pyx_t_1) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":310
+ *             self.units[var] =  get(str(var), UNITS, "UnknownVar")
+ * 
+ *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         (Re)make the metadata object
+ */
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 310, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_5make_meta, 0, __pyx_n_s_CSVFluid_make_meta, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_meta, __pyx_t_3) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+  /* "ThermoPyle.pyx":328
+ *         })
+ * 
+ *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Refreshes the object, remakes meta, cleans data, remakes units.
+ */
+  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_7refresh, 0, __pyx_n_s_CSVFluid_refresh, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_refresh, __pyx_t_1) < 0) __PYX_ERR(0, 328, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":337
+ *         self.make_meta()
+ * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Changes order of the columns:
  */
-  __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_List); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_List); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = __Pyx_GetModuleGlobalName(__pyx_n_s_Text); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyObject_GetItem(__pyx_t_1, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_5 = PyObject_GetItem(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_t_5) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_3changeOrder, 0, __pyx_n_s_CSVFluid_changeOrder, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 304, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_changeOrder, __pyx_t_5) < 0) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_order, __pyx_t_5) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_9changeOrder, 0, __pyx_n_s_CSVFluid_changeOrder, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_changeOrder, __pyx_t_5) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":329
+  /* "ThermoPyle.pyx":362
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
  *         """
  *         Returns a copy of itself
  */
-  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_C); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, __pyx_t_3) < 0) __PYX_ERR(0, 329, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_5copy, 0, __pyx_n_s_CSVFluid_copy, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_5);
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_C); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, __pyx_t_1) < 0) __PYX_ERR(0, 362, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_11copy, 0, __pyx_n_s_CSVFluid_copy, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_copy, __pyx_t_3) < 0) __PYX_ERR(0, 329, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_copy, __pyx_t_1) < 0) __PYX_ERR(0, 362, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "ThermoPyle.pyx":368
+ *         return deepcopy(self)
+ * 
+ *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
+ *         """
+ *         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
+ */
+  __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_path, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_filename, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_mode, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_13write_data, 0, __pyx_n_s_CSVFluid_write_data, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_5, __pyx_tuple__58);
+  __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_1);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_write_data, __pyx_t_5) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "ThermoPyle.pyx":267
  * 
  * 
- * class CSVFluid():             # <<<<<<<<<<<<<<
+ * class CSVFluid:             # <<<<<<<<<<<<<<
  *     """
  *     A class that will help work with ThermoFluid data contained in CSV/JSON files.
  */
-  __pyx_t_3 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_CSVFluid, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 267, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CSVFluid, __pyx_t_3) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_5 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_CSVFluid, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 267, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CSVFluid, __pyx_t_5) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":336
+  /* "ThermoPyle.pyx":449
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
  *     """
  *     Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_1fluid_plot, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_1fluid_plot, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fluid_plot, __pyx_t_2) < 0) __PYX_ERR(0, 336, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fluid_plot, __pyx_t_2) < 0) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":387
+  /* "ThermoPyle.pyx":500
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
  *             newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
  *                                                            Union[float, int]]:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_3rescale, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_3rescale, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_rescale, __pyx_t_2) < 0) __PYX_ERR(0, 387, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_rescale, __pyx_t_2) < 0) __PYX_ERR(0, 500, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":401
+  /* "ThermoPyle.pyx":514
  * 
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
  *     """
  *     Does what it says on the tin. Makes a Contour Plot of the Fluid.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_5fluid_contour_plot, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_5fluid_contour_plot, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fluid_contour_plot, __pyx_t_2) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_fluid_contour_plot, __pyx_t_2) < 0) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "ThermoPyle.pyx":1

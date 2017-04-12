@@ -40,7 +40,7 @@ UNITS = {
 }
 
 
-class ThermoFluid():
+class ThermoFluid:
     """
     A class that will contain the data requested.
     Call the class with these arguments
@@ -134,8 +134,8 @@ class ThermoFluid():
     def make_units(self) -> None:
         """(Re)make the units list"""
         self.units = {}
-        for var in self.vars:
-            self.units[var] =  get(var, UNITS, "UnknownVar")
+        for var in self.data.columns:
+            self.units[var] =  get(str(var), UNITS, "UnknownVar")
 
     def make_meta(self) -> None:
         """
@@ -159,6 +159,7 @@ class ThermoFluid():
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
         """
+        self.vars = set(self.data.columns)
         self.make_units()
         self.clean()
         self.make_meta()
@@ -209,9 +210,8 @@ class ThermoFluid():
             self.data = self.data[self.data["T"] >=
                                   (CP.PropsSI("TMIN", self.fluid) + 1.0)]
         if "U" in self.vars:
-            self.data = self.data[self.data["U"] >= 1.0]
-        if "V" in self.vars:
-            self.data = self.data[self.data["V"] >= 0.1]
+            self.data = self.data[self.data["U"] >= 0.0]
+
 
     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
         """
@@ -264,7 +264,7 @@ class ThermoFluid():
         return deepcopy(self)
 
 
-class CSVFluid():
+class CSVFluid:
     """
     A class that will help work with ThermoFluid data contained in CSV/JSON files.
 
@@ -301,6 +301,39 @@ class CSVFluid():
         self.numPoints = self.meta["numPoints"]
         self.units = self.meta["units"]
 
+    def make_units(self) -> None:
+        """(Re)make the units list"""
+        self.units = {}
+        for var in self.data.columns:
+            self.units[var] =  get(str(var), UNITS, "UnknownVar")
+
+    def make_meta(self) -> None:
+        """
+        (Re)make the metadata object
+        """
+        self.make_units()
+        self.meta = pyr.pmap({
+            "date":
+            str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
+            "fluid": self.fluid,
+            "xvar": self.xvar,
+            "yvar": self.yvar,
+            "zvar": self.zvar,
+            "vars": list(self.vars),
+            "numPoints": self.numPoints,
+            "colorMap": self.colorMap,
+            "units": self.units
+        })
+
+    def refresh(self) -> None:
+        """
+        Refreshes the object, remakes meta, cleans data, remakes units.
+        """
+        self.vars = set(self.data.columns)
+        self.make_units()
+        self.clean()
+        self.make_meta()
+
     def changeOrder(self, order: List[Text]) -> None:
         """
         Changes order of the columns:
@@ -331,6 +364,86 @@ class CSVFluid():
         Returns a copy of itself
         """
         return deepcopy(self)
+
+    def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
+        """
+        Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
+
+        Parameters:
+
+            path (str): path where file should be saved
+
+            filename (str): what to name the file
+
+            mode (str): How to name the file:
+                -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``;
+                -  **custom**: fully custom name;
+                -  **dual**: default + custom.
+        """
+        try:
+            assert mode in {"dual", "custom", "default"}
+        except AssertionError:
+            raise ValueError(
+                "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
+
+        if filename == "" and mode in {"dual", "custom"}:
+            raise TypeError(
+                "When supplying {0} mode, filename is required; None given".format(mode))
+
+        if mode != "custom":
+            default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
+                varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
+
+        if mode == "custom":
+            middle_string = filename
+
+        elif mode == "default":
+            middle_string = default_string
+
+        elif mode == "dual":
+            middle_string = default_string + "_" + filename
+
+        self.make_meta()
+
+        self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
+        with open(path + middle_string + ".json", mode="w+") as f:
+            json.dump(dict(self.meta), f)
+
+
+        def add_column(self, variables: Union[List[Text], Text]) -> None:
+            """
+            Adds a column to the dataframe
+
+            Paramaters:
+                variable (Union[List[Text],Text]): What variable(s) to add
+            """
+            if type(variables) is not list:
+                variables = [variables]
+
+            for var in variables:
+                try:
+                    assert var not in self.vars
+                except AssertionError:
+                    raise ValueError(
+                        "Cannot add column {0}: already in frame".format(var))
+
+
+            self.vars += variables
+            buffer = {}
+            newcols = {}
+            for var in variables:
+                newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+
+            for key in newcols:
+                buffer[key] = []
+
+            for index, row in self.data.iterrows():
+                for key in newcols:
+                    get(key, buffer).append(get(key, newcols)(row))
+            for key in newcols:
+                self.data[key] = pd.Series(buffer[key], index=self.data.index)
+            self.make_units()
+            self.make_meta()
 
 
 def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:
@@ -422,17 +535,13 @@ def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar
     matplotlib.rcParams["ytick.direction"] = "out"
     fig = plt.figure(randint(1,10**4))
     fignum = fig.number
-    # X = np.array(pd.Series(fluid.data[xvar]).unique())
-    # Y = np.array(pd.Series(fluid.data[yvar]).unique())
     xx = pd.Series(fluid.data[xvar]).tolist()
     yy = pd.Series(fluid.data[yvar]).tolist()
     zz = pd.Series(fluid.data[contour]).tolist()
     xi = np.linspace(min(xx), max(xx), 217)
     yi = np.linspace(min(yy), max(yy), 217)
-    #Z = np.array(fluid.data.pivot(index=xvar, columns=yvar,  values=contour))
     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
     X, Y = np.meshgrid(xi, yi)
-    #CS = plt.contour(X, Y.T, Z, cmap=fluid.colorMap)
     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
     fmt = {}
     for x in CS.levels:

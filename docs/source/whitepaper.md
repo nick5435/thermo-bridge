@@ -55,13 +55,19 @@ The following software and packages are required:
 
 All of these packages, save for Python itself, can be installed with `pip`.
 
-## Why CoolProp?
-
-_Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
-
 ## Implementation & Use
 
 _Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
+
+### Data Cleaning
+
+CoolProp, as simple to use as it may be, has its downsides. One of such downsides is that it will still produce data in unphysical regions, i.e. where $S\leq 0$ or where $U \lt 0$. To counteract this, we made the following choices:
+
+* Only keep rows where $S\gt 0$ (The Second Law)
+* Only keep rows where $U \gt 0$ (Need a Physical Regime)
+* Only keep rows where $P -1 \gt P_\text{min}$, and likewise for $T$
+
+This final assumption was made to avoid regions where the derivatives are very steep, which would not have worked to create a physical surface.
 
 ## Future Work
 

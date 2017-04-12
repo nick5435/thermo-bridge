@@ -14,7 +14,7 @@ extensions = [Extension("ThermoPyle", ["ThermoPyle.pyx"]), ]
 
 setup(
     name='ThermoPyle',
-    version='0.6.1',
+    version='0.6.2',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     long_description=readme(),
     url='https://github.com/nick5435/thermo-bridge',
