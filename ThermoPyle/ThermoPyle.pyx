@@ -543,7 +543,7 @@ def rescale(oldrange: List[Union[float, int]],
         """
         def scaler(x:float)->float:
             """
-            scales input according to y = {delta_y}/{delta_x}*(x-{old_min})+ {new_min}
+            scales input according to y = {slope}*(x-{old_min})+{new_min}
 
             Paramaters:
                 x (float): A value to scales
@@ -551,7 +551,7 @@ def rescale(oldrange: List[Union[float, int]],
                 y (float): the scaled version of x
             """
             return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
-        scaler.__doc__ = scaler.__doc__.format(delta_y=(newrange[1]-newrange[0]), delta_x=(oldrange[1]-oldrange[0]), old_min=oldrange[0],newmin=newrange[0])
+        scaler.__doc__ = scaler.__doc__.format(slope=((newrange[1]-newrange[0])/(oldrange[1]-oldrange[0])), old_min=oldrange[0], new_min=newrange[0])
         return scaler
 
 def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:
