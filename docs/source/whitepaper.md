@@ -60,9 +60,9 @@ All of these packages, save for Python itself, can be installed with `pip`.
 
 CoolProp, as simple to use as it may be, has its downsides. One of such downsides is that it will still produce data in unphysical regions, i.e. where $S\leq 0$ or where $U \lt 0$. To counteract this, we made the following choices:
 
-* Only keep rows where $S\gt 0$ (The Second Law)
-* Only keep rows where $U \gt 0$ (Need a Physical Regime)
-* Only keep rows where $P -1 \gt P_\text{min}$, and likewise for $T$
+* Only keep rows where `S > 0` (The Second Law)
+* Only keep rows where `U > 0` (Need a Physical Regime)
+* Only keep rows where `P-1 > P_min`, and likewise for `T`.
 
 This final assumption was made to avoid regions where the derivatives are very steep, which would not have worked to create a physical surface.
 
