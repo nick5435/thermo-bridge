@@ -68,28 +68,27 @@ class ThermoFluid:
     """
 
     def __init__(self,
-                 fluid: str="Water",
-                 xvar: str="T",
-                 yvar: str="P",
-                 zvar: str="S",
-                 numPoints: Union[List[int], int]=[217, 217],
-                 colorMap: str="viridis"):
+        fluid: str="Water",
+        xvar: str="T",
+        yvar: str="P",
+        zvar: str="S",
+        numPoints: Union[List[int], int]=[217, 217],
+        colorMap: str="viridis"):
 
         self.fluid = fluid
         if type(numPoints) is int:
             self.numPoints = [numPoints, numPoints]
         else:
             self.numPoints = [numPoints[0], numPoints[1]]
-        self.colorMap = colorMap
-        self.xvar = xvar
-        self.yvar = yvar
-        self.zvar = zvar
-        self.vars = [self.xvar, self.yvar, self.zvar]
-        self.M = CP.PropsSI("M", self.fluid)
+            self.colorMap = colorMap
+            self.xvar = xvar
+            self.yvar = yvar
+            self.zvar = zvar
+            self.vars = [self.xvar, self.yvar, self.zvar]
+            self.M = CP.PropsSI("M", self.fluid)
 
 
-        # Linear interpolation between tmin and tmax with NUM_POINTS number of
-        # points, delta = tmax-min/NUM_POINTS
+            # Linear interpolation between tmin and tmax with NUM_POINTS number of points, delta = tmax-min/NUM_POINTS
         if self.xvar in ["P", "T"]:
             xspace = np.linspace(
                 CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1,
@@ -122,8 +121,8 @@ class ThermoFluid:
             for y in yspace:
                 data = np.append(data, [[
                     x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
-                                     self.fluid)
-                                     ]], axis=0)
+                        self.fluid)
+                        ]], axis=0)
 
         # Create Pandas Frame of Data
         self.data = pd.DataFrame(data, columns=self.vars)
@@ -203,12 +202,12 @@ class ThermoFluid:
         """Re-cleans data"""
         if "P" in self.vars:
             self.data = self.data[self.data["P"] >=
-                                  CP.PropsSI("PMIN", self.fluid) + 1.0]
+                CP.PropsSI("PMIN", self.fluid) + 1.0]
         if "S" in self.vars:
             self.data = self.data[self.data["S"] > 0.0]
         if "T" in self.vars:
             self.data = self.data[self.data["T"] >=
-                                  (CP.PropsSI("TMIN", self.fluid) + 1.0)]
+                (CP.PropsSI("TMIN", self.fluid) + 1.0)]
         if "U" in self.vars:
             self.data = self.data[self.data["U"] >= 0.0]
 
@@ -533,18 +532,27 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text=""
 
 
 def rescale(oldrange: List[Union[float, int]],
-            newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
-                                                           Union[float, int]]:
-    """
-    Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply
+    newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
+        Union[float, int]]:
+        """
+        Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply
 
-    Parameters:
-        oldrange (List[Union[float, int]]): The old range of the data, [min, max]
-        newrange (List[Union[float, int]]): The new range of the data, [min, max]
+        Parameters:
+            oldrange (List[Union[float, int]]): The old range of the data, [min, max]
+            newrange (List[Union[float, int]]): The new range of the data, [min, max]
+        """
+        def scaler(x:float)->float:
+            """
+            scales input according to y = {delta_y}/{delta_x}*(x-{old_min})+ {new_min}
 
-    """
-    return lambda x: (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
-
+            Paramaters:
+                x (float): A value to scales
+            Returns:
+                y (float): the scaled version of x
+            """
+            return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
+        scaler.__doc__ = scaler.__doc__.format(delta_y=(newrange[1]-newrange[0]), delta_x=(oldrange[1]-oldrange[0]), old_min=oldrange[0],newmin=newrange[0])
+        return scaler
 
 def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:
     """

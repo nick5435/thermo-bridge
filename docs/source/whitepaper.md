@@ -55,9 +55,6 @@ The following software and packages are required:
 
 All of these packages, save for Python itself, can be installed with `pip`.
 
-## Implementation & Use
-
-_Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
 
 ### Data Cleaning
 
@@ -71,7 +68,7 @@ This final assumption was made to avoid regions where the derivatives are very s
 
 ## Future Work
 
-_Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
+Future work for this software would be to implement the functionality of CoolProp on our own, as CoolProp's lack of a Volume variable was hard to work around. We would also like to eventually work in regions that CoolProp could not, which includes the low-temperature limit and the high-pressure limit.
 
 
 ## References
