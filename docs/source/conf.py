@@ -28,7 +28,7 @@ release = "0.6.3"
 sys.path.insert(0, os.path.abspath("../../ThermoPyle/"))
 sys.path.insert(1, os.path.abspath("../../notebooks/"))
 sys.path.insert(1, os.path.abspath("../../plots/"))
-
+sys.path.insert(0, os.path.abspath("../../"))
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
