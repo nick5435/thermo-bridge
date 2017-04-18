@@ -25,6 +25,7 @@ version = "0.6"
 release = "0.6.3"
 
 
+sys.path.insert(0, os.path.abspath("../../ThermoPyle/ThermoPyle.pyx"))
 sys.path.insert(0, os.path.abspath("../../ThermoPyle/"))
 sys.path.insert(1, os.path.abspath("../../notebooks/"))
 sys.path.insert(1, os.path.abspath("../../plots/"))
@@ -59,7 +60,7 @@ napoleon_use_rtype = True
 
 autodoc_mock_imports = [
     "pyrsistent", "arrow", "matplotlib", "mpl_toolkits", "matplotlib.pyplot",
-    "pandas", "cytoolz", "numpy", "mpl_toolkits.mplot3d", "Cython", "matplotlib.mlab", "matplotlib.cm"
+    "pandas", "cytoolz", "numpy", "mpl_toolkits.mplot3d", "matplotlib.mlab", "matplotlib.cm"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
