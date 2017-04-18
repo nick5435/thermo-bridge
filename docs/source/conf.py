@@ -24,14 +24,10 @@ version = "0.6"
 # The full version, including alpha/beta/rc tags.
 release = "0.6.3"
 
-sys.path.insert(0, os.path.abspath("."))
-sys.path.insert(0, os.path.abspath(".."))
+
 sys.path.insert(0, os.path.abspath("../../ThermoPyle/"))
-sys.path.insert(0, os.path.abspath("/../ThermoPyle/"))
-sys.path.insert(0, os.path.abspath("./ThermoPyle/"))
-sys.path.insert(0, os.path.abspath("../../notebooks/"))
-sys.path.insert(0, os.path.abspath("../../"))
-sys.path.insert(0, os.path.abspath("../../plots/"))
+sys.path.insert(1, os.path.abspath("../../notebooks/"))
+sys.path.insert(1, os.path.abspath("../../plots/"))
 
 # -- General configuration ------------------------------------------------
 
