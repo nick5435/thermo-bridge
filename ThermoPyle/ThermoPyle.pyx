@@ -129,13 +129,14 @@ class ThermoFluid:
         self.make_units()
         self.clean()
         self.make_meta()
-
+    @classmethod
     def make_units(self) -> None:
         """(Re)make the units list"""
         self.units = {}
         for var in self.data.columns:
             self.units[var] =  get(str(var), UNITS, "UnknownVar")
 
+    @classmethod
     def make_meta(self) -> None:
         """
         (Re)make the metadata object
@@ -154,6 +155,7 @@ class ThermoFluid:
             "units": self.units
         })
 
+    @classmethod
     def refresh(self) -> None:
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
@@ -163,6 +165,7 @@ class ThermoFluid:
         self.clean()
         self.make_meta()
 
+    @classmethod
     def add_column(self, variables: Union[List[Text], Text]) -> None:
         """
         Adds a column to the dataframe
@@ -179,8 +182,6 @@ class ThermoFluid:
             except AssertionError:
                 raise ValueError(
                     "Cannot add column {0}: already in frame".format(var))
-
-
         self.vars += variables
         buffer = {}
         newcols = {}
@@ -198,6 +199,7 @@ class ThermoFluid:
         self.make_units()
         self.make_meta()
 
+    @classmethod
     def clean(self) -> None:
         """Re-cleans data"""
         if "P" in self.vars:
@@ -211,7 +213,7 @@ class ThermoFluid:
         if "U" in self.vars:
             self.data = self.data[self.data["U"] >= 0.0]
 
-
+    @classmethod
     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
         """
         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
@@ -253,7 +255,7 @@ class ThermoFluid:
         self.make_meta()
 
         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
-        with open(path + middle_string + ".json", mode="w+") as f:
+        with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:
             json.dump(dict(self.meta), f)
 
     def copy(self) -> T:
@@ -300,12 +302,14 @@ class CSVFluid:
         self.numPoints = self.meta["numPoints"]
         self.units = self.meta["units"]
 
+    @classmethod
     def make_units(self) -> None:
         """(Re)make the units list"""
         self.units = {}
         for var in self.data.columns:
             self.units[var] =  get(str(var), UNITS, "UnknownVar")
 
+    @classmethod
     def make_meta(self) -> None:
         """
         (Re)make the metadata object
@@ -324,41 +328,37 @@ class CSVFluid:
             "units": self.units
         })
 
-        def add_column(self, variables: Union[List[Text], Text]) -> None:
-            """
-            Adds a column to the dataframe
+    @classmethod
+    def add_column(self, variables: Union[List[Text], Text]) -> None:
+        """
+        Adds a column to the dataframe
 
-            Paramaters:
-                variable (Union[List[Text],Text]): What variable(s) to add
-            """
-            if type(variables) is not list:
-                variables = [variables]
-
-            for var in variables:
-                try:
-                    assert var not in self.vars
-                except AssertionError:
-                    raise ValueError(
-                        "Cannot add column {0}: already in frame".format(var))
-
-
-            self.vars += variables
-            buffer = {}
-            newcols = {}
-            for var in variables:
-                newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
-
+        Paramaters:
+            variable (Union[List[Text],Text]): What variable(s) to add
+        """
+        if type(variables) is not list:
+            variables = [variables]
+        for var in variables:
+            try:
+                assert var not in self.vars
+            except AssertionError:
+                raise ValueError("Cannot add column {0}: already in frame".format(var))
+        self.vars += variables
+        buffer = {}
+        newcols = {}
+        for var in variables:
+            newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+        for key in newcols:
+            buffer[key] = []
+        for index, row in self.data.iterrows():
             for key in newcols:
-                buffer[key] = []
+                get(key, buffer).append(get(key, newcols)(row))
+        for key in newcols:
+            self.data[key] = pd.Series(buffer[key], index=self.data.index)
+        self.make_units()
+        self.make_meta()
 
-            for index, row in self.data.iterrows():
-                for key in newcols:
-                    get(key, buffer).append(get(key, newcols)(row))
-            for key in newcols:
-                self.data[key] = pd.Series(buffer[key], index=self.data.index)
-            self.make_units()
-            self.make_meta()
-
+    @classmethod
     def refresh(self) -> None:
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
@@ -368,6 +368,7 @@ class CSVFluid:
         self.clean()
         self.make_meta()
 
+    @classmethod
     def changeOrder(self, order: List[Text]) -> None:
         """
         Changes order of the columns:
@@ -386,9 +387,7 @@ class CSVFluid:
         except AssertionError:
             raise ValueError(
                 "Order of columns must be a permutation of columns of data")
-
-        self.data = self.data[list(
-            order) + [var for var in set(self.vars) if var not in set(order)]]
+        self.data = self.data[list(order) + [var for var in set(self.vars) if var not in set(order)]]
         self.xvar = order[0]
         self.yvar = order[1]
         self.zvar = order[2]
@@ -399,6 +398,7 @@ class CSVFluid:
         """
         return deepcopy(self)
 
+    @classmethod
     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
         """
         Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.
@@ -440,44 +440,40 @@ class CSVFluid:
         self.make_meta()
 
         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
-        with open(path + middle_string + ".json", mode="w+") as f:
+        with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:
             json.dump(dict(self.meta), f)
 
+    @classmethod
+    def add_column(self, variables: Union[List[Text], Text]) -> None:
+        """
+        Adds a column to the dataframe
 
-        def add_column(self, variables: Union[List[Text], Text]) -> None:
-            """
-            Adds a column to the dataframe
+        Paramaters:
+            variable (Union[List[Text],Text]): What variable(s) to add
+        """
+        if type(variables) is not list:
+            variables = [variables]
+        for var in variables:
+            try:
+                assert var not in self.vars
+            except AssertionError:
+                raise ValueError("Cannot add column {0}: already in frame".format(var))
 
-            Paramaters:
-                variable (Union[List[Text],Text]): What variable(s) to add
-            """
-            if type(variables) is not list:
-                variables = [variables]
+        self.vars += variables
+        buffer = {}
+        newcols = {}
+        for var in variables:
+            newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
 
-            for var in variables:
-                try:
-                    assert var not in self.vars
-                except AssertionError:
-                    raise ValueError(
-                        "Cannot add column {0}: already in frame".format(var))
-
-
-            self.vars += variables
-            buffer = {}
-            newcols = {}
-            for var in variables:
-                newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
-
+        for key in newcols:
+            buffer[key] = []
+        for index, row in self.data.iterrows():
             for key in newcols:
-                buffer[key] = []
-
-            for index, row in self.data.iterrows():
-                for key in newcols:
-                    get(key, buffer).append(get(key, newcols)(row))
-            for key in newcols:
-                self.data[key] = pd.Series(buffer[key], index=self.data.index)
-            self.make_units()
-            self.make_meta()
+                get(key, buffer).append(get(key, newcols)(row))
+        for key in newcols:
+            self.data[key] = pd.Series(buffer[key], index=self.data.index)
+        self.make_units()
+        self.make_meta()
 
 
 def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:

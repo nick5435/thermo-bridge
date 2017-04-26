@@ -17,10 +17,12 @@ Required Tools
 
 * `Pandoc <http://pandoc.org/installing.html>`_ for Documentation
 * `wkhtmltopdf <http://wkhtmltopdf.org/downloads.html>`_ Stable
+* A working C/C++ Compiler (MinGW recommended)
 
 Setup Process
 =============
 
+#. Install your C/C++ Compiler, making sure that its tools end up in your path.
 #. Install Git using its default settings.
 #. Install Git-LFS using its default settings.
 #. Install Anaconda using its default options.
@@ -33,7 +35,7 @@ Setup Process
     cd ~
     git clone https://github.com/nick5435/thermo-bridge.git
     cd thermo-bridge
-    pip install -e ./ThermoPyle[dev]
+    pip install -U -e ThermoPyle[dev]
     conda update --all
 
 #. For a runtime example, open :code:`notebooks/thermo_generic_library_runner.ipynb` using :code:`jupyter notebook`
