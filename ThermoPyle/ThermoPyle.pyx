@@ -325,8 +325,7 @@ class CSVFluid:
             "vars": list(self.vars),
             "numPoints": self.numPoints,
             "colorMap": self.colorMap,
-            "units": self.units
-        })
+            "units": self.units})
 
     @classmethod
     def add_column(self, variables: Union[List[Text], Text]) -> None:
