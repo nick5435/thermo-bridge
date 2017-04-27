@@ -3,6 +3,7 @@ from itertools import permutations
 
 import ThermoPyle as TP
 import argparse
+import pandas as pd
 
 
 def make_Time(time):
@@ -12,9 +13,9 @@ def make_Time(time):
 
 
 # d_vars = ["U", "T", "P", "S", "D", "G", "H"]
-d_vars = ["U", "T", "P", "S", "D"]
+d_vars = ["U", "T", "P", "S", "D", "G"]
 newCols = {f"d({z})/d({y})|{x}" for x, y, z in permutations(d_vars, 3)
-           }.union(d_vars).difference({"T", "P", "U"})
+           }.union(d_vars).difference({"T", "P", "U"}).union({"PHASE"})
 
 newCols = list(newCols)
 parser = argparse.ArgumentParser(description="Make some CSV goodness.")
@@ -65,7 +66,11 @@ for i, col in enumerate(newCols[:numCols]):
     print(" " * 4 + f"This Iteration: {make_Time(itertimes[-1][2])}")
     print(" " * 4 + f"Time Elapsed: {make_Time(itertimes[-1][1]-start)}\n")
 
+
+myfluid.data["V"] = pd.Series(myfluid.M / myfluid.data["D"], index=myfluid.data.index)
+myfluid.refresh()
 myfluid.clean()
+
 if args.write:
     myfluid.write_data("finalData/", mode="dual",
                        filename="with_derivatives")
