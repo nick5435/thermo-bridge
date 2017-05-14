@@ -4,3 +4,7 @@ finalData/Water_T-217_P-217_U_with_ders_and_enthalpy.csv filter=lfs diff=lfs mer
 finalData/Water_T-217_P-217_U_with_Volume_and_ders.csv filter=lfs diff=lfs merge=lfs -text
 finalData/Water_T-217_P-217_U_with_derivatives_and_volume.csv filter=lfs diff=lfs merge=lfs -text
 finalData/Water_T-217_P-217_U_with_derivatives_and_volume_SCALED.csv filter=lfs diff=lfs merge=lfs -text
+notebooks/* linguist-vendored
+ThermoPyle_* linguist-vendored
+plots/* linguist-vendored
+finalData/* linguist-vendored
