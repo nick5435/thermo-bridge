@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 def readme():
     """Where the README file is."""
-    with open('README.md') as f:
+    with open('README.rst') as f:
         return f.read()
 
 
