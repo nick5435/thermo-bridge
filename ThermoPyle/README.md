@@ -1,11 +1,22 @@
-# Thermodynamics Data Generator -- Physics Bridge
-## Nick Meyer and Aaron Wangberg
-## 2017-02-11
-## Version 0.4
+==========
+ThermoPyle
+==========
+
+We generate `datasets <https://github.com/nick5435/thermo-bridge/tree/master/finalData>`_ and `plots <https://github.com/nick5435/thermo-bridge/tree/master/plots>`_ using `CoolProp <http://coolprop.org>`_.
+Install the library by runnning `pip install thermopyle`.
+
+|plot|
+
+Documentation:
+|docs|
 
 
-We generate datasets and plots using CoolProp, running under Python.
+.. |docs| image:: http://readthedocs.org/projects/thermo-bridge/badge/?version=stable
+    :alt: Documentation Status
+    :scale: 100%
+    :target: http://thermo-bridge.readthedocs.io/en/stable/?badge=stable
 
-To Install:
-	pip install -e .
-	
+.. |plot| image:: https://github.com/nick5435/thermo-bridge/raw/master/plots/TPS.png
+    :alt: Sample Plot
+    :width: 250
+    :target: https://github.com/nick5435/thermo-bridge/tree/master/plots
