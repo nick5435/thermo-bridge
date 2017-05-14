@@ -16,7 +16,7 @@ setup(
     url='https://github.com/nick5435/thermo-bridge',
     author='Nick Meyer',
     author_email='nmeyer14@winona.edu',
-    license='MIT',
+    license='GPL',
     packages=find_packages(),
     zip_safe=False,
     setup_requires=[],

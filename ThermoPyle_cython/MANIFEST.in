@@ -1,4 +1,0 @@
-include README.md
-include requirements.txt
-include ThermoPyleCYTHON.pyx
-include ThermoPyleCYTHON.c
