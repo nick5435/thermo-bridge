@@ -9,7 +9,7 @@ def readme():
 
 
 setup(
-    name='ThermoPyle',
+    name='ThermoPyleRAW',
     version='0.6.3',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     long_description=readme(),

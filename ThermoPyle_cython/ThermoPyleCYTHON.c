@@ -3,7 +3,7 @@
 /* BEGIN: Cython Metadata
 {
     "distutils": {},
-    "module_name": "ThermoPyle"
+    "module_name": "ThermoPyleCYTHON"
 }
 END: Cython Metadata */
 
@@ -434,8 +434,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__ThermoPyle
-#define __PYX_HAVE_API__ThermoPyle
+#define __PYX_HAVE__ThermoPyleCYTHON
+#define __PYX_HAVE_API__ThermoPyleCYTHON
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -631,70 +631,70 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "ThermoPyle.pyx",
+  "ThermoPyleCYTHON.pyx",
 };
 
 /*--- Type declarations ---*/
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column;
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column;
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column;
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale;
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column;
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column;
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column;
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale;
 struct __pyx_defaults;
 typedef struct __pyx_defaults __pyx_defaults;
 struct __pyx_defaults {
   PyObject *__pyx_arg_numPoints;
 };
 
-/* "ThermoPyle.pyx":169
+/* "ThermoPyleCYTHON.pyx":169
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Adds a column to the dataframe
  */
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column {
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column {
   PyObject_HEAD
   PyObject *__pyx_v_self;
   PyObject *__pyx_v_var;
 };
 
 
-/* "ThermoPyle.pyx":331
+/* "ThermoPyleCYTHON.pyx":331
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Adds a column to the dataframe
  */
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column {
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column {
   PyObject_HEAD
   PyObject *__pyx_v_self;
   PyObject *__pyx_v_var;
 };
 
 
-/* "ThermoPyle.pyx":446
+/* "ThermoPyleCYTHON.pyx":446
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
  *         """
  *         Adds a column to the dataframe
  */
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column {
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column {
   PyObject_HEAD
   PyObject *__pyx_v_self;
   PyObject *__pyx_v_var;
 };
 
 
-/* "ThermoPyle.pyx":529
+/* "ThermoPyleCYTHON.pyx":529
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
  *     newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
  *         Union[float, int]]:
  */
-struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale {
+struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale {
   PyObject_HEAD
   PyObject *__pyx_v_newrange;
   PyObject *__pyx_v_oldrange;
@@ -1228,15 +1228,15 @@ static int __Pyx_check_binary_version(void);
 static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 
-/* Module declarations from 'ThermoPyle' */
-static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct__add_column = 0;
-static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct_1_add_column = 0;
-static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct_2_add_column = 0;
-static PyTypeObject *__pyx_ptype_10ThermoPyle___pyx_scope_struct_3_rescale = 0;
-#define __Pyx_MODULE_NAME "ThermoPyle"
-int __pyx_module_is_main_ThermoPyle = 0;
+/* Module declarations from 'ThermoPyleCYTHON' */
+static PyTypeObject *__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct__add_column = 0;
+static PyTypeObject *__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column = 0;
+static PyTypeObject *__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column = 0;
+static PyTypeObject *__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale = 0;
+#define __Pyx_MODULE_NAME "ThermoPyleCYTHON"
+int __pyx_module_is_main_ThermoPyleCYTHON = 0;
 
-/* Implementation of 'ThermoPyle' */
+/* Implementation of 'ThermoPyleCYTHON' */
 static PyObject *__pyx_builtin_AssertionError;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_TypeError;
@@ -1433,7 +1433,6 @@ static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_numPoints[] = "numPoints";
 static const char __pyx_k_set_title[] = "set_title";
 static const char __pyx_k_variables[] = "variables";
-static const char __pyx_k_ThermoPyle[] = "ThermoPyle";
 static const char __pyx_k_US_Central[] = "US/Central";
 static const char __pyx_k_UnknownVar[] = "UnknownVar";
 static const char __pyx_k_ValueError[] = "ValueError";
@@ -1462,6 +1461,7 @@ static const char __pyx_k_xtick_direction[] = "xtick.direction";
 static const char __pyx_k_ytick_direction[] = "ytick.direction";
 static const char __pyx_k_CSVFluid_refresh[] = "CSVFluid.refresh";
 static const char __pyx_k_ThermoFluid_copy[] = "ThermoFluid.copy";
+static const char __pyx_k_ThermoPyleCYTHON[] = "ThermoPyleCYTHON";
 static const char __pyx_k_0_and_1_vs_2_of_3[] = "{0} and {1} vs {2} of {3}";
 static const char __pyx_k_CoolProp_CoolProp[] = "CoolProp.CoolProp";
 static const char __pyx_k_ThermoFluid_clean[] = "ThermoFluid.clean";
@@ -1488,7 +1488,7 @@ static const char __pyx_k_Mode_must_be_one_of_dual_custom[] = "Mode must be one 
 static const char __pyx_k_module_ThermoPyle_platform_Unix[] = "\n.. module:: ThermoPyle\n    :platform: Unix, Windows\n    :synopsis: Uses CoolProp to access thermodynamic data about Fluids.\n\n.. moduleauthor:: Nick Meyer <nmeyer5435@gmail.com>\n";
 static const char __pyx_k_All_entries_order_MUST_be_in_var[] = "All entries order MUST be in vars";
 static const char __pyx_k_CSVFluid_add_column_locals_lambd[] = "CSVFluid.add_column.<locals>.<lambda>";
-static const char __pyx_k_C_Users_at8183jk_Desktop_Drive_D[] = "C:\\Users\\at8183jk\\Desktop\\Drive\\Dropsync\\School\\Winona\\ResearchProject\\code\\ThermoPyle\\ThermoPyle.pyx";
+static const char __pyx_k_C_Users_at8183jk_Desktop_Drive_D[] = "C:\\Users\\at8183jk\\Desktop\\Drive\\Dropsync\\School\\Winona\\ResearchProject\\code\\ThermoPyle_cython\\ThermoPyleCYTHON.pyx";
 static const char __pyx_k_Cannot_add_column_0_already_in_f[] = "Cannot add column {0}: already in frame";
 static const char __pyx_k_Order_of_columns_must_be_a_permu[] = "Order of columns must be a permutation of columns of data";
 static const char __pyx_k_ThermoFluid_add_column_locals_la[] = "ThermoFluid.add_column.<locals>.<lambda>";
@@ -1557,7 +1557,7 @@ static PyObject *__pyx_n_s_ThermoFluid_make_meta;
 static PyObject *__pyx_n_s_ThermoFluid_make_units;
 static PyObject *__pyx_n_s_ThermoFluid_refresh;
 static PyObject *__pyx_n_s_ThermoFluid_write_data;
-static PyObject *__pyx_n_s_ThermoPyle;
+static PyObject *__pyx_n_s_ThermoPyleCYTHON;
 static PyObject *__pyx_n_s_Tuple;
 static PyObject *__pyx_n_s_TypeError;
 static PyObject *__pyx_n_s_TypeVar;
@@ -1745,35 +1745,35 @@ static PyObject *__pyx_n_s_yy;
 static PyObject *__pyx_n_s_zip;
 static PyObject *__pyx_n_s_zvar;
 static PyObject *__pyx_n_s_zz;
-static PyObject *__pyx_pf_10ThermoPyle_6__defaults__(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_numPoints, PyObject *__pyx_v_colorMap); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_6__defaults__(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_numPoints, PyObject *__pyx_v_colorMap); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_6refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pathToFile); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_8add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_10clean(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_14copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pathToFile); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_6add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_8refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_10changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_12copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_14write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode); /* proto */
 static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_state); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_coloring); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_oldrange, PyObject *__pyx_v_newrange); /* proto */
-static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_contour); /* proto */
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct__add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_3_rescale(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_16add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_fluid_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_coloring); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_7rescale_scaler(PyObject *__pyx_self, PyObject *__pyx_v_x); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_2rescale(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_oldrange, PyObject *__pyx_v_newrange); /* proto */
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_4fluid_contour_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_contour); /* proto */
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct__add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_float_0_0;
 static PyObject *__pyx_float_0_1;
 static PyObject *__pyx_float_1_0;
@@ -1853,7 +1853,7 @@ static PyObject *__pyx_codeobj__64;
 static PyObject *__pyx_codeobj__66;
 static PyObject *__pyx_codeobj__68;
 
-/* "ThermoPyle.pyx":70
+/* "ThermoPyleCYTHON.pyx":70
  *     """
  * 
  *     def __init__(self,             # <<<<<<<<<<<<<<
@@ -1861,7 +1861,7 @@ static PyObject *__pyx_codeobj__68;
  *         xvar: str="T",
  */
 
-static PyObject *__pyx_pf_10ThermoPyle_6__defaults__(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_6__defaults__(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -1904,7 +1904,7 @@ static PyObject *__pyx_pf_10ThermoPyle_6__defaults__(CYTHON_UNUSED PyObject *__p
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_AddTraceback("ThermoPyle.__defaults__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.__defaults__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -1913,9 +1913,9 @@ static PyObject *__pyx_pf_10ThermoPyle_6__defaults__(CYTHON_UNUSED PyObject *__p
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_1__init__ = {"__init__", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_1__init__ = {"__init__", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_fluid = 0;
   PyObject *__pyx_v_xvar = 0;
@@ -2014,18 +2014,18 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_1__init__(PyObject *__pyx_s
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 0, 1, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 70, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid___init__(__pyx_self, __pyx_v_self, __pyx_v_fluid, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_zvar, __pyx_v_numPoints, __pyx_v_colorMap);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid___init__(__pyx_self, __pyx_v_self, __pyx_v_fluid, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_zvar, __pyx_v_numPoints, __pyx_v_colorMap);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_numPoints, PyObject *__pyx_v_colorMap) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_numPoints, PyObject *__pyx_v_colorMap) {
   PyObject *__pyx_v_xspace = NULL;
   PyObject *__pyx_v_yspace = NULL;
   PyObject *__pyx_v_data = NULL;
@@ -2054,7 +2054,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   PyObject *__pyx_t_19 = NULL;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "ThermoPyle.pyx":78
+  /* "ThermoPyleCYTHON.pyx":78
  *         colorMap: str="viridis"):
  * 
  *         self.fluid = fluid             # <<<<<<<<<<<<<<
@@ -2063,7 +2063,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fluid, __pyx_v_fluid) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":79
+  /* "ThermoPyleCYTHON.pyx":79
  * 
  *         self.fluid = fluid
  *         if type(numPoints) is int:             # <<<<<<<<<<<<<<
@@ -2074,7 +2074,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":80
+    /* "ThermoPyleCYTHON.pyx":80
  *         self.fluid = fluid
  *         if type(numPoints) is int:
  *             self.numPoints = [numPoints, numPoints]             # <<<<<<<<<<<<<<
@@ -2092,7 +2092,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_numPoints, __pyx_t_3) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":79
+    /* "ThermoPyleCYTHON.pyx":79
  * 
  *         self.fluid = fluid
  *         if type(numPoints) is int:             # <<<<<<<<<<<<<<
@@ -2102,7 +2102,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     goto __pyx_L3;
   }
 
-  /* "ThermoPyle.pyx":82
+  /* "ThermoPyleCYTHON.pyx":82
  *             self.numPoints = [numPoints, numPoints]
  *         else:
  *             self.numPoints = [numPoints[0], numPoints[1]]             # <<<<<<<<<<<<<<
@@ -2125,7 +2125,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_numPoints, __pyx_t_5) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "ThermoPyle.pyx":83
+    /* "ThermoPyleCYTHON.pyx":83
  *         else:
  *             self.numPoints = [numPoints[0], numPoints[1]]
  *             self.colorMap = colorMap             # <<<<<<<<<<<<<<
@@ -2134,7 +2134,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_colorMap, __pyx_v_colorMap) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
 
-    /* "ThermoPyle.pyx":84
+    /* "ThermoPyleCYTHON.pyx":84
  *             self.numPoints = [numPoints[0], numPoints[1]]
  *             self.colorMap = colorMap
  *             self.xvar = xvar             # <<<<<<<<<<<<<<
@@ -2143,7 +2143,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xvar, __pyx_v_xvar) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
 
-    /* "ThermoPyle.pyx":85
+    /* "ThermoPyleCYTHON.pyx":85
  *             self.colorMap = colorMap
  *             self.xvar = xvar
  *             self.yvar = yvar             # <<<<<<<<<<<<<<
@@ -2152,7 +2152,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yvar, __pyx_v_yvar) < 0) __PYX_ERR(0, 85, __pyx_L1_error)
 
-    /* "ThermoPyle.pyx":86
+    /* "ThermoPyleCYTHON.pyx":86
  *             self.xvar = xvar
  *             self.yvar = yvar
  *             self.zvar = zvar             # <<<<<<<<<<<<<<
@@ -2161,7 +2161,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
  */
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_zvar, __pyx_v_zvar) < 0) __PYX_ERR(0, 86, __pyx_L1_error)
 
-    /* "ThermoPyle.pyx":87
+    /* "ThermoPyleCYTHON.pyx":87
  *             self.yvar = yvar
  *             self.zvar = zvar
  *             self.vars = [self.xvar, self.yvar, self.zvar]             # <<<<<<<<<<<<<<
@@ -2188,7 +2188,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vars, __pyx_t_6) < 0) __PYX_ERR(0, 87, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":88
+    /* "ThermoPyleCYTHON.pyx":88
  *             self.zvar = zvar
  *             self.vars = [self.xvar, self.yvar, self.zvar]
  *             self.M = CP.PropsSI("M", self.fluid)             # <<<<<<<<<<<<<<
@@ -2254,7 +2254,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   }
   __pyx_L3:;
 
-  /* "ThermoPyle.pyx":92
+  /* "ThermoPyleCYTHON.pyx":92
  * 
  *             # Linear interpolation between tmin and tmax with NUM_POINTS number of points, delta = tmax-min/NUM_POINTS
  *         if self.xvar in ["P", "T"]:             # <<<<<<<<<<<<<<
@@ -2276,7 +2276,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "ThermoPyle.pyx":93
+    /* "ThermoPyleCYTHON.pyx":93
  *             # Linear interpolation between tmin and tmax with NUM_POINTS number of points, delta = tmax-min/NUM_POINTS
  *         if self.xvar in ["P", "T"]:
  *             xspace = np.linspace(             # <<<<<<<<<<<<<<
@@ -2289,7 +2289,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":94
+    /* "ThermoPyleCYTHON.pyx":94
  *         if self.xvar in ["P", "T"]:
  *             xspace = np.linspace(
  *                 CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1,             # <<<<<<<<<<<<<<
@@ -2361,7 +2361,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":95
+    /* "ThermoPyleCYTHON.pyx":95
  *             xspace = np.linspace(
  *                 CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1,
  *                 CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1,             # <<<<<<<<<<<<<<
@@ -2433,7 +2433,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":96
+    /* "ThermoPyleCYTHON.pyx":96
  *                 CP.PropsSI(self.xvar + "MIN", self.fluid) + 0.1,
  *                 CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1,
  *                 self.numPoints[0] + 1)             # <<<<<<<<<<<<<<
@@ -2505,7 +2505,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __pyx_v_xspace = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":92
+    /* "ThermoPyleCYTHON.pyx":92
  * 
  *             # Linear interpolation between tmin and tmax with NUM_POINTS number of points, delta = tmax-min/NUM_POINTS
  *         if self.xvar in ["P", "T"]:             # <<<<<<<<<<<<<<
@@ -2515,7 +2515,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     goto __pyx_L4;
   }
 
-  /* "ThermoPyle.pyx":97
+  /* "ThermoPyleCYTHON.pyx":97
  *                 CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1,
  *                 self.numPoints[0] + 1)
  *         elif self.xvar in ["D"] and self.fluid.lower() == "water":             # <<<<<<<<<<<<<<
@@ -2561,7 +2561,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "ThermoPyle.pyx":98
+    /* "ThermoPyleCYTHON.pyx":98
  *                 self.numPoints[0] + 1)
  *         elif self.xvar in ["D"] and self.fluid.lower() == "water":
  *             xspace = np.linspace(0.01, 1200.01, self.numPoints[0] + 1)             # <<<<<<<<<<<<<<
@@ -2634,7 +2634,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __pyx_v_xspace = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":97
+    /* "ThermoPyleCYTHON.pyx":97
  *                 CP.PropsSI(self.xvar + "MAX", self.fluid) - 0.1,
  *                 self.numPoints[0] + 1)
  *         elif self.xvar in ["D"] and self.fluid.lower() == "water":             # <<<<<<<<<<<<<<
@@ -2644,7 +2644,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     goto __pyx_L4;
   }
 
-  /* "ThermoPyle.pyx":100
+  /* "ThermoPyleCYTHON.pyx":100
  *             xspace = np.linspace(0.01, 1200.01, self.numPoints[0] + 1)
  * 
  *         elif self.xvar in ["U"]:             # <<<<<<<<<<<<<<
@@ -2658,7 +2658,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_t_13 = (__pyx_t_1 != 0);
   if (__pyx_t_13) {
 
-    /* "ThermoPyle.pyx":101
+    /* "ThermoPyleCYTHON.pyx":101
  * 
  *         elif self.xvar in ["U"]:
  *             xspace = np.linspace(9000.0, 6000000.0, self.numPoints[0] + 1)             # <<<<<<<<<<<<<<
@@ -2731,7 +2731,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __pyx_v_xspace = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":100
+    /* "ThermoPyleCYTHON.pyx":100
  *             xspace = np.linspace(0.01, 1200.01, self.numPoints[0] + 1)
  * 
  *         elif self.xvar in ["U"]:             # <<<<<<<<<<<<<<
@@ -2741,7 +2741,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   }
   __pyx_L4:;
 
-  /* "ThermoPyle.pyx":105
+  /* "ThermoPyleCYTHON.pyx":105
  *         # Linear interpolation between pmin and pmax with NUM_POINTS number of
  *         # points, delta = max-min/NUM_POINTS
  *         if self.yvar in ["P", "T"]:             # <<<<<<<<<<<<<<
@@ -2763,7 +2763,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_t_1 = (__pyx_t_13 != 0);
   if (__pyx_t_1) {
 
-    /* "ThermoPyle.pyx":106
+    /* "ThermoPyleCYTHON.pyx":106
  *         # points, delta = max-min/NUM_POINTS
  *         if self.yvar in ["P", "T"]:
  *             yspace = np.linspace(             # <<<<<<<<<<<<<<
@@ -2776,7 +2776,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":107
+    /* "ThermoPyleCYTHON.pyx":107
  *         if self.yvar in ["P", "T"]:
  *             yspace = np.linspace(
  *                 CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1,             # <<<<<<<<<<<<<<
@@ -2848,7 +2848,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":108
+    /* "ThermoPyleCYTHON.pyx":108
  *             yspace = np.linspace(
  *                 CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1,
  *                 CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1,             # <<<<<<<<<<<<<<
@@ -2920,7 +2920,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":109
+    /* "ThermoPyleCYTHON.pyx":109
  *                 CP.PropsSI(self.yvar + "MIN", self.fluid) + 0.1,
  *                 CP.PropsSI(self.yvar + "MAX", self.fluid) - 0.1,
  *                 self.numPoints[1] + 1)             # <<<<<<<<<<<<<<
@@ -2992,7 +2992,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __pyx_v_yspace = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":105
+    /* "ThermoPyleCYTHON.pyx":105
  *         # Linear interpolation between pmin and pmax with NUM_POINTS number of
  *         # points, delta = max-min/NUM_POINTS
  *         if self.yvar in ["P", "T"]:             # <<<<<<<<<<<<<<
@@ -3002,7 +3002,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     goto __pyx_L9;
   }
 
-  /* "ThermoPyle.pyx":111
+  /* "ThermoPyleCYTHON.pyx":111
  *                 self.numPoints[1] + 1)
  * 
  *         elif self.yvar in ["D"] and self.fluid.lower() == "water":             # <<<<<<<<<<<<<<
@@ -3048,7 +3048,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_L12_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "ThermoPyle.pyx":112
+    /* "ThermoPyleCYTHON.pyx":112
  * 
  *         elif self.yvar in ["D"] and self.fluid.lower() == "water":
  *             yspace = np.linspace(0.01, 1200.01, self.numPoints[1] + 1)             # <<<<<<<<<<<<<<
@@ -3121,7 +3121,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __pyx_v_yspace = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":111
+    /* "ThermoPyleCYTHON.pyx":111
  *                 self.numPoints[1] + 1)
  * 
  *         elif self.yvar in ["D"] and self.fluid.lower() == "water":             # <<<<<<<<<<<<<<
@@ -3131,7 +3131,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     goto __pyx_L9;
   }
 
-  /* "ThermoPyle.pyx":114
+  /* "ThermoPyleCYTHON.pyx":114
  *             yspace = np.linspace(0.01, 1200.01, self.numPoints[1] + 1)
  * 
  *         elif self.yvar in ["U"]:             # <<<<<<<<<<<<<<
@@ -3145,7 +3145,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":115
+    /* "ThermoPyleCYTHON.pyx":115
  * 
  *         elif self.yvar in ["U"]:
  *             yspace = np.linspace(9000.0, 6000000.0, self.numPoints[1] + 1)             # <<<<<<<<<<<<<<
@@ -3218,7 +3218,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __pyx_v_yspace = __pyx_t_6;
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":114
+    /* "ThermoPyleCYTHON.pyx":114
  *             yspace = np.linspace(0.01, 1200.01, self.numPoints[1] + 1)
  * 
  *         elif self.yvar in ["U"]:             # <<<<<<<<<<<<<<
@@ -3228,7 +3228,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   }
   __pyx_L9:;
 
-  /* "ThermoPyle.pyx":119
+  /* "ThermoPyleCYTHON.pyx":119
  *         # Create a empty list for storing data
  *         # Then make our data.
  *         data = np.empty((0, 3), dtype=float)             # <<<<<<<<<<<<<<
@@ -3250,7 +3250,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __pyx_v_data = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":120
+  /* "ThermoPyleCYTHON.pyx":120
  *         # Then make our data.
  *         data = np.empty((0, 3), dtype=float)
  *         for x in xspace:             # <<<<<<<<<<<<<<
@@ -3300,7 +3300,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":121
+    /* "ThermoPyleCYTHON.pyx":121
  *         data = np.empty((0, 3), dtype=float)
  *         for x in xspace:
  *             for y in yspace:             # <<<<<<<<<<<<<<
@@ -3350,7 +3350,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       __Pyx_XDECREF_SET(__pyx_v_y, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "ThermoPyle.pyx":122
+      /* "ThermoPyleCYTHON.pyx":122
  *         for x in xspace:
  *             for y in yspace:
  *                 data = np.append(data, [[             # <<<<<<<<<<<<<<
@@ -3363,7 +3363,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "ThermoPyle.pyx":123
+      /* "ThermoPyleCYTHON.pyx":123
  *             for y in yspace:
  *                 data = np.append(data, [[
  *                     x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,             # <<<<<<<<<<<<<<
@@ -3382,7 +3382,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yvar); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 123, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
 
-      /* "ThermoPyle.pyx":124
+      /* "ThermoPyleCYTHON.pyx":124
  *                 data = np.append(data, [[
  *                     x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
  *                         self.fluid)             # <<<<<<<<<<<<<<
@@ -3457,7 +3457,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       }
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "ThermoPyle.pyx":122
+      /* "ThermoPyleCYTHON.pyx":122
  *         for x in xspace:
  *             for y in yspace:
  *                 data = np.append(data, [[             # <<<<<<<<<<<<<<
@@ -3489,7 +3489,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       PyTuple_SET_ITEM(__pyx_t_11, 1, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "ThermoPyle.pyx":125
+      /* "ThermoPyleCYTHON.pyx":125
  *                     x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
  *                         self.fluid)
  *                         ]], axis=0)             # <<<<<<<<<<<<<<
@@ -3500,7 +3500,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       __Pyx_GOTREF(__pyx_t_8);
       if (PyDict_SetItem(__pyx_t_8, __pyx_n_s_axis, __pyx_int_0) < 0) __PYX_ERR(0, 125, __pyx_L1_error)
 
-      /* "ThermoPyle.pyx":122
+      /* "ThermoPyleCYTHON.pyx":122
  *         for x in xspace:
  *             for y in yspace:
  *                 data = np.append(data, [[             # <<<<<<<<<<<<<<
@@ -3515,7 +3515,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
       __Pyx_DECREF_SET(__pyx_v_data, __pyx_t_19);
       __pyx_t_19 = 0;
 
-      /* "ThermoPyle.pyx":121
+      /* "ThermoPyleCYTHON.pyx":121
  *         data = np.empty((0, 3), dtype=float)
  *         for x in xspace:
  *             for y in yspace:             # <<<<<<<<<<<<<<
@@ -3525,7 +3525,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":120
+    /* "ThermoPyleCYTHON.pyx":120
  *         # Then make our data.
  *         data = np.empty((0, 3), dtype=float)
  *         for x in xspace:             # <<<<<<<<<<<<<<
@@ -3535,7 +3535,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":128
+  /* "ThermoPyleCYTHON.pyx":128
  * 
  *         # Create Pandas Frame of Data
  *         self.data = pd.DataFrame(data, columns=self.vars)             # <<<<<<<<<<<<<<
@@ -3566,7 +3566,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_8) < 0) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":129
+  /* "ThermoPyleCYTHON.pyx":129
  *         # Create Pandas Frame of Data
  *         self.data = pd.DataFrame(data, columns=self.vars)
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -3595,7 +3595,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":130
+  /* "ThermoPyleCYTHON.pyx":130
  *         self.data = pd.DataFrame(data, columns=self.vars)
  *         self.make_units()
  *         self.clean()             # <<<<<<<<<<<<<<
@@ -3624,7 +3624,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":131
+  /* "ThermoPyleCYTHON.pyx":131
  *         self.make_units()
  *         self.clean()
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -3653,7 +3653,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":70
+  /* "ThermoPyleCYTHON.pyx":70
  *     """
  * 
  *     def __init__(self,             # <<<<<<<<<<<<<<
@@ -3676,7 +3676,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_18);
   __Pyx_XDECREF(__pyx_t_19);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_xspace);
@@ -3689,7 +3689,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":133
+/* "ThermoPyleCYTHON.pyx":133
  *         self.make_meta()
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -3698,21 +3698,21 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid___init__(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_2make_units[] = "(Re)make the units list";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_3make_units = {"make_units", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_3make_units, METH_O, __pyx_doc_10ThermoPyle_11ThermoFluid_2make_units};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_2make_units[] = "(Re)make the units list";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_3make_units = {"make_units", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_3make_units, METH_O, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_2make_units};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("make_units (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_2make_units(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -3728,7 +3728,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("make_units", 0);
 
-  /* "ThermoPyle.pyx":135
+  /* "ThermoPyleCYTHON.pyx":135
  *     def make_units(self) -> None:
  *         """(Re)make the units list"""
  *         self.units = {}             # <<<<<<<<<<<<<<
@@ -3740,7 +3740,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_units, __pyx_t_1) < 0) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":136
+  /* "ThermoPyleCYTHON.pyx":136
  *         """(Re)make the units list"""
  *         self.units = {}
  *         for var in self.data.columns:             # <<<<<<<<<<<<<<
@@ -3795,7 +3795,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "ThermoPyle.pyx":137
+    /* "ThermoPyleCYTHON.pyx":137
  *         self.units = {}
  *         for var in self.data.columns:
  *             self.units[var] =  get(str(var), UNITS, "UnknownVar")             # <<<<<<<<<<<<<<
@@ -3872,7 +3872,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "ThermoPyle.pyx":136
+    /* "ThermoPyleCYTHON.pyx":136
  *         """(Re)make the units list"""
  *         self.units = {}
  *         for var in self.data.columns:             # <<<<<<<<<<<<<<
@@ -3882,7 +3882,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":133
+  /* "ThermoPyleCYTHON.pyx":133
  *         self.make_meta()
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -3901,7 +3901,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.make_units", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.make_units", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_var);
@@ -3910,7 +3910,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":140
+/* "ThermoPyleCYTHON.pyx":140
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -3919,21 +3919,21 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_2make_units(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_4make_meta[] = "\n        (Re)make the metadata object\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_5make_meta = {"make_meta", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_5make_meta, METH_O, __pyx_doc_10ThermoPyle_11ThermoFluid_4make_meta};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_4make_meta[] = "\n        (Re)make the metadata object\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_5make_meta = {"make_meta", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_5make_meta, METH_O, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_4make_meta};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("make_meta (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_4make_meta(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3943,7 +3943,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("make_meta", 0);
 
-  /* "ThermoPyle.pyx":144
+  /* "ThermoPyleCYTHON.pyx":144
  *         (Re)make the metadata object
  *         """
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -3972,7 +3972,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":145
+  /* "ThermoPyleCYTHON.pyx":145
  *         """
  *         self.make_units()
  *         self.meta = pyr.pmap({             # <<<<<<<<<<<<<<
@@ -3985,7 +3985,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":146
+  /* "ThermoPyleCYTHON.pyx":146
  *         self.make_units()
  *         self.meta = pyr.pmap({
  *             "date":             # <<<<<<<<<<<<<<
@@ -3995,7 +3995,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "ThermoPyle.pyx":147
+  /* "ThermoPyleCYTHON.pyx":147
  *         self.meta = pyr.pmap({
  *             "date":
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),             # <<<<<<<<<<<<<<
@@ -4027,7 +4027,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_date, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":148
+  /* "ThermoPyleCYTHON.pyx":148
  *             "date":
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
  *             "fluid": self.fluid,             # <<<<<<<<<<<<<<
@@ -4039,7 +4039,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_fluid, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":149
+  /* "ThermoPyleCYTHON.pyx":149
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
  *             "fluid": self.fluid,
  *             "xvar": self.xvar,             # <<<<<<<<<<<<<<
@@ -4051,7 +4051,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_xvar, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":150
+  /* "ThermoPyleCYTHON.pyx":150
  *             "fluid": self.fluid,
  *             "xvar": self.xvar,
  *             "yvar": self.yvar,             # <<<<<<<<<<<<<<
@@ -4063,7 +4063,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_yvar, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":151
+  /* "ThermoPyleCYTHON.pyx":151
  *             "xvar": self.xvar,
  *             "yvar": self.yvar,
  *             "zvar": self.zvar,             # <<<<<<<<<<<<<<
@@ -4075,7 +4075,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_zvar, __pyx_t_4) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":152
+  /* "ThermoPyleCYTHON.pyx":152
  *             "yvar": self.yvar,
  *             "zvar": self.zvar,
  *             "vars": list(self.vars),             # <<<<<<<<<<<<<<
@@ -4090,7 +4090,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_vars, __pyx_t_5) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":153
+  /* "ThermoPyleCYTHON.pyx":153
  *             "zvar": self.zvar,
  *             "vars": list(self.vars),
  *             "numPoints": self.numPoints,             # <<<<<<<<<<<<<<
@@ -4102,7 +4102,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_numPoints, __pyx_t_5) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":154
+  /* "ThermoPyleCYTHON.pyx":154
  *             "vars": list(self.vars),
  *             "numPoints": self.numPoints,
  *             "colorMap": self.colorMap,             # <<<<<<<<<<<<<<
@@ -4114,7 +4114,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_colorMap, __pyx_t_5) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":155
+  /* "ThermoPyleCYTHON.pyx":155
  *             "numPoints": self.numPoints,
  *             "colorMap": self.colorMap,
  *             "units": self.units             # <<<<<<<<<<<<<<
@@ -4172,7 +4172,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":145
+  /* "ThermoPyleCYTHON.pyx":145
  *         """
  *         self.make_units()
  *         self.meta = pyr.pmap({             # <<<<<<<<<<<<<<
@@ -4182,7 +4182,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_meta, __pyx_t_1) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":140
+  /* "ThermoPyleCYTHON.pyx":140
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -4199,7 +4199,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.make_meta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.make_meta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4207,7 +4207,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":159
+/* "ThermoPyleCYTHON.pyx":159
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -4216,21 +4216,21 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_4make_meta(CYTHON_UNUSED Py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_7refresh(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_6refresh[] = "\n        Refreshes the object, remakes meta, cleans data, remakes units.\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_7refresh = {"refresh", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_7refresh, METH_O, __pyx_doc_10ThermoPyle_11ThermoFluid_6refresh};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_7refresh(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_7refresh(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_6refresh[] = "\n        Refreshes the object, remakes meta, cleans data, remakes units.\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_7refresh = {"refresh", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_7refresh, METH_O, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_6refresh};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_7refresh(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("refresh (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_6refresh(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_6refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4238,7 +4238,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("refresh", 0);
 
-  /* "ThermoPyle.pyx":163
+  /* "ThermoPyleCYTHON.pyx":163
  *         Refreshes the object, remakes meta, cleans data, remakes units.
  *         """
  *         self.vars = set(self.data.columns)             # <<<<<<<<<<<<<<
@@ -4256,7 +4256,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vars, __pyx_t_1) < 0) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":164
+  /* "ThermoPyleCYTHON.pyx":164
  *         """
  *         self.vars = set(self.data.columns)
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -4285,7 +4285,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":165
+  /* "ThermoPyleCYTHON.pyx":165
  *         self.vars = set(self.data.columns)
  *         self.make_units()
  *         self.clean()             # <<<<<<<<<<<<<<
@@ -4314,7 +4314,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":166
+  /* "ThermoPyleCYTHON.pyx":166
  *         self.make_units()
  *         self.clean()
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -4343,7 +4343,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":159
+  /* "ThermoPyleCYTHON.pyx":159
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -4358,7 +4358,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.refresh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.refresh", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4366,7 +4366,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":169
+/* "ThermoPyleCYTHON.pyx":169
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -4375,10 +4375,10 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_6refresh(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_8add_column[] = "\n        Adds a column to the dataframe\n\n        Paramaters:\n            variable (Union[List[Text],Text]): What variable(s) to add\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_9add_column = {"add_column", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_11ThermoFluid_8add_column};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_9add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_8add_column[] = "\n        Adds a column to the dataframe\n\n        Paramaters:\n            variable (Union[List[Text],Text]): What variable(s) to add\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_9add_column = {"add_column", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_9add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_8add_column};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_9add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_variables = 0;
   PyObject *__pyx_r = 0;
@@ -4423,18 +4423,18 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 169, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_8add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":189
+/* "ThermoPyleCYTHON.pyx":189
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
@@ -4443,9 +4443,9 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_9add_column(PyObject *__pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_10add_column_lambda(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_10add_column_lambda = {"lambda", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_10add_column_lambda, METH_O, 0};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_10add_column_lambda(PyObject *__pyx_self, PyObject *__pyx_v_state) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_10add_column_lambda(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_10add_column_lambda = {"lambda", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_10add_column_lambda, METH_O, 0};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_10add_column_lambda(PyObject *__pyx_self, PyObject *__pyx_v_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda (wrapper)", 0);
@@ -4457,8 +4457,8 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_10add_column_lambda(PyObjec
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__pyx_v_state) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *__pyx_cur_scope;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *__pyx_outer_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *__pyx_cur_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -4472,7 +4472,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   int __pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("lambda", 0);
-  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 189, __pyx_L1_error)
@@ -4584,7 +4584,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.add_column.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.add_column.lambda", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4592,7 +4592,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":169
+/* "ThermoPyleCYTHON.pyx":169
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -4600,8 +4600,8 @@ static PyObject *__pyx_lambda_funcdef_lambda(PyObject *__pyx_self, PyObject *__p
  *         Adds a column to the dataframe
  */
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *__pyx_cur_scope;
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_8add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *__pyx_cur_scope;
   PyObject *__pyx_v_buffer = NULL;
   PyObject *__pyx_v_newcols = NULL;
   PyObject *__pyx_v_key = NULL;
@@ -4631,9 +4631,9 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   Py_ssize_t __pyx_t_20;
   int __pyx_t_21;
   __Pyx_RefNannySetupContext("add_column", 0);
-  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct__add_column(__pyx_ptype_10ThermoPyle___pyx_scope_struct__add_column, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *)__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct__add_column(__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct__add_column, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 169, __pyx_L1_error)
   } else {
@@ -4644,7 +4644,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_INCREF(__pyx_v_variables);
 
-  /* "ThermoPyle.pyx":176
+  /* "ThermoPyleCYTHON.pyx":176
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -4655,7 +4655,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":177
+    /* "ThermoPyleCYTHON.pyx":177
  *         """
  *         if type(variables) is not list:
  *             variables = [variables]             # <<<<<<<<<<<<<<
@@ -4670,7 +4670,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_DECREF_SET(__pyx_v_variables, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":176
+    /* "ThermoPyleCYTHON.pyx":176
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -4679,7 +4679,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  */
   }
 
-  /* "ThermoPyle.pyx":179
+  /* "ThermoPyleCYTHON.pyx":179
  *             variables = [variables]
  * 
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4730,7 +4730,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":180
+    /* "ThermoPyleCYTHON.pyx":180
  * 
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -4746,7 +4746,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":181
+        /* "ThermoPyleCYTHON.pyx":181
  *         for var in variables:
  *             try:
  *                 assert var not in self.vars             # <<<<<<<<<<<<<<
@@ -4766,7 +4766,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         }
         #endif
 
-        /* "ThermoPyle.pyx":180
+        /* "ThermoPyleCYTHON.pyx":180
  * 
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -4782,7 +4782,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_PyThreadState_assign
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":182
+      /* "ThermoPyleCYTHON.pyx":182
  *             try:
  *                 assert var not in self.vars
  *             except AssertionError:             # <<<<<<<<<<<<<<
@@ -4791,13 +4791,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  */
       __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_10) {
-        __Pyx_AddTraceback("ThermoPyle.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_11, &__pyx_t_12) < 0) __PYX_ERR(0, 182, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_GOTREF(__pyx_t_12);
 
-        /* "ThermoPyle.pyx":184
+        /* "ThermoPyleCYTHON.pyx":184
  *             except AssertionError:
  *                 raise ValueError(
  *                     "Cannot add column {0}: already in frame".format(var))             # <<<<<<<<<<<<<<
@@ -4850,7 +4850,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
         }
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-        /* "ThermoPyle.pyx":183
+        /* "ThermoPyleCYTHON.pyx":183
  *                 assert var not in self.vars
  *             except AssertionError:
  *                 raise ValueError(             # <<<<<<<<<<<<<<
@@ -4872,7 +4872,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       goto __pyx_L8_except_error;
       __pyx_L8_except_error:;
 
-      /* "ThermoPyle.pyx":180
+      /* "ThermoPyleCYTHON.pyx":180
  * 
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -4888,7 +4888,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __pyx_L13_try_end:;
     }
 
-    /* "ThermoPyle.pyx":179
+    /* "ThermoPyleCYTHON.pyx":179
  *             variables = [variables]
  * 
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4898,7 +4898,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":185
+  /* "ThermoPyleCYTHON.pyx":185
  *                 raise ValueError(
  *                     "Cannot add column {0}: already in frame".format(var))
  *         self.vars += variables             # <<<<<<<<<<<<<<
@@ -4913,7 +4913,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars, __pyx_t_12) < 0) __PYX_ERR(0, 185, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":186
+  /* "ThermoPyleCYTHON.pyx":186
  *                     "Cannot add column {0}: already in frame".format(var))
  *         self.vars += variables
  *         buffer = {}             # <<<<<<<<<<<<<<
@@ -4925,7 +4925,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __pyx_v_buffer = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":187
+  /* "ThermoPyleCYTHON.pyx":187
  *         self.vars += variables
  *         buffer = {}
  *         newcols = {}             # <<<<<<<<<<<<<<
@@ -4937,7 +4937,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __pyx_v_newcols = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":188
+  /* "ThermoPyleCYTHON.pyx":188
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -4988,19 +4988,19 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":189
+    /* "ThermoPyleCYTHON.pyx":189
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
  * 
  *         for key in newcols:
  */
-    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_10add_column_lambda, 0, __pyx_n_s_ThermoFluid_add_column_locals_la, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_10add_column_lambda, 0, __pyx_n_s_ThermoFluid_add_column_locals_la, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyleCYTHON, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (unlikely(PyDict_SetItem(__pyx_v_newcols, __pyx_cur_scope->__pyx_v_var, __pyx_t_3) < 0)) __PYX_ERR(0, 189, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":188
+    /* "ThermoPyleCYTHON.pyx":188
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -5010,7 +5010,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":191
+  /* "ThermoPyleCYTHON.pyx":191
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
  * 
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -5031,7 +5031,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":192
+    /* "ThermoPyleCYTHON.pyx":192
  * 
  *         for key in newcols:
  *             buffer[key] = []             # <<<<<<<<<<<<<<
@@ -5045,7 +5045,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":194
+  /* "ThermoPyleCYTHON.pyx":194
  *             buffer[key] = []
  * 
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -5170,7 +5170,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":195
+    /* "ThermoPyleCYTHON.pyx":195
  * 
  *         for index, row in self.data.iterrows():
  *             for key in newcols:             # <<<<<<<<<<<<<<
@@ -5191,7 +5191,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":196
+      /* "ThermoPyleCYTHON.pyx":196
  *         for index, row in self.data.iterrows():
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))             # <<<<<<<<<<<<<<
@@ -5341,7 +5341,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     }
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":194
+    /* "ThermoPyleCYTHON.pyx":194
  *             buffer[key] = []
  * 
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -5351,7 +5351,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":197
+  /* "ThermoPyleCYTHON.pyx":197
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -5372,7 +5372,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":198
+    /* "ThermoPyleCYTHON.pyx":198
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)             # <<<<<<<<<<<<<<
@@ -5413,7 +5413,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":199
+  /* "ThermoPyleCYTHON.pyx":199
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -5442,7 +5442,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":200
+  /* "ThermoPyleCYTHON.pyx":200
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -5471,7 +5471,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":169
+  /* "ThermoPyleCYTHON.pyx":169
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -5491,7 +5491,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_buffer);
@@ -5506,7 +5506,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":203
+/* "ThermoPyleCYTHON.pyx":203
  * 
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
@@ -5515,21 +5515,21 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_8add_column(CYTHON_UNUSED P
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_11clean(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_10clean[] = "Re-cleans data";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_11clean = {"clean", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_11clean, METH_O, __pyx_doc_10ThermoPyle_11ThermoFluid_10clean};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_11clean(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_11clean(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_10clean[] = "Re-cleans data";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_11clean = {"clean", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_11clean, METH_O, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_10clean};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_11clean(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("clean (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_10clean(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_10clean(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_10clean(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5544,7 +5544,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("clean", 0);
 
-  /* "ThermoPyle.pyx":205
+  /* "ThermoPyleCYTHON.pyx":205
  *     def clean(self) -> None:
  *         """Re-cleans data"""
  *         if "P" in self.vars:             # <<<<<<<<<<<<<<
@@ -5558,7 +5558,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "ThermoPyle.pyx":206
+    /* "ThermoPyleCYTHON.pyx":206
  *         """Re-cleans data"""
  *         if "P" in self.vars:
  *             self.data = self.data[self.data["P"] >=             # <<<<<<<<<<<<<<
@@ -5573,7 +5573,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":207
+    /* "ThermoPyleCYTHON.pyx":207
  *         if "P" in self.vars:
  *             self.data = self.data[self.data["P"] >=
  *                 CP.PropsSI("PMIN", self.fluid) + 1.0]             # <<<<<<<<<<<<<<
@@ -5641,7 +5641,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "ThermoPyle.pyx":206
+    /* "ThermoPyleCYTHON.pyx":206
  *         """Re-cleans data"""
  *         if "P" in self.vars:
  *             self.data = self.data[self.data["P"] >=             # <<<<<<<<<<<<<<
@@ -5655,7 +5655,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_7) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "ThermoPyle.pyx":205
+    /* "ThermoPyleCYTHON.pyx":205
  *     def clean(self) -> None:
  *         """Re-cleans data"""
  *         if "P" in self.vars:             # <<<<<<<<<<<<<<
@@ -5664,7 +5664,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":208
+  /* "ThermoPyleCYTHON.pyx":208
  *             self.data = self.data[self.data["P"] >=
  *                 CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:             # <<<<<<<<<<<<<<
@@ -5678,7 +5678,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":209
+    /* "ThermoPyleCYTHON.pyx":209
  *                 CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]             # <<<<<<<<<<<<<<
@@ -5701,7 +5701,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "ThermoPyle.pyx":208
+    /* "ThermoPyleCYTHON.pyx":208
  *             self.data = self.data[self.data["P"] >=
  *                 CP.PropsSI("PMIN", self.fluid) + 1.0]
  *         if "S" in self.vars:             # <<<<<<<<<<<<<<
@@ -5710,7 +5710,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":210
+  /* "ThermoPyleCYTHON.pyx":210
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:             # <<<<<<<<<<<<<<
@@ -5724,7 +5724,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "ThermoPyle.pyx":211
+    /* "ThermoPyleCYTHON.pyx":211
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=             # <<<<<<<<<<<<<<
@@ -5739,7 +5739,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":212
+    /* "ThermoPyleCYTHON.pyx":212
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=
  *                 (CP.PropsSI("TMIN", self.fluid) + 1.0)]             # <<<<<<<<<<<<<<
@@ -5807,7 +5807,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":211
+    /* "ThermoPyleCYTHON.pyx":211
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:
  *             self.data = self.data[self.data["T"] >=             # <<<<<<<<<<<<<<
@@ -5821,7 +5821,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_10) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":210
+    /* "ThermoPyleCYTHON.pyx":210
  *         if "S" in self.vars:
  *             self.data = self.data[self.data["S"] > 0.0]
  *         if "T" in self.vars:             # <<<<<<<<<<<<<<
@@ -5830,7 +5830,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":213
+  /* "ThermoPyleCYTHON.pyx":213
  *             self.data = self.data[self.data["T"] >=
  *                 (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:             # <<<<<<<<<<<<<<
@@ -5844,7 +5844,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   __pyx_t_2 = (__pyx_t_3 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":214
+    /* "ThermoPyleCYTHON.pyx":214
  *                 (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:
  *             self.data = self.data[self.data["U"] >= 0.0]             # <<<<<<<<<<<<<<
@@ -5867,7 +5867,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
     if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "ThermoPyle.pyx":213
+    /* "ThermoPyleCYTHON.pyx":213
  *             self.data = self.data[self.data["T"] >=
  *                 (CP.PropsSI("TMIN", self.fluid) + 1.0)]
  *         if "U" in self.vars:             # <<<<<<<<<<<<<<
@@ -5876,7 +5876,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":203
+  /* "ThermoPyleCYTHON.pyx":203
  * 
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
@@ -5895,7 +5895,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.clean", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.clean", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5903,7 +5903,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":217
+/* "ThermoPyleCYTHON.pyx":217
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -5912,10 +5912,10 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_10clean(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_13write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_12write_data[] = "\n        Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.\n\n        Parameters:\n\n            path (str): path where file should be saved\n\n            filename (str): what to name the file\n\n            mode (str): How to name the file:\n                -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``;\n                -  **custom**: fully custom name;\n                -  **dual**: default + custom.\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_13write_data = {"write_data", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_13write_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_11ThermoFluid_12write_data};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_13write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_13write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_12write_data[] = "\n        Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.\n\n        Parameters:\n\n            path (str): path where file should be saved\n\n            filename (str): what to name the file\n\n            mode (str): How to name the file:\n                -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``;\n                -  **custom**: fully custom name;\n                -  **dual**: default + custom.\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_13write_data = {"write_data", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_13write_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_12write_data};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_13write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_path = 0;
   PyObject *__pyx_v_filename = 0;
@@ -5983,18 +5983,18 @@ static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_13write_data(PyObject *__py
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("write_data", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 217, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(__pyx_self, __pyx_v_self, __pyx_v_path, __pyx_v_filename, __pyx_v_mode);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_12write_data(__pyx_self, __pyx_v_self, __pyx_v_path, __pyx_v_filename, __pyx_v_mode);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_12write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode) {
   PyObject *__pyx_v_default_string = NULL;
   PyObject *__pyx_v_middle_string = NULL;
   PyObject *__pyx_v_f = NULL;
@@ -6023,7 +6023,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   PyObject *__pyx_t_19 = NULL;
   __Pyx_RefNannySetupContext("write_data", 0);
 
-  /* "ThermoPyle.pyx":232
+  /* "ThermoPyleCYTHON.pyx":232
  *                 -  **dual**: default + custom.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -6039,7 +6039,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":233
+      /* "ThermoPyleCYTHON.pyx":233
  *         """
  *         try:
  *             assert mode in {"dual", "custom", "default"}             # <<<<<<<<<<<<<<
@@ -6073,7 +6073,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
       }
       #endif
 
-      /* "ThermoPyle.pyx":232
+      /* "ThermoPyleCYTHON.pyx":232
  *                 -  **dual**: default + custom.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -6089,7 +6089,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __Pyx_PyThreadState_assign
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":234
+    /* "ThermoPyleCYTHON.pyx":234
  *         try:
  *             assert mode in {"dual", "custom", "default"}
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -6098,13 +6098,13 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
  */
     __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("ThermoPyle.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 234, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GOTREF(__pyx_t_9);
 
-      /* "ThermoPyle.pyx":236
+      /* "ThermoPyleCYTHON.pyx":236
  *         except AssertionError:
  *             raise ValueError(
  *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))             # <<<<<<<<<<<<<<
@@ -6157,7 +6157,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
       }
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "ThermoPyle.pyx":235
+      /* "ThermoPyleCYTHON.pyx":235
  *             assert mode in {"dual", "custom", "default"}
  *         except AssertionError:
  *             raise ValueError(             # <<<<<<<<<<<<<<
@@ -6179,7 +6179,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "ThermoPyle.pyx":232
+    /* "ThermoPyleCYTHON.pyx":232
  *                 -  **dual**: default + custom.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -6195,7 +6195,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __pyx_L10_try_end:;
   }
 
-  /* "ThermoPyle.pyx":238
+  /* "ThermoPyleCYTHON.pyx":238
  *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
  * 
  *         if filename == "" and mode in {"dual", "custom"}:             # <<<<<<<<<<<<<<
@@ -6225,7 +6225,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __pyx_L17_bool_binop_done:;
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":240
+    /* "ThermoPyleCYTHON.pyx":240
  *         if filename == "" and mode in {"dual", "custom"}:
  *             raise TypeError(
  *                 "When supplying {0} mode, filename is required; None given".format(mode))             # <<<<<<<<<<<<<<
@@ -6278,7 +6278,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     }
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "ThermoPyle.pyx":239
+    /* "ThermoPyleCYTHON.pyx":239
  * 
  *         if filename == "" and mode in {"dual", "custom"}:
  *             raise TypeError(             # <<<<<<<<<<<<<<
@@ -6297,7 +6297,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __PYX_ERR(0, 239, __pyx_L1_error)
 
-    /* "ThermoPyle.pyx":238
+    /* "ThermoPyleCYTHON.pyx":238
  *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
  * 
  *         if filename == "" and mode in {"dual", "custom"}:             # <<<<<<<<<<<<<<
@@ -6306,7 +6306,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
  */
   }
 
-  /* "ThermoPyle.pyx":242
+  /* "ThermoPyleCYTHON.pyx":242
  *                 "When supplying {0} mode, filename is required; None given".format(mode))
  * 
  *         if mode != "custom":             # <<<<<<<<<<<<<<
@@ -6316,7 +6316,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_custom, Py_NE)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 242, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":243
+    /* "ThermoPyleCYTHON.pyx":243
  * 
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
@@ -6331,7 +6331,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
 
-    /* "ThermoPyle.pyx":244
+    /* "ThermoPyleCYTHON.pyx":244
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])             # <<<<<<<<<<<<<<
@@ -6458,7 +6458,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
       __Pyx_XDECREF_SET(__pyx_v_point, __pyx_t_13);
       __pyx_t_13 = 0;
 
-      /* "ThermoPyle.pyx":243
+      /* "ThermoPyleCYTHON.pyx":243
  * 
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
@@ -6493,7 +6493,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     }
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":244
+    /* "ThermoPyleCYTHON.pyx":244
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])             # <<<<<<<<<<<<<<
@@ -6512,7 +6512,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-    /* "ThermoPyle.pyx":243
+    /* "ThermoPyleCYTHON.pyx":243
  * 
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
@@ -6529,7 +6529,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __pyx_v_default_string = __pyx_t_10;
     __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":242
+    /* "ThermoPyleCYTHON.pyx":242
  *                 "When supplying {0} mode, filename is required; None given".format(mode))
  * 
  *         if mode != "custom":             # <<<<<<<<<<<<<<
@@ -6538,7 +6538,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
  */
   }
 
-  /* "ThermoPyle.pyx":246
+  /* "ThermoPyleCYTHON.pyx":246
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
  * 
  *         if mode == "custom":             # <<<<<<<<<<<<<<
@@ -6548,7 +6548,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_custom, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 246, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":247
+    /* "ThermoPyleCYTHON.pyx":247
  * 
  *         if mode == "custom":
  *             middle_string = filename             # <<<<<<<<<<<<<<
@@ -6558,7 +6558,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __Pyx_INCREF(__pyx_v_filename);
     __pyx_v_middle_string = __pyx_v_filename;
 
-    /* "ThermoPyle.pyx":246
+    /* "ThermoPyleCYTHON.pyx":246
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
  * 
  *         if mode == "custom":             # <<<<<<<<<<<<<<
@@ -6568,7 +6568,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     goto __pyx_L26;
   }
 
-  /* "ThermoPyle.pyx":249
+  /* "ThermoPyleCYTHON.pyx":249
  *             middle_string = filename
  * 
  *         elif mode == "default":             # <<<<<<<<<<<<<<
@@ -6578,7 +6578,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_default, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 249, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":250
+    /* "ThermoPyleCYTHON.pyx":250
  * 
  *         elif mode == "default":
  *             middle_string = default_string             # <<<<<<<<<<<<<<
@@ -6589,7 +6589,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __Pyx_INCREF(__pyx_v_default_string);
     __pyx_v_middle_string = __pyx_v_default_string;
 
-    /* "ThermoPyle.pyx":249
+    /* "ThermoPyleCYTHON.pyx":249
  *             middle_string = filename
  * 
  *         elif mode == "default":             # <<<<<<<<<<<<<<
@@ -6599,7 +6599,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     goto __pyx_L26;
   }
 
-  /* "ThermoPyle.pyx":252
+  /* "ThermoPyleCYTHON.pyx":252
  *             middle_string = default_string
  * 
  *         elif mode == "dual":             # <<<<<<<<<<<<<<
@@ -6609,7 +6609,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_dual, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 252, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":253
+    /* "ThermoPyleCYTHON.pyx":253
  * 
  *         elif mode == "dual":
  *             middle_string = default_string + "_" + filename             # <<<<<<<<<<<<<<
@@ -6625,7 +6625,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __pyx_v_middle_string = __pyx_t_13;
     __pyx_t_13 = 0;
 
-    /* "ThermoPyle.pyx":252
+    /* "ThermoPyleCYTHON.pyx":252
  *             middle_string = default_string
  * 
  *         elif mode == "dual":             # <<<<<<<<<<<<<<
@@ -6635,7 +6635,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   }
   __pyx_L26:;
 
-  /* "ThermoPyle.pyx":255
+  /* "ThermoPyleCYTHON.pyx":255
  *             middle_string = default_string + "_" + filename
  * 
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -6664,7 +6664,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-  /* "ThermoPyle.pyx":257
+  /* "ThermoPyleCYTHON.pyx":257
  *         self.make_meta()
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)             # <<<<<<<<<<<<<<
@@ -6698,7 +6698,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "ThermoPyle.pyx":258
+  /* "ThermoPyleCYTHON.pyx":258
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:             # <<<<<<<<<<<<<<
@@ -6762,7 +6762,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
           __pyx_v_f = __pyx_t_9;
           __pyx_t_9 = 0;
 
-          /* "ThermoPyle.pyx":259
+          /* "ThermoPyleCYTHON.pyx":259
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:
  *             json.dump(dict(self.meta), f)             # <<<<<<<<<<<<<<
@@ -6833,7 +6833,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-          /* "ThermoPyle.pyx":258
+          /* "ThermoPyleCYTHON.pyx":258
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:             # <<<<<<<<<<<<<<
@@ -6855,7 +6855,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("ThermoPyle.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_9, &__pyx_t_8, &__pyx_t_11) < 0) __PYX_ERR(0, 258, __pyx_L33_except_error)
           __Pyx_GOTREF(__pyx_t_9);
           __Pyx_GOTREF(__pyx_t_8);
@@ -6920,7 +6920,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
     __pyx_L42:;
   }
 
-  /* "ThermoPyle.pyx":217
+  /* "ThermoPyleCYTHON.pyx":217
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -6939,7 +6939,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_default_string);
@@ -6952,7 +6952,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":261
+/* "ThermoPyleCYTHON.pyx":261
  *             json.dump(dict(self.meta), f)
  * 
  *     def copy(self) -> T:             # <<<<<<<<<<<<<<
@@ -6961,21 +6961,21 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_12write_data(CYTHON_UNUSED 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_15copy(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_11ThermoFluid_14copy[] = "\n        Returns a copy of itself\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_11ThermoFluid_15copy = {"copy", (PyCFunction)__pyx_pw_10ThermoPyle_11ThermoFluid_15copy, METH_O, __pyx_doc_10ThermoPyle_11ThermoFluid_14copy};
-static PyObject *__pyx_pw_10ThermoPyle_11ThermoFluid_15copy(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_15copy(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_14copy[] = "\n        Returns a copy of itself\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_15copy = {"copy", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_15copy, METH_O, __pyx_doc_16ThermoPyleCYTHON_11ThermoFluid_14copy};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_11ThermoFluid_15copy(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("copy (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_11ThermoFluid_14copy(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_14copy(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_11ThermoFluid_14copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -6984,7 +6984,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObje
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("copy", 0);
 
-  /* "ThermoPyle.pyx":265
+  /* "ThermoPyleCYTHON.pyx":265
  *         Returns a copy of itself
  *         """
  *         return deepcopy(self)             # <<<<<<<<<<<<<<
@@ -7041,7 +7041,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObje
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ThermoPyle.pyx":261
+  /* "ThermoPyleCYTHON.pyx":261
  *             json.dump(dict(self.meta), f)
  * 
  *     def copy(self) -> T:             # <<<<<<<<<<<<<<
@@ -7055,7 +7055,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("ThermoPyle.ThermoFluid.copy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.ThermoFluid.copy", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -7063,7 +7063,7 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":289
+/* "ThermoPyleCYTHON.pyx":289
  *     """
  * 
  *     def __init__(self, pathToFile: str):             # <<<<<<<<<<<<<<
@@ -7072,9 +7072,9 @@ static PyObject *__pyx_pf_10ThermoPyle_11ThermoFluid_14copy(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_1__init__ = {"__init__", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_1__init__ = {"__init__", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_1__init__, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_1__init__(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_pathToFile = 0;
   PyObject *__pyx_r = 0;
@@ -7119,18 +7119,18 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_1__init__(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("__init__", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 289, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid___init__(__pyx_self, __pyx_v_self, __pyx_v_pathToFile);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid___init__(__pyx_self, __pyx_v_self, __pyx_v_pathToFile);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pathToFile) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_pathToFile) {
   PyObject *__pyx_v_jf = NULL;
   PyObject *__pyx_v_cf = NULL;
   PyObject *__pyx_r = NULL;
@@ -7151,7 +7151,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   int __pyx_t_14;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "ThermoPyle.pyx":291
+  /* "ThermoPyleCYTHON.pyx":291
  *     def __init__(self, pathToFile: str):
  * 
  *         with open(pathToFile + ".json", mode="r+") as jf:             # <<<<<<<<<<<<<<
@@ -7210,7 +7210,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
           __pyx_v_jf = __pyx_t_2;
           __pyx_t_2 = 0;
 
-          /* "ThermoPyle.pyx":292
+          /* "ThermoPyleCYTHON.pyx":292
  * 
  *         with open(pathToFile + ".json", mode="r+") as jf:
  *             self.meta = pyr.pmap(json.loads(jf.read()))             # <<<<<<<<<<<<<<
@@ -7342,7 +7342,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
           if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_meta, __pyx_t_2) < 0) __PYX_ERR(0, 292, __pyx_L7_error)
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "ThermoPyle.pyx":291
+          /* "ThermoPyleCYTHON.pyx":291
  *     def __init__(self, pathToFile: str):
  * 
  *         with open(pathToFile + ".json", mode="r+") as jf:             # <<<<<<<<<<<<<<
@@ -7364,7 +7364,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("ThermoPyle.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_1, &__pyx_t_11) < 0) __PYX_ERR(0, 291, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_1);
@@ -7429,7 +7429,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
     __pyx_L18:;
   }
 
-  /* "ThermoPyle.pyx":293
+  /* "ThermoPyleCYTHON.pyx":293
  *         with open(pathToFile + ".json", mode="r+") as jf:
  *             self.meta = pyr.pmap(json.loads(jf.read()))
  *         with open(pathToFile + ".csv", mode="r+") as cf:             # <<<<<<<<<<<<<<
@@ -7488,7 +7488,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
           __pyx_v_cf = __pyx_t_1;
           __pyx_t_1 = 0;
 
-          /* "ThermoPyle.pyx":294
+          /* "ThermoPyleCYTHON.pyx":294
  *             self.meta = pyr.pmap(json.loads(jf.read()))
  *         with open(pathToFile + ".csv", mode="r+") as cf:
  *             self.data = pd.read_csv(cf)             # <<<<<<<<<<<<<<
@@ -7546,7 +7546,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
           if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_1) < 0) __PYX_ERR(0, 294, __pyx_L23_error)
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "ThermoPyle.pyx":293
+          /* "ThermoPyleCYTHON.pyx":293
  *         with open(pathToFile + ".json", mode="r+") as jf:
  *             self.meta = pyr.pmap(json.loads(jf.read()))
  *         with open(pathToFile + ".csv", mode="r+") as cf:             # <<<<<<<<<<<<<<
@@ -7568,7 +7568,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
         __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("ThermoPyle.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_11, &__pyx_t_3) < 0) __PYX_ERR(0, 293, __pyx_L25_except_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_GOTREF(__pyx_t_11);
@@ -7633,7 +7633,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
     __pyx_L34:;
   }
 
-  /* "ThermoPyle.pyx":295
+  /* "ThermoPyleCYTHON.pyx":295
  *         with open(pathToFile + ".csv", mode="r+") as cf:
  *             self.data = pd.read_csv(cf)
  *         self.colorMap = self.meta["colorMap"]             # <<<<<<<<<<<<<<
@@ -7648,7 +7648,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_colorMap, __pyx_t_11) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":296
+  /* "ThermoPyleCYTHON.pyx":296
  *             self.data = pd.read_csv(cf)
  *         self.colorMap = self.meta["colorMap"]
  *         self.xvar = self.meta["xvar"]             # <<<<<<<<<<<<<<
@@ -7663,7 +7663,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xvar, __pyx_t_3) < 0) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":297
+  /* "ThermoPyleCYTHON.pyx":297
  *         self.colorMap = self.meta["colorMap"]
  *         self.xvar = self.meta["xvar"]
  *         self.yvar = self.meta["yvar"]             # <<<<<<<<<<<<<<
@@ -7678,7 +7678,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yvar, __pyx_t_11) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":298
+  /* "ThermoPyleCYTHON.pyx":298
  *         self.xvar = self.meta["xvar"]
  *         self.yvar = self.meta["yvar"]
  *         self.zvar = self.meta["zvar"]             # <<<<<<<<<<<<<<
@@ -7693,7 +7693,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_zvar, __pyx_t_3) < 0) __PYX_ERR(0, 298, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":299
+  /* "ThermoPyleCYTHON.pyx":299
  *         self.yvar = self.meta["yvar"]
  *         self.zvar = self.meta["zvar"]
  *         self.vars = list(self.meta["vars"])             # <<<<<<<<<<<<<<
@@ -7711,7 +7711,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vars, __pyx_t_3) < 0) __PYX_ERR(0, 299, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":300
+  /* "ThermoPyleCYTHON.pyx":300
  *         self.zvar = self.meta["zvar"]
  *         self.vars = list(self.meta["vars"])
  *         self.fluid = self.meta["fluid"]             # <<<<<<<<<<<<<<
@@ -7726,7 +7726,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_fluid, __pyx_t_11) < 0) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":301
+  /* "ThermoPyleCYTHON.pyx":301
  *         self.vars = list(self.meta["vars"])
  *         self.fluid = self.meta["fluid"]
  *         self.colorMap = self.meta["colorMap"]             # <<<<<<<<<<<<<<
@@ -7741,7 +7741,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_colorMap, __pyx_t_3) < 0) __PYX_ERR(0, 301, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":302
+  /* "ThermoPyleCYTHON.pyx":302
  *         self.fluid = self.meta["fluid"]
  *         self.colorMap = self.meta["colorMap"]
  *         self.numPoints = self.meta["numPoints"]             # <<<<<<<<<<<<<<
@@ -7756,7 +7756,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_numPoints, __pyx_t_11) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":303
+  /* "ThermoPyleCYTHON.pyx":303
  *         self.colorMap = self.meta["colorMap"]
  *         self.numPoints = self.meta["numPoints"]
  *         self.units = self.meta["units"]             # <<<<<<<<<<<<<<
@@ -7771,7 +7771,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_units, __pyx_t_3) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":289
+  /* "ThermoPyleCYTHON.pyx":289
  *     """
  * 
  *     def __init__(self, pathToFile: str):             # <<<<<<<<<<<<<<
@@ -7790,7 +7790,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_9);
   __Pyx_XDECREF(__pyx_t_10);
   __Pyx_XDECREF(__pyx_t_11);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_jf);
@@ -7800,7 +7800,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":306
+/* "ThermoPyleCYTHON.pyx":306
  * 
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -7809,21 +7809,21 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid___init__(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_2make_units[] = "(Re)make the units list";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_3make_units = {"make_units", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_3make_units, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_2make_units};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_2make_units[] = "(Re)make the units list";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_3make_units = {"make_units", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_3make_units, METH_O, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_2make_units};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_3make_units(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("make_units (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_2make_units(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_2make_units(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_2make_units(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -7839,7 +7839,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("make_units", 0);
 
-  /* "ThermoPyle.pyx":308
+  /* "ThermoPyleCYTHON.pyx":308
  *     def make_units(self) -> None:
  *         """(Re)make the units list"""
  *         self.units = {}             # <<<<<<<<<<<<<<
@@ -7851,7 +7851,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_units, __pyx_t_1) < 0) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":309
+  /* "ThermoPyleCYTHON.pyx":309
  *         """(Re)make the units list"""
  *         self.units = {}
  *         for var in self.data.columns:             # <<<<<<<<<<<<<<
@@ -7906,7 +7906,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "ThermoPyle.pyx":310
+    /* "ThermoPyleCYTHON.pyx":310
  *         self.units = {}
  *         for var in self.data.columns:
  *             self.units[var] =  get(str(var), UNITS, "UnknownVar")             # <<<<<<<<<<<<<<
@@ -7983,7 +7983,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "ThermoPyle.pyx":309
+    /* "ThermoPyleCYTHON.pyx":309
  *         """(Re)make the units list"""
  *         self.units = {}
  *         for var in self.data.columns:             # <<<<<<<<<<<<<<
@@ -7993,7 +7993,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":306
+  /* "ThermoPyleCYTHON.pyx":306
  * 
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -8012,7 +8012,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.make_units", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.make_units", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_var);
@@ -8021,7 +8021,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":313
+/* "ThermoPyleCYTHON.pyx":313
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -8030,21 +8030,21 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_2make_units(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_4make_meta[] = "\n        (Re)make the metadata object\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_5make_meta = {"make_meta", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_5make_meta, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_4make_meta};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_4make_meta[] = "\n        (Re)make the metadata object\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_5make_meta = {"make_meta", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_5make_meta, METH_O, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_4make_meta};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_5make_meta(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("make_meta (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_4make_meta(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_4make_meta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8054,7 +8054,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   PyObject *__pyx_t_5 = NULL;
   __Pyx_RefNannySetupContext("make_meta", 0);
 
-  /* "ThermoPyle.pyx":317
+  /* "ThermoPyleCYTHON.pyx":317
  *         (Re)make the metadata object
  *         """
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -8083,7 +8083,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":318
+  /* "ThermoPyleCYTHON.pyx":318
  *         """
  *         self.make_units()
  *         self.meta = pyr.pmap({             # <<<<<<<<<<<<<<
@@ -8096,7 +8096,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":319
+  /* "ThermoPyleCYTHON.pyx":319
  *         self.make_units()
  *         self.meta = pyr.pmap({
  *             "date":             # <<<<<<<<<<<<<<
@@ -8106,7 +8106,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   __pyx_t_2 = PyDict_New(); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "ThermoPyle.pyx":320
+  /* "ThermoPyleCYTHON.pyx":320
  *         self.meta = pyr.pmap({
  *             "date":
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),             # <<<<<<<<<<<<<<
@@ -8138,7 +8138,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_date, __pyx_t_4) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":321
+  /* "ThermoPyleCYTHON.pyx":321
  *             "date":
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
  *             "fluid": self.fluid,             # <<<<<<<<<<<<<<
@@ -8150,7 +8150,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_fluid, __pyx_t_4) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":322
+  /* "ThermoPyleCYTHON.pyx":322
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),
  *             "fluid": self.fluid,
  *             "xvar": self.xvar,             # <<<<<<<<<<<<<<
@@ -8162,7 +8162,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_xvar, __pyx_t_4) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":323
+  /* "ThermoPyleCYTHON.pyx":323
  *             "fluid": self.fluid,
  *             "xvar": self.xvar,
  *             "yvar": self.yvar,             # <<<<<<<<<<<<<<
@@ -8174,7 +8174,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_yvar, __pyx_t_4) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":324
+  /* "ThermoPyleCYTHON.pyx":324
  *             "xvar": self.xvar,
  *             "yvar": self.yvar,
  *             "zvar": self.zvar,             # <<<<<<<<<<<<<<
@@ -8186,7 +8186,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_zvar, __pyx_t_4) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":325
+  /* "ThermoPyleCYTHON.pyx":325
  *             "yvar": self.yvar,
  *             "zvar": self.zvar,
  *             "vars": list(self.vars),             # <<<<<<<<<<<<<<
@@ -8201,7 +8201,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_vars, __pyx_t_5) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":326
+  /* "ThermoPyleCYTHON.pyx":326
  *             "zvar": self.zvar,
  *             "vars": list(self.vars),
  *             "numPoints": self.numPoints,             # <<<<<<<<<<<<<<
@@ -8213,7 +8213,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_numPoints, __pyx_t_5) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":327
+  /* "ThermoPyleCYTHON.pyx":327
  *             "vars": list(self.vars),
  *             "numPoints": self.numPoints,
  *             "colorMap": self.colorMap,             # <<<<<<<<<<<<<<
@@ -8225,7 +8225,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_colorMap, __pyx_t_5) < 0) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":328
+  /* "ThermoPyleCYTHON.pyx":328
  *             "numPoints": self.numPoints,
  *             "colorMap": self.colorMap,
  *             "units": self.units})             # <<<<<<<<<<<<<<
@@ -8283,7 +8283,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":318
+  /* "ThermoPyleCYTHON.pyx":318
  *         """
  *         self.make_units()
  *         self.meta = pyr.pmap({             # <<<<<<<<<<<<<<
@@ -8293,7 +8293,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_meta, __pyx_t_1) < 0) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":313
+  /* "ThermoPyleCYTHON.pyx":313
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -8310,7 +8310,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.make_meta", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.make_meta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8318,7 +8318,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":331
+/* "ThermoPyleCYTHON.pyx":331
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -8327,10 +8327,10 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_4make_meta(CYTHON_UNUSED PyObje
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_7add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_6add_column[] = "\n        Adds a column to the dataframe\n\n        Paramaters:\n            variable (Union[List[Text],Text]): What variable(s) to add\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_7add_column = {"add_column", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_7add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_6add_column};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_7add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_7add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_6add_column[] = "\n        Adds a column to the dataframe\n\n        Paramaters:\n            variable (Union[List[Text],Text]): What variable(s) to add\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_7add_column = {"add_column", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_7add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_6add_column};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_7add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_variables = 0;
   PyObject *__pyx_r = 0;
@@ -8375,18 +8375,18 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_7add_column(PyObject *__pyx_sel
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 331, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_6add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_6add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":349
+/* "ThermoPyleCYTHON.pyx":349
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
@@ -8395,9 +8395,9 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_7add_column(PyObject *__pyx_sel
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_10add_column_lambda1 = {"lambda1", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_lambda1, METH_O, 0};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_10add_column_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_10add_column_lambda1 = {"lambda1", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_10add_column_lambda1, METH_O, 0};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_10add_column_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda1 (wrapper)", 0);
@@ -8409,8 +8409,8 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_lambda1(PyObject *
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__pyx_v_state) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_cur_scope;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_outer_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *__pyx_cur_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8424,7 +8424,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   int __pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("lambda1", 0);
-  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
@@ -8536,7 +8536,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column.lambda1", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -8544,7 +8544,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":331
+/* "ThermoPyleCYTHON.pyx":331
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -8552,8 +8552,8 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self, PyObject *__
  *         Adds a column to the dataframe
  */
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_cur_scope;
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_6add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *__pyx_cur_scope;
   PyObject *__pyx_v_buffer = NULL;
   PyObject *__pyx_v_newcols = NULL;
   PyObject *__pyx_v_key = NULL;
@@ -8583,9 +8583,9 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   Py_ssize_t __pyx_t_20;
   int __pyx_t_21;
   __Pyx_RefNannySetupContext("add_column", 0);
-  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(__pyx_ptype_10ThermoPyle___pyx_scope_struct_1_add_column, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *)__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column(__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 331, __pyx_L1_error)
   } else {
@@ -8596,7 +8596,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_INCREF(__pyx_v_variables);
 
-  /* "ThermoPyle.pyx":338
+  /* "ThermoPyleCYTHON.pyx":338
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -8607,7 +8607,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":339
+    /* "ThermoPyleCYTHON.pyx":339
  *         """
  *         if type(variables) is not list:
  *             variables = [variables]             # <<<<<<<<<<<<<<
@@ -8622,7 +8622,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     __Pyx_DECREF_SET(__pyx_v_variables, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":338
+    /* "ThermoPyleCYTHON.pyx":338
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -8631,7 +8631,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
  */
   }
 
-  /* "ThermoPyle.pyx":340
+  /* "ThermoPyleCYTHON.pyx":340
  *         if type(variables) is not list:
  *             variables = [variables]
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -8682,7 +8682,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":341
+    /* "ThermoPyleCYTHON.pyx":341
  *             variables = [variables]
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -8698,7 +8698,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":342
+        /* "ThermoPyleCYTHON.pyx":342
  *         for var in variables:
  *             try:
  *                 assert var not in self.vars             # <<<<<<<<<<<<<<
@@ -8718,7 +8718,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
         }
         #endif
 
-        /* "ThermoPyle.pyx":341
+        /* "ThermoPyleCYTHON.pyx":341
  *             variables = [variables]
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -8734,7 +8734,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
       __Pyx_PyThreadState_assign
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":343
+      /* "ThermoPyleCYTHON.pyx":343
  *             try:
  *                 assert var not in self.vars
  *             except AssertionError:             # <<<<<<<<<<<<<<
@@ -8743,13 +8743,13 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
  */
       __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_10) {
-        __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_11, &__pyx_t_12) < 0) __PYX_ERR(0, 343, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_GOTREF(__pyx_t_12);
 
-        /* "ThermoPyle.pyx":344
+        /* "ThermoPyleCYTHON.pyx":344
  *                 assert var not in self.vars
  *             except AssertionError:
  *                 raise ValueError("Cannot add column {0}: already in frame".format(var))             # <<<<<<<<<<<<<<
@@ -8816,7 +8816,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
       goto __pyx_L8_except_error;
       __pyx_L8_except_error:;
 
-      /* "ThermoPyle.pyx":341
+      /* "ThermoPyleCYTHON.pyx":341
  *             variables = [variables]
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -8832,7 +8832,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
       __pyx_L13_try_end:;
     }
 
-    /* "ThermoPyle.pyx":340
+    /* "ThermoPyleCYTHON.pyx":340
  *         if type(variables) is not list:
  *             variables = [variables]
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -8842,7 +8842,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":345
+  /* "ThermoPyleCYTHON.pyx":345
  *             except AssertionError:
  *                 raise ValueError("Cannot add column {0}: already in frame".format(var))
  *         self.vars += variables             # <<<<<<<<<<<<<<
@@ -8857,7 +8857,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars, __pyx_t_12) < 0) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":346
+  /* "ThermoPyleCYTHON.pyx":346
  *                 raise ValueError("Cannot add column {0}: already in frame".format(var))
  *         self.vars += variables
  *         buffer = {}             # <<<<<<<<<<<<<<
@@ -8869,7 +8869,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __pyx_v_buffer = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":347
+  /* "ThermoPyleCYTHON.pyx":347
  *         self.vars += variables
  *         buffer = {}
  *         newcols = {}             # <<<<<<<<<<<<<<
@@ -8881,7 +8881,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __pyx_v_newcols = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":348
+  /* "ThermoPyleCYTHON.pyx":348
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -8932,19 +8932,19 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":349
+    /* "ThermoPyleCYTHON.pyx":349
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
  *         for key in newcols:
  *             buffer[key] = []
  */
-    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_10add_column_lambda1, 0, __pyx_n_s_CSVFluid_add_column_locals_lambd, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_10add_column_lambda1, 0, __pyx_n_s_CSVFluid_add_column_locals_lambd, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyleCYTHON, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (unlikely(PyDict_SetItem(__pyx_v_newcols, __pyx_cur_scope->__pyx_v_var, __pyx_t_3) < 0)) __PYX_ERR(0, 349, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":348
+    /* "ThermoPyleCYTHON.pyx":348
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -8954,7 +8954,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":350
+  /* "ThermoPyleCYTHON.pyx":350
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -8975,7 +8975,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":351
+    /* "ThermoPyleCYTHON.pyx":351
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
  *         for key in newcols:
  *             buffer[key] = []             # <<<<<<<<<<<<<<
@@ -8989,7 +8989,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":352
+  /* "ThermoPyleCYTHON.pyx":352
  *         for key in newcols:
  *             buffer[key] = []
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -9114,7 +9114,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":353
+    /* "ThermoPyleCYTHON.pyx":353
  *             buffer[key] = []
  *         for index, row in self.data.iterrows():
  *             for key in newcols:             # <<<<<<<<<<<<<<
@@ -9135,7 +9135,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":354
+      /* "ThermoPyleCYTHON.pyx":354
  *         for index, row in self.data.iterrows():
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))             # <<<<<<<<<<<<<<
@@ -9285,7 +9285,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     }
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":352
+    /* "ThermoPyleCYTHON.pyx":352
  *         for key in newcols:
  *             buffer[key] = []
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -9295,7 +9295,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":355
+  /* "ThermoPyleCYTHON.pyx":355
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -9316,7 +9316,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":356
+    /* "ThermoPyleCYTHON.pyx":356
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)             # <<<<<<<<<<<<<<
@@ -9357,7 +9357,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":357
+  /* "ThermoPyleCYTHON.pyx":357
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -9386,7 +9386,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":358
+  /* "ThermoPyleCYTHON.pyx":358
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -9415,7 +9415,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":331
+  /* "ThermoPyleCYTHON.pyx":331
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -9435,7 +9435,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_buffer);
@@ -9450,7 +9450,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":361
+/* "ThermoPyleCYTHON.pyx":361
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -9459,21 +9459,21 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_6add_column(CYTHON_UNUSED PyObj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_9refresh(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_8refresh[] = "\n        Refreshes the object, remakes meta, cleans data, remakes units.\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_9refresh = {"refresh", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_9refresh, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_8refresh};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_9refresh(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_9refresh(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_8refresh[] = "\n        Refreshes the object, remakes meta, cleans data, remakes units.\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_9refresh = {"refresh", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_9refresh, METH_O, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_8refresh};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_9refresh(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("refresh (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_8refresh(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_8refresh(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_8refresh(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9481,7 +9481,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("refresh", 0);
 
-  /* "ThermoPyle.pyx":365
+  /* "ThermoPyleCYTHON.pyx":365
  *         Refreshes the object, remakes meta, cleans data, remakes units.
  *         """
  *         self.vars = set(self.data.columns)             # <<<<<<<<<<<<<<
@@ -9499,7 +9499,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_vars, __pyx_t_1) < 0) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":366
+  /* "ThermoPyleCYTHON.pyx":366
  *         """
  *         self.vars = set(self.data.columns)
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -9528,7 +9528,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":367
+  /* "ThermoPyleCYTHON.pyx":367
  *         self.vars = set(self.data.columns)
  *         self.make_units()
  *         self.clean()             # <<<<<<<<<<<<<<
@@ -9557,7 +9557,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":368
+  /* "ThermoPyleCYTHON.pyx":368
  *         self.make_units()
  *         self.clean()
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -9586,7 +9586,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":361
+  /* "ThermoPyleCYTHON.pyx":361
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -9601,7 +9601,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.refresh", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.refresh", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -9609,7 +9609,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":371
+/* "ThermoPyleCYTHON.pyx":371
  * 
  * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
@@ -9618,10 +9618,10 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_8refresh(CYTHON_UNUSED PyObject
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_11changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_10changeOrder[] = "\n        Changes order of the columns:\n\n        Parameters:\n            order (List[Text]): is a permutation of length 3 on vars.\n\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_11changeOrder = {"changeOrder", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_11changeOrder, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_10changeOrder};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_11changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_11changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_10changeOrder[] = "\n        Changes order of the columns:\n\n        Parameters:\n            order (List[Text]): is a permutation of length 3 on vars.\n\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_11changeOrder = {"changeOrder", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_11changeOrder, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_10changeOrder};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_11changeOrder(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_order = 0;
   PyObject *__pyx_r = 0;
@@ -9666,18 +9666,18 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_11changeOrder(PyObject *__pyx_s
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("changeOrder", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 371, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(__pyx_self, __pyx_v_self, __pyx_v_order);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_10changeOrder(__pyx_self, __pyx_v_self, __pyx_v_order);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_10changeOrder(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_order) {
   PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -9695,7 +9695,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   int __pyx_t_12;
   __Pyx_RefNannySetupContext("changeOrder", 0);
 
-  /* "ThermoPyle.pyx":379
+  /* "ThermoPyleCYTHON.pyx":379
  * 
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -9711,7 +9711,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":380
+      /* "ThermoPyleCYTHON.pyx":380
  *         """
  *         try:
  *             assert set(order).issubset(set(self.vars))             # <<<<<<<<<<<<<<
@@ -9785,7 +9785,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
       }
       #endif
 
-      /* "ThermoPyle.pyx":379
+      /* "ThermoPyleCYTHON.pyx":379
  * 
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -9805,7 +9805,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":381
+    /* "ThermoPyleCYTHON.pyx":381
  *         try:
  *             assert set(order).issubset(set(self.vars))
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -9814,13 +9814,13 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
  */
     __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_10) {
-      __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_8) < 0) __PYX_ERR(0, 381, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "ThermoPyle.pyx":382
+      /* "ThermoPyleCYTHON.pyx":382
  *             assert set(order).issubset(set(self.vars))
  *         except AssertionError:
  *             raise ValueError("All entries order MUST be in vars")             # <<<<<<<<<<<<<<
@@ -9836,7 +9836,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "ThermoPyle.pyx":379
+    /* "ThermoPyleCYTHON.pyx":379
  * 
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -9852,7 +9852,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     __pyx_L10_try_end:;
   }
 
-  /* "ThermoPyle.pyx":384
+  /* "ThermoPyleCYTHON.pyx":384
  *             raise ValueError("All entries order MUST be in vars")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -9868,7 +9868,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     __Pyx_XGOTREF(__pyx_t_1);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":385
+      /* "ThermoPyleCYTHON.pyx":385
  * 
  *         try:
  *             assert order in permutations(self.vars, 3)             # <<<<<<<<<<<<<<
@@ -9937,7 +9937,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
       }
       #endif
 
-      /* "ThermoPyle.pyx":384
+      /* "ThermoPyleCYTHON.pyx":384
  *             raise ValueError("All entries order MUST be in vars")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -9957,7 +9957,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "ThermoPyle.pyx":386
+    /* "ThermoPyleCYTHON.pyx":386
  *         try:
  *             assert order in permutations(self.vars, 3)
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -9966,13 +9966,13 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
  */
     __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_10) {
-      __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_8, &__pyx_t_6, &__pyx_t_5) < 0) __PYX_ERR(0, 386, __pyx_L15_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_5);
 
-      /* "ThermoPyle.pyx":387
+      /* "ThermoPyleCYTHON.pyx":387
  *             assert order in permutations(self.vars, 3)
  *         except AssertionError:
  *             raise ValueError(             # <<<<<<<<<<<<<<
@@ -9988,7 +9988,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     goto __pyx_L15_except_error;
     __pyx_L15_except_error:;
 
-    /* "ThermoPyle.pyx":384
+    /* "ThermoPyleCYTHON.pyx":384
  *             raise ValueError("All entries order MUST be in vars")
  * 
  *         try:             # <<<<<<<<<<<<<<
@@ -10004,7 +10004,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
     __pyx_L20_try_end:;
   }
 
-  /* "ThermoPyle.pyx":389
+  /* "ThermoPyleCYTHON.pyx":389
  *             raise ValueError(
  *                 "Order of columns must be a permutation of columns of data")
  *         self.data = self.data[list(order) + [var for var in set(self.vars) if var not in set(order)]]             # <<<<<<<<<<<<<<
@@ -10062,7 +10062,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_data, __pyx_t_8) < 0) __PYX_ERR(0, 389, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":390
+  /* "ThermoPyleCYTHON.pyx":390
  *                 "Order of columns must be a permutation of columns of data")
  *         self.data = self.data[list(order) + [var for var in set(self.vars) if var not in set(order)]]
  *         self.xvar = order[0]             # <<<<<<<<<<<<<<
@@ -10074,7 +10074,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xvar, __pyx_t_8) < 0) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":391
+  /* "ThermoPyleCYTHON.pyx":391
  *         self.data = self.data[list(order) + [var for var in set(self.vars) if var not in set(order)]]
  *         self.xvar = order[0]
  *         self.yvar = order[1]             # <<<<<<<<<<<<<<
@@ -10086,7 +10086,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yvar, __pyx_t_8) < 0) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":392
+  /* "ThermoPyleCYTHON.pyx":392
  *         self.xvar = order[0]
  *         self.yvar = order[1]
  *         self.zvar = order[2]             # <<<<<<<<<<<<<<
@@ -10098,7 +10098,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_zvar, __pyx_t_8) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":371
+  /* "ThermoPyleCYTHON.pyx":371
  * 
  * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
@@ -10115,7 +10115,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   __Pyx_XDECREF(__pyx_t_6);
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.changeOrder", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_var);
@@ -10124,7 +10124,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":394
+/* "ThermoPyleCYTHON.pyx":394
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
@@ -10133,21 +10133,21 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_10changeOrder(CYTHON_UNUSED PyO
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_13copy(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_12copy[] = "\n        Returns a copy of itself\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_13copy = {"copy", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_13copy, METH_O, __pyx_doc_10ThermoPyle_8CSVFluid_12copy};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_13copy(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_13copy(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_12copy[] = "\n        Returns a copy of itself\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_13copy = {"copy", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_13copy, METH_O, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_12copy};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_13copy(PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("copy (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_12copy(__pyx_self, ((PyObject *)__pyx_v_self));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_12copy(__pyx_self, ((PyObject *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_12copy(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10156,7 +10156,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("copy", 0);
 
-  /* "ThermoPyle.pyx":398
+  /* "ThermoPyleCYTHON.pyx":398
  *         Returns a copy of itself
  *         """
  *         return deepcopy(self)             # <<<<<<<<<<<<<<
@@ -10213,7 +10213,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ThermoPyle.pyx":394
+  /* "ThermoPyleCYTHON.pyx":394
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
@@ -10227,7 +10227,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.copy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.copy", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -10235,7 +10235,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":401
+/* "ThermoPyleCYTHON.pyx":401
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -10244,10 +10244,10 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_12copy(CYTHON_UNUSED PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_15write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_14write_data[] = "\n        Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.\n\n        Parameters:\n\n            path (str): path where file should be saved\n\n            filename (str): what to name the file\n\n            mode (str): How to name the file:\n                -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``;\n                -  **custom**: fully custom name;\n                -  **dual**: default + custom.\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_15write_data = {"write_data", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_15write_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_14write_data};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_15write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_15write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_14write_data[] = "\n        Does what it says on the tin. Makes a CSV and JSON files and saves them to path given.\n\n        Parameters:\n\n            path (str): path where file should be saved\n\n            filename (str): what to name the file\n\n            mode (str): How to name the file:\n                -  **default**: ``FluidName_X-xpoints_Y-ypoints_Z``;\n                -  **custom**: fully custom name;\n                -  **dual**: default + custom.\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_15write_data = {"write_data", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_15write_data, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_14write_data};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_15write_data(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_path = 0;
   PyObject *__pyx_v_filename = 0;
@@ -10315,18 +10315,18 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_15write_data(PyObject *__pyx_se
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("write_data", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 401, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_14write_data(__pyx_self, __pyx_v_self, __pyx_v_path, __pyx_v_filename, __pyx_v_mode);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_14write_data(__pyx_self, __pyx_v_self, __pyx_v_path, __pyx_v_filename, __pyx_v_mode);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_14write_data(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_path, PyObject *__pyx_v_filename, PyObject *__pyx_v_mode) {
   PyObject *__pyx_v_default_string = NULL;
   PyObject *__pyx_v_middle_string = NULL;
   PyObject *__pyx_v_f = NULL;
@@ -10355,7 +10355,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   PyObject *__pyx_t_19 = NULL;
   __Pyx_RefNannySetupContext("write_data", 0);
 
-  /* "ThermoPyle.pyx":416
+  /* "ThermoPyleCYTHON.pyx":416
  *                 -  **dual**: default + custom.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -10371,7 +10371,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":417
+      /* "ThermoPyleCYTHON.pyx":417
  *         """
  *         try:
  *             assert mode in {"dual", "custom", "default"}             # <<<<<<<<<<<<<<
@@ -10405,7 +10405,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
       }
       #endif
 
-      /* "ThermoPyle.pyx":416
+      /* "ThermoPyleCYTHON.pyx":416
  *                 -  **dual**: default + custom.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -10421,7 +10421,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __Pyx_PyThreadState_assign
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "ThermoPyle.pyx":418
+    /* "ThermoPyleCYTHON.pyx":418
  *         try:
  *             assert mode in {"dual", "custom", "default"}
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -10430,13 +10430,13 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
  */
     __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 418, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_GOTREF(__pyx_t_9);
 
-      /* "ThermoPyle.pyx":420
+      /* "ThermoPyleCYTHON.pyx":420
  *         except AssertionError:
  *             raise ValueError(
  *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))             # <<<<<<<<<<<<<<
@@ -10489,7 +10489,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
       }
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "ThermoPyle.pyx":419
+      /* "ThermoPyleCYTHON.pyx":419
  *             assert mode in {"dual", "custom", "default"}
  *         except AssertionError:
  *             raise ValueError(             # <<<<<<<<<<<<<<
@@ -10511,7 +10511,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "ThermoPyle.pyx":416
+    /* "ThermoPyleCYTHON.pyx":416
  *                 -  **dual**: default + custom.
  *         """
  *         try:             # <<<<<<<<<<<<<<
@@ -10527,7 +10527,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __pyx_L10_try_end:;
   }
 
-  /* "ThermoPyle.pyx":422
+  /* "ThermoPyleCYTHON.pyx":422
  *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
  * 
  *         if filename == "" and mode in {"dual", "custom"}:             # <<<<<<<<<<<<<<
@@ -10557,7 +10557,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __pyx_L17_bool_binop_done:;
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":424
+    /* "ThermoPyleCYTHON.pyx":424
  *         if filename == "" and mode in {"dual", "custom"}:
  *             raise TypeError(
  *                 "When supplying {0} mode, filename is required; None given".format(mode))             # <<<<<<<<<<<<<<
@@ -10610,7 +10610,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-    /* "ThermoPyle.pyx":423
+    /* "ThermoPyleCYTHON.pyx":423
  * 
  *         if filename == "" and mode in {"dual", "custom"}:
  *             raise TypeError(             # <<<<<<<<<<<<<<
@@ -10629,7 +10629,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __PYX_ERR(0, 423, __pyx_L1_error)
 
-    /* "ThermoPyle.pyx":422
+    /* "ThermoPyleCYTHON.pyx":422
  *                 "Mode must be one of \"dual\", \"custom\", or \"default\". {0} provided".format(mode))
  * 
  *         if filename == "" and mode in {"dual", "custom"}:             # <<<<<<<<<<<<<<
@@ -10638,7 +10638,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "ThermoPyle.pyx":426
+  /* "ThermoPyleCYTHON.pyx":426
  *                 "When supplying {0} mode, filename is required; None given".format(mode))
  * 
  *         if mode != "custom":             # <<<<<<<<<<<<<<
@@ -10648,7 +10648,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_custom, Py_NE)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 426, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":427
+    /* "ThermoPyleCYTHON.pyx":427
  * 
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
@@ -10663,7 +10663,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __pyx_t_9 = PyList_New(0); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 427, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
 
-    /* "ThermoPyle.pyx":428
+    /* "ThermoPyleCYTHON.pyx":428
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])             # <<<<<<<<<<<<<<
@@ -10790,7 +10790,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
       __Pyx_XDECREF_SET(__pyx_v_point, __pyx_t_13);
       __pyx_t_13 = 0;
 
-      /* "ThermoPyle.pyx":427
+      /* "ThermoPyleCYTHON.pyx":427
  * 
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
@@ -10825,7 +10825,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":428
+    /* "ThermoPyleCYTHON.pyx":428
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])             # <<<<<<<<<<<<<<
@@ -10844,7 +10844,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-    /* "ThermoPyle.pyx":427
+    /* "ThermoPyleCYTHON.pyx":427
  * 
  *         if mode != "custom":
  *             default_string = self.fluid + "_" + "_".join([str(varname) + "-" + str(point) for (             # <<<<<<<<<<<<<<
@@ -10861,7 +10861,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __pyx_v_default_string = __pyx_t_10;
     __pyx_t_10 = 0;
 
-    /* "ThermoPyle.pyx":426
+    /* "ThermoPyleCYTHON.pyx":426
  *                 "When supplying {0} mode, filename is required; None given".format(mode))
  * 
  *         if mode != "custom":             # <<<<<<<<<<<<<<
@@ -10870,7 +10870,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "ThermoPyle.pyx":430
+  /* "ThermoPyleCYTHON.pyx":430
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
  * 
  *         if mode == "custom":             # <<<<<<<<<<<<<<
@@ -10880,7 +10880,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_custom, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 430, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":431
+    /* "ThermoPyleCYTHON.pyx":431
  * 
  *         if mode == "custom":
  *             middle_string = filename             # <<<<<<<<<<<<<<
@@ -10890,7 +10890,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __Pyx_INCREF(__pyx_v_filename);
     __pyx_v_middle_string = __pyx_v_filename;
 
-    /* "ThermoPyle.pyx":430
+    /* "ThermoPyleCYTHON.pyx":430
  *                 varname, point) in zip([self.xvar, self.yvar], self.numPoints)] + [self.zvar])
  * 
  *         if mode == "custom":             # <<<<<<<<<<<<<<
@@ -10900,7 +10900,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     goto __pyx_L26;
   }
 
-  /* "ThermoPyle.pyx":433
+  /* "ThermoPyleCYTHON.pyx":433
  *             middle_string = filename
  * 
  *         elif mode == "default":             # <<<<<<<<<<<<<<
@@ -10910,7 +10910,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_default, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 433, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":434
+    /* "ThermoPyleCYTHON.pyx":434
  * 
  *         elif mode == "default":
  *             middle_string = default_string             # <<<<<<<<<<<<<<
@@ -10921,7 +10921,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __Pyx_INCREF(__pyx_v_default_string);
     __pyx_v_middle_string = __pyx_v_default_string;
 
-    /* "ThermoPyle.pyx":433
+    /* "ThermoPyleCYTHON.pyx":433
  *             middle_string = filename
  * 
  *         elif mode == "default":             # <<<<<<<<<<<<<<
@@ -10931,7 +10931,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     goto __pyx_L26;
   }
 
-  /* "ThermoPyle.pyx":436
+  /* "ThermoPyleCYTHON.pyx":436
  *             middle_string = default_string
  * 
  *         elif mode == "dual":             # <<<<<<<<<<<<<<
@@ -10941,7 +10941,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_v_mode, __pyx_n_s_dual, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 436, __pyx_L1_error)
   if (__pyx_t_5) {
 
-    /* "ThermoPyle.pyx":437
+    /* "ThermoPyleCYTHON.pyx":437
  * 
  *         elif mode == "dual":
  *             middle_string = default_string + "_" + filename             # <<<<<<<<<<<<<<
@@ -10957,7 +10957,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __pyx_v_middle_string = __pyx_t_13;
     __pyx_t_13 = 0;
 
-    /* "ThermoPyle.pyx":436
+    /* "ThermoPyleCYTHON.pyx":436
  *             middle_string = default_string
  * 
  *         elif mode == "dual":             # <<<<<<<<<<<<<<
@@ -10967,7 +10967,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   }
   __pyx_L26:;
 
-  /* "ThermoPyle.pyx":439
+  /* "ThermoPyleCYTHON.pyx":439
  *             middle_string = default_string + "_" + filename
  * 
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -10996,7 +10996,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
 
-  /* "ThermoPyle.pyx":441
+  /* "ThermoPyleCYTHON.pyx":441
  *         self.make_meta()
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)             # <<<<<<<<<<<<<<
@@ -11030,7 +11030,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "ThermoPyle.pyx":442
+  /* "ThermoPyleCYTHON.pyx":442
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:             # <<<<<<<<<<<<<<
@@ -11094,7 +11094,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
           __pyx_v_f = __pyx_t_9;
           __pyx_t_9 = 0;
 
-          /* "ThermoPyle.pyx":443
+          /* "ThermoPyleCYTHON.pyx":443
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:
  *             json.dump(dict(self.meta), f)             # <<<<<<<<<<<<<<
@@ -11165,7 +11165,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-          /* "ThermoPyle.pyx":442
+          /* "ThermoPyleCYTHON.pyx":442
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:             # <<<<<<<<<<<<<<
@@ -11187,7 +11187,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
         __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
         /*except:*/ {
-          __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+          __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
           if (__Pyx_GetException(&__pyx_t_9, &__pyx_t_8, &__pyx_t_11) < 0) __PYX_ERR(0, 442, __pyx_L33_except_error)
           __Pyx_GOTREF(__pyx_t_9);
           __Pyx_GOTREF(__pyx_t_8);
@@ -11252,7 +11252,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
     __pyx_L42:;
   }
 
-  /* "ThermoPyle.pyx":401
+  /* "ThermoPyleCYTHON.pyx":401
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -11271,7 +11271,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.write_data", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_default_string);
@@ -11284,7 +11284,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":446
+/* "ThermoPyleCYTHON.pyx":446
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -11293,10 +11293,10 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_14write_data(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_17add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_8CSVFluid_16add_column[] = "\n        Adds a column to the dataframe\n\n        Paramaters:\n            variable (Union[List[Text],Text]): What variable(s) to add\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_17add_column = {"add_column", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_17add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_8CSVFluid_16add_column};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_17add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_17add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_16add_column[] = "\n        Adds a column to the dataframe\n\n        Paramaters:\n            variable (Union[List[Text],Text]): What variable(s) to add\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_17add_column = {"add_column", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_17add_column, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_8CSVFluid_16add_column};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_17add_column(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_variables = 0;
   PyObject *__pyx_r = 0;
@@ -11341,18 +11341,18 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_17add_column(PyObject *__pyx_se
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("add_column", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 446, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_8CSVFluid_16add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_8CSVFluid_16add_column(__pyx_self, __pyx_v_self, __pyx_v_variables);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":465
+/* "ThermoPyleCYTHON.pyx":465
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
@@ -11361,9 +11361,9 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_17add_column(PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_1lambda2(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
-static PyMethodDef __pyx_mdef_10ThermoPyle_8CSVFluid_10add_column_1lambda2 = {"lambda2", (PyCFunction)__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_1lambda2, METH_O, 0};
-static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_1lambda2(PyObject *__pyx_self, PyObject *__pyx_v_state) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_10add_column_1lambda2(PyObject *__pyx_self, PyObject *__pyx_v_state); /*proto*/
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_10add_column_1lambda2 = {"lambda2", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_10add_column_1lambda2, METH_O, 0};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_8CSVFluid_10add_column_1lambda2(PyObject *__pyx_self, PyObject *__pyx_v_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("lambda2 (wrapper)", 0);
@@ -11375,8 +11375,8 @@ static PyObject *__pyx_pw_10ThermoPyle_8CSVFluid_10add_column_1lambda2(PyObject 
 }
 
 static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__pyx_v_state) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *__pyx_cur_scope;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *__pyx_outer_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *__pyx_cur_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11390,7 +11390,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
   int __pyx_t_9;
   PyObject *__pyx_t_10 = NULL;
   __Pyx_RefNannySetupContext("lambda2", 0);
-  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_CP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 465, __pyx_L1_error)
@@ -11502,7 +11502,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_10);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column.lambda2", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -11510,7 +11510,7 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":446
+/* "ThermoPyleCYTHON.pyx":446
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -11518,8 +11518,8 @@ static PyObject *__pyx_lambda_funcdef_lambda2(PyObject *__pyx_self, PyObject *__
  *         Adds a column to the dataframe
  */
 
-static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *__pyx_cur_scope;
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_8CSVFluid_16add_column(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_variables) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *__pyx_cur_scope;
   PyObject *__pyx_v_buffer = NULL;
   PyObject *__pyx_v_newcols = NULL;
   PyObject *__pyx_v_key = NULL;
@@ -11549,9 +11549,9 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   Py_ssize_t __pyx_t_20;
   int __pyx_t_21;
   __Pyx_RefNannySetupContext("add_column", 0);
-  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_add_column(__pyx_ptype_10ThermoPyle___pyx_scope_struct_2_add_column, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *)__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column(__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 446, __pyx_L1_error)
   } else {
@@ -11562,7 +11562,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_self);
   __Pyx_INCREF(__pyx_v_variables);
 
-  /* "ThermoPyle.pyx":453
+  /* "ThermoPyleCYTHON.pyx":453
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -11573,7 +11573,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":454
+    /* "ThermoPyleCYTHON.pyx":454
  *         """
  *         if type(variables) is not list:
  *             variables = [variables]             # <<<<<<<<<<<<<<
@@ -11588,7 +11588,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     __Pyx_DECREF_SET(__pyx_v_variables, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":453
+    /* "ThermoPyleCYTHON.pyx":453
  *             variable (Union[List[Text],Text]): What variable(s) to add
  *         """
  *         if type(variables) is not list:             # <<<<<<<<<<<<<<
@@ -11597,7 +11597,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
  */
   }
 
-  /* "ThermoPyle.pyx":455
+  /* "ThermoPyleCYTHON.pyx":455
  *         if type(variables) is not list:
  *             variables = [variables]
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -11648,7 +11648,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     __Pyx_GIVEREF(__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":456
+    /* "ThermoPyleCYTHON.pyx":456
  *             variables = [variables]
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -11664,7 +11664,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":457
+        /* "ThermoPyleCYTHON.pyx":457
  *         for var in variables:
  *             try:
  *                 assert var not in self.vars             # <<<<<<<<<<<<<<
@@ -11684,7 +11684,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
         }
         #endif
 
-        /* "ThermoPyle.pyx":456
+        /* "ThermoPyleCYTHON.pyx":456
  *             variables = [variables]
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -11700,7 +11700,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
       __Pyx_PyThreadState_assign
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":458
+      /* "ThermoPyleCYTHON.pyx":458
  *             try:
  *                 assert var not in self.vars
  *             except AssertionError:             # <<<<<<<<<<<<<<
@@ -11709,13 +11709,13 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
  */
       __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_10) {
-        __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_11, &__pyx_t_12) < 0) __PYX_ERR(0, 458, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_GOTREF(__pyx_t_12);
 
-        /* "ThermoPyle.pyx":459
+        /* "ThermoPyleCYTHON.pyx":459
  *                 assert var not in self.vars
  *             except AssertionError:
  *                 raise ValueError("Cannot add column {0}: already in frame".format(var))             # <<<<<<<<<<<<<<
@@ -11782,7 +11782,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
       goto __pyx_L8_except_error;
       __pyx_L8_except_error:;
 
-      /* "ThermoPyle.pyx":456
+      /* "ThermoPyleCYTHON.pyx":456
  *             variables = [variables]
  *         for var in variables:
  *             try:             # <<<<<<<<<<<<<<
@@ -11798,7 +11798,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
       __pyx_L13_try_end:;
     }
 
-    /* "ThermoPyle.pyx":455
+    /* "ThermoPyleCYTHON.pyx":455
  *         if type(variables) is not list:
  *             variables = [variables]
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -11808,7 +11808,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":461
+  /* "ThermoPyleCYTHON.pyx":461
  *                 raise ValueError("Cannot add column {0}: already in frame".format(var))
  * 
  *         self.vars += variables             # <<<<<<<<<<<<<<
@@ -11823,7 +11823,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   if (__Pyx_PyObject_SetAttrStr(__pyx_cur_scope->__pyx_v_self, __pyx_n_s_vars, __pyx_t_12) < 0) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":462
+  /* "ThermoPyleCYTHON.pyx":462
  * 
  *         self.vars += variables
  *         buffer = {}             # <<<<<<<<<<<<<<
@@ -11835,7 +11835,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __pyx_v_buffer = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":463
+  /* "ThermoPyleCYTHON.pyx":463
  *         self.vars += variables
  *         buffer = {}
  *         newcols = {}             # <<<<<<<<<<<<<<
@@ -11847,7 +11847,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __pyx_v_newcols = ((PyObject*)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":464
+  /* "ThermoPyleCYTHON.pyx":464
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -11898,19 +11898,19 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":465
+    /* "ThermoPyleCYTHON.pyx":465
  *         newcols = {}
  *         for var in variables:
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)             # <<<<<<<<<<<<<<
  * 
  *         for key in newcols:
  */
-    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_10add_column_1lambda2, 0, __pyx_n_s_CSVFluid_add_column_locals_lambd, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 465, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_10add_column_1lambda2, 0, __pyx_n_s_CSVFluid_add_column_locals_lambd, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyleCYTHON, __pyx_d, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 465, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (unlikely(PyDict_SetItem(__pyx_v_newcols, __pyx_cur_scope->__pyx_v_var, __pyx_t_3) < 0)) __PYX_ERR(0, 465, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":464
+    /* "ThermoPyleCYTHON.pyx":464
  *         buffer = {}
  *         newcols = {}
  *         for var in variables:             # <<<<<<<<<<<<<<
@@ -11920,7 +11920,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":467
+  /* "ThermoPyleCYTHON.pyx":467
  *             newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
  * 
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -11941,7 +11941,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":468
+    /* "ThermoPyleCYTHON.pyx":468
  * 
  *         for key in newcols:
  *             buffer[key] = []             # <<<<<<<<<<<<<<
@@ -11955,7 +11955,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":469
+  /* "ThermoPyleCYTHON.pyx":469
  *         for key in newcols:
  *             buffer[key] = []
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -12080,7 +12080,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_row, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "ThermoPyle.pyx":470
+    /* "ThermoPyleCYTHON.pyx":470
  *             buffer[key] = []
  *         for index, row in self.data.iterrows():
  *             for key in newcols:             # <<<<<<<<<<<<<<
@@ -12101,7 +12101,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
       __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":471
+      /* "ThermoPyleCYTHON.pyx":471
  *         for index, row in self.data.iterrows():
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))             # <<<<<<<<<<<<<<
@@ -12251,7 +12251,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":469
+    /* "ThermoPyleCYTHON.pyx":469
  *         for key in newcols:
  *             buffer[key] = []
  *         for index, row in self.data.iterrows():             # <<<<<<<<<<<<<<
@@ -12261,7 +12261,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":472
+  /* "ThermoPyleCYTHON.pyx":472
  *             for key in newcols:
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:             # <<<<<<<<<<<<<<
@@ -12282,7 +12282,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
     __Pyx_XDECREF_SET(__pyx_v_key, __pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "ThermoPyle.pyx":473
+    /* "ThermoPyleCYTHON.pyx":473
  *                 get(key, buffer).append(get(key, newcols)(row))
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)             # <<<<<<<<<<<<<<
@@ -12323,7 +12323,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   }
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":474
+  /* "ThermoPyleCYTHON.pyx":474
  *         for key in newcols:
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()             # <<<<<<<<<<<<<<
@@ -12352,7 +12352,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":475
+  /* "ThermoPyleCYTHON.pyx":475
  *             self.data[key] = pd.Series(buffer[key], index=self.data.index)
  *         self.make_units()
  *         self.make_meta()             # <<<<<<<<<<<<<<
@@ -12381,7 +12381,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":446
+  /* "ThermoPyleCYTHON.pyx":446
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -12401,7 +12401,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
-  __Pyx_AddTraceback("ThermoPyle.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.CSVFluid.add_column", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_buffer);
@@ -12416,7 +12416,7 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":478
+/* "ThermoPyleCYTHON.pyx":478
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
@@ -12425,10 +12425,10 @@ static PyObject *__pyx_pf_10ThermoPyle_8CSVFluid_16add_column(CYTHON_UNUSED PyOb
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_1fluid_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_fluid_plot[] = "\n    Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.\n\n    Parameters:\n        fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.\n        xvar (Text): What variable to put on the x-axis\n        yvar (Text): What variable to put on the y-axis\n        zvar (Text): What variable to put on the z-axis\n        coloring (Text): What variable to color by. Default is zvar.\n    ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_1fluid_plot = {"fluid_plot", (PyCFunction)__pyx_pw_10ThermoPyle_1fluid_plot, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_fluid_plot};
-static PyObject *__pyx_pw_10ThermoPyle_1fluid_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_1fluid_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_fluid_plot[] = "\n    Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.\n\n    Parameters:\n        fluid (Union[CSVFluid, ThermoFluid]): Which fluid object to make a plot for.\n        xvar (Text): What variable to put on the x-axis\n        yvar (Text): What variable to put on the y-axis\n        zvar (Text): What variable to put on the z-axis\n        coloring (Text): What variable to color by. Default is zvar.\n    ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_1fluid_plot = {"fluid_plot", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_1fluid_plot, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_fluid_plot};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_1fluid_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_fluid = 0;
   PyObject *__pyx_v_xvar = 0;
   PyObject *__pyx_v_yvar = 0;
@@ -12506,18 +12506,18 @@ static PyObject *__pyx_pw_10ThermoPyle_1fluid_plot(PyObject *__pyx_self, PyObjec
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fluid_plot", 0, 1, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 478, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_fluid_plot(__pyx_self, __pyx_v_fluid, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_zvar, __pyx_v_coloring);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_fluid_plot(__pyx_self, __pyx_v_fluid, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_zvar, __pyx_v_coloring);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_coloring) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_fluid_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_zvar, PyObject *__pyx_v_coloring) {
   PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_v_fig = NULL;
   PyObject *__pyx_v_ax = NULL;
@@ -12544,7 +12544,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_INCREF(__pyx_v_zvar);
   __Pyx_INCREF(__pyx_v_coloring);
 
-  /* "ThermoPyle.pyx":489
+  /* "ThermoPyleCYTHON.pyx":489
  *         coloring (Text): What variable to color by. Default is zvar.
  *     """
  *     if not coloring:             # <<<<<<<<<<<<<<
@@ -12555,7 +12555,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = ((!__pyx_t_1) != 0);
   if (__pyx_t_2) {
 
-    /* "ThermoPyle.pyx":490
+    /* "ThermoPyleCYTHON.pyx":490
  *     """
  *     if not coloring:
  *         coloring = fluid.zvar             # <<<<<<<<<<<<<<
@@ -12567,7 +12567,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_DECREF_SET(__pyx_v_coloring, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":489
+    /* "ThermoPyleCYTHON.pyx":489
  *         coloring (Text): What variable to color by. Default is zvar.
  *     """
  *     if not coloring:             # <<<<<<<<<<<<<<
@@ -12576,7 +12576,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "ThermoPyle.pyx":491
+  /* "ThermoPyleCYTHON.pyx":491
  *     if not coloring:
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:             # <<<<<<<<<<<<<<
@@ -12610,7 +12610,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "ThermoPyle.pyx":492
+    /* "ThermoPyleCYTHON.pyx":492
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:             # <<<<<<<<<<<<<<
@@ -12621,7 +12621,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
     __pyx_t_1 = ((!__pyx_t_2) != 0);
     if (__pyx_t_1) {
 
-      /* "ThermoPyle.pyx":493
+      /* "ThermoPyleCYTHON.pyx":493
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:
  *             if var == xvar:             # <<<<<<<<<<<<<<
@@ -12633,7 +12633,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":494
+        /* "ThermoPyleCYTHON.pyx":494
  *         if not var:
  *             if var == xvar:
  *                 xvar = fluid.xvar             # <<<<<<<<<<<<<<
@@ -12645,7 +12645,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
         __Pyx_DECREF_SET(__pyx_v_xvar, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "ThermoPyle.pyx":493
+        /* "ThermoPyleCYTHON.pyx":493
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:
  *             if var == xvar:             # <<<<<<<<<<<<<<
@@ -12654,7 +12654,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":495
+      /* "ThermoPyleCYTHON.pyx":495
  *             if var == xvar:
  *                 xvar = fluid.xvar
  *             if var == yvar:             # <<<<<<<<<<<<<<
@@ -12666,7 +12666,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":496
+        /* "ThermoPyleCYTHON.pyx":496
  *                 xvar = fluid.xvar
  *             if var == yvar:
  *                 yvar = fluid.yvar             # <<<<<<<<<<<<<<
@@ -12678,7 +12678,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
         __Pyx_DECREF_SET(__pyx_v_yvar, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "ThermoPyle.pyx":495
+        /* "ThermoPyleCYTHON.pyx":495
  *             if var == xvar:
  *                 xvar = fluid.xvar
  *             if var == yvar:             # <<<<<<<<<<<<<<
@@ -12687,7 +12687,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":497
+      /* "ThermoPyleCYTHON.pyx":497
  *             if var == yvar:
  *                 yvar = fluid.yvar
  *             if var == zvar:             # <<<<<<<<<<<<<<
@@ -12699,7 +12699,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":498
+        /* "ThermoPyleCYTHON.pyx":498
  *                 yvar = fluid.yvar
  *             if var == zvar:
  *                 zvar = fluid.zvar             # <<<<<<<<<<<<<<
@@ -12711,7 +12711,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
         __Pyx_DECREF_SET(__pyx_v_zvar, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "ThermoPyle.pyx":497
+        /* "ThermoPyleCYTHON.pyx":497
  *             if var == yvar:
  *                 yvar = fluid.yvar
  *             if var == zvar:             # <<<<<<<<<<<<<<
@@ -12720,7 +12720,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":499
+      /* "ThermoPyleCYTHON.pyx":499
  *             if var == zvar:
  *                 zvar = fluid.zvar
  *             if var == coloring:             # <<<<<<<<<<<<<<
@@ -12732,7 +12732,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_1) {
 
-        /* "ThermoPyle.pyx":500
+        /* "ThermoPyleCYTHON.pyx":500
  *                 zvar = fluid.zvar
  *             if var == coloring:
  *                 coloring == fluid.zvar             # <<<<<<<<<<<<<<
@@ -12745,7 +12745,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "ThermoPyle.pyx":499
+        /* "ThermoPyleCYTHON.pyx":499
  *             if var == zvar:
  *                 zvar = fluid.zvar
  *             if var == coloring:             # <<<<<<<<<<<<<<
@@ -12754,7 +12754,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       }
 
-      /* "ThermoPyle.pyx":492
+      /* "ThermoPyleCYTHON.pyx":492
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:
  *         if not var:             # <<<<<<<<<<<<<<
@@ -12763,7 +12763,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
     }
 
-    /* "ThermoPyle.pyx":501
+    /* "ThermoPyleCYTHON.pyx":501
  *             if var == coloring:
  *                 coloring == fluid.zvar
  *         try:             # <<<<<<<<<<<<<<
@@ -12779,7 +12779,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_XGOTREF(__pyx_t_9);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":502
+        /* "ThermoPyleCYTHON.pyx":502
  *                 coloring == fluid.zvar
  *         try:
  *             assert var in fluid.vars             # <<<<<<<<<<<<<<
@@ -12799,7 +12799,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
         }
         #endif
 
-        /* "ThermoPyle.pyx":501
+        /* "ThermoPyleCYTHON.pyx":501
  *             if var == coloring:
  *                 coloring == fluid.zvar
  *         try:             # <<<<<<<<<<<<<<
@@ -12816,7 +12816,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-      /* "ThermoPyle.pyx":503
+      /* "ThermoPyleCYTHON.pyx":503
  *         try:
  *             assert var in fluid.vars
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -12825,13 +12825,13 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
       __pyx_t_10 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_10) {
-        __Pyx_AddTraceback("ThermoPyle.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_6, &__pyx_t_3, &__pyx_t_11) < 0) __PYX_ERR(0, 503, __pyx_L13_except_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_GOTREF(__pyx_t_11);
 
-        /* "ThermoPyle.pyx":504
+        /* "ThermoPyleCYTHON.pyx":504
  *             assert var in fluid.vars
  *         except AssertionError:
  *             ValueError("variable {0} is not a valid variable.".format(var))             # <<<<<<<<<<<<<<
@@ -12900,7 +12900,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       goto __pyx_L13_except_error;
       __pyx_L13_except_error:;
 
-      /* "ThermoPyle.pyx":501
+      /* "ThermoPyleCYTHON.pyx":501
  *             if var == coloring:
  *                 coloring == fluid.zvar
  *         try:             # <<<<<<<<<<<<<<
@@ -12922,7 +12922,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
       __pyx_L18_try_end:;
     }
 
-    /* "ThermoPyle.pyx":491
+    /* "ThermoPyleCYTHON.pyx":491
  *     if not coloring:
  *         coloring = fluid.zvar
  *     for var in [xvar, yvar, zvar, coloring]:             # <<<<<<<<<<<<<<
@@ -12932,7 +12932,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":507
+  /* "ThermoPyleCYTHON.pyx":507
  * 
  *     # Plotting:
  *     fig = plt.figure(randint(10**4,10**5))             # <<<<<<<<<<<<<<
@@ -12998,7 +12998,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_v_fig = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":510
+  /* "ThermoPyleCYTHON.pyx":510
  * 
  *     # we want 3D plots
  *     ax = fig.add_subplot(111, projection="3d")             # <<<<<<<<<<<<<<
@@ -13017,7 +13017,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_v_ax = __pyx_t_12;
   __pyx_t_12 = 0;
 
-  /* "ThermoPyle.pyx":513
+  /* "ThermoPyleCYTHON.pyx":513
  * 
  *     # Plot the data
  *     ax.scatter(             # <<<<<<<<<<<<<<
@@ -13027,7 +13027,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_v_ax, __pyx_n_s_scatter); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
 
-  /* "ThermoPyle.pyx":514
+  /* "ThermoPyleCYTHON.pyx":514
  *     # Plot the data
  *     ax.scatter(
  *         fluid.data[xvar],             # <<<<<<<<<<<<<<
@@ -13040,7 +13040,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":515
+  /* "ThermoPyleCYTHON.pyx":515
  *     ax.scatter(
  *         fluid.data[xvar],
  *         fluid.data[yvar],             # <<<<<<<<<<<<<<
@@ -13053,7 +13053,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":516
+  /* "ThermoPyleCYTHON.pyx":516
  *         fluid.data[xvar],
  *         fluid.data[yvar],
  *         fluid.data[zvar],             # <<<<<<<<<<<<<<
@@ -13066,7 +13066,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":513
+  /* "ThermoPyleCYTHON.pyx":513
  * 
  *     # Plot the data
  *     ax.scatter(             # <<<<<<<<<<<<<<
@@ -13085,7 +13085,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_6 = 0;
   __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":517
+  /* "ThermoPyleCYTHON.pyx":517
  *         fluid.data[yvar],
  *         fluid.data[zvar],
  *         c=fluid.data[coloring],             # <<<<<<<<<<<<<<
@@ -13102,7 +13102,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_c, __pyx_t_4) < 0) __PYX_ERR(0, 517, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":518
+  /* "ThermoPyleCYTHON.pyx":518
  *         fluid.data[zvar],
  *         c=fluid.data[coloring],
  *         cmap=fluid.colorMap,             # <<<<<<<<<<<<<<
@@ -13115,7 +13115,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_edgecolors, __pyx_n_s_none) < 0) __PYX_ERR(0, 517, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":513
+  /* "ThermoPyleCYTHON.pyx":513
  * 
  *     # Plot the data
  *     ax.scatter(             # <<<<<<<<<<<<<<
@@ -13129,7 +13129,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":522
+  /* "ThermoPyleCYTHON.pyx":522
  * 
  *     # Set the Labels
  *     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))             # <<<<<<<<<<<<<<
@@ -13240,7 +13240,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":523
+  /* "ThermoPyleCYTHON.pyx":523
  *     # Set the Labels
  *     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))             # <<<<<<<<<<<<<<
@@ -13351,7 +13351,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":524
+  /* "ThermoPyleCYTHON.pyx":524
  *     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))             # <<<<<<<<<<<<<<
@@ -13462,7 +13462,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":525
+  /* "ThermoPyleCYTHON.pyx":525
  *     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
  *     ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))             # <<<<<<<<<<<<<<
@@ -13576,7 +13576,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":526
+  /* "ThermoPyleCYTHON.pyx":526
  *     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
  *     ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))
  *     plt.show(fig)             # <<<<<<<<<<<<<<
@@ -13633,7 +13633,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":478
+  /* "ThermoPyleCYTHON.pyx":478
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
@@ -13653,7 +13653,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_t_13);
   __Pyx_XDECREF(__pyx_t_14);
   __Pyx_XDECREF(__pyx_t_15);
-  __Pyx_AddTraceback("ThermoPyle.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_var);
@@ -13668,7 +13668,7 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":529
+/* "ThermoPyleCYTHON.pyx":529
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -13677,10 +13677,10 @@ static PyObject *__pyx_pf_10ThermoPyle_fluid_plot(CYTHON_UNUSED PyObject *__pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_2rescale[] = "\n        Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply\n\n        Parameters:\n            oldrange (List[Union[float, int]]): The old range of the data, [min, max]\n            newrange (List[Union[float, int]]): The new range of the data, [min, max]\n        ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_3rescale = {"rescale", (PyCFunction)__pyx_pw_10ThermoPyle_3rescale, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_2rescale};
-static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_3rescale(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_2rescale[] = "\n        Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply\n\n        Parameters:\n            oldrange (List[Union[float, int]]): The old range of the data, [min, max]\n            newrange (List[Union[float, int]]): The new range of the data, [min, max]\n        ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_3rescale = {"rescale", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_3rescale, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_2rescale};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_3rescale(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_oldrange = 0;
   PyObject *__pyx_v_newrange = 0;
   PyObject *__pyx_r = 0;
@@ -13725,18 +13725,18 @@ static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("rescale", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 529, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.rescale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.rescale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_2rescale(__pyx_self, __pyx_v_oldrange, __pyx_v_newrange);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_2rescale(__pyx_self, __pyx_v_oldrange, __pyx_v_newrange);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":539
+/* "ThermoPyleCYTHON.pyx":539
  *             newrange (List[Union[float, int]]): The new range of the data, [min, max]
  *         """
  *         def scaler(x:float)->float:             # <<<<<<<<<<<<<<
@@ -13745,23 +13745,23 @@ static PyObject *__pyx_pw_10ThermoPyle_3rescale(PyObject *__pyx_self, PyObject *
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_7rescale_1scaler(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
-static char __pyx_doc_10ThermoPyle_7rescale_scaler[] = "\n            scales input according to y = {slope}*(x-{old_min})+{new_min}\n\n            Paramaters:\n                x (float): A value to scales\n            Returns:\n                y (float): the scaled version of x\n            ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_7rescale_1scaler = {"scaler", (PyCFunction)__pyx_pw_10ThermoPyle_7rescale_1scaler, METH_O, __pyx_doc_10ThermoPyle_7rescale_scaler};
-static PyObject *__pyx_pw_10ThermoPyle_7rescale_1scaler(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_7rescale_1scaler(PyObject *__pyx_self, PyObject *__pyx_v_x); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_7rescale_scaler[] = "\n            scales input according to y = {slope}*(x-{old_min})+{new_min}\n\n            Paramaters:\n                x (float): A value to scales\n            Returns:\n                y (float): the scaled version of x\n            ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_7rescale_1scaler = {"scaler", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_7rescale_1scaler, METH_O, __pyx_doc_16ThermoPyleCYTHON_7rescale_scaler};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_7rescale_1scaler(PyObject *__pyx_self, PyObject *__pyx_v_x) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("scaler (wrapper)", 0);
-  __pyx_r = __pyx_pf_10ThermoPyle_7rescale_scaler(__pyx_self, ((PyObject *)__pyx_v_x));
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_7rescale_scaler(__pyx_self, ((PyObject *)__pyx_v_x));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyObject *__pyx_v_x) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *__pyx_cur_scope;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *__pyx_outer_scope;
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_7rescale_scaler(PyObject *__pyx_self, PyObject *__pyx_v_x) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *__pyx_cur_scope;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *__pyx_outer_scope;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -13769,10 +13769,10 @@ static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyO
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   __Pyx_RefNannySetupContext("scaler", 0);
-  __pyx_outer_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *) __Pyx_CyFunction_GetClosure(__pyx_self);
+  __pyx_outer_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
 
-  /* "ThermoPyle.pyx":548
+  /* "ThermoPyleCYTHON.pyx":548
  *                 y (float): the scaled version of x
  *             """
  *             return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]             # <<<<<<<<<<<<<<
@@ -13825,7 +13825,7 @@ static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyO
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ThermoPyle.pyx":539
+  /* "ThermoPyleCYTHON.pyx":539
  *             newrange (List[Union[float, int]]): The new range of the data, [min, max]
  *         """
  *         def scaler(x:float)->float:             # <<<<<<<<<<<<<<
@@ -13839,7 +13839,7 @@ static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyO
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_AddTraceback("ThermoPyle.rescale.scaler", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.rescale.scaler", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -13847,7 +13847,7 @@ static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyO
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":529
+/* "ThermoPyleCYTHON.pyx":529
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -13855,8 +13855,8 @@ static PyObject *__pyx_pf_10ThermoPyle_7rescale_scaler(PyObject *__pyx_self, PyO
  *         Union[float, int]]:
  */
 
-static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_oldrange, PyObject *__pyx_v_newrange) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *__pyx_cur_scope;
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_2rescale(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_oldrange, PyObject *__pyx_v_newrange) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *__pyx_cur_scope;
   PyObject *__pyx_v_scaler = 0;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
@@ -13867,9 +13867,9 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   PyObject *__pyx_t_5 = NULL;
   PyObject *__pyx_t_6 = NULL;
   __Pyx_RefNannySetupContext("rescale", 0);
-  __pyx_cur_scope = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *)__pyx_tp_new_10ThermoPyle___pyx_scope_struct_3_rescale(__pyx_ptype_10ThermoPyle___pyx_scope_struct_3_rescale, __pyx_empty_tuple, NULL);
+  __pyx_cur_scope = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *)__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale(__pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale, __pyx_empty_tuple, NULL);
   if (unlikely(!__pyx_cur_scope)) {
-    __pyx_cur_scope = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *)Py_None);
+    __pyx_cur_scope = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *)Py_None);
     __Pyx_INCREF(Py_None);
     __PYX_ERR(0, 529, __pyx_L1_error)
   } else {
@@ -13882,7 +13882,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_newrange);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_newrange);
 
-  /* "ThermoPyle.pyx":539
+  /* "ThermoPyleCYTHON.pyx":539
  *             newrange (List[Union[float, int]]): The new range of the data, [min, max]
  *         """
  *         def scaler(x:float)->float:             # <<<<<<<<<<<<<<
@@ -13893,14 +13893,14 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_x, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 539, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, ((PyObject *)(&PyFloat_Type))) < 0) __PYX_ERR(0, 539, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_7rescale_1scaler, 0, __pyx_n_s_rescale_locals_scaler, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 539, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_7rescale_1scaler, 0, __pyx_n_s_rescale_locals_scaler, ((PyObject*)__pyx_cur_scope), __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_2, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_scaler = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":549
+  /* "ThermoPyleCYTHON.pyx":549
  *             """
  *             return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
  *         scaler.__doc__ = scaler.__doc__.format(slope=((newrange[1]-newrange[0])/(oldrange[1]-oldrange[0])), old_min=oldrange[0], new_min=newrange[0])             # <<<<<<<<<<<<<<
@@ -13951,7 +13951,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_scaler, __pyx_n_s_doc, __pyx_t_3) < 0) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":550
+  /* "ThermoPyleCYTHON.pyx":550
  *             return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
  *         scaler.__doc__ = scaler.__doc__.format(slope=((newrange[1]-newrange[0])/(oldrange[1]-oldrange[0])), old_min=oldrange[0], new_min=newrange[0])
  *         return scaler             # <<<<<<<<<<<<<<
@@ -13963,7 +13963,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   __pyx_r = __pyx_v_scaler;
   goto __pyx_L0;
 
-  /* "ThermoPyle.pyx":529
+  /* "ThermoPyleCYTHON.pyx":529
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -13979,7 +13979,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_AddTraceback("ThermoPyle.rescale", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.rescale", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_scaler);
@@ -13989,7 +13989,7 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
   return __pyx_r;
 }
 
-/* "ThermoPyle.pyx":552
+/* "ThermoPyleCYTHON.pyx":552
  *         return scaler
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
@@ -13998,10 +13998,10 @@ static PyObject *__pyx_pf_10ThermoPyle_2rescale(CYTHON_UNUSED PyObject *__pyx_se
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_10ThermoPyle_5fluid_contour_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_10ThermoPyle_4fluid_contour_plot[] = "\n    Does what it says on the tin. Makes a Contour Plot of the Fluid.\n\n    Paramaters:\n        fluid (Union[CSVFluid, ThermoFluid]): What fluid object to get data from.\n        xvar (Text): What is our x-variable\n        yvar (Text): What is our y-variable?\n        contour (Text): What contour to plot. Must be a variable in fluid.vars\n    ";
-static PyMethodDef __pyx_mdef_10ThermoPyle_5fluid_contour_plot = {"fluid_contour_plot", (PyCFunction)__pyx_pw_10ThermoPyle_5fluid_contour_plot, METH_VARARGS|METH_KEYWORDS, __pyx_doc_10ThermoPyle_4fluid_contour_plot};
-static PyObject *__pyx_pw_10ThermoPyle_5fluid_contour_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_5fluid_contour_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_16ThermoPyleCYTHON_4fluid_contour_plot[] = "\n    Does what it says on the tin. Makes a Contour Plot of the Fluid.\n\n    Paramaters:\n        fluid (Union[CSVFluid, ThermoFluid]): What fluid object to get data from.\n        xvar (Text): What is our x-variable\n        yvar (Text): What is our y-variable?\n        contour (Text): What contour to plot. Must be a variable in fluid.vars\n    ";
+static PyMethodDef __pyx_mdef_16ThermoPyleCYTHON_5fluid_contour_plot = {"fluid_contour_plot", (PyCFunction)__pyx_pw_16ThermoPyleCYTHON_5fluid_contour_plot, METH_VARARGS|METH_KEYWORDS, __pyx_doc_16ThermoPyleCYTHON_4fluid_contour_plot};
+static PyObject *__pyx_pw_16ThermoPyleCYTHON_5fluid_contour_plot(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_fluid = 0;
   PyObject *__pyx_v_xvar = 0;
   PyObject *__pyx_v_yvar = 0;
@@ -14069,18 +14069,18 @@ static PyObject *__pyx_pw_10ThermoPyle_5fluid_contour_plot(PyObject *__pyx_self,
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("fluid_contour_plot", 0, 1, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 552, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_10ThermoPyle_4fluid_contour_plot(__pyx_self, __pyx_v_fluid, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_contour);
+  __pyx_r = __pyx_pf_16ThermoPyleCYTHON_4fluid_contour_plot(__pyx_self, __pyx_v_fluid, __pyx_v_xvar, __pyx_v_yvar, __pyx_v_contour);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_contour) {
+static PyObject *__pyx_pf_16ThermoPyleCYTHON_4fluid_contour_plot(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_fluid, PyObject *__pyx_v_xvar, PyObject *__pyx_v_yvar, PyObject *__pyx_v_contour) {
   PyObject *__pyx_v_var = NULL;
   PyObject *__pyx_v_fig = NULL;
   CYTHON_UNUSED PyObject *__pyx_v_fignum = NULL;
@@ -14114,7 +14114,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   PyObject *__pyx_t_15 = NULL;
   __Pyx_RefNannySetupContext("fluid_contour_plot", 0);
 
-  /* "ThermoPyle.pyx":562
+  /* "ThermoPyleCYTHON.pyx":562
  *         contour (Text): What contour to plot. Must be a variable in fluid.vars
  *     """
  *     try:             # <<<<<<<<<<<<<<
@@ -14130,7 +14130,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "ThermoPyle.pyx":563
+      /* "ThermoPyleCYTHON.pyx":563
  *     """
  *     try:
  *         assert contour in set(fluid.vars)             # <<<<<<<<<<<<<<
@@ -14153,7 +14153,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       }
       #endif
 
-      /* "ThermoPyle.pyx":562
+      /* "ThermoPyleCYTHON.pyx":562
  *         contour (Text): What contour to plot. Must be a variable in fluid.vars
  *     """
  *     try:             # <<<<<<<<<<<<<<
@@ -14170,7 +14170,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "ThermoPyle.pyx":564
+    /* "ThermoPyleCYTHON.pyx":564
  *     try:
  *         assert contour in set(fluid.vars)
  *     except AssertionError:             # <<<<<<<<<<<<<<
@@ -14179,13 +14179,13 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
  */
     __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
     if (__pyx_t_7) {
-      __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
       if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_4, &__pyx_t_8) < 0) __PYX_ERR(0, 564, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_8);
 
-      /* "ThermoPyle.pyx":565
+      /* "ThermoPyleCYTHON.pyx":565
  *         assert contour in set(fluid.vars)
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")             # <<<<<<<<<<<<<<
@@ -14203,7 +14203,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "ThermoPyle.pyx":562
+    /* "ThermoPyleCYTHON.pyx":562
  *         contour (Text): What contour to plot. Must be a variable in fluid.vars
  *     """
  *     try:             # <<<<<<<<<<<<<<
@@ -14225,7 +14225,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __pyx_L10_try_end:;
   }
 
-  /* "ThermoPyle.pyx":566
+  /* "ThermoPyleCYTHON.pyx":566
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:             # <<<<<<<<<<<<<<
@@ -14253,7 +14253,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF_SET(__pyx_v_var, __pyx_t_8);
     __pyx_t_8 = 0;
 
-    /* "ThermoPyle.pyx":567
+    /* "ThermoPyleCYTHON.pyx":567
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:
  *         try:             # <<<<<<<<<<<<<<
@@ -14269,7 +14269,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __Pyx_XGOTREF(__pyx_t_1);
       /*try:*/ {
 
-        /* "ThermoPyle.pyx":568
+        /* "ThermoPyleCYTHON.pyx":568
  *     for var in [xvar, yvar]:
  *         try:
  *             assert var in set(fluid.vars)             # <<<<<<<<<<<<<<
@@ -14292,7 +14292,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
         }
         #endif
 
-        /* "ThermoPyle.pyx":567
+        /* "ThermoPyleCYTHON.pyx":567
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:
  *         try:             # <<<<<<<<<<<<<<
@@ -14310,7 +14310,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "ThermoPyle.pyx":569
+      /* "ThermoPyleCYTHON.pyx":569
  *         try:
  *             assert var in set(fluid.vars)
  *         except AssertionError:             # <<<<<<<<<<<<<<
@@ -14319,13 +14319,13 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
  */
       __pyx_t_7 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AssertionError);
       if (__pyx_t_7) {
-        __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+        __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
         if (__Pyx_GetException(&__pyx_t_5, &__pyx_t_8, &__pyx_t_9) < 0) __PYX_ERR(0, 569, __pyx_L17_except_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_GOTREF(__pyx_t_9);
 
-        /* "ThermoPyle.pyx":570
+        /* "ThermoPyleCYTHON.pyx":570
  *             assert var in set(fluid.vars)
  *         except AssertionError:
  *             ValueError("Variable not valid.")             # <<<<<<<<<<<<<<
@@ -14343,7 +14343,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       goto __pyx_L17_except_error;
       __pyx_L17_except_error:;
 
-      /* "ThermoPyle.pyx":567
+      /* "ThermoPyleCYTHON.pyx":567
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:
  *         try:             # <<<<<<<<<<<<<<
@@ -14365,7 +14365,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
       __pyx_L22_try_end:;
     }
 
-    /* "ThermoPyle.pyx":566
+    /* "ThermoPyleCYTHON.pyx":566
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")
  *     for var in [xvar, yvar]:             # <<<<<<<<<<<<<<
@@ -14375,7 +14375,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":572
+  /* "ThermoPyleCYTHON.pyx":572
  *             ValueError("Variable not valid.")
  * 
  *     matplotlib.rcParams["xtick.direction"] = "out"             # <<<<<<<<<<<<<<
@@ -14390,7 +14390,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   if (unlikely(PyObject_SetItem(__pyx_t_9, __pyx_kp_s_xtick_direction, __pyx_n_s_out) < 0)) __PYX_ERR(0, 572, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-  /* "ThermoPyle.pyx":573
+  /* "ThermoPyleCYTHON.pyx":573
  * 
  *     matplotlib.rcParams["xtick.direction"] = "out"
  *     matplotlib.rcParams["ytick.direction"] = "out"             # <<<<<<<<<<<<<<
@@ -14405,7 +14405,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   if (unlikely(PyObject_SetItem(__pyx_t_4, __pyx_kp_s_ytick_direction, __pyx_n_s_out) < 0)) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":574
+  /* "ThermoPyleCYTHON.pyx":574
  *     matplotlib.rcParams["xtick.direction"] = "out"
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))             # <<<<<<<<<<<<<<
@@ -14471,7 +14471,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_fig = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":575
+  /* "ThermoPyleCYTHON.pyx":575
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))
  *     fignum = fig.number             # <<<<<<<<<<<<<<
@@ -14483,7 +14483,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_fignum = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":576
+  /* "ThermoPyleCYTHON.pyx":576
  *     fig = plt.figure(randint(1,10**4))
  *     fignum = fig.number
  *     xx = pd.Series(fluid.data[xvar]).tolist()             # <<<<<<<<<<<<<<
@@ -14570,7 +14570,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_xx = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":577
+  /* "ThermoPyleCYTHON.pyx":577
  *     fignum = fig.number
  *     xx = pd.Series(fluid.data[xvar]).tolist()
  *     yy = pd.Series(fluid.data[yvar]).tolist()             # <<<<<<<<<<<<<<
@@ -14657,7 +14657,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_yy = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":578
+  /* "ThermoPyleCYTHON.pyx":578
  *     xx = pd.Series(fluid.data[xvar]).tolist()
  *     yy = pd.Series(fluid.data[yvar]).tolist()
  *     zz = pd.Series(fluid.data[contour]).tolist()             # <<<<<<<<<<<<<<
@@ -14744,7 +14744,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_zz = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":579
+  /* "ThermoPyleCYTHON.pyx":579
  *     yy = pd.Series(fluid.data[yvar]).tolist()
  *     zz = pd.Series(fluid.data[contour]).tolist()
  *     xi = np.linspace(min(xx), max(xx), 217)             # <<<<<<<<<<<<<<
@@ -14827,7 +14827,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_xi = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":580
+  /* "ThermoPyleCYTHON.pyx":580
  *     zz = pd.Series(fluid.data[contour]).tolist()
  *     xi = np.linspace(min(xx), max(xx), 217)
  *     yi = np.linspace(min(yy), max(yy), 217)             # <<<<<<<<<<<<<<
@@ -14910,7 +14910,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_yi = __pyx_t_4;
   __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":581
+  /* "ThermoPyleCYTHON.pyx":581
  *     xi = np.linspace(min(xx), max(xx), 217)
  *     yi = np.linspace(min(yy), max(yy), 217)
  *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')             # <<<<<<<<<<<<<<
@@ -14950,7 +14950,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_Z = __pyx_t_8;
   __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":582
+  /* "ThermoPyleCYTHON.pyx":582
  *     yi = np.linspace(min(yy), max(yy), 217)
  *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
  *     X, Y = np.meshgrid(xi, yi)             # <<<<<<<<<<<<<<
@@ -15062,7 +15062,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_Y = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":583
+  /* "ThermoPyleCYTHON.pyx":583
  *     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
  *     X, Y = np.meshgrid(xi, yi)
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)             # <<<<<<<<<<<<<<
@@ -15099,7 +15099,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_CS = __pyx_t_11;
   __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":584
+  /* "ThermoPyleCYTHON.pyx":584
  *     X, Y = np.meshgrid(xi, yi)
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  *     fmt = {}             # <<<<<<<<<<<<<<
@@ -15111,7 +15111,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __pyx_v_fmt = ((PyObject*)__pyx_t_11);
   __pyx_t_11 = 0;
 
-  /* "ThermoPyle.pyx":585
+  /* "ThermoPyleCYTHON.pyx":585
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  *     fmt = {}
  *     for x in CS.levels:             # <<<<<<<<<<<<<<
@@ -15163,7 +15163,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_11);
     __pyx_t_11 = 0;
 
-    /* "ThermoPyle.pyx":586
+    /* "ThermoPyleCYTHON.pyx":586
  *     fmt = {}
  *     for x in CS.levels:
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]             # <<<<<<<<<<<<<<
@@ -15230,7 +15230,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
     if (unlikely(PyDict_SetItem(__pyx_v_fmt, __pyx_v_x, __pyx_t_11) < 0)) __PYX_ERR(0, 586, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-    /* "ThermoPyle.pyx":585
+    /* "ThermoPyleCYTHON.pyx":585
  *     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
  *     fmt = {}
  *     for x in CS.levels:             # <<<<<<<<<<<<<<
@@ -15240,7 +15240,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "ThermoPyle.pyx":587
+  /* "ThermoPyleCYTHON.pyx":587
  *     for x in CS.levels:
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)             # <<<<<<<<<<<<<<
@@ -15269,7 +15269,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":588
+  /* "ThermoPyleCYTHON.pyx":588
  *         fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))             # <<<<<<<<<<<<<<
@@ -15383,7 +15383,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":589
+  /* "ThermoPyleCYTHON.pyx":589
  *     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))             # <<<<<<<<<<<<<<
@@ -15497,7 +15497,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":590
+  /* "ThermoPyleCYTHON.pyx":590
  *     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))             # <<<<<<<<<<<<<<
@@ -15613,7 +15613,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":591
+  /* "ThermoPyleCYTHON.pyx":591
  *     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
  *     plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))
  *     plt.show(fig)             # <<<<<<<<<<<<<<
@@ -15668,7 +15668,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "ThermoPyle.pyx":552
+  /* "ThermoPyleCYTHON.pyx":552
  *         return scaler
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
@@ -15687,7 +15687,7 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_15);
-  __Pyx_AddTraceback("ThermoPyle.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ThermoPyleCYTHON.fluid_contour_plot", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_var);
@@ -15709,14 +15709,14 @@ static PyObject *__pyx_pf_10ThermoPyle_4fluid_contour_plot(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-static struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *__pyx_freelist_10ThermoPyle___pyx_scope_struct__add_column[8];
-static int __pyx_freecount_10ThermoPyle___pyx_scope_struct__add_column = 0;
+static struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct__add_column[8];
+static int __pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct__add_column = 0;
 
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct__add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct__add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct__add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column)))) {
-    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct__add_column[--__pyx_freecount_10ThermoPyle___pyx_scope_struct__add_column];
-    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct__add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column)))) {
+    o = (PyObject*)__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct__add_column[--__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct__add_column];
+    memset(o, 0, sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -15726,21 +15726,21 @@ static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct__add_column(PyType
   return o;
 }
 
-static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct__add_column(PyObject *o) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)o;
+static void __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct__add_column(PyObject *o) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_self);
   Py_CLEAR(p->__pyx_v_var);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct__add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column)))) {
-    __pyx_freelist_10ThermoPyle___pyx_scope_struct__add_column[__pyx_freecount_10ThermoPyle___pyx_scope_struct__add_column++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct__add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column)))) {
+    __pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct__add_column[__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct__add_column++] = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct__add_column(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct__add_column(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *)o;
   if (p->__pyx_v_self) {
     e = (*v)(p->__pyx_v_self, a); if (e) return e;
   }
@@ -15750,9 +15750,9 @@ static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct__add_column(PyObjec
   return 0;
 }
 
-static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct__add_column(PyObject *o) {
+static int __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct__add_column(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column *)o;
   tmp = ((PyObject*)p->__pyx_v_self);
   p->__pyx_v_self = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -15762,12 +15762,12 @@ static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct__add_column(PyObject *
   return 0;
 }
 
-static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct__add_column = {
+static PyTypeObject __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct__add_column = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ThermoPyle.__pyx_scope_struct__add_column", /*tp_name*/
-  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct__add_column), /*tp_basicsize*/
+  "ThermoPyleCYTHON.__pyx_scope_struct__add_column", /*tp_name*/
+  sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct__add_column), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct__add_column, /*tp_dealloc*/
+  __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct__add_column, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -15789,8 +15789,8 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct__add_column = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct__add_column, /*tp_traverse*/
-  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct__add_column, /*tp_clear*/
+  __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct__add_column, /*tp_traverse*/
+  __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct__add_column, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -15805,7 +15805,7 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct__add_column = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_10ThermoPyle___pyx_scope_struct__add_column, /*tp_new*/
+  __pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct__add_column, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -15820,14 +15820,14 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct__add_column = {
   #endif
 };
 
-static struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *__pyx_freelist_10ThermoPyle___pyx_scope_struct_1_add_column[8];
-static int __pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column = 0;
+static struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column[8];
+static int __pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column = 0;
 
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column)))) {
-    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct_1_add_column[--__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column];
-    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column)))) {
+    o = (PyObject*)__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column[--__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column];
+    memset(o, 0, sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -15837,21 +15837,21 @@ static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column(PyTyp
   return o;
 }
 
-static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject *o) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o;
+static void __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column(PyObject *o) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_self);
   Py_CLEAR(p->__pyx_v_var);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column)))) {
-    __pyx_freelist_10ThermoPyle___pyx_scope_struct_1_add_column[__pyx_freecount_10ThermoPyle___pyx_scope_struct_1_add_column++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column)))) {
+    __pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column[__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column++] = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *)o;
   if (p->__pyx_v_self) {
     e = (*v)(p->__pyx_v_self, a); if (e) return e;
   }
@@ -15861,9 +15861,9 @@ static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_add_column(PyObje
   return 0;
 }
 
-static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject *o) {
+static int __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column *)o;
   tmp = ((PyObject*)p->__pyx_v_self);
   p->__pyx_v_self = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -15873,12 +15873,12 @@ static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_add_column(PyObject 
   return 0;
 }
 
-static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column = {
+static PyTypeObject __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ThermoPyle.__pyx_scope_struct_1_add_column", /*tp_name*/
-  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_1_add_column), /*tp_basicsize*/
+  "ThermoPyleCYTHON.__pyx_scope_struct_1_add_column", /*tp_name*/
+  sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_dealloc*/
+  __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -15900,8 +15900,8 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_traverse*/
-  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_clear*/
+  __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column, /*tp_traverse*/
+  __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -15916,7 +15916,7 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_10ThermoPyle___pyx_scope_struct_1_add_column, /*tp_new*/
+  __pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -15931,14 +15931,14 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column = {
   #endif
 };
 
-static struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *__pyx_freelist_10ThermoPyle___pyx_scope_struct_2_add_column[8];
-static int __pyx_freecount_10ThermoPyle___pyx_scope_struct_2_add_column = 0;
+static struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column[8];
+static int __pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column = 0;
 
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column)))) {
-    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct_2_add_column[--__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_add_column];
-    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column)))) {
+    o = (PyObject*)__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column[--__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column];
+    memset(o, 0, sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -15948,21 +15948,21 @@ static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_add_column(PyTyp
   return o;
 }
 
-static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_2_add_column(PyObject *o) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *)o;
+static void __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column(PyObject *o) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_self);
   Py_CLEAR(p->__pyx_v_var);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column)))) {
-    __pyx_freelist_10ThermoPyle___pyx_scope_struct_2_add_column[__pyx_freecount_10ThermoPyle___pyx_scope_struct_2_add_column++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column)))) {
+    __pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column[__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column++] = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_2_add_column(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *)o;
   if (p->__pyx_v_self) {
     e = (*v)(p->__pyx_v_self, a); if (e) return e;
   }
@@ -15972,9 +15972,9 @@ static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_2_add_column(PyObje
   return 0;
 }
 
-static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_2_add_column(PyObject *o) {
+static int __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column *)o;
   tmp = ((PyObject*)p->__pyx_v_self);
   p->__pyx_v_self = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -15984,12 +15984,12 @@ static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_2_add_column(PyObject 
   return 0;
 }
 
-static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column = {
+static PyTypeObject __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ThermoPyle.__pyx_scope_struct_2_add_column", /*tp_name*/
-  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_2_add_column), /*tp_basicsize*/
+  "ThermoPyleCYTHON.__pyx_scope_struct_2_add_column", /*tp_name*/
+  sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_2_add_column, /*tp_dealloc*/
+  __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -16011,8 +16011,8 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_2_add_column, /*tp_traverse*/
-  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_2_add_column, /*tp_clear*/
+  __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column, /*tp_traverse*/
+  __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -16027,7 +16027,7 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_10ThermoPyle___pyx_scope_struct_2_add_column, /*tp_new*/
+  __pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -16042,14 +16042,14 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column = {
   #endif
 };
 
-static struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *__pyx_freelist_10ThermoPyle___pyx_scope_struct_3_rescale[8];
-static int __pyx_freecount_10ThermoPyle___pyx_scope_struct_3_rescale = 0;
+static struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale[8];
+static int __pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale = 0;
 
-static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_3_rescale(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
-  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_10ThermoPyle___pyx_scope_struct_3_rescale > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale)))) {
-    o = (PyObject*)__pyx_freelist_10ThermoPyle___pyx_scope_struct_3_rescale[--__pyx_freecount_10ThermoPyle___pyx_scope_struct_3_rescale];
-    memset(o, 0, sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale));
+  if (CYTHON_COMPILING_IN_CPYTHON && likely((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale > 0) & (t->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale)))) {
+    o = (PyObject*)__pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale[--__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale];
+    memset(o, 0, sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale));
     (void) PyObject_INIT(o, t);
     PyObject_GC_Track(o);
   } else {
@@ -16059,21 +16059,21 @@ static PyObject *__pyx_tp_new_10ThermoPyle___pyx_scope_struct_3_rescale(PyTypeOb
   return o;
 }
 
-static void __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_3_rescale(PyObject *o) {
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *)o;
+static void __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale(PyObject *o) {
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *)o;
   PyObject_GC_UnTrack(o);
   Py_CLEAR(p->__pyx_v_newrange);
   Py_CLEAR(p->__pyx_v_oldrange);
-  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_10ThermoPyle___pyx_scope_struct_3_rescale < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale)))) {
-    __pyx_freelist_10ThermoPyle___pyx_scope_struct_3_rescale[__pyx_freecount_10ThermoPyle___pyx_scope_struct_3_rescale++] = ((struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *)o);
+  if (CYTHON_COMPILING_IN_CPYTHON && ((__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale < 8) & (Py_TYPE(o)->tp_basicsize == sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale)))) {
+    __pyx_freelist_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale[__pyx_freecount_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale++] = ((struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *)o);
   } else {
     (*Py_TYPE(o)->tp_free)(o);
   }
 }
 
-static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_3_rescale(PyObject *o, visitproc v, void *a) {
+static int __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale(PyObject *o, visitproc v, void *a) {
   int e;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *)o;
   if (p->__pyx_v_newrange) {
     e = (*v)(p->__pyx_v_newrange, a); if (e) return e;
   }
@@ -16083,9 +16083,9 @@ static int __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_3_rescale(PyObject 
   return 0;
 }
 
-static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_3_rescale(PyObject *o) {
+static int __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale(PyObject *o) {
   PyObject* tmp;
-  struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *p = (struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale *)o;
+  struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *p = (struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale *)o;
   tmp = ((PyObject*)p->__pyx_v_newrange);
   p->__pyx_v_newrange = Py_None; Py_INCREF(Py_None);
   Py_XDECREF(tmp);
@@ -16095,12 +16095,12 @@ static int __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_3_rescale(PyObject *o)
   return 0;
 }
 
-static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_3_rescale = {
+static PyTypeObject __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale = {
   PyVarObject_HEAD_INIT(0, 0)
-  "ThermoPyle.__pyx_scope_struct_3_rescale", /*tp_name*/
-  sizeof(struct __pyx_obj_10ThermoPyle___pyx_scope_struct_3_rescale), /*tp_basicsize*/
+  "ThermoPyleCYTHON.__pyx_scope_struct_3_rescale", /*tp_name*/
+  sizeof(struct __pyx_obj_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_10ThermoPyle___pyx_scope_struct_3_rescale, /*tp_dealloc*/
+  __pyx_tp_dealloc_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale, /*tp_dealloc*/
   0, /*tp_print*/
   0, /*tp_getattr*/
   0, /*tp_setattr*/
@@ -16122,8 +16122,8 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_3_rescale = {
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
   0, /*tp_doc*/
-  __pyx_tp_traverse_10ThermoPyle___pyx_scope_struct_3_rescale, /*tp_traverse*/
-  __pyx_tp_clear_10ThermoPyle___pyx_scope_struct_3_rescale, /*tp_clear*/
+  __pyx_tp_traverse_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale, /*tp_traverse*/
+  __pyx_tp_clear_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale, /*tp_clear*/
   0, /*tp_richcompare*/
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
@@ -16138,7 +16138,7 @@ static PyTypeObject __pyx_type_10ThermoPyle___pyx_scope_struct_3_rescale = {
   0, /*tp_dictoffset*/
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_10ThermoPyle___pyx_scope_struct_3_rescale, /*tp_new*/
+  __pyx_tp_new_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -16164,7 +16164,7 @@ static struct PyModuleDef __pyx_moduledef = {
   #else
     PyModuleDef_HEAD_INIT,
   #endif
-    "ThermoPyle",
+    "ThermoPyleCYTHON",
     __pyx_k_module_ThermoPyle_platform_Unix, /* m_doc */
     -1, /* m_size */
     __pyx_methods /* m_methods */,
@@ -16238,7 +16238,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ThermoFluid_make_units, __pyx_k_ThermoFluid_make_units, sizeof(__pyx_k_ThermoFluid_make_units), 0, 0, 1, 1},
   {&__pyx_n_s_ThermoFluid_refresh, __pyx_k_ThermoFluid_refresh, sizeof(__pyx_k_ThermoFluid_refresh), 0, 0, 1, 1},
   {&__pyx_n_s_ThermoFluid_write_data, __pyx_k_ThermoFluid_write_data, sizeof(__pyx_k_ThermoFluid_write_data), 0, 0, 1, 1},
-  {&__pyx_n_s_ThermoPyle, __pyx_k_ThermoPyle, sizeof(__pyx_k_ThermoPyle), 0, 0, 1, 1},
+  {&__pyx_n_s_ThermoPyleCYTHON, __pyx_k_ThermoPyleCYTHON, sizeof(__pyx_k_ThermoPyleCYTHON), 0, 0, 1, 1},
   {&__pyx_n_s_Tuple, __pyx_k_Tuple, sizeof(__pyx_k_Tuple), 0, 0, 1, 1},
   {&__pyx_n_s_TypeError, __pyx_k_TypeError, sizeof(__pyx_k_TypeError), 0, 0, 1, 1},
   {&__pyx_n_s_TypeVar, __pyx_k_TypeVar, sizeof(__pyx_k_TypeVar), 0, 0, 1, 1},
@@ -16445,7 +16445,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "ThermoPyle.pyx":119
+  /* "ThermoPyleCYTHON.pyx":119
  *         # Create a empty list for storing data
  *         # Then make our data.
  *         data = np.empty((0, 3), dtype=float)             # <<<<<<<<<<<<<<
@@ -16459,7 +16459,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "ThermoPyle.pyx":147
+  /* "ThermoPyleCYTHON.pyx":147
  *         self.meta = pyr.pmap({
  *             "date":
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),             # <<<<<<<<<<<<<<
@@ -16473,7 +16473,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "ThermoPyle.pyx":258
+  /* "ThermoPyleCYTHON.pyx":258
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:             # <<<<<<<<<<<<<<
@@ -16484,7 +16484,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
 
-  /* "ThermoPyle.pyx":291
+  /* "ThermoPyleCYTHON.pyx":291
  *     def __init__(self, pathToFile: str):
  * 
  *         with open(pathToFile + ".json", mode="r+") as jf:             # <<<<<<<<<<<<<<
@@ -16495,7 +16495,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "ThermoPyle.pyx":293
+  /* "ThermoPyleCYTHON.pyx":293
  *         with open(pathToFile + ".json", mode="r+") as jf:
  *             self.meta = pyr.pmap(json.loads(jf.read()))
  *         with open(pathToFile + ".csv", mode="r+") as cf:             # <<<<<<<<<<<<<<
@@ -16506,7 +16506,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "ThermoPyle.pyx":320
+  /* "ThermoPyleCYTHON.pyx":320
  *         self.meta = pyr.pmap({
  *             "date":
  *             str(arrow.now("US/Central").format("YYYY-MM-DD @ HH:mm:ss")),             # <<<<<<<<<<<<<<
@@ -16520,7 +16520,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
 
-  /* "ThermoPyle.pyx":382
+  /* "ThermoPyleCYTHON.pyx":382
  *             assert set(order).issubset(set(self.vars))
  *         except AssertionError:
  *             raise ValueError("All entries order MUST be in vars")             # <<<<<<<<<<<<<<
@@ -16531,7 +16531,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__13);
   __Pyx_GIVEREF(__pyx_tuple__13);
 
-  /* "ThermoPyle.pyx":387
+  /* "ThermoPyleCYTHON.pyx":387
  *             assert order in permutations(self.vars, 3)
  *         except AssertionError:
  *             raise ValueError(             # <<<<<<<<<<<<<<
@@ -16542,7 +16542,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
 
-  /* "ThermoPyle.pyx":442
+  /* "ThermoPyleCYTHON.pyx":442
  * 
  *         self.data.to_csv(path + middle_string + ".csv", mode="w+", index=False)
  *         with open(path + middle_string + ".json", mode="w+", encoding="utf-8") as f:             # <<<<<<<<<<<<<<
@@ -16553,7 +16553,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__15);
   __Pyx_GIVEREF(__pyx_tuple__15);
 
-  /* "ThermoPyle.pyx":507
+  /* "ThermoPyleCYTHON.pyx":507
  * 
  *     # Plotting:
  *     fig = plt.figure(randint(10**4,10**5))             # <<<<<<<<<<<<<<
@@ -16564,7 +16564,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
-  /* "ThermoPyle.pyx":510
+  /* "ThermoPyleCYTHON.pyx":510
  * 
  *     # we want 3D plots
  *     ax = fig.add_subplot(111, projection="3d")             # <<<<<<<<<<<<<<
@@ -16575,7 +16575,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "ThermoPyle.pyx":539
+  /* "ThermoPyleCYTHON.pyx":539
  *             newrange (List[Union[float, int]]): The new range of the data, [min, max]
  *         """
  *         def scaler(x:float)->float:             # <<<<<<<<<<<<<<
@@ -16587,7 +16587,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__18);
   __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_scaler, 539, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 539, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":565
+  /* "ThermoPyleCYTHON.pyx":565
  *         assert contour in set(fluid.vars)
  *     except AssertionError:
  *         ValueError("contour needs to be a variable of fluid")             # <<<<<<<<<<<<<<
@@ -16598,7 +16598,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
 
-  /* "ThermoPyle.pyx":570
+  /* "ThermoPyleCYTHON.pyx":570
  *             assert var in set(fluid.vars)
  *         except AssertionError:
  *             ValueError("Variable not valid.")             # <<<<<<<<<<<<<<
@@ -16609,7 +16609,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
 
-  /* "ThermoPyle.pyx":574
+  /* "ThermoPyleCYTHON.pyx":574
  *     matplotlib.rcParams["xtick.direction"] = "out"
  *     matplotlib.rcParams["ytick.direction"] = "out"
  *     fig = plt.figure(randint(1,10**4))             # <<<<<<<<<<<<<<
@@ -16620,7 +16620,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "ThermoPyle.pyx":27
+  /* "ThermoPyleCYTHON.pyx":27
  * from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
  * 
  * T = TypeVar("ThermoFluid")             # <<<<<<<<<<<<<<
@@ -16631,7 +16631,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__25);
   __Pyx_GIVEREF(__pyx_tuple__25);
 
-  /* "ThermoPyle.pyx":28
+  /* "ThermoPyleCYTHON.pyx":28
  * 
  * T = TypeVar("ThermoFluid")
  * C = TypeVar("CSVFluid")             # <<<<<<<<<<<<<<
@@ -16642,7 +16642,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
 
-  /* "ThermoPyle.pyx":70
+  /* "ThermoPyleCYTHON.pyx":70
  *     """
  * 
  *     def __init__(self,             # <<<<<<<<<<<<<<
@@ -16654,7 +16654,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__27);
   __pyx_codeobj__28 = (PyObject*)__Pyx_PyCode_New(7, 0, 12, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__27, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_init, 70, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__28)) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":133
+  /* "ThermoPyleCYTHON.pyx":133
  *         self.make_meta()
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -16666,7 +16666,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__29);
   __pyx_codeobj__30 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__29, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_units, 133, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__30)) __PYX_ERR(0, 133, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":140
+  /* "ThermoPyleCYTHON.pyx":140
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -16678,7 +16678,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__31);
   __pyx_codeobj__32 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__31, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_meta, 140, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__32)) __PYX_ERR(0, 140, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":159
+  /* "ThermoPyleCYTHON.pyx":159
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -16690,7 +16690,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__33);
   __pyx_codeobj__34 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__33, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_refresh, 159, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__34)) __PYX_ERR(0, 159, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":169
+  /* "ThermoPyleCYTHON.pyx":169
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -16702,7 +16702,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__35);
   __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__35, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_add_column, 169, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 169, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":203
+  /* "ThermoPyleCYTHON.pyx":203
  * 
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
@@ -16714,7 +16714,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__37);
   __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_clean, 203, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 203, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":217
+  /* "ThermoPyleCYTHON.pyx":217
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -16729,7 +16729,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
 
-  /* "ThermoPyle.pyx":261
+  /* "ThermoPyleCYTHON.pyx":261
  *             json.dump(dict(self.meta), f)
  * 
  *     def copy(self) -> T:             # <<<<<<<<<<<<<<
@@ -16741,7 +16741,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__42);
   __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_copy, 261, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 261, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":289
+  /* "ThermoPyleCYTHON.pyx":289
  *     """
  * 
  *     def __init__(self, pathToFile: str):             # <<<<<<<<<<<<<<
@@ -16753,7 +16753,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__44);
   __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_init, 289, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 289, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":306
+  /* "ThermoPyleCYTHON.pyx":306
  * 
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -16765,7 +16765,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__46);
   __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_units, 306, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 306, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":313
+  /* "ThermoPyleCYTHON.pyx":313
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -16777,7 +16777,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__48);
   __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_make_meta, 313, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 313, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":331
+  /* "ThermoPyleCYTHON.pyx":331
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -16789,7 +16789,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__50);
   __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_add_column, 331, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 331, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":361
+  /* "ThermoPyleCYTHON.pyx":361
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -16801,7 +16801,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__52);
   __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_refresh, 361, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 361, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":371
+  /* "ThermoPyleCYTHON.pyx":371
  * 
  * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
@@ -16813,7 +16813,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__54);
   __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_changeOrder, 371, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 371, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":394
+  /* "ThermoPyleCYTHON.pyx":394
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
@@ -16825,7 +16825,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__56);
   __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_copy, 394, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 394, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":401
+  /* "ThermoPyleCYTHON.pyx":401
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -16840,7 +16840,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__60);
   __Pyx_GIVEREF(__pyx_tuple__60);
 
-  /* "ThermoPyle.pyx":446
+  /* "ThermoPyleCYTHON.pyx":446
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -16852,7 +16852,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__61);
   __pyx_codeobj__62 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__61, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_add_column, 446, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__62)) __PYX_ERR(0, 446, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":478
+  /* "ThermoPyleCYTHON.pyx":478
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
@@ -16864,7 +16864,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__63);
   __pyx_codeobj__64 = (PyObject*)__Pyx_PyCode_New(5, 0, 8, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__63, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_fluid_plot, 478, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__64)) __PYX_ERR(0, 478, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":529
+  /* "ThermoPyleCYTHON.pyx":529
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
@@ -16876,7 +16876,7 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_GIVEREF(__pyx_tuple__65);
   __pyx_codeobj__66 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, 0, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__65, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_at8183jk_Desktop_Drive_D, __pyx_n_s_rescale, 529, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__66)) __PYX_ERR(0, 529, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":552
+  /* "ThermoPyleCYTHON.pyx":552
  *         return scaler
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
@@ -16917,11 +16917,11 @@ static int __Pyx_InitGlobals(void) {
 }
 
 #if PY_MAJOR_VERSION < 3
-PyMODINIT_FUNC initThermoPyle(void); /*proto*/
-PyMODINIT_FUNC initThermoPyle(void)
+PyMODINIT_FUNC initThermoPyleCYTHON(void); /*proto*/
+PyMODINIT_FUNC initThermoPyleCYTHON(void)
 #else
-PyMODINIT_FUNC PyInit_ThermoPyle(void); /*proto*/
-PyMODINIT_FUNC PyInit_ThermoPyle(void)
+PyMODINIT_FUNC PyInit_ThermoPyleCYTHON(void); /*proto*/
+PyMODINIT_FUNC PyInit_ThermoPyleCYTHON(void)
 #endif
 {
   PyObject *__pyx_t_1 = NULL;
@@ -16940,7 +16940,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
           Py_FatalError("failed to import 'refnanny' module");
   }
   #endif
-  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_ThermoPyle(void)", 0);
+  __Pyx_RefNannySetupContext("PyMODINIT_FUNC PyInit_ThermoPyleCYTHON(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -16969,7 +16969,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   #endif
   /*--- Module creation code ---*/
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("ThermoPyle", __pyx_methods, __pyx_k_module_ThermoPyle_platform_Unix, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("ThermoPyleCYTHON", __pyx_methods, __pyx_k_module_ThermoPyle_platform_Unix, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -16986,14 +16986,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_ThermoPyle) {
+  if (__pyx_module_is_main_ThermoPyleCYTHON) {
     if (PyObject_SetAttrString(__pyx_m, "__name__", __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "ThermoPyle")) {
-      if (unlikely(PyDict_SetItemString(modules, "ThermoPyle", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "ThermoPyleCYTHON")) {
+      if (unlikely(PyDict_SetItemString(modules, "ThermoPyleCYTHON", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -17005,18 +17005,18 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   /*--- Variable export code ---*/
   /*--- Function export code ---*/
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct__add_column) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
-  __pyx_type_10ThermoPyle___pyx_scope_struct__add_column.tp_print = 0;
-  __pyx_ptype_10ThermoPyle___pyx_scope_struct__add_column = &__pyx_type_10ThermoPyle___pyx_scope_struct__add_column;
-  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  __pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column.tp_print = 0;
-  __pyx_ptype_10ThermoPyle___pyx_scope_struct_1_add_column = &__pyx_type_10ThermoPyle___pyx_scope_struct_1_add_column;
-  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column) < 0) __PYX_ERR(0, 446, __pyx_L1_error)
-  __pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column.tp_print = 0;
-  __pyx_ptype_10ThermoPyle___pyx_scope_struct_2_add_column = &__pyx_type_10ThermoPyle___pyx_scope_struct_2_add_column;
-  if (PyType_Ready(&__pyx_type_10ThermoPyle___pyx_scope_struct_3_rescale) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
-  __pyx_type_10ThermoPyle___pyx_scope_struct_3_rescale.tp_print = 0;
-  __pyx_ptype_10ThermoPyle___pyx_scope_struct_3_rescale = &__pyx_type_10ThermoPyle___pyx_scope_struct_3_rescale;
+  if (PyType_Ready(&__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct__add_column) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct__add_column.tp_print = 0;
+  __pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct__add_column = &__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct__add_column;
+  if (PyType_Ready(&__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column.tp_print = 0;
+  __pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column = &__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_1_add_column;
+  if (PyType_Ready(&__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column) < 0) __PYX_ERR(0, 446, __pyx_L1_error)
+  __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column.tp_print = 0;
+  __pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column = &__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_2_add_column;
+  if (PyType_Ready(&__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale.tp_print = 0;
+  __pyx_ptype_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale = &__pyx_type_16ThermoPyleCYTHON___pyx_scope_struct_3_rescale;
   /*--- Type import code ---*/
   /*--- Variable import code ---*/
   /*--- Function import code ---*/
@@ -17025,7 +17025,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "ThermoPyle.pyx":9
+  /* "ThermoPyleCYTHON.pyx":9
  * """
  * 
  * import json             # <<<<<<<<<<<<<<
@@ -17037,7 +17037,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_json_2, __pyx_t_1) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":10
+  /* "ThermoPyleCYTHON.pyx":10
  * 
  * import json
  * from copy import deepcopy             # <<<<<<<<<<<<<<
@@ -17058,7 +17058,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":11
+  /* "ThermoPyleCYTHON.pyx":11
  * import json
  * from copy import deepcopy
  * from itertools import permutations             # <<<<<<<<<<<<<<
@@ -17079,7 +17079,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":12
+  /* "ThermoPyleCYTHON.pyx":12
  * from copy import deepcopy
  * from itertools import permutations
  * from random import randint             # <<<<<<<<<<<<<<
@@ -17100,7 +17100,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":14
+  /* "ThermoPyleCYTHON.pyx":14
  * from random import randint
  * 
  * import arrow             # <<<<<<<<<<<<<<
@@ -17112,7 +17112,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_arrow, __pyx_t_2) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":15
+  /* "ThermoPyleCYTHON.pyx":15
  * 
  * import arrow
  * import CoolProp.CoolProp as CP             # <<<<<<<<<<<<<<
@@ -17130,7 +17130,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_CP, __pyx_t_1) < 0) __PYX_ERR(0, 15, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":16
+  /* "ThermoPyleCYTHON.pyx":16
  * import arrow
  * import CoolProp.CoolProp as CP
  * import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -17148,7 +17148,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_plt, __pyx_t_2) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":17
+  /* "ThermoPyleCYTHON.pyx":17
  * import CoolProp.CoolProp as CP
  * import matplotlib.pyplot as plt
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -17160,7 +17160,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":18
+  /* "ThermoPyleCYTHON.pyx":18
  * import matplotlib.pyplot as plt
  * import numpy as np
  * import pandas as pd             # <<<<<<<<<<<<<<
@@ -17172,7 +17172,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pd, __pyx_t_2) < 0) __PYX_ERR(0, 18, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":19
+  /* "ThermoPyleCYTHON.pyx":19
  * import numpy as np
  * import pandas as pd
  * import matplotlib             # <<<<<<<<<<<<<<
@@ -17184,7 +17184,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_matplotlib, __pyx_t_2) < 0) __PYX_ERR(0, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":20
+  /* "ThermoPyleCYTHON.pyx":20
  * import pandas as pd
  * import matplotlib
  * from matplotlib import cm, mlab             # <<<<<<<<<<<<<<
@@ -17212,7 +17212,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":21
+  /* "ThermoPyleCYTHON.pyx":21
  * import matplotlib
  * from matplotlib import cm, mlab
  * import pyrsistent as pyr             # <<<<<<<<<<<<<<
@@ -17224,7 +17224,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_pyr, __pyx_t_1) < 0) __PYX_ERR(0, 21, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":22
+  /* "ThermoPyleCYTHON.pyx":22
  * from matplotlib import cm, mlab
  * import pyrsistent as pyr
  * from cytoolz import get             # <<<<<<<<<<<<<<
@@ -17245,7 +17245,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":23
+  /* "ThermoPyleCYTHON.pyx":23
  * import pyrsistent as pyr
  * from cytoolz import get
  * from mpl_toolkits.mplot3d import Axes3D             # <<<<<<<<<<<<<<
@@ -17266,7 +17266,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":25
+  /* "ThermoPyleCYTHON.pyx":25
  * from mpl_toolkits.mplot3d import Axes3D
  * 
  * from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union             # <<<<<<<<<<<<<<
@@ -17336,7 +17336,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":27
+  /* "ThermoPyleCYTHON.pyx":27
  * from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
  * 
  * T = TypeVar("ThermoFluid")             # <<<<<<<<<<<<<<
@@ -17351,7 +17351,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_T, __pyx_t_1) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":28
+  /* "ThermoPyleCYTHON.pyx":28
  * 
  * T = TypeVar("ThermoFluid")
  * C = TypeVar("CSVFluid")             # <<<<<<<<<<<<<<
@@ -17366,7 +17366,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_C, __pyx_t_2) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":31
+  /* "ThermoPyleCYTHON.pyx":31
  * 
  * UNITS = {
  *     "P": "Pa",             # <<<<<<<<<<<<<<
@@ -17387,17 +17387,17 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_UNITS, __pyx_t_2) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":43
+  /* "ThermoPyleCYTHON.pyx":43
  * 
  * 
  * class ThermoFluid:             # <<<<<<<<<<<<<<
  *     """
  *     A class that will contain the data requested.
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_ThermoFluid, __pyx_n_s_ThermoFluid, (PyObject *) NULL, __pyx_n_s_ThermoPyle, __pyx_kp_s_A_class_that_will_contain_the_d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_ThermoFluid, __pyx_n_s_ThermoFluid, (PyObject *) NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_kp_s_A_class_that_will_contain_the_d); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "ThermoPyle.pyx":70
+  /* "ThermoPyleCYTHON.pyx":70
  *     """
  * 
  *     def __init__(self,             # <<<<<<<<<<<<<<
@@ -17407,7 +17407,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "ThermoPyle.pyx":71
+  /* "ThermoPyleCYTHON.pyx":71
  * 
  *     def __init__(self,
  *         fluid: str="Water",             # <<<<<<<<<<<<<<
@@ -17416,7 +17416,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_fluid, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":72
+  /* "ThermoPyleCYTHON.pyx":72
  *     def __init__(self,
  *         fluid: str="Water",
  *         xvar: str="T",             # <<<<<<<<<<<<<<
@@ -17425,7 +17425,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_xvar, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":73
+  /* "ThermoPyleCYTHON.pyx":73
  *         fluid: str="Water",
  *         xvar: str="T",
  *         yvar: str="P",             # <<<<<<<<<<<<<<
@@ -17434,7 +17434,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_yvar, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":74
+  /* "ThermoPyleCYTHON.pyx":74
  *         xvar: str="T",
  *         yvar: str="P",
  *         zvar: str="S",             # <<<<<<<<<<<<<<
@@ -17443,7 +17443,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_zvar, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":75
+  /* "ThermoPyleCYTHON.pyx":75
  *         yvar: str="P",
  *         zvar: str="S",
  *         numPoints: Union[List[int], int]=[217, 217],             # <<<<<<<<<<<<<<
@@ -17472,7 +17472,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_numPoints, __pyx_t_5) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":76
+  /* "ThermoPyleCYTHON.pyx":76
  *         zvar: str="S",
  *         numPoints: Union[List[int], int]=[217, 217],
  *         colorMap: str="viridis"):             # <<<<<<<<<<<<<<
@@ -17481,18 +17481,18 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
  */
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_colorMap, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":70
+  /* "ThermoPyleCYTHON.pyx":70
  *     """
  * 
  *     def __init__(self,             # <<<<<<<<<<<<<<
  *         fluid: str="Water",
  *         xvar: str="T",
  */
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_1__init__, 0, __pyx_n_s_ThermoFluid___init, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_1__init__, 0, __pyx_n_s_ThermoFluid___init, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__28)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (!__Pyx_CyFunction_InitDefaults(__pyx_t_5, sizeof(__pyx_defaults), 1)) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "ThermoPyle.pyx":75
+  /* "ThermoPyleCYTHON.pyx":75
  *         yvar: str="P",
  *         zvar: str="S",
  *         numPoints: Union[List[int], int]=[217, 217],             # <<<<<<<<<<<<<<
@@ -17510,13 +17510,13 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_t_5)->__pyx_arg_numPoints = __pyx_t_4;
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
-  __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_5, __pyx_pf_10ThermoPyle_6__defaults__);
+  __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_5, __pyx_pf_16ThermoPyleCYTHON_6__defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_init, __pyx_t_5) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":133
+  /* "ThermoPyleCYTHON.pyx":133
  *         self.make_meta()
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -17526,14 +17526,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_3make_units, 0, __pyx_n_s_ThermoFluid_make_units, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_3make_units, 0, __pyx_n_s_ThermoFluid_make_units, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__30)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_units, __pyx_t_1) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":140
+  /* "ThermoPyleCYTHON.pyx":140
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -17543,14 +17543,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_5make_meta, 0, __pyx_n_s_ThermoFluid_make_meta, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_5make_meta, 0, __pyx_n_s_ThermoFluid_make_meta, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__32)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_meta, __pyx_t_5) < 0) __PYX_ERR(0, 140, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":159
+  /* "ThermoPyleCYTHON.pyx":159
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -17560,14 +17560,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_7refresh, 0, __pyx_n_s_ThermoFluid_refresh, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_7refresh, 0, __pyx_n_s_ThermoFluid_refresh, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__34)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_refresh, __pyx_t_1) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":169
+  /* "ThermoPyleCYTHON.pyx":169
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -17603,14 +17603,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_variables, __pyx_t_3) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_9add_column, 0, __pyx_n_s_ThermoFluid_add_column, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_9add_column, 0, __pyx_n_s_ThermoFluid_add_column, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_add_column, __pyx_t_3) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":203
+  /* "ThermoPyleCYTHON.pyx":203
  * 
  * 
  *     def clean(self) -> None:             # <<<<<<<<<<<<<<
@@ -17620,14 +17620,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_11clean, 0, __pyx_n_s_ThermoFluid_clean, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_11clean, 0, __pyx_n_s_ThermoFluid_clean, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_clean, __pyx_t_1) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":217
+  /* "ThermoPyleCYTHON.pyx":217
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -17640,7 +17640,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_filename, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_mode, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_13write_data, 0, __pyx_n_s_ThermoFluid_write_data, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_13write_data, 0, __pyx_n_s_ThermoFluid_write_data, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__41);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
@@ -17648,7 +17648,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_write_data, __pyx_t_3) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":261
+  /* "ThermoPyleCYTHON.pyx":261
  *             json.dump(dict(self.meta), f)
  * 
  *     def copy(self) -> T:             # <<<<<<<<<<<<<<
@@ -17661,14 +17661,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_t_1) < 0) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_11ThermoFluid_15copy, 0, __pyx_n_s_ThermoFluid_copy, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_11ThermoFluid_15copy, 0, __pyx_n_s_ThermoFluid_copy, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_copy, __pyx_t_1) < 0) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":43
+  /* "ThermoPyleCYTHON.pyx":43
  * 
  * 
  * class ThermoFluid:             # <<<<<<<<<<<<<<
@@ -17681,17 +17681,17 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":268
+  /* "ThermoPyleCYTHON.pyx":268
  * 
  * 
  * class CSVFluid:             # <<<<<<<<<<<<<<
  *     """
  *     A class that will help work with ThermoFluid data contained in CSV/JSON files.
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_CSVFluid, __pyx_n_s_CSVFluid, (PyObject *) NULL, __pyx_n_s_ThermoPyle, __pyx_kp_s_A_class_that_will_help_work_wit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_CSVFluid, __pyx_n_s_CSVFluid, (PyObject *) NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_kp_s_A_class_that_will_help_work_wit); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "ThermoPyle.pyx":289
+  /* "ThermoPyleCYTHON.pyx":289
  *     """
  * 
  *     def __init__(self, pathToFile: str):             # <<<<<<<<<<<<<<
@@ -17701,14 +17701,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_pathToFile, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_1__init__, 0, __pyx_n_s_CSVFluid___init, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_1__init__, 0, __pyx_n_s_CSVFluid___init, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":306
+  /* "ThermoPyleCYTHON.pyx":306
  * 
  * 
  *     def make_units(self) -> None:             # <<<<<<<<<<<<<<
@@ -17718,14 +17718,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_3 = PyDict_New(); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_3make_units, 0, __pyx_n_s_CSVFluid_make_units, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_3make_units, 0, __pyx_n_s_CSVFluid_make_units, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_units, __pyx_t_1) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":313
+  /* "ThermoPyleCYTHON.pyx":313
  * 
  * 
  *     def make_meta(self) -> None:             # <<<<<<<<<<<<<<
@@ -17735,14 +17735,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_1 = PyDict_New(); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 313, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_5make_meta, 0, __pyx_n_s_CSVFluid_make_meta, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 313, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_5make_meta, 0, __pyx_n_s_CSVFluid_make_meta, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_make_meta, __pyx_t_3) < 0) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":331
+  /* "ThermoPyleCYTHON.pyx":331
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -17778,14 +17778,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_variables, __pyx_t_5) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_7add_column, 0, __pyx_n_s_CSVFluid_add_column, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_7add_column, 0, __pyx_n_s_CSVFluid_add_column, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_add_column, __pyx_t_5) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":361
+  /* "ThermoPyleCYTHON.pyx":361
  * 
  * 
  *     def refresh(self) -> None:             # <<<<<<<<<<<<<<
@@ -17795,14 +17795,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __pyx_t_5 = PyDict_New(); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 361, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_9refresh, 0, __pyx_n_s_CSVFluid_refresh, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_9refresh, 0, __pyx_n_s_CSVFluid_refresh, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_5);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_refresh, __pyx_t_3) < 0) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":371
+  /* "ThermoPyleCYTHON.pyx":371
  * 
  * 
  *     def changeOrder(self, order: List[Text]) -> None:             # <<<<<<<<<<<<<<
@@ -17822,14 +17822,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_order, __pyx_t_1) < 0) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 371, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_11changeOrder, 0, __pyx_n_s_CSVFluid_changeOrder, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_11changeOrder, 0, __pyx_n_s_CSVFluid_changeOrder, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_changeOrder, __pyx_t_1) < 0) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":394
+  /* "ThermoPyleCYTHON.pyx":394
  *         self.zvar = order[2]
  * 
  *     def copy(self) -> C:             # <<<<<<<<<<<<<<
@@ -17842,14 +17842,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_GOTREF(__pyx_t_3);
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, __pyx_t_3) < 0) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_13copy, 0, __pyx_n_s_CSVFluid_copy, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_13copy, 0, __pyx_n_s_CSVFluid_copy, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_copy, __pyx_t_3) < 0) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "ThermoPyle.pyx":401
+  /* "ThermoPyleCYTHON.pyx":401
  * 
  * 
  *     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:             # <<<<<<<<<<<<<<
@@ -17862,7 +17862,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_filename, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_mode, ((PyObject *)(&PyString_Type))) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
   if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_15write_data, 0, __pyx_n_s_CSVFluid_write_data, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__59)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_15write_data, 0, __pyx_n_s_CSVFluid_write_data, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__59)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_tuple__60);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
@@ -17870,7 +17870,7 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_write_data, __pyx_t_1) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ThermoPyle.pyx":446
+  /* "ThermoPyleCYTHON.pyx":446
  * 
  * 
  *     def add_column(self, variables: Union[List[Text], Text]) -> None:             # <<<<<<<<<<<<<<
@@ -17906,14 +17906,14 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_variables, __pyx_t_5) < 0) __PYX_ERR(0, 446, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, Py_None) < 0) __PYX_ERR(0, 446, __pyx_L1_error)
-  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_10ThermoPyle_8CSVFluid_17add_column, 0, __pyx_n_s_CSVFluid_add_column, NULL, __pyx_n_s_ThermoPyle, __pyx_d, ((PyObject *)__pyx_codeobj__62)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 446, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_8CSVFluid_17add_column, 0, __pyx_n_s_CSVFluid_add_column, NULL, __pyx_n_s_ThermoPyleCYTHON, __pyx_d, ((PyObject *)__pyx_codeobj__62)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 446, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_5, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (PyObject_SetItem(__pyx_t_2, __pyx_n_s_add_column, __pyx_t_5) < 0) __PYX_ERR(0, 446, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "ThermoPyle.pyx":268
+  /* "ThermoPyleCYTHON.pyx":268
  * 
  * 
  * class CSVFluid:             # <<<<<<<<<<<<<<
@@ -17926,43 +17926,43 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":478
+  /* "ThermoPyleCYTHON.pyx":478
  * 
  * 
  * def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:             # <<<<<<<<<<<<<<
  *     """
  *     Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_1fluid_plot, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_1fluid_plot, NULL, __pyx_n_s_ThermoPyleCYTHON); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fluid_plot, __pyx_t_2) < 0) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":529
+  /* "ThermoPyleCYTHON.pyx":529
  * 
  * 
  * def rescale(oldrange: List[Union[float, int]],             # <<<<<<<<<<<<<<
  *     newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
  *         Union[float, int]]:
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_3rescale, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_3rescale, NULL, __pyx_n_s_ThermoPyleCYTHON); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_rescale, __pyx_t_2) < 0) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":552
+  /* "ThermoPyleCYTHON.pyx":552
  *         return scaler
  * 
  * def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:             # <<<<<<<<<<<<<<
  *     """
  *     Does what it says on the tin. Makes a Contour Plot of the Fluid.
  */
-  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10ThermoPyle_5fluid_contour_plot, NULL, __pyx_n_s_ThermoPyle); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
+  __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_16ThermoPyleCYTHON_5fluid_contour_plot, NULL, __pyx_n_s_ThermoPyleCYTHON); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_fluid_contour_plot, __pyx_t_2) < 0) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "ThermoPyle.pyx":1
+  /* "ThermoPyleCYTHON.pyx":1
  * """             # <<<<<<<<<<<<<<
  * .. module:: ThermoPyle
  *     :platform: Unix, Windows
@@ -17984,11 +17984,11 @@ PyMODINIT_FUNC PyInit_ThermoPyle(void)
   __Pyx_XDECREF(__pyx_t_6);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init ThermoPyle", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init ThermoPyleCYTHON", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_DECREF(__pyx_m); __pyx_m = 0;
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init ThermoPyle");
+    PyErr_SetString(PyExc_ImportError, "init ThermoPyleCYTHON");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
