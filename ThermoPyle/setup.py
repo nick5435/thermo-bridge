@@ -10,13 +10,13 @@ def readme():
 
 setup(
     name='ThermoPyle',
-    version='0.6.3',
+    version='0.7.0',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     long_description=readme(),
     url='https://github.com/nick5435/thermo-bridge',
     author='Nick Meyer',
-    author_email='nmeyer14@winona.edu',
-    license='GPL',
+    author_email='nmeyer5435@gmail.com',
+    license='GPLv3+',
     packages=find_packages(),
     zip_safe=False,
     setup_requires=[],
@@ -35,6 +35,7 @@ setup(
     },
     python_requires='>=3.5.0',
     include_package_data=True,
+    keywords="physics mathematics thermodynamics engineering science chemistry state pandas numpy matplotlib",
     classifiers=[
         'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3.6',
