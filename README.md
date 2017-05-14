@@ -1,19 +1,13 @@
-# Thermodynamics Data Generator -- Physics Bridge
-## Nick Meyer and Aaron Wangberg
+# ThermoPyle
 
-<table>
-<tr>
-<td>
-<img src="https://github.com/nick5435/thermo-bridge/raw/master/plots/TPS.png" alt="Sample Plot" width="400"/></td>
-<td>
-We generate <a href="https://github.com/nick5435/thermo-bridge/tree/master/data">datasets</a> and plots using <a href="http://coolprop.org">CoolProp</a> running under Python. <br />
-Install the library by runnning <pre>pip install -e .</pre> in the ThermoPyle directory.
-<br />
-Documentation is at: <a href='http://thermo-bridge.readthedocs.io/'>
-     ReadTheDocs.io <br />
-     <img src='https://readthedocs.org/projects/thermo-bridge/badge/?version=stable' alt='Documentation Status' />
-</a>
-</td>
-</td>
-</tr>
-</table>
+<img src="https://github.com/nick5435/thermo-bridge/raw/master/plots/TPS.png" alt="Sample Plot" width="400"/>
+
+We generate [datasets](https://github.com/nick5435/thermo-bridge/tree/master/finaldata) and [plots](https://github.com/nick5435/thermo-bridge/tree/master/plots) using [CoolProp](http://coolprop.org) running under Python. 
+
+Install the library by runnning `pip install -U ThermoPyle`
+
+Documentation is at: [ReadTheDocs.io](http://thermo-bridge.readthedocs.io/')
+     ![Documentation Status](https://readthedocs.org/projects/thermo-bridge/badge/?version=stable)
+
+	 
+[Now on PyPI!](https://pypi.python.org/pypi/ThermoPyle "ThermoPyle on PyPI")
