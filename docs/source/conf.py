@@ -12,7 +12,7 @@ from recommonmark.parser import CommonMarkParser
 
 # General information about the project.
 project = "ThermoPyle"
-copyright = "2016-2017, Nick Meyer, Aaron Wangberg"
+copyright = "2016-, Nick Meyer, Aaron Wangberg"
 author = "Nick Meyer, Aaron Wangberg"
 
 # The version info for the project you"re documenting, acts as replacement for
@@ -43,7 +43,7 @@ extensions = [
     "sphinx.ext.autodoc", "sphinx.ext.intersphinx", "sphinx.ext.todo",
     "sphinx.ext.mathjax", "sphinx.ext.ifconfig", "sphinx.ext.viewcode",
     "sphinx.ext.githubpages", "sphinx.ext.napoleon",
-    "sphinx_autodoc_typehints", "sphinx.ext.githubpages"
+    "sphinx_autodoc_typehints", "sphinx.ext.githubpages",
 ]
 
 napoleon_google_docstring = True
@@ -60,7 +60,7 @@ napoleon_use_rtype = True
 
 autodoc_mock_imports = [
     "pyrsistent", "arrow", "matplotlib", "mpl_toolkits", "matplotlib.pyplot",
-    "pandas", "toolz", "numpy", "mpl_toolkits.mplot3d", "matplotlib.mlab", "matplotlib.cm"
+    "pandas", "toolz", "numpy", "mpl_toolkits.mplot3d", "matplotlib.mlab", "matplotlib.cm",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -209,7 +209,7 @@ latex_documents = [(master_doc, "ThermoPyle.tex",
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [(master_doc, "ThermoPyle",
-              " ThermoPyle Documentation", [author], 1)]
+              " ThermoPyle Documentation", [author], 1),]
 
 # -- Options for Texinfo output -------------------------------------------
 
@@ -229,5 +229,5 @@ intersphinx_mapping = {
     "numpy": ("https://docs.scipy.org/doc/numpy/", None),
     "matplotlib": ("http://matplotlib.org/", None),
     "pyrsistent": ("http://pyrsistent.readthedocs.io/en/latest/", None),
-    "arrow": ("http://arrow.readthedocs.io/en/latest/", None)
+    "arrow": ("http://arrow.readthedocs.io/en/latest/", None),
 }

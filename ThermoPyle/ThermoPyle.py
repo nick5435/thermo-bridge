@@ -10,19 +10,18 @@ import json
 from copy import deepcopy
 from itertools import permutations
 from random import randint
+from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
 
 import arrow
 import CoolProp.CoolProp as CP
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib
-from matplotlib import cm, mlab
 import pyrsistent as pyr
-from toolz import get
+from matplotlib import cm, mlab
 from mpl_toolkits.mplot3d import Axes3D
-
-from typing import Any, Callable, Dict, List, Text, Tuple, TypeVar, Union
+from toolz.curried import curry, get, itemmap, pipe
 
 T = TypeVar("ThermoFluid")
 C = TypeVar("CSVFluid")
@@ -38,6 +37,11 @@ UNITS = {
     "H": "J/kg",
     "PHASE": "",
 }
+
+
+@curry
+def apply(f, x):
+    return f(x)
 
 
 class ThermoFluid:
@@ -68,12 +72,12 @@ class ThermoFluid:
     """
 
     def __init__(self,
-        fluid: str="Water",
-        xvar: str="T",
-        yvar: str="P",
-        zvar: str="S",
-        numPoints: Union[List[int], int]=[217, 217],
-        colorMap: str="viridis"):
+                 fluid: str="Water",
+                 xvar: str="T",
+                 yvar: str="P",
+                 zvar: str="S",
+                 numPoints: Union[List[int], int]=[217, 217],
+                 colorMap: str="viridis"):
 
         self.fluid = fluid
         if type(numPoints) is int:
@@ -86,7 +90,6 @@ class ThermoFluid:
             self.zvar = zvar
             self.vars = [self.xvar, self.yvar, self.zvar]
             self.M = CP.PropsSI("M", self.fluid)
-
 
             # Linear interpolation between tmin and tmax with NUM_POINTS number of points, delta = tmax-min/NUM_POINTS
         if self.xvar in ["P", "T"]:
@@ -121,21 +124,19 @@ class ThermoFluid:
             for y in yspace:
                 data = np.append(data, [[
                     x, y, CP.PropsSI(self.zvar, self.xvar, x, self.yvar, y,
-                        self.fluid)
-                        ]], axis=0)
+                                     self.fluid)
+                ]], axis=0)
 
         # Create Pandas Frame of Data
         self.data = pd.DataFrame(data, columns=self.vars)
         self.make_units()
         self.clean()
         self.make_meta()
-    
+
     def make_units(self) -> None:
         """(Re)make the units list"""
-        self.units = {}
-        for var in self.data.columns:
-            self.units[var] =  get(str(var), UNITS, "UnknownVar")
-
+        self.units = {var: get(str(var), UNITS, "UnknownVar")
+                      for var in self.data.columns.tolist()}
 
     def make_meta(self) -> None:
         """
@@ -155,16 +156,14 @@ class ThermoFluid:
             "units": self.units
         })
 
-
     def refresh(self) -> None:
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
         """
-        self.vars = set(self.data.columns)
+        self.vars = list(set(self.data.columns.tolist()))
         self.make_units()
         self.clean()
         self.make_meta()
-
 
     def add_column(self, variables: Union[List[Text], Text]) -> None:
         """
@@ -183,36 +182,31 @@ class ThermoFluid:
                 raise ValueError(
                     "Cannot add column {0}: already in frame".format(var))
         self.vars += variables
-        buffer = {}
-        newcols = {}
-        for var in variables:
-            newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
 
-        for key in newcols:
-            buffer[key] = []
+        newcols = {var: lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
+                   for var in variables}
+        buffer = {key: [] for key in newcols}
 
         for index, row in self.data.iterrows():
-            for key in newcols:
-                get(key, buffer).append(get(key, newcols)(row))
+            buffer = itemmap(lambda tup: (
+                tup[0], tup[1] + [apply(get(tup[0], newcols), row)]), buffer)
         for key in newcols:
             self.data[key] = pd.Series(buffer[key], index=self.data.index)
         self.make_units()
         self.make_meta()
 
-
     def clean(self) -> None:
         """Re-cleans data"""
         if "P" in self.vars:
             self.data = self.data[self.data["P"] >=
-                CP.PropsSI("PMIN", self.fluid) + 1.0]
+                                  CP.PropsSI("PMIN", self.fluid) + 1.0]
         if "S" in self.vars:
             self.data = self.data[self.data["S"] > 0.0]
         if "T" in self.vars:
             self.data = self.data[self.data["T"] >=
-                (CP.PropsSI("TMIN", self.fluid) + 1.0)]
+                                  (CP.PropsSI("TMIN", self.fluid) + 1.0)]
         if "U" in self.vars:
             self.data = self.data[self.data["U"] >= 0.0]
-
 
     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
         """
@@ -302,13 +296,10 @@ class CSVFluid:
         self.numPoints = self.meta["numPoints"]
         self.units = self.meta["units"]
 
-
     def make_units(self) -> None:
         """(Re)make the units list"""
-        self.units = {}
-        for var in self.data.columns:
-            self.units[var] =  get(str(var), UNITS, "UnknownVar")
-
+        self.units = {var: get(str(var), UNITS, "UnknownVar")
+                      for var in self.data.columns.tolist()}
 
     def make_meta(self) -> None:
         """
@@ -327,7 +318,6 @@ class CSVFluid:
             "colorMap": self.colorMap,
             "units": self.units})
 
-
     def add_column(self, variables: Union[List[Text], Text]) -> None:
         """
         Adds a column to the dataframe
@@ -341,32 +331,29 @@ class CSVFluid:
             try:
                 assert var not in self.vars
             except AssertionError:
-                raise ValueError("Cannot add column {0}: already in frame".format(var))
+                raise ValueError(
+                    "Cannot add column {0}: already in frame".format(var))
         self.vars += variables
-        buffer = {}
-        newcols = {}
-        for var in variables:
-            newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
-        for key in newcols:
-            buffer[key] = []
+
+        newcols = {var: lambda state: CP.PropsSI(
+            var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid) for var in variables}
+        buffer = {key: [] for key in newcols}
         for index, row in self.data.iterrows():
-            for key in newcols:
-                get(key, buffer).append(get(key, newcols)(row))
+            buffer = itemmap(lambda tup: (
+                tup[0], tup[1] + [apply(get(tup[0], newcols), row)]), buffer)
         for key in newcols:
             self.data[key] = pd.Series(buffer[key], index=self.data.index)
         self.make_units()
         self.make_meta()
 
-
     def refresh(self) -> None:
         """
         Refreshes the object, remakes meta, cleans data, remakes units.
         """
-        self.vars = set(self.data.columns)
+        self.vars = set(self.data.columns.tolist())
         self.make_units()
         self.clean()
         self.make_meta()
-
 
     def changeOrder(self, order: List[Text]) -> None:
         """
@@ -386,7 +373,8 @@ class CSVFluid:
         except AssertionError:
             raise ValueError(
                 "Order of columns must be a permutation of columns of data")
-        self.data = self.data[list(order) + [var for var in set(self.vars) if var not in set(order)]]
+        self.data = self.data[list(
+            order) + [var for var in set(self.vars) if var not in set(order)]]
         self.xvar = order[0]
         self.yvar = order[1]
         self.zvar = order[2]
@@ -396,7 +384,6 @@ class CSVFluid:
         Returns a copy of itself
         """
         return deepcopy(self)
-
 
     def write_data(self, path: str="./data/", filename: str="", mode: str="default") -> None:
         """
@@ -443,38 +430,6 @@ class CSVFluid:
             json.dump(dict(self.meta), f)
 
 
-    def add_column(self, variables: Union[List[Text], Text]) -> None:
-        """
-        Adds a column to the dataframe
-
-        Paramaters:
-            variable (Union[List[Text],Text]): What variable(s) to add
-        """
-        if type(variables) is not list:
-            variables = [variables]
-        for var in variables:
-            try:
-                assert var not in self.vars
-            except AssertionError:
-                raise ValueError("Cannot add column {0}: already in frame".format(var))
-
-        self.vars += variables
-        buffer = {}
-        newcols = {}
-        for var in variables:
-            newcols[var] = lambda state: CP.PropsSI(var, self.xvar, state[self.xvar], self.yvar, state[self.yvar], self.fluid)
-
-        for key in newcols:
-            buffer[key] = []
-        for index, row in self.data.iterrows():
-            for key in newcols:
-                get(key, buffer).append(get(key, newcols)(row))
-        for key in newcols:
-            self.data[key] = pd.Series(buffer[key], index=self.data.index)
-        self.make_units()
-        self.make_meta()
-
-
 def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text="", zvar: Text="", coloring: Text="") -> None:
     """
     Does what it says on the tin. Makes a 3D Scatter Plot of the dataframe.
@@ -504,7 +459,7 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text=""
             ValueError("variable {0} is not a valid variable.".format(var))
 
     # Plotting:
-    fig = plt.figure(randint(10**4,10**5))
+    fig = plt.figure(randint(10**4, 10**5))
 
     # we want 3D plots
     ax = fig.add_subplot(111, projection="3d")
@@ -522,32 +477,35 @@ def fluid_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="", yvar: Text=""
     ax.set_xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
     ax.set_ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
     ax.set_zlabel("{0} [{1}]".format(zvar, fluid.units[zvar]))
-    ax.set_title("{0} and {1} vs {2} of {3}".format(xvar, yvar, zvar, fluid.fluid))
+    ax.set_title("{0} and {1} vs {2} of {3}".format(
+        xvar, yvar, zvar, fluid.fluid))
     plt.show(fig)
 
 
 def rescale(oldrange: List[Union[float, int]],
-    newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
-        Union[float, int]]:
-        """
-        Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply
+            newrange: List[Union[float, int]]) -> Callable[[Union[float, int]],
+                                                           Union[float, int]]:
+    """
+    Creates a function that transforms a single variable from oldrange to newrange. Use it with map or Pandas.DataFrame.apply
 
-        Parameters:
-            oldrange (List[Union[float, int]]): The old range of the data, [min, max]
-            newrange (List[Union[float, int]]): The new range of the data, [min, max]
+    Parameters:
+        oldrange (List[Union[float, int]]): The old range of the data, [min, max]
+        newrange (List[Union[float, int]]): The new range of the data, [min, max]
+    """
+    def scaler(x: float)->float:
         """
-        def scaler(x:float)->float:
-            """
-            scales input according to y = {slope}*(x-{old_min})+{new_min}
+        scales input according to y = {slope}*(x-{old_min})+{new_min}
 
-            Paramaters:
-                x (float): A value to scales
-            Returns:
-                y (float): the scaled version of x
-            """
-            return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
-        scaler.__doc__ = scaler.__doc__.format(slope=((newrange[1]-newrange[0])/(oldrange[1]-oldrange[0])), old_min=oldrange[0], new_min=newrange[0])
-        return scaler
+        Paramaters:
+            x (float): A value to scales
+        Returns:
+            y (float): the scaled version of x
+        """
+        return (newrange[1] - newrange[0]) / (oldrange[1] - oldrange[0]) * (x - oldrange[0]) + newrange[0]
+    scaler.__doc__ = scaler.__doc__.format(slope=((newrange[1] - newrange[0]) / (
+        oldrange[1] - oldrange[0])), old_min=oldrange[0], new_min=newrange[0])
+    return scaler
+
 
 def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar: Text="P", contour: Text="U") -> None:
     """
@@ -571,7 +529,7 @@ def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar
 
     matplotlib.rcParams["xtick.direction"] = "out"
     matplotlib.rcParams["ytick.direction"] = "out"
-    fig = plt.figure(randint(1,10**4))
+    fig = plt.figure(randint(1, 10**4))
     fignum = fig.number
     xx = pd.Series(fluid.data[xvar]).tolist()
     yy = pd.Series(fluid.data[yvar]).tolist()
@@ -581,11 +539,11 @@ def fluid_contour_plot(fluid: Union[CSVFluid, ThermoFluid], xvar: Text="T", yvar
     Z = mlab.griddata(xx, yy, zz, xi, yi, interp='linear')
     X, Y = np.meshgrid(xi, yi)
     CS = plt.contour(X, Y, Z, cmap=fluid.colorMap)
-    fmt = {}
-    for x in CS.levels:
-        fmt[x] = "{:.4g}".format(x) + " " + fluid.units[contour]
+    fmt = {x: "{:.4g}".format(
+        x) + " " + fluid.units[contour] for x in CS.levels}
     plt.clabel(CS, fontsize=10, inline=1, fmt=fmt)
     plt.xlabel("{0} [{1}]".format(xvar, fluid.units[xvar]))
     plt.ylabel("{0} [{1}]".format(yvar, fluid.units[yvar]))
-    plt.title("{0} and {1} vs {2} of {3}".format(xvar, yvar, contour, fluid.fluid))
+    plt.title("{0} and {1} vs {2} of {3}".format(
+        xvar, yvar, contour, fluid.fluid))
     plt.show(fig)
