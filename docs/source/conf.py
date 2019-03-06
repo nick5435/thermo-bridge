@@ -22,7 +22,7 @@ author = "Nick Meyer, Aaron Wangberg"
 # The short X.Y version.
 version = "0.7"
 # The full version, including alpha/beta/rc tags.
-release = "0.7.2"
+release = "0.7.2.1"
 
 
 sys.path.insert(0, os.path.abspath("../../ThermoPyle/ThermoPyle.py"))

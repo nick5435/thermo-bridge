@@ -10,7 +10,7 @@ def readme():
 
 setup(
     name='ThermoPyle',
-    version='0.7.2',
+    version='0.7.2.1',
     description='Creation of Thermodynamic Surfaces using CoolProp',
     # long_description=readme(),
     url='https://github.com/nick5435/thermo-bridge',
@@ -26,7 +26,7 @@ setup(
         'pyrsistent>=0.12.0', 'arrow>=0.10.0', 'toolz>=0.8.2',
         'mpld3>=0.3',
     ],
-    extra_requires={
+    extras_require={
         'dev': [
             'sphinx>=1.5.1', 'sphinx_bootstrap_theme>=0.4.13',
             'sphinx-autobuild>=0.6.0', 'sphinx-autodoc-typehints>=1.1.0',
