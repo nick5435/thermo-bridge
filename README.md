@@ -6,7 +6,7 @@ We generate [datasets](https://github.com/nick5435/thermo-bridge/tree/master/fin
 
 Install the library by runnning `pip install -U ThermoPyle`
 
-Documentation is at: [ReadTheDocs.io](http://thermo-bridge.readthedocs.io/')
+Documentation is at: [ReadTheDocs.io](http://thermo-bridge.readthedocs.io/)
      ![Documentation Status](https://readthedocs.org/projects/thermo-bridge/badge/?version=stable)
 
 	 
