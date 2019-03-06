@@ -10,5 +10,5 @@ ThermoPyle
    CSVFluid
 
 .. automodule:: ThermoPyle
-      :members: fluid_plot, rescale
+      :members: fluid_plot, fluid_contour_plot, rescale
       :noindex:
